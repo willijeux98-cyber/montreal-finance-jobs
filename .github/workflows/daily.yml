@@ -1,0 +1,32 @@
+name: Daily job pull
+
+on:
+  schedule:
+    - cron: "0 10 * * *"   # 6:00 am Montreal (summer time), 5:00 am in winter
+  workflow_dispatch:        # "Run workflow" button for an on-demand refresh
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-pull
+  cancel-in-progress: false
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python fetch.py
+      - name: Save today's book
+        run: |
+          git config user.name  "position-book-bot"
+          git config user.email "position-book-bot@users.noreply.github.com"
+          git add docs data
+          git diff --cached --quiet || git commit -m "Book for $(date -u +%F)"
+          git push

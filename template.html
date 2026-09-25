@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Position Book</title>
+<meta name="description" content="Montreal buy-side, banking and markets openings, ranked every morning.">
+<meta name="theme-color" content="#EDEDEB" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0C0C0C" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Position Book">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230000C1'/%3E%3Ctext x='32' y='46' font-family='Arial Black,Arial' font-weight='900' font-size='38' fill='white' text-anchor='middle'%3EPB%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' fill='%230000C1'/%3E%3Ctext x='90' y='124' font-family='Arial Black,Arial' font-weight='900' font-size='96' fill='white' text-anchor='middle'%3EPB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap">
+<style>
+/* POSITION BOOK — Swiss. One grotesk, heavy rules, one blue. */
+:root{
+  --bg:#EDEDEB; --bg-2:#E3E3E0; --ink:#0A0A0A; --ink-2:#3A3A38; --mut:#6A6A68;
+  --faint:#9A9A96; --rule:#0A0A0A; --hair:#C9C9C5; --blue:#0000C1; --blue-ink:#FFFFFF;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0C0C0C; --bg-2:#151515; --ink:#EDEDEB; --ink-2:#C4C4C0; --mut:#8E8E8A;
+    --faint:#5E5E5A; --rule:#EDEDEB; --hair:#2A2A28; --blue:#7B7BFF; --blue-ink:#0C0C0C;
+    color-scheme:dark;
+  }
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0; overflow-x:hidden; background:var(--bg); color:var(--ink);
+  font-family:"Archivo", Helvetica, Arial, sans-serif; font-size:15px; line-height:1.5;
+  font-variant-numeric:tabular-nums lining-nums; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1300px; margin:0 auto; padding-inline:clamp(16px,3.2vw,44px); padding-block:0 110px;}
+:focus-visible{outline:3px solid var(--blue); outline-offset:2px;}
+.up{text-transform:uppercase; letter-spacing:.16em; font-weight:700;}
+
+/* masthead */
+.mast{padding-top:max(clamp(26px,4vw,52px), env(safe-area-inset-top));}
+.kick{font-size:10px; color:var(--blue); margin-bottom:clamp(14px,2vw,22px);}
+.wordmark{font-size:clamp(52px,13.5vw,168px); font-weight:900; line-height:.82;
+  letter-spacing:-.055em; text-transform:uppercase; margin:0;}
+.meta{display:flex; flex-wrap:wrap; gap:6px 26px; font-size:10px; color:var(--mut); margin-top:clamp(16px,2vw,26px);}
+.meta b{color:var(--ink); font-weight:800;}
+.strip{display:flex; flex-wrap:wrap; gap:clamp(20px,4.4vw,64px);
+  border-top:4px solid var(--rule); border-bottom:4px solid var(--rule);
+  padding:clamp(14px,2vw,20px) 0; margin-top:clamp(18px,2.4vw,28px);}
+.stat .v{font-size:clamp(32px,5.2vw,58px); font-weight:900; line-height:.92; letter-spacing:-.05em;}
+.stat.on .v{color:var(--blue);}
+.stat .k{font-size:9px; color:var(--mut); margin-top:6px;}
+
+/* lead */
+.lead{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:clamp(20px,4vw,58px);
+  align-items:start; padding:clamp(24px,3.4vw,40px) 0; border-bottom:4px solid var(--rule);}
+.lead .tag{display:inline-block; background:var(--blue); color:var(--blue-ink); font-size:9px; padding:5px 10px; margin-bottom:16px;}
+.lead h2{font-size:clamp(26px,4.4vw,54px); font-weight:800; line-height:1.02; letter-spacing:-.04em; margin:0 0 14px; text-wrap:balance;}
+.who{display:flex; flex-wrap:wrap; gap:9px; font-size:10px; color:var(--mut); margin-bottom:16px;}
+.who .f{color:var(--ink); font-weight:800;}
+.who .d{color:var(--hair);}
+.lead p{font-size:16px; line-height:1.55; color:var(--ink-2); max-width:60ch; margin:0 0 22px;}
+.lead .num{font-size:clamp(88px,15vw,190px); font-weight:900; line-height:.74; letter-spacing:-.075em;
+  color:var(--blue); display:block; text-align:right;}
+.lead .den{font-size:9px; color:var(--mut); display:block; text-align:right; margin-top:12px;}
+
+/* controls */
+.bar{position:sticky; top:0; z-index:40; background:var(--bg);
+  display:flex; flex-direction:column; gap:10px; padding:12px 0; border-bottom:4px solid var(--rule);}
+.bar-row{display:flex; flex-wrap:wrap; gap:10px 20px; align-items:center;}
+.segs{display:flex; gap:0; overflow-x:auto; scrollbar-width:none; padding-left:2px; max-width:100%;}
+.segs::-webkit-scrollbar{display:none;}
+.seg{appearance:none; cursor:pointer; background:transparent; color:var(--mut); flex:0 0 auto;
+  border:2px solid var(--ink); margin-left:-2px; font-family:inherit; font-size:9.5px; font-weight:700;
+  letter-spacing:.14em; text-transform:uppercase; padding:9px 13px; white-space:nowrap;
+  transition:background .12s linear, color .12s linear;}
+.seg:hover{color:var(--ink);}
+.seg[aria-pressed="true"]{background:var(--ink); color:var(--bg); position:relative; z-index:2;}
+.seg .n{opacity:.55; margin-left:6px;}
+.push{flex:1 1 auto;}
+.find{appearance:none; background:transparent; color:var(--ink); border:0; border-bottom:2px solid var(--ink);
+  border-radius:0; font-family:inherit; font-size:14px; font-weight:600; padding:7px 2px; width:min(240px,100%);}
+.find::placeholder{color:var(--faint); text-transform:uppercase; letter-spacing:.14em; font-size:9.5px;}
+.find:focus{border-bottom-color:var(--blue); outline:none;}
+.opt{display:inline-flex; align-items:center; gap:7px; cursor:pointer; font-size:9.5px; font-weight:700;
+  letter-spacing:.13em; text-transform:uppercase; color:var(--mut); user-select:none; white-space:nowrap;}
+.opt input{accent-color:var(--blue); width:16px; height:16px; cursor:pointer;}
+
+/* tiers & rows */
+.tier{margin-top:clamp(34px,4vw,54px);}
+.tier-h{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; border-bottom:4px solid var(--rule); padding-bottom:8px;}
+.tier-h h3{font-size:clamp(24px,3.4vw,40px); font-weight:900; line-height:1; letter-spacing:-.045em; text-transform:uppercase; margin:0;}
+.tier-h .rg{font-size:9.5px; font-weight:800; letter-spacing:.14em; color:var(--blue);}
+.tier-h .sy{font-size:12px; color:var(--mut);}
+.tier-h .ct{margin-left:auto; font-size:10px; font-weight:700; color:var(--faint);}
+.row{border-bottom:1px solid var(--hair);}
+.btn{width:100%; text-align:left; background:none; border:0; cursor:pointer; color:inherit; font-family:inherit;
+  display:grid; grid-template-columns:52px 92px minmax(0,1fr) auto 18px; gap:14px; align-items:center;
+  padding:14px 4px; transition:background .1s linear;}
+.btn:hover{background:var(--bg-2);}
+.sc{font-size:clamp(28px,3vw,36px); font-weight:900; line-height:1; letter-spacing:-.055em; text-align:right;}
+.sc.on{color:var(--blue);}
+.mt{display:flex; gap:2px;}
+.mt i{flex:1; height:14px; background:var(--hair);}
+.mt i.f{background:var(--ink);}
+.mt.on i.f{background:var(--blue);}
+.nm{min-width:0;}
+.nm .t{font-size:15px; font-weight:600; line-height:1.26; letter-spacing:-.018em; margin-bottom:5px; overflow-wrap:anywhere;}
+.nm .s{display:flex; flex-wrap:wrap; gap:4px 8px; font-size:9px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:var(--mut);}
+.nm .s .f{color:var(--ink-2); font-weight:800;}
+.nm .s .d{color:var(--hair);}
+.nm .s .nw{background:var(--blue); color:var(--blue-ink); padding:0 5px;}
+.nm .s .ap{border:1.5px solid var(--ink-2); color:var(--ink-2); padding:0 4px;}
+.ag{font-size:10px; font-weight:700; color:var(--faint); white-space:nowrap;}
+.cv{font-size:14px; font-weight:700; color:var(--faint); justify-self:end; transition:transform .16s linear;}
+.row.open .cv{transform:rotate(90deg);}
+.pan{display:none; padding:0 4px 24px 172px;}
+.row.open .pan{display:block;}
+.pan p{margin:0 0 18px; font-size:14.5px; line-height:1.6; color:var(--ink-2); max-width:62ch;}
+.acts{display:flex; gap:20px; align-items:center; flex-wrap:wrap;}
+.go{display:inline-block; text-decoration:none; cursor:pointer; background:var(--ink); color:var(--bg);
+  border:2px solid var(--ink); font-size:10px; font-weight:800; letter-spacing:.16em; text-transform:uppercase;
+  padding:12px 22px; transition:background .12s linear, border-color .12s linear, color .12s linear;}
+.go:hover{background:var(--blue); border-color:var(--blue); color:var(--blue-ink);}
+.mk{display:inline-flex; align-items:center; gap:8px; cursor:pointer; font-size:9.5px; font-weight:700;
+  letter-spacing:.13em; text-transform:uppercase; color:var(--mut); user-select:none; padding:8px 0;}
+.mk input{accent-color:var(--blue); width:16px; height:16px; cursor:pointer;}
+.row.done .btn{opacity:.38;}
+.row.done .nm .t{text-decoration:line-through; text-decoration-thickness:2px;}
+.nil{padding:80px 10px; text-align:center; color:var(--mut); font-size:clamp(20px,3vw,30px);
+  font-weight:800; letter-spacing:-.03em; text-transform:uppercase;}
+
+/* foot */
+.foot{margin-top:clamp(50px,6vw,80px); padding-top:24px; border-top:4px solid var(--rule);
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr)); gap:28px;
+  font-size:13px; line-height:1.6; color:var(--mut);}
+.foot h4{font-size:9.5px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:var(--ink); margin:0 0 10px;}
+.foot b{color:var(--ink-2); font-weight:700;}
+.warn{color:var(--blue); font-weight:700;}
+
+@media (max-width:940px){
+  .lead{grid-template-columns:1fr;}
+  .lead .num,.lead .den{text-align:left;}
+}
+@media (max-width:720px){
+  .btn{grid-template-columns:40px minmax(0,1fr) 14px; gap:12px; padding:14px 2px;}
+  .mt,.ag{display:none;}
+  .pan{padding:0 2px 22px 52px;}
+  .find{width:100%;}
+  .bar-row.opts{gap:8px 18px;}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="mast">
+    <div class="kick up">Montr&eacute;al &mdash; buy-side, banking &amp; markets</div>
+    <h1 class="wordmark">Position<br>Book</h1>
+    <div class="meta up">
+      <span>Updated <b id="d-run">&mdash;</b></span>
+      <span><b id="d-boards">&mdash;</b> hiring boards</span>
+      <span><b id="d-scan">&mdash;</b> postings read</span>
+    </div>
+    <div class="strip">
+      <div class="stat on"><div class="v" id="c-strong">&mdash;</div><div class="k up">Apply today</div></div>
+      <div class="stat"><div class="v" id="c-new">&mdash;</div><div class="k up">New today</div></div>
+      <div class="stat"><div class="v" id="c-total">&mdash;</div><div class="k up">Ranked</div></div>
+      <div class="stat"><div class="v" id="c-done">0</div><div class="k up">Applied</div></div>
+    </div>
+  </header>
+
+  <section id="lead"></section>
+
+  <div class="bar">
+    <div class="segs" id="segs" role="group" aria-label="Type of firm"></div>
+    <div class="bar-row opts">
+      <input class="find" id="q" type="search" placeholder="Search firm or role" aria-label="Search roles and firms">
+      <span class="push"></span>
+      <label class="opt"><input type="checkbox" id="f-new"> New only</label>
+      <label class="opt"><input type="checkbox" id="f-done"> Hide applied</label>
+    </div>
+  </div>
+
+  <main id="board"></main>
+
+  <footer class="foot">
+    <div>
+      <h4>How it ranks</h4>
+      Every posting is scored 0&ndash;10 against your r&eacute;sum&eacute;: the type of firm, whether the
+      seat is investment, deal or markets work, and whether the title is at your level (two years in, CFA
+      Level&nbsp;I passed). Anything under 4 is left out.
+    </div>
+    <div>
+      <h4>Where it looks</h4>
+      Straight from each firm&rsquo;s own hiring system, never job sites: CDPQ, PSP, National Bank,
+      Desjardins, Fiera, Novacap, Brookfield, Blackstone, Carlyle, BMO, CIBC, TD, Squarepoint, DRW and more.
+      Refreshed every morning at 6.
+      <span id="errs"></span>
+    </div>
+    <div>
+      <h4>Working the book</h4>
+      Tap a row for the reasoning and the link. <b>Mark applied</b> strikes it through and is remembered on
+      this phone, so the book narrows to what you haven&rsquo;t acted on yet.
+    </div>
+  </footer>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const JOBS = (DATA && DATA.jobs) || [];
+const META = (DATA && DATA.meta) || {run:"-", boards:0, scanned:0, errors:[]};
+
+const TIERS = [
+  {k:"now",  lo:8, hi:10, name:"Apply today",  rg:"8–10", sy:"your résumé already argues for these"},
+  {k:"shot", lo:6, hi:7,  name:"Worth a shot", rg:"6–7",  sy:"winnable, but the application has to work"},
+  {k:"str",  lo:4, hi:5,  name:"Stretch",      rg:"4–5",  sy:"right firm, wrong level or wrong seat"}
+];
+const CATS = [
+  {k:"all", name:"All"},
+  {k:"pension", name:"Pension funds"},
+  {k:"pe_vc", name:"PE & VC"},
+  {k:"ib", name:"Banks & IB"},
+  {k:"hedge", name:"Trading & hedge funds"},
+  {k:"am", name:"Asset managers"},
+  {k:"markets", name:"Exchange"},
+  {k:"insurer", name:"Insurers"}
+];
+
+const KEY = "position-book-applied";
+let done = new Set();
+try{ const r = localStorage.getItem(KEY); if(r) done = new Set(JSON.parse(r)); }catch(e){}
+const save = () => { try{ localStorage.setItem(KEY, JSON.stringify([...done])); }catch(e){} };
+
+let cat = "all", query = "";
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+const age = j => j.n ? "new" : (j.a == null ? "" : (j.a === 0 ? "today" : j.a + "d"));
+
+function pool(){
+  const onlyNew = document.getElementById("f-new").checked;
+  const hide = document.getElementById("f-done").checked;
+  return JOBS.filter(j => {
+    if(cat !== "all" && j.cat !== cat) return false;
+    if(onlyNew && !j.n) return false;
+    if(hide && done.has(j.u)) return false;
+    if(query && !((j.t + " " + j.c + " " + j.l).toLowerCase().includes(query))) return false;
+    return true;
+  });
+}
+
+function segs(){
+  const count = k => k === "all" ? JOBS.length : JOBS.filter(j => j.cat === k).length;
+  document.getElementById("segs").innerHTML = CATS.filter(d => count(d.k)).map(d =>
+    '<button class="seg" data-k="' + d.k + '" aria-pressed="' + (cat === d.k) + '">' +
+    esc(d.name) + '<span class="n">' + count(d.k) + '</span></button>').join("");
+  document.querySelectorAll(".seg").forEach(b => b.onclick = () => { cat = b.dataset.k; segs(); paint(); });
+}
+
+function lead(rows){
+  const host = document.getElementById("lead");
+  const j = rows.find(x => !done.has(x.u));
+  if(!j){ host.innerHTML = ""; return; }
+  host.innerHTML = '<div class="lead">' +
+    '<div><span class="tag up">Top of the book</span>' +
+      '<h2>' + esc(j.t) + '</h2>' +
+      '<div class="who up"><span class="f">' + esc(j.c) + '</span><span class="d">/</span>' +
+        '<span>' + esc(j.l) + '</span>' +
+        (age(j) ? '<span class="d">/</span><span>' + age(j) + '</span>' : '') + '</div>' +
+      '<p>' + esc(j.w) + '</p>' +
+      '<a class="go" href="' + esc(j.u) + '" target="_blank" rel="noopener noreferrer">Open posting</a></div>' +
+    '<div><span class="num">' + j.s + '</span><span class="den up">out of ten</span></div></div>';
+}
+
+const meter = s => {
+  let c = "";
+  for(let i = 1; i <= 10; i++) c += '<i class="' + (i <= s ? "f" : "") + '"></i>';
+  return '<span class="mt' + (s >= 8 ? " on" : "") + '" aria-hidden="true">' + c + '</span>';
+};
+
+function paint(){
+  const rows = pool().slice().sort((a, b) => b.s - a.s || (b.n - a.n) || ((a.a ?? 999) - (b.a ?? 999)));
+  lead(rows);
+  const host = document.getElementById("board");
+  if(!rows.length){ host.innerHTML = '<p class="nil">Nothing on these terms</p>'; return; }
+  let n = 0;
+  host.innerHTML = TIERS.map(t => {
+    const set = rows.filter(j => j.s >= t.lo && j.s <= t.hi);
+    if(!set.length) return "";
+    return '<section class="tier"><div class="tier-h"><h3>' + esc(t.name) + '</h3>' +
+      '<span class="rg">' + t.rg + '</span><span class="sy">' + esc(t.sy) + '</span>' +
+      '<span class="ct up">' + set.length + '</span></div>' +
+      set.map(j => {
+        n++;
+        const id = "r" + n, is = done.has(j.u), a = age(j);
+        return '<article class="row' + (is ? " done" : "") + '" id="' + id + '">' +
+          '<button class="btn" aria-expanded="false" aria-controls="' + id + 'p" data-id="' + id + '">' +
+            '<span class="sc' + (j.s >= 8 ? " on" : "") + '">' + j.s + '</span>' + meter(j.s) +
+            '<span class="nm"><span class="t">' + esc(j.t) + '</span>' +
+            '<span class="s"><span class="f">' + esc(j.c) + '</span><span class="d">/</span>' +
+            '<span>' + esc(j.l) + '</span>' +
+            (j.n ? '<span class="nw">new</span>' : '') +
+            (is ? '<span class="ap">applied</span>' : '') + '</span></span>' +
+            '<span class="ag">' + (j.n ? "" : a) + '</span><span class="cv">&rsaquo;</span>' +
+          '</button>' +
+          '<div class="pan" id="' + id + 'p"><p>' + esc(j.w) + '</p><div class="acts">' +
+            '<a class="go" href="' + esc(j.u) + '" target="_blank" rel="noopener noreferrer">Open posting</a>' +
+            '<label class="mk"><input type="checkbox" data-u="' + esc(j.u) + '"' + (is ? " checked" : "") + '> Mark applied</label>' +
+          '</div></div></article>';
+      }).join("") + '</section>';
+  }).join("");
+
+  host.querySelectorAll(".btn").forEach(b => b.onclick = () => {
+    const row = document.getElementById(b.dataset.id);
+    b.setAttribute("aria-expanded", row.classList.toggle("open"));
+  });
+  host.querySelectorAll(".mk input").forEach(cb => cb.onchange = () => {
+    cb.checked ? done.add(cb.dataset.u) : done.delete(cb.dataset.u);
+    save(); tally(); paint();
+  });
+}
+
+function tally(){
+  document.getElementById("d-run").textContent    = META.run;
+  document.getElementById("d-boards").textContent = META.boards;
+  document.getElementById("d-scan").textContent   = Number(META.scanned).toLocaleString("en-CA");
+  document.getElementById("c-strong").textContent = JOBS.filter(j => j.s >= 8 && !done.has(j.u)).length;
+  document.getElementById("c-new").textContent    = JOBS.filter(j => j.n).length;
+  document.getElementById("c-total").textContent  = JOBS.length;
+  document.getElementById("c-done").textContent   = JOBS.filter(j => done.has(j.u)).length;
+  if(META.errors && META.errors.length)
+    document.getElementById("errs").innerHTML = ' <span class="warn">Couldn’t reach today: ' +
+      esc(META.errors.map(e => e.split(":")[0]).join(", ")) + '.</span>';
+}
+
+["f-new","f-done"].forEach(id => document.getElementById(id).onchange = paint);
+document.getElementById("q").oninput = e => { query = e.target.value.trim().toLowerCase(); paint(); };
+
+segs(); tally(); paint();
+</script>
+</body>
+</html>
