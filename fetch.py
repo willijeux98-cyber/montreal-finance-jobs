@@ -27,53 +27,7 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
       "Accept": "application/json"}
 TODAY = dt.date.today()
 
-# ---------------------------------------------------------------- sources
-# (display name, category, hq_montreal)
-# category: pension | pe_vc | hedge | am | ib | markets | insurer
-WORKDAY = [
-    # name, tenant, wd#, site, category, hq_montreal
-    ("CDPQ", "cdpq", 10, "CDPQ", "pension", True),
-    ("PSP Investments", "investpsp", 3, "psp_careers", "pension", True),
-    ("Fiera Capital", "fieracapital", 3, "Career", "am", True),
-    ("Desjardins", "desjardins", 10, "Desjardins", "ib", True),
-    ("OMERS", "omers", 3, "OMERS_External", "pension", False),
-    ("Brookfield", "brookfield", 5, "brookfield", "pe_vc", False),
-    ("Blackstone", "blackstone", 1, "Blackstone_Careers", "pe_vc", False),
-    ("Carlyle", "carlyle", 1, "Carlyle", "pe_vc", False),
-    ("BlackRock", "blackrock", 1, "BlackRock_Professional", "am", False),
-    ("State Street", "statestreet", 1, "Global", "am", False),
-    ("BMO", "bmo", 3, "External", "ib", False),
-    ("CIBC", "cibc", 3, "search", "ib", False),
-    ("TD", "td", 3, "TD_Bank_Careers", "ib", False),
-    ("Raymond James", "raymondjames", 1, "RaymondJamesCareers", "ib", False),
-    ("TMX Group", "tmx", 3, "TMX_Careers", "markets", False),
-    ("Manulife", "manulife", 3, "MFCJH_Jobs", "insurer", False),
-    ("Sun Life", "sunlife", 3, "Experienced-Jobs", "insurer", False),
-]
-GREENHOUSE = [
-    ("Squarepoint", "squarepointcapital", "hedge"),
-    ("DRW", "drweng", "hedge"),
-    ("Point72", "point72", "hedge"),
-    ("Schonfeld", "schonfeld", "hedge"),
-    ("AQR", "aqr", "hedge"),
-    ("Man Group", "mangroup", "hedge"),
-    ("Tower Research", "towerresearchcapital", "hedge"),
-    ("Jump Trading", "jumptrading", "hedge"),
-    ("Jane Street", "janestreet", "hedge"),
-    ("IMC", "imc", "hedge"),
-    ("Virtu", "virtu", "hedge"),
-    ("WorldQuant", "worldquant", "hedge"),
-    ("Flow Traders", "flowtraders", "hedge"),
-    ("ExodusPoint", "exoduspoint", "hedge"),
-    ("StepStone", "stepstone", "pe_vc"),
-]
-ASHBY = [
-    ("Georgian", "georgian", "pe_vc"),
-    ("Inovia Capital", "inoviacapital", "pe_vc"),
-    ("PineBridge", "pinebridge", "am"),
-]
-RIPPLING = [("Novacap", "novacap", "pe_vc", True)]
-BAMBOO = [("Picton Mahoney", "pictonmahoney", "am", False)]
+from sources import build_sources  # noqa: E402  (all job boards live in sources.py / data/boards.json)
 
 # ---------------------------------------------------------------- filters
 MTL = re.compile(r"montr[eé]al|laval|longueuil|brossard|boucherville|pointe-claire", re.I)
@@ -95,8 +49,9 @@ EXCLUDE = re.compile(
     r"internal audit|audit interne|accountant|comptab|accounting|payable|tax\b|fiscal|"
     r"procurement|approvisionnement|scrum|agile coach|product owner|"
     r"data engineer|machine learning engineer|site reliab|administrative|"
-    r"insurance advisor|conseiller en assurance|sales representative|représentant|"
-    r"platform|applications? specialist|infrastructure specialist|analytics infrastructure|ULL|colo|"
+    r"insurance advisor|conseiller en assurance|sales representative|représentant|investment specialist|"
+    r"crime|investigat|conciliat|technical analyst|service desk|sourcing|help desk|"
+    r"platform|applications? specialist|infrastructure specialist|analytics infrastructure|\bULL\b|colo\b|"
     r"architect|scientist|personal banker|banquier|investment advisor|conseiller en placement|"
     r"investorline|regional sales|sales manager|wealth|patrimoine|nesbitt|wood gundy|"
     r"investment and financing|placement et financement|credit card|cartes? de crédit|"
@@ -106,6 +61,11 @@ EXCLUDE = re.compile(
 
 # front-office investment / deal / markets work
 STRONG = [
+    (r"secondar|primaries|primary fund|funds? of funds|fonds de fonds|fund investments?|co-?invest|private markets|"
+     r"marchés privés|placements privés", "fund investing"),
+    (r"corporate development|développement corporatif|corp\.? dev", "corporate development"),
+    (r"transaction advisory|deal advisory|transaction services|financial due diligence|business valuation|"
+     r"évaluation d.entreprise|valuations? (&|and) (modeling|modelling|advisory)|restructuring", "deal advisory"),
     (r"private equity|capital[- ]investissement|buyout", "private equity"),
     (r"venture|capital de risque|growth equity|croissance", "venture / growth"),
     (r"investment banking|banque d.investissement|financement corporatif|corporate finance|"
@@ -127,7 +87,7 @@ STRONG = [
      r"répartition de l.actif|total fund|public markets|marchés publics|multi-asset|multiactifs",
      "portfolio management"),
     (r"capital markets|marchés des capitaux|global markets|marchés mondiaux", "capital markets"),
-    (r"invest|placement|co-invest|alpha|hedge fund|fund investment|fonds", "investments"),
+    (r"\binvest(?!igat)|placement|co-invest|\balpha\b|hedge fund|fund investment|\bfonds\b", "investments"),
 ]
 MEDIUM = [
     (r"valuation|évaluation", "valuation"),
@@ -149,7 +109,8 @@ LEVEL_DOWN = re.compile(
 STUDENT = re.compile(r"intern|stage|stagiaire|co-?op|student|étudiant|summer|été 20", re.I)
 TEMP = re.compile(r"temporary|temporaire|contract|contrat|\d+\s*(months|mois)", re.I)
 
-CAT_BASE = {"pension": 6, "pe_vc": 6, "hedge": 6, "am": 5, "ib": 5, "markets": 5, "insurer": 4}
+CAT_BASE = {"pension": 6, "pe_vc": 6, "hedge": 6, "am": 5, "ib": 5, "markets": 5, "insurer": 4,
+            "advisory": 5, "corpdev": 5}
 CAT_WORDS = {
     "pension": "a Montreal pension investor",
     "pe_vc": "a private-markets investor",
@@ -158,8 +119,13 @@ CAT_WORDS = {
     "ib": "a bank's markets and advisory side",
     "markets": "the exchange operator",
     "insurer": "an insurer's investment arm",
+    "advisory": "a deal-advisory / valuation team",
+    "corpdev": "a Montreal company's M&A team",
 }
 ANGLE = {
+    "fund investing": "Lead with CFA Level I, fund mechanics (GP/LP, NAV, DPI/TVPI, the J-curve) and the $20B merger diligence.",
+    "corporate development": "Buy-side M&A from inside a company: lead with the $20B merger and your integration modelling.",
+    "deal advisory": "Transaction services and valuation are the classic bridge into PE. Lead with the merger diligence.",
     "private equity": "Lead with the $20B merger diligence and your break-even and cost-volume models.",
     "venture / growth": "Lead with the $20B merger diligence and the fact you've built and shipped products at Manulife.",
     "investment banking": "Lead with the $20B merger diligence. That's M&A work, and bankers will recognize it.",
@@ -205,11 +171,11 @@ def classify(title, cat=None):
     return "none", None
 
 
-LVL_EXEC = re.compile(r"director|directeur|directrice|vice[- ]president|VP|head of|managing|partner|"
-                      r"chief|chef|senior director", re.I)
-LVL_MGR = re.compile(r"manager|gestionnaire|lead|principal|senior advisor|conseill(er|ère)\(?-?è?r?e?\)? "
+LVL_EXEC = re.compile(r"director|directeur|directrice|vice[- ]president|\bVP\b|head of|managing|partner|"
+                      r"chief|\bchef\b|senior director", re.I)
+LVL_MGR = re.compile(r"manager|gestionnaire|\blead\b|principal\b|senior advisor|conseill(er|ère)\(?-?è?r?e?\)? "
                      r"(principal|senior|sénior)|premier\(?-?è?r?e?\)? conseill|expert", re.I)
-OPS = re.compile(r"operations|opérations|administration|settlement|règlement|control|contrôle|"
+OPS = re.compile(r"operations|opérations|administration|settlement|règlement|control\b|contrôle|"
                  r"servicing|integration|intégration", re.I)
 LVL_ADV = re.compile(r"advisor|conseill|specialist|spécialiste", re.I)
 
@@ -238,9 +204,15 @@ def score(job):
     if cat == "ib" and re.search(r"investment associate", t, re.I):
         return None  # wealth-desk assistant seat at a bank
     # banks are huge: only keep their front-office seats
-    if cat in ("ib", "insurer", "markets") and kind not in ("strong", "quant"):
-        if not (cat == "ib" and sig in STRONG_MEDIUM):
+    if cat in ("ib", "insurer", "markets", "advisory", "corpdev") and kind not in ("strong", "quant"):
+        if not (cat in ("ib", "advisory") and sig in ("valuation", "markets operations", "due diligence")):
             return None
+    if cat == "corpdev" and sig not in ("corporate development", "investment banking", "deal advisory", "fund investing"):
+        return None  # at an operating company only the M&A / corp-dev seats count
+    if cat == "advisory" and sig not in ("deal advisory", "investment banking", "valuation", "due diligence"):
+        return None
+    if kind == "none" and job["c"] not in CORE:
+        return None  # a non-investment seat is only worth showing at a core buy-side firm
     s = CAT_BASE[cat]
     if kind == "strong":
         s += 3
@@ -282,134 +254,27 @@ def why(job, kind, sig, level):
     return f"{lvl}: {what}.{extra} {ANGLE.get(sig, ANGLE[None])}"
 
 
-# ---------------------------------------------------------------- fetchers
-def get(url, headers=None):
-    r = requests.get(url, headers=headers or UA, timeout=40)
-    r.raise_for_status()
-    return r
-
-
-def days_from_workday(txt):
-    t = (txt or "").lower()
-    if "today" in t or "aujourd" in t:
-        return 0
-    if "yesterday" in t or "hier" in t:
-        return 1
-    m = re.search(r"(\d+)\+?", t)
-    return int(m.group(1)) if m else None
-
-
-def fetch_workday(src):
-    name, tenant, n, site, cat, hq = src
-    base = f"https://{tenant}.wd{n}.myworkdayjobs.com"
-    api = f"{base}/wday/cxs/{tenant}/{site}/jobs"
-    hdr = {**UA, "Content-Type": "application/json"}
-    first = requests.post(api, json={"limit": 20, "offset": 0, "searchText": "", "appliedFacets": {}},
-                          headers=hdr, timeout=40)
-    first.raise_for_status()
-    data = first.json()
-    total = data.get("total", 0)
-    posts = list(data.get("jobPostings", []))
-
-    def page(off):
-        r = requests.post(api, json={"limit": 20, "offset": off, "searchText": "", "appliedFacets": {}},
-                          headers=hdr, timeout=40)
-        r.raise_for_status()
-        return r.json().get("jobPostings", [])
-
-    with cf.ThreadPoolExecutor(6) as ex:
-        for chunk in ex.map(page, range(20, total, 20)):
-            posts.extend(chunk)
-    out = []
-    for p in posts:
-        loc = p.get("locationsText", "") or ""
-        out.append(dict(c=name, cat=cat, t=p.get("title", ""), l=loc,
-                        u=f"{base}/{site}{p.get('externalPath', '')}",
-                        age=days_from_workday(p.get("postedOn")), hq=hq))
-    return out, total
-
-
-def iso_age(s):
-    try:
-        d = dt.datetime.fromisoformat(s.replace("Z", "+00:00")).date()
-        return (TODAY - d).days
-    except Exception:
-        return None
-
-
-def fetch_greenhouse(src):
-    name, tok, cat = src
-    jobs = get(f"https://boards-api.greenhouse.io/v1/boards/{tok}/jobs").json().get("jobs", [])
-    return [dict(c=name, cat=cat, t=j["title"], l=(j.get("location") or {}).get("name", ""),
-                 u=j["absolute_url"], age=iso_age(j.get("first_published") or j.get("updated_at", "")), hq=False)
-            for j in jobs], len(jobs)
-
-
-def fetch_ashby(src):
-    name, tok, cat = src
-    jobs = get(f"https://api.ashbyhq.com/posting-api/job-board/{tok}").json().get("jobs", [])
-    return [dict(c=name, cat=cat, t=j["title"], l=j.get("location", ""), u=j["jobUrl"],
-                 age=iso_age(j.get("publishedAt", "")), hq=False) for j in jobs], len(jobs)
-
-
-def fetch_rippling(src):
-    name, tok, cat, hq = src
-    items = get(f"https://ats.rippling.com/api/v2/board/{tok}/jobs").json().get("items", [])
-    out = []
-    for j in items:
-        locs = j.get("locations") or j.get("workLocations") or []
-        loc = ", ".join((x.get("name") if isinstance(x, dict) else str(x)) for x in locs) or "Montreal area"
-        out.append(dict(c=name, cat=cat, t=j.get("name", ""), l=loc, u=j.get("url", ""), age=None, hq=hq))
-    return out, len(items)
-
-
-def fetch_bamboo(src):
-    name, tok, cat, hq = src
-    res = get(f"https://{tok}.bamboohr.com/careers/list").json().get("result", [])
-    out = []
-    for j in res:
-        loc = j.get("location") or {}
-        city = ", ".join(x for x in (loc.get("city"), loc.get("state")) if x)
-        out.append(dict(c=name, cat=cat, t=j.get("jobOpeningName", ""), l=city,
-                        u=f"https://{tok}.bamboohr.com/careers/{j.get('id')}", age=None, hq=hq))
-    return out, len(res)
-
-
-NBC_ROW = re.compile(
-    r'data-map="job-detail-link"\s+href="([^"]+)"\s+title="([^"]*)".*?</th>\s*<td>\s*(.*?)\s*</td>', re.S)
-
-
-def fetch_nbc(_src=None):
-    out, off, seen = [], 0, set()
-    while off < 1000:
-        t = get(f"https://emplois.bnc.ca/en_CA/careers/SearchJobs/?jobOffset={off}",
-                headers={**UA, "Accept": "text/html"}).text
-        rows = NBC_ROW.findall(t)
-        new = [r for r in rows if r[0] not in seen]
-        if not new:
-            break
-        for u, title, loc in new:
-            seen.add(u)
-            out.append(dict(c="National Bank", cat="ib", t=html.unescape(title).strip(),
-                            l=html.unescape(re.sub(r"\s+", " ", loc)).strip(), u=u, age=None, hq=True))
-        off += 20
-    return out, len(out)
-
-
-SOURCES = ([(fetch_workday, s, s[0]) for s in WORKDAY] +
-           [(fetch_greenhouse, s, s[0]) for s in GREENHOUSE] +
-           [(fetch_ashby, s, s[0]) for s in ASHBY] +
-           [(fetch_rippling, s, s[0]) for s in RIPPLING] +
-           [(fetch_bamboo, s, s[0]) for s in BAMBOO] +
-           [(fetch_nbc, None, "National Bank")])
+SOURCES = [(lambda _s, f=f: f(), None, label) for f, label in build_sources()]
+# Firms where even a non-investment seat is a real foot in the door
+CORE = {"CDPQ", "PSP Investments", "Ardian", "Novacap", "Sagard", "Power Corporation", "Fiera Capital",
+        "Investissement Quebec", "Fonds de solidarite FTQ", "Fondaction", "Desjardins Capital", "Ivanhoe Cambridge",
+        "Inovia Capital", "Walter Capital Partners", "Claridge", "Squarepoint", "DRW", "Teralys Capital", "BDC",
+        "Letko Brosseau", "Jarislowsky Fraser", "Van Berkom", "Addenda Capital", "Montrusco Bolton"}
 
 
 # ---------------------------------------------------------------- pipeline
+OTHER = re.compile(r"toronto|vancouver|calgary|edmonton|ottawa|winnipeg|halifax|waterloo|mississauga|new york|"
+                   r"boston|chicago|houston|london|paris|madrid|singapore|hong kong|qu[eé]bec city|ville de qu[eé]bec|"
+                   r"\bl[eé]vis\b|sherbrooke|gatineau", re.I)
+
+
 def keep_location(j):
     loc = j["l"] or ""
-    if MTL.search(loc):
+    if MTL.search(loc) or MTL.search(j["t"]):
         j["mtl_explicit"] = True
         return True
+    if OTHER.search(loc) or OTHER.search(j["t"]):
+        return False
     if j["hq"] and (MULTI.search(loc) or not loc.strip() or re.search(r"canada|qu[eé]bec", loc, re.I)):
         j["mtl_explicit"] = False
         return True

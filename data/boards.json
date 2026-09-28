@@ -1,0 +1,2389 @@
+[
+ {
+  "name": "CDPQ",
+  "domain": "cdpq.com",
+  "cat": "pension",
+  "boards": [
+   [
+    "workday",
+    [
+     "cdpq",
+     "10",
+     "CDPQ"
+    ]
+   ],
+   [
+    "workday",
+    [
+     "cdpq",
+     "10",
+     "CDPQ-recrutement-universitaire"
+    ]
+   ]
+  ],
+  "careers": "https://www.lacaisse.com/fr/carrieres",
+  "rc": false
+ },
+ {
+  "name": "PSP Investments",
+  "domain": "investpsp.com",
+  "cat": "pension",
+  "boards": [
+   [
+    "workday",
+    [
+     "investpsp",
+     "3",
+     "psp_careers"
+    ]
+   ]
+  ],
+  "careers": "https://www.investpsp.com/en/careers/",
+  "rc": false
+ },
+ {
+  "name": "Ivanhoe Cambridge",
+  "domain": "ivanhoecambridge.com",
+  "cat": "pension",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Fonds de solidarite FTQ",
+  "domain": "fondsftq.com",
+  "cat": "pension",
+  "boards": [
+   [
+    "workday",
+    [
+     "fondsftq",
+     "10",
+     "sitecarriere_externe"
+    ]
+   ]
+  ],
+  "careers": "https://www.fondsftq.com/fr-ca/carriere",
+  "rc": false
+ },
+ {
+  "name": "Fondaction",
+  "domain": "fondaction.com",
+  "cat": "pension",
+  "boards": [],
+  "careers": "https://www.fondaction.com/carrieres/",
+  "rc": true
+ },
+ {
+  "name": "Investissement Quebec",
+  "domain": "investquebec.com",
+  "cat": "pension",
+  "boards": [
+   [
+    "workday",
+    [
+     "investquebec",
+     "10",
+     "ext"
+    ]
+   ]
+  ],
+  "careers": "https://www.investquebec.com/fr/nous-joindre/nos-bureaux",
+  "rc": false
+ },
+ {
+  "name": "BDC",
+  "domain": "bdc.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.bdc.ca/fr/carrieres?ref=shorturl-carrieres",
+  "rc": false
+ },
+ {
+  "name": "Teralys Capital",
+  "domain": "teralyscapital.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.teralyscapital.com/nousjoindre/",
+  "rc": false
+ },
+ {
+  "name": "Power Corporation",
+  "domain": "powercorporation.com",
+  "cat": "pension",
+  "boards": [],
+  "careers": "https://www.powercorporation.com/en/other/careers/",
+  "rc": false
+ },
+ {
+  "name": "Sagard",
+  "domain": "sagard.com",
+  "cat": "pe_vc",
+  "boards": [
+   [
+    "workday",
+    [
+     "sagardholdings",
+     "10",
+     "sagardcareers"
+    ]
+   ]
+  ],
+  "careers": "https://www.sagard.com/real-estate/careers/",
+  "rc": false
+ },
+ {
+  "name": "Power Sustainable",
+  "domain": "powersustainable.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Claridge",
+  "domain": "claridge.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Ardian",
+  "domain": "ardian.com",
+  "cat": "pe_vc",
+  "boards": [
+   [
+    "workday",
+    [
+     "ardian",
+     "103",
+     "ArdianCareers"
+    ]
+   ]
+  ],
+  "careers": "https://www.ardian.com/join-us",
+  "rc": true
+ },
+ {
+  "name": "Desjardins Capital",
+  "domain": "desjardinscapital.com",
+  "cat": "pe_vc",
+  "boards": [
+   [
+    "workday",
+    [
+     "desjardins",
+     "10",
+     "EtudiantsetStagiaires"
+    ]
+   ],
+   [
+    "workday",
+    [
+     "desjardins",
+     "10",
+     "Desjardins"
+    ]
+   ]
+  ],
+  "careers": "https://www.desjardins.com/fr/carriere/processus-recrutement.html?navigMW=pp",
+  "rc": true
+ },
+ {
+  "name": "CN Investment Division",
+  "domain": "cn.ca",
+  "cat": "pension",
+  "boards": [],
+  "careers": "https://careers.cn.ca/search/?q=&locationsearch=&locale=fr_CA&searchResultView=LIST",
+  "rc": false
+ },
+ {
+  "name": "OMERS",
+  "domain": "omers.com",
+  "cat": "pension",
+  "boards": [],
+  "careers": "https://www.omers.com/emplois",
+  "rc": false
+ },
+ {
+  "name": "CPP Investments",
+  "domain": "cppinvestments.com",
+  "cat": "pension",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Ontario Teachers",
+  "domain": "otpp.com",
+  "cat": "pension",
+  "boards": [
+   [
+    "workday",
+    [
+     "otppb",
+     "3",
+     "OntarioTeachers_Careers"
+    ]
+   ]
+  ],
+  "careers": "https://www.otpp.com/en-ca/careers/",
+  "rc": false
+ },
+ {
+  "name": "BCI",
+  "domain": "bci.ca",
+  "cat": "pension",
+  "boards": [
+   [
+    "workday",
+    [
+     "bci",
+     "10",
+     "BCI_Careers"
+    ]
+   ]
+  ],
+  "careers": "https://www.bci.ca/people/careers/",
+  "rc": false
+ },
+ {
+  "name": "AIMCo",
+  "domain": "aimco.ca",
+  "cat": "pension",
+  "boards": [
+   [
+    "workday",
+    [
+     "aimco",
+     "10",
+     "AIMCoCareers"
+    ]
+   ]
+  ],
+  "careers": "https://www.aimco.ca/careers",
+  "rc": false
+ },
+ {
+  "name": "Novacap",
+  "domain": "novacap.ca",
+  "cat": "pe_vc",
+  "boards": [
+   [
+    "rippling",
+    "novacapexpress"
+   ],
+   [
+    "rippling",
+    "novacapexprimez"
+   ]
+  ],
+  "careers": "https://novacapcorp.com/careers/",
+  "rc": false
+ },
+ {
+  "name": "Walter Capital Partners",
+  "domain": "waltercapital.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://waltercapital.ca/fr/carrieres/",
+  "rc": false
+ },
+ {
+  "name": "Champlain Financial",
+  "domain": "champlainfinancial.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "XPND Capital",
+  "domain": "xpndcapital.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Seafort Capital",
+  "domain": "seafortcapital.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.seafortcapital.com/careers",
+  "rc": false
+ },
+ {
+  "name": "Brookfield",
+  "domain": "brookfield.com",
+  "cat": "pe_vc",
+  "boards": [
+   [
+    "workday",
+    [
+     "brookfield",
+     "5",
+     "brookfield"
+    ]
+   ]
+  ],
+  "careers": "https://www.brookfield.com/careers/life-at-brookfield",
+  "rc": false
+ },
+ {
+  "name": "Onex",
+  "domain": "onex.com",
+  "cat": "pe_vc",
+  "boards": [
+   [
+    "greenhouse",
+    "onexgeneral"
+   ]
+  ],
+  "careers": "https://www.onex.com/careers",
+  "rc": false
+ },
+ {
+  "name": "Birch Hill Equity",
+  "domain": "birchhillequity.com",
+  "cat": "pe_vc",
+  "boards": [
+   [
+    "greenhouse",
+    "birchhillequity"
+   ]
+  ],
+  "careers": "https://www.birchhillequity.com/grow-your-career/",
+  "rc": false
+ },
+ {
+  "name": "Clairvest",
+  "domain": "clairvest.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.clairvest.com/careers",
+  "rc": false
+ },
+ {
+  "name": "TorQuest",
+  "domain": "torquest.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Persistence Capital",
+  "domain": "persistencecapital.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Northleaf Capital",
+  "domain": "northleafcapital.com",
+  "cat": "pe_vc",
+  "boards": [
+   [
+    "bamboohr",
+    "northleafcapitalpartners"
+   ]
+  ],
+  "careers": "https://northleafcapitalpartners.bamboohr.com/careers",
+  "rc": false
+ },
+ {
+  "name": "HarbourVest",
+  "domain": "harbourvest.com",
+  "cat": "pe_vc",
+  "boards": [
+   [
+    "workday",
+    [
+     "harbourvest",
+     "5",
+     "HVP"
+    ]
+   ]
+  ],
+  "careers": "https://www.harbourvest.com/us/en/about-harbourvest/careers",
+  "rc": false
+ },
+ {
+  "name": "Hamilton Lane",
+  "domain": "hamiltonlane.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.hamiltonlane.com/en-us/careers",
+  "rc": false
+ },
+ {
+  "name": "StepStone",
+  "domain": "stepstonegroup.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Blackstone",
+  "domain": "blackstone.com",
+  "cat": "pe_vc",
+  "boards": [
+   [
+    "workday",
+    [
+     "blackstone",
+     "1",
+     "Blackstone_Careers"
+    ]
+   ]
+  ],
+  "careers": "https://www.blackstone.com/our-businesses/tactical-opportunities/",
+  "rc": false
+ },
+ {
+  "name": "KKR",
+  "domain": "kkr.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.kkr.com/insights/asia-credit-opportunity",
+  "rc": false
+ },
+ {
+  "name": "Inovia Capital",
+  "domain": "inovia.vc",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://careers.inovia.vc/jobs",
+  "rc": false
+ },
+ {
+  "name": "Real Ventures",
+  "domain": "realventures.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://realventures.com/careers/",
+  "rc": true
+ },
+ {
+  "name": "Panache Ventures",
+  "domain": "panache.vc",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "White Star Capital",
+  "domain": "whitestarcapital.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Amplitude Ventures",
+  "domain": "amplitudevc.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://careers.amplitudevc.com/companies",
+  "rc": false
+ },
+ {
+  "name": "Lumira Ventures",
+  "domain": "lumiraventures.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Cycle Capital",
+  "domain": "cyclecapital.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Diagram Ventures",
+  "domain": "diagram.vc",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Brightspark Ventures",
+  "domain": "brightspark.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://careers.brightspark.com/companies",
+  "rc": true
+ },
+ {
+  "name": "Luge Capital",
+  "domain": "luge.vc",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.luge.vc/contact-us/careers-confirmation/",
+  "rc": true
+ },
+ {
+  "name": "Tactico",
+  "domain": "tactico.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Front Row Ventures",
+  "domain": "frontrow.vc",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://frontrow.ventures/english-frv-talent/",
+  "rc": true
+ },
+ {
+  "name": "Anges Quebec",
+  "domain": "angesquebec.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "TVM Life Science",
+  "domain": "tvm-lifescience.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Georgian",
+  "domain": "georgian.io",
+  "cat": "pe_vc",
+  "boards": [
+   [
+    "ashby",
+    "georgian"
+   ]
+  ],
+  "careers": "https://georgian.io/careers",
+  "rc": false
+ },
+ {
+  "name": "Boreal Ventures",
+  "domain": "borealventures.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Evolem",
+  "domain": "evolem.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://evolem.com/en/a-fresco-to-celebrate-bruno-roussets-exceptional-career/",
+  "rc": false
+ },
+ {
+  "name": "Emerillon Capital",
+  "domain": "emerillon.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Idealist Capital",
+  "domain": "idealistcapital.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Fiera Capital",
+  "domain": "fieracapital.com",
+  "cat": "am",
+  "boards": [
+   [
+    "workday",
+    [
+     "fieracapital",
+     "3",
+     "Career"
+    ]
+   ]
+  ],
+  "careers": "https://fieracapital.wd3.myworkdayjobs.com/Career",
+  "rc": false
+ },
+ {
+  "name": "Jarislowsky Fraser",
+  "domain": "jflglobal.com",
+  "cat": "am",
+  "boards": [],
+  "careers": "https://jflglobal.com/en-ca/careers/",
+  "rc": false
+ },
+ {
+  "name": "Letko Brosseau",
+  "domain": "letko.com",
+  "cat": "am",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Van Berkom",
+  "domain": "vanberkom.com",
+  "cat": "am",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Montrusco Bolton",
+  "domain": "montrusco.com",
+  "cat": "am",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Triasima",
+  "domain": "triasima.com",
+  "cat": "am",
+  "boards": [],
+  "careers": "https://triasima.com/en/career/",
+  "rc": false
+ },
+ {
+  "name": "Claret Asset Management",
+  "domain": "claret.ca",
+  "cat": "am",
+  "boards": [],
+  "careers": "https://www.claret.ca/our-firm/careers/",
+  "rc": false
+ },
+ {
+  "name": "Pembroke Management",
+  "domain": "pml.ca",
+  "cat": "am",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Addenda Capital",
+  "domain": "addenda-capital.com",
+  "cat": "am",
+  "boards": [
+   [
+    "jobvite",
+    "addendacapital"
+   ],
+   [
+    "jobvite",
+    "addendacapital-fr"
+   ]
+  ],
+  "careers": "https://addendacapital.com/en/careers",
+  "rc": false
+ },
+ {
+  "name": "AlphaFixe Capital",
+  "domain": "alphafixe.com",
+  "cat": "am",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Optimum Asset Management",
+  "domain": "optimumgestion.com",
+  "cat": "am",
+  "boards": [],
+  "careers": "https://carrieres.optimumfinancier.com/postes-disponibles",
+  "rc": false
+ },
+ {
+  "name": "Formula Growth",
+  "domain": "formulagrowth.ca",
+  "cat": "am",
+  "boards": [],
+  "careers": "https://www.formulagrowth.com/investment_fund/formula-growth-global-opportunities-fund/",
+  "rc": false
+ },
+ {
+  "name": "Mackenzie Investments",
+  "domain": "mackenzieinvestments.com",
+  "cat": "am",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Connor Clark & Lunn",
+  "domain": "cclgroup.com",
+  "cat": "am",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Hexavest (Vontobel)",
+  "domain": "vontobel.com",
+  "cat": "am",
+  "boards": [
+   [
+    "workday",
+    [
+     "vontobel",
+     "3",
+     "Vontobel_External_Career"
+    ]
+   ]
+  ],
+  "careers": "https://www.vontobel.com/en/about-vontobel/careers/",
+  "rc": false
+ },
+ {
+  "name": "Natixis Investment Managers",
+  "domain": "im.natixis.com",
+  "cat": "am",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Picton Mahoney",
+  "domain": "pictonmahoney.com",
+  "cat": "am",
+  "boards": [
+   [
+    "bamboohr",
+    "pictonmahoney"
+   ]
+  ],
+  "careers": "https://global.pictoninvestments.com/en/about/careers",
+  "rc": false
+ },
+ {
+  "name": "Mawer",
+  "domain": "mawer.com",
+  "cat": "am",
+  "boards": [],
+  "careers": "https://www.mawer.com/funds/explore-funds/global-credit-opportunities-fund",
+  "rc": false
+ },
+ {
+  "name": "Beutel Goodman",
+  "domain": "beutelgoodman.com",
+  "cat": "am",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Burgundy Asset Management",
+  "domain": "burgundyasset.com",
+  "cat": "am",
+  "boards": [],
+  "careers": "https://www.burgundyasset.com/careers/",
+  "rc": false
+ },
+ {
+  "name": "Guardian Capital",
+  "domain": "guardiancapital.com",
+  "cat": "am",
+  "boards": [],
+  "careers": "https://www.guardiancapital.com/careers/",
+  "rc": false
+ },
+ {
+  "name": "PIMCO",
+  "domain": "pimco.com",
+  "cat": "am",
+  "boards": [
+   [
+    "workday",
+    [
+     "pimco",
+     "1",
+     "pimco-careers"
+    ]
+   ]
+  ],
+  "careers": "https://www.pimco.com/us/en/about-us/careers",
+  "rc": false
+ },
+ {
+  "name": "BlackRock",
+  "domain": "blackrock.com",
+  "cat": "am",
+  "boards": [],
+  "careers": "https://careers.blackrock.com",
+  "rc": false
+ },
+ {
+  "name": "State Street",
+  "domain": "statestreet.com",
+  "cat": "am",
+  "boards": [
+   [
+    "workday",
+    [
+     "statestreet",
+     "1",
+     "Global"
+    ]
+   ]
+  ],
+  "careers": "https://careers.statestreet.com/global/en",
+  "rc": false
+ },
+ {
+  "name": "iA Financial Group",
+  "domain": "ia.ca",
+  "cat": "insurer",
+  "boards": [
+   [
+    "workday",
+    [
+     "ia",
+     "3",
+     "Professional"
+    ]
+   ]
+  ],
+  "careers": "https://ia.ca/jobs",
+  "rc": false
+ },
+ {
+  "name": "Beneva",
+  "domain": "beneva.ca",
+  "cat": "insurer",
+  "boards": [],
+  "careers": "https://www.beneva.ca/en/careers",
+  "rc": false
+ },
+ {
+  "name": "Manulife",
+  "domain": "manulife.com",
+  "cat": "insurer",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Sun Life",
+  "domain": "sunlife.ca",
+  "cat": "insurer",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Intact",
+  "domain": "intactfc.com",
+  "cat": "insurer",
+  "boards": [],
+  "careers": "https://www.intactfc.com/careers",
+  "rc": false
+ },
+ {
+  "name": "Desjardins",
+  "domain": "desjardins.com",
+  "cat": "ib",
+  "boards": [
+   [
+    "workday",
+    [
+     "desjardins",
+     "10",
+     "Desjardins"
+    ]
+   ]
+  ],
+  "careers": "https://www.desjardins.com/fr/carriere/processus-recrutement.html?navigMW=pp",
+  "rc": false
+ },
+ {
+  "name": "Squarepoint",
+  "domain": "squarepoint-capital.com",
+  "cat": "hedge",
+  "boards": [],
+  "careers": "https://www.squarepoint-capital.com/open-opportunities",
+  "rc": false
+ },
+ {
+  "name": "DRW",
+  "domain": "drw.com",
+  "cat": "hedge",
+  "boards": [],
+  "careers": "https://www.drw.com/work-at-drw",
+  "rc": false
+ },
+ {
+  "name": "Hudson River Trading",
+  "domain": "hudsonrivertrading.com",
+  "cat": "hedge",
+  "boards": [],
+  "careers": "https://www.hudsonrivertrading.com/work-at-hrt/",
+  "rc": false
+ },
+ {
+  "name": "Optiver",
+  "domain": "optiver.com",
+  "cat": "hedge",
+  "boards": [],
+  "careers": "https://www.optiver.com/join-us/jobs/",
+  "rc": false
+ },
+ {
+  "name": "National Bank",
+  "domain": "bnc.ca",
+  "cat": "ib",
+  "boards": [],
+  "careers": "https://emplois.bnc.ca/fr_CA/careers/studentsandintership",
+  "rc": false
+ },
+ {
+  "name": "BMO",
+  "domain": "bmo.com",
+  "cat": "ib",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "RBC",
+  "domain": "rbc.com",
+  "cat": "ib",
+  "boards": [],
+  "careers": "https://jobs.rbc.com/ca/en/",
+  "rc": false
+ },
+ {
+  "name": "TD",
+  "domain": "td.com",
+  "cat": "ib",
+  "boards": [
+   [
+    "workday",
+    [
+     "td",
+     "3",
+     "TD_Bank_Careers"
+    ]
+   ]
+  ],
+  "careers": "https://careers.td.com/",
+  "rc": true
+ },
+ {
+  "name": "CIBC",
+  "domain": "cibc.com",
+  "cat": "ib",
+  "boards": [
+   [
+    "workday",
+    [
+     "cibc",
+     "3",
+     "search"
+    ]
+   ],
+   [
+    "workday",
+    [
+     "cibc",
+     "3",
+     "campus"
+    ]
+   ]
+  ],
+  "careers": "https://www.cibc.com/en/about-cibc/careers.html",
+  "rc": true
+ },
+ {
+  "name": "Scotiabank",
+  "domain": "scotiabank.com",
+  "cat": "ib",
+  "boards": [],
+  "careers": "https://www.scotiabank.com/careers/en/careers.html",
+  "rc": false
+ },
+ {
+  "name": "Laurentian Bank",
+  "domain": "laurentianbank.ca",
+  "cat": "ib",
+  "boards": [],
+  "careers": "https://www.laurentianbank.ca/en/about-us/careers",
+  "rc": false
+ },
+ {
+  "name": "Canaccord Genuity",
+  "domain": "canaccordgenuity.com",
+  "cat": "ib",
+  "boards": [],
+  "careers": "https://www.canaccordgenuity.com/global-careers/",
+  "rc": false
+ },
+ {
+  "name": "Raymond James",
+  "domain": "raymondjames.ca",
+  "cat": "ib",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Stifel",
+  "domain": "stifel.com",
+  "cat": "ib",
+  "boards": [],
+  "careers": "https://careers-stifel.icims.com/jobs/search?mode=job&iis=Company+Website",
+  "rc": false
+ },
+ {
+  "name": "Eight Capital",
+  "domain": "eightcapital.com",
+  "cat": "ib",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Cormark Securities",
+  "domain": "cormark.com",
+  "cat": "ib",
+  "boards": [],
+  "careers": "https://www.atb.com:443/company/careers",
+  "rc": false
+ },
+ {
+  "name": "Echelon",
+  "domain": "echelonpartners.ca",
+  "cat": "ib",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "BNP Paribas",
+  "domain": "bnpparibas.ca",
+  "cat": "ib",
+  "boards": [],
+  "careers": "https://www.bnpparibas.ca/en/work-at-bnp-paribas/",
+  "rc": false
+ },
+ {
+  "name": "Morgan Stanley",
+  "domain": "morganstanley.com",
+  "cat": "ib",
+  "boards": [],
+  "careers": "https://www.morganstanley.com/careers/career-opportunities-search",
+  "rc": false
+ },
+ {
+  "name": "Credit Agricole CIB",
+  "domain": "ca-cib.com",
+  "cat": "ib",
+  "boards": [],
+  "careers": "https://www.ca-cib.com/en/career",
+  "rc": false
+ },
+ {
+  "name": "Societe Generale",
+  "domain": "societegenerale.com",
+  "cat": "ib",
+  "boards": [],
+  "careers": "https://careers.societegenerale.com/",
+  "rc": false
+ },
+ {
+  "name": "TMX Group",
+  "domain": "tmx.com",
+  "cat": "markets",
+  "boards": [
+   [
+    "workday",
+    [
+     "tmx",
+     "3",
+     "TMX_Careers"
+    ]
+   ]
+  ],
+  "careers": "https://www.tmx.com/en/careers",
+  "rc": false
+ },
+ {
+  "name": "Deloitte",
+  "domain": "deloitte.com",
+  "cat": "advisory",
+  "boards": [],
+  "careers": "https://www.deloitte.com/us/en/legal/join-deloitte-legal-information-for-job-seekers.html?icid=bn_join-deloitte-legal-information-for-job-seekers",
+  "rc": true
+ },
+ {
+  "name": "PwC",
+  "domain": "pwc.com",
+  "cat": "advisory",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "EY",
+  "domain": "ey.com",
+  "cat": "advisory",
+  "boards": [],
+  "careers": "https://www.ey.com/en_us/careers/mba-and-advanced-degree-opportunities",
+  "rc": false
+ },
+ {
+  "name": "KPMG",
+  "domain": "kpmg.com",
+  "cat": "advisory",
+  "boards": [],
+  "careers": "https://kpmg.com/xx/en/careers/job-search.html",
+  "rc": false
+ },
+ {
+  "name": "BDO",
+  "domain": "bdo.ca",
+  "cat": "advisory",
+  "boards": [
+   [
+    "workday",
+    [
+     "bdo",
+     "3",
+     "BDO"
+    ]
+   ]
+  ],
+  "careers": "https://www.bdo.ca/careers",
+  "rc": true
+ },
+ {
+  "name": "Raymond Chabot Grant Thornton",
+  "domain": "rcgt.com",
+  "cat": "advisory",
+  "boards": [
+   [
+    "workday",
+    [
+     "rcgt",
+     "3",
+     "External"
+    ]
+   ]
+  ],
+  "careers": "https://www.rcgt.com/fr/carrieres/professionnels/professions-en-demande/",
+  "rc": false
+ },
+ {
+  "name": "MNP",
+  "domain": "mnp.ca",
+  "cat": "advisory",
+  "boards": [],
+  "careers": "https://www.mnp.ca/en/careers",
+  "rc": false
+ },
+ {
+  "name": "Richter",
+  "domain": "richter.ca",
+  "cat": "advisory",
+  "boards": [],
+  "careers": "https://www.richter.ca/careers/",
+  "rc": true
+ },
+ {
+  "name": "Alvarez & Marsal",
+  "domain": "alvarezandmarsal.com",
+  "cat": "advisory",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Houlihan Lokey",
+  "domain": "hl.com",
+  "cat": "advisory",
+  "boards": [
+   [
+    "workday",
+    [
+     "hl",
+     "1",
+     "Campus"
+    ]
+   ],
+   [
+    "workday",
+    [
+     "hl",
+     "1",
+     "Lateral"
+    ]
+   ],
+   [
+    "workday",
+    [
+     "hl",
+     "1",
+     "Corporate"
+    ]
+   ]
+  ],
+  "careers": "https://hl.com/careers/",
+  "rc": false
+ },
+ {
+  "name": "Lazard",
+  "domain": "lazard.com",
+  "cat": "advisory",
+  "boards": [],
+  "careers": "https://www.lazard.com/careers/inclusion/",
+  "rc": false
+ },
+ {
+  "name": "Evercore",
+  "domain": "evercore.com",
+  "cat": "advisory",
+  "boards": [],
+  "careers": "https://www.evercore.com/careers/",
+  "rc": false
+ },
+ {
+  "name": "PJT Partners",
+  "domain": "pjtpartners.com",
+  "cat": "advisory",
+  "boards": [
+   [
+    "workday",
+    [
+     "pjtpartners",
+     "1",
+     "Careers"
+    ]
+   ],
+   [
+    "workday",
+    [
+     "pjtpartners",
+     "1",
+     "Students"
+    ]
+   ],
+   [
+    "workday",
+    [
+     "pjtpartners",
+     "1",
+     "Studentevents"
+    ]
+   ]
+  ],
+  "careers": "https://www.pjtpartners.com/careers",
+  "rc": false
+ },
+ {
+  "name": "Moelis",
+  "domain": "moelis.com",
+  "cat": "advisory",
+  "boards": [
+   [
+    "workday",
+    [
+     "moelis",
+     "1",
+     "Experienced-Hires"
+    ]
+   ]
+  ],
+  "careers": "https://www.moelis.com/careers/explore-opportunities/?tab=students-and-graduates",
+  "rc": false
+ },
+ {
+  "name": "Rothschild",
+  "domain": "rothschildandco.com",
+  "cat": "advisory",
+  "boards": [],
+  "careers": "https://www.rothschildandco.com/en/careers/",
+  "rc": false
+ },
+ {
+  "name": "Couche-Tard",
+  "domain": "couche-tard.com",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "CGI",
+  "domain": "cgi.com",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": "https://www.cgi.com/fr/carrieres",
+  "rc": false
+ },
+ {
+  "name": "CAE",
+  "domain": "cae.com",
+  "cat": "corpdev",
+  "boards": [
+   [
+    "workday",
+    [
+     "cae",
+     "3",
+     "career"
+    ]
+   ],
+   [
+    "workday",
+    [
+     "cae",
+     "3",
+     "CaeCareer2"
+    ]
+   ]
+  ],
+  "careers": "https://www.cae.com/carrieres",
+  "rc": false
+ },
+ {
+  "name": "WSP",
+  "domain": "wsp.com",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "BRP",
+  "domain": "brp.com",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": "https://www.brp.com/en/careers.html",
+  "rc": false
+ },
+ {
+  "name": "Saputo",
+  "domain": "saputo.com",
+  "cat": "corpdev",
+  "boards": [
+   [
+    "workday",
+    [
+     "saputo",
+     "5",
+     "Saputo_External_Careers"
+    ]
+   ]
+  ],
+  "careers": "https://saputo.wd5.myworkdayjobs.com/en-US/Saputo_External_Careers?locationCountry=bc33aa3152ec42d4995f4791a106ed09&amp;utm_source=saputo-com&amp;utm_medium=internal-website&amp;utm_campaign=header-en-find-job-btn-usa",
+  "rc": false
+ },
+ {
+  "name": "Metro",
+  "domain": "metro.ca",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": "https://talent.metro.ca/fr",
+  "rc": false
+ },
+ {
+  "name": "Dollarama",
+  "domain": "dollarama.com",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": "https://www.dollarama.com/en-CA/corp/careers",
+  "rc": false
+ },
+ {
+  "name": "Air Canada",
+  "domain": "aircanada.com",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": "https://careers.aircanada.com/ca/en",
+  "rc": false
+ },
+ {
+  "name": "CN",
+  "domain": "cn.ca",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": "https://careers.cn.ca/search/?q=&locationsearch=&locale=fr_CA&searchResultView=LIST",
+  "rc": false
+ },
+ {
+  "name": "Bombardier",
+  "domain": "bombardier.com",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": "https://jobs.bombardier.com/?locale=en_CA",
+  "rc": false
+ },
+ {
+  "name": "Lightspeed",
+  "domain": "lightspeedhq.com",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": "https://www.lightspeedhq.com/careers/",
+  "rc": false
+ },
+ {
+  "name": "Nuvei",
+  "domain": "nuvei.com",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": "https://www.nuvei.com/careers",
+  "rc": false
+ },
+ {
+  "name": "Hydro-Quebec",
+  "domain": "hydroquebec.com",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": "https://emploi.hydroquebec.com/",
+  "rc": false
+ },
+ {
+  "name": "Gildan",
+  "domain": "gildancorp.com",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": "https://gildancorp.com/en/careers/",
+  "rc": false
+ },
+ {
+  "name": "Stella-Jones",
+  "domain": "stella-jones.com",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": "https://www.stella-jones.com/en-CA/careers",
+  "rc": false
+ },
+ {
+  "name": "Boralex",
+  "domain": "boralex.com",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": "https://www.boralex.com/fr/nous-rejoindre",
+  "rc": false
+ },
+ {
+  "name": "Innergex",
+  "domain": "innergex.com",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": "https://www.innergex.com/en/careers",
+  "rc": false
+ },
+ {
+  "name": "Pomerleau",
+  "domain": "pomerleau.ca",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": "https://jobs.pomerleau.ca/en_US/Jobs",
+  "rc": false
+ },
+ {
+  "name": "Cogeco",
+  "domain": "corpo.cogeco.com",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": "https://corpo.cogeco.com/careers",
+  "rc": false
+ },
+ {
+  "name": "Quebecor",
+  "domain": "quebecor.com",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": "https://www.quebecor.com/fr/nous-joindre",
+  "rc": false
+ },
+ {
+  "name": "TFI International",
+  "domain": "tfiintl.com",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Aritzia",
+  "domain": "aritzia.com",
+  "cat": "corpdev",
+  "boards": [],
+  "careers": null,
+  "rc": false
+ },
+ {
+  "name": "Advanceo Capital",
+  "domain": "advanceo.vc",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Citadelle Capital",
+  "domain": "citadellecapital.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "David Fortier",
+  "domain": "dissan.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.dissan.com/en/career-and-culture/",
+  "rc": true
+ },
+ {
+  "name": "Holt Xchange",
+  "domain": "holtxchange.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://holtxchange.com/jobs/",
+  "rc": true
+ },
+ {
+  "name": "Jolt Capital",
+  "domain": "jolt-capital.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.jolt-capital.com/news/pierre-leonard-rouzaud-joins-as-director-of-strategic-projects",
+  "rc": true
+ },
+ {
+  "name": "Amiral Ventures",
+  "domain": "amiral.vc",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Two Small Fish Ventures",
+  "domain": "twosmallfish.vc",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://twosmallfish.vc/the-five-layers-of-ai-where-are-the-next-opportunities",
+  "rc": true
+ },
+ {
+  "name": "Ecotierra Capital",
+  "domain": "ecotierracapital.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Rosalie Simard",
+  "domain": "2degres.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://2degres.com/nous-joindre/",
+  "rc": true
+ },
+ {
+  "name": "Graphite Ventures",
+  "domain": "graphitevc.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Rally Assets",
+  "domain": "rallyassets.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://rallyassets.com/about/team/jobs/",
+  "rc": true
+ },
+ {
+  "name": "Amplify Capital",
+  "domain": "amplifycapital.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Financement Agricole Canada",
+  "domain": "fcc-fac.ca",
+  "cat": "pe_vc",
+  "boards": [
+   [
+    "workday",
+    [
+     "fccfac",
+     "3",
+     "careers-carrieres"
+    ]
+   ]
+  ],
+  "careers": "https://www.fcc-fac.ca/en/about-fcc/careers",
+  "rc": true
+ },
+ {
+  "name": "Sylvain Carle",
+  "domain": "metanoia.vc",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.linkedin.com/company/linkedin/jobs",
+  "rc": true
+ },
+ {
+  "name": "Mitsubishi HC Capital Canada",
+  "domain": "mhccna.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.mhccna.com/en-us/career-opportunities",
+  "rc": true
+ },
+ {
+  "name": "Geneviève Nadeau – CFO Montréal",
+  "domain": "cfomontreal.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.cfomontreal.com/emplois",
+  "rc": true
+ },
+ {
+  "name": "CTS – Catalyseur Technologie Santé",
+  "domain": "ctssante.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Startup en Résidence",
+  "domain": "startup-residence.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Pender & Howe",
+  "domain": "penderhowe.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://penderhowe.com/en/insights/hiring-for-every-stage-leadership-and-talent-in-junior-and-mid-tier-mining/",
+  "rc": true
+ },
+ {
+  "name": "BKR CAPITAL",
+  "domain": "bkrcapital.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.bkrcapital.ca/about/careers",
+  "rc": true
+ },
+ {
+  "name": "Propulsion Québec",
+  "domain": "propulsionquebec.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://propulsionquebec.com/en/careers",
+  "rc": true
+ },
+ {
+  "name": "asterX | Québecor",
+  "domain": "asterx.vc",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "BDG & associés",
+  "domain": "cfbdg.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Emend Vision Fund",
+  "domain": "emendfund.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Zù",
+  "domain": "zumtl.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://zumtl.com/en/careers/",
+  "rc": true
+ },
+ {
+  "name": "Cycle Momentum",
+  "domain": "cyclemomentum.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Sodec",
+  "domain": "sodec.gouv.qc.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://sodec.gouv.qc.ca/carriere/",
+  "rc": true
+ },
+ {
+  "name": "Clot Avocats",
+  "domain": "clotavocats.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Groupe FTM",
+  "domain": "groupftm.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://groupftm.com/careers/",
+  "rc": true
+ },
+ {
+  "name": "BIOQuébec",
+  "domain": "bioquebec.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://bioquebec.com/nous-joindre/",
+  "rc": true
+ },
+ {
+  "name": "Agetech Capital",
+  "domain": "agetechcapital.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Capricorn Partners",
+  "domain": "capricorn.be",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://capricorn.be/en/news_items/capricorn-partners-joins-90-million-highlife-round-to-start-its-pivotal-study-and-accelerate-its-commercial-expansion",
+  "rc": true
+ },
+ {
+  "name": "Propulia Capital Inc.",
+  "domain": "propuliacapital.ai",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "i4 Capital",
+  "domain": "i4capital.vc",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://i4capital.vc/join-us/",
+  "rc": true
+ },
+ {
+  "name": "Bell Ventures",
+  "domain": "bce.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://jobs.bell.ca/ca/en",
+  "rc": true
+ },
+ {
+  "name": "W Investment",
+  "domain": "winvestments.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://winvestments.ca/averna-and-spherea-join-forces-to-build-a-leading-test-quality-engineering-systems-integration-organization/",
+  "rc": true
+ },
+ {
+  "name": "Sean Languedoc (Outforce)",
+  "domain": "outforce.ai",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://cdn.prod.website-files.com/64e8d1ca8b5b7b48829140c9/css/global-talent-accelerator.webflow.shared.ec55e9e8b.css",
+  "rc": true
+ },
+ {
+  "name": "Theodorus",
+  "domain": "theodorus.be",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "EgR",
+  "domain": "egr.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.egr.ca/carrieres/",
+  "rc": true
+ },
+ {
+  "name": "Fonds Climat du Grand Montréal",
+  "domain": "fondsclimatmontreal.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://fondsclimatmontreal.com/carriere/",
+  "rc": true
+ },
+ {
+  "name": "Simon Lafrance",
+  "domain": "trxinvest.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Pender Ventures",
+  "domain": "penderventures.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.penderventures.com/join-us-at-gpfest-2024-a-conference-for-venture-investors/",
+  "rc": true
+ },
+ {
+  "name": "Blue Vision Capital",
+  "domain": "bluevisioncapital.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Triptyq Capital",
+  "domain": "triptyq.vc",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Accelia Capital",
+  "domain": "accelia.vc",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://accelia.vc/carrieres/",
+  "rc": true
+ },
+ {
+  "name": "Valeurs mobilières TD",
+  "domain": "tdsecurities.com",
+  "cat": "pe_vc",
+  "boards": [
+   [
+    "workday",
+    [
+     "td",
+     "3",
+     "TD_Bank_Careers"
+    ]
+   ]
+  ],
+  "careers": "https://www.tdsecurities.com/ca/en/careers",
+  "rc": true
+ },
+ {
+  "name": "Silicon Valley Bank",
+  "domain": "svb.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.svb.com/equal-credit-opportunity-act-disclosures/",
+  "rc": true
+ },
+ {
+  "name": "Québec Tech",
+  "domain": "quebectech.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Écotech Québec",
+  "domain": "ecotechquebec.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.ecotechquebec.com/nous-joindre/",
+  "rc": true
+ },
+ {
+  "name": "Holt Accelerator",
+  "domain": "holtaccelerator.ai",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Boreal Ventures",
+  "domain": "boreal.vc",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "CVCA",
+  "domain": "cvca.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.cvca.ca/announcement/harbourvest-mubadala-brookfield-northleaf-and-sagard-leaders-to-join-canadian-founders-on-stage-at-canadian-global-growth-forum/",
+  "rc": true
+ },
+ {
+  "name": "Natural Products Canada (NPC) Ventures",
+  "domain": "npcventures.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "CEOS Family Office",
+  "domain": "ceosfamilyoffice.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Annie Thabet (Celtis Capital)",
+  "domain": "celtiscapital.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "InnoHub La Centrale",
+  "domain": "innohublacentrale.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Sectoral Asset Management Inc",
+  "domain": "sectoral.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.sectoral.com/en/careers/",
+  "rc": true
+ },
+ {
+  "name": "Patrick Michetti (EDC)",
+  "domain": "edc.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.edc.ca/en/about-us/careers.html",
+  "rc": true
+ },
+ {
+  "name": "AFFQ",
+  "domain": "affq.org",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.affq.org/nouvelles-et-ressources/offre-demploi-coordonnatrice-administration-et-op%C3%A9rations",
+  "rc": true
+ },
+ {
+  "name": "Mouvement des accélérateurs d’innovation du Québec",
+  "domain": "mainqc.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Highline Beta",
+  "domain": "highlinebeta.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Espace CDPQ",
+  "domain": "espacecdpq.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Innovobot",
+  "domain": "innovobot.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Accuracy",
+  "domain": "accuracy.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.accuracy.com/careers/joining-accuracy/",
+  "rc": true
+ },
+ {
+  "name": "PME MTL Centre-Ville",
+  "domain": "pmemtl.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://pmemtl.com/blogue/cinq-trucs-pour-devenir-un-aimant-a-talents",
+  "rc": true
+ },
+ {
+  "name": "DEV Vaudreuil Soulanges",
+  "domain": "developpementvs.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://developpementvs.com/carrieres/",
+  "rc": true
+ },
+ {
+  "name": "Club des Intrapreneurs",
+  "domain": "clubintrapreneurs.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "La Capitale Assurance et services financiers",
+  "domain": "lacapitale.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.beneva.ca/en/careers",
+  "rc": true
+ },
+ {
+  "name": "ACET",
+  "domain": "acet.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Pascale Rondeau (Assurart)",
+  "domain": "assurart.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.assurart.com/careers",
+  "rc": true
+ },
+ {
+  "name": "Crédit Mutuel Equity",
+  "domain": "creditmutuel-equity.eu",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Patrick Dussault (Namakor)",
+  "domain": "namakor.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Kilmer Group",
+  "domain": "kilmergroup.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://jobs.lighthousehiring.ai/kilmer-group/eac8928f-a86d-4f3b-97f5-d157727a3346",
+  "rc": true
+ },
+ {
+  "name": "Fonds Ecofuel",
+  "domain": "fondsecofuel.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://fondsecofuel.ca/carrieres/",
+  "rc": true
+ },
+ {
+  "name": "Développement économique de l’agglomération de Longueuil (DEL)",
+  "domain": "delagglo.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.delagglo.ca/styles.css?v=yqzz-n9B6JoINvqrC1uMrkPQBJhgNGDxZ1uHw930370",
+  "rc": true
+ },
+ {
+  "name": "Fonds d’investissement de la culture et des communications",
+  "domain": "ficc.qc.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Fonds Innovexport",
+  "domain": "fondsinnovexport.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://fondsinnovexport.com/nous-joindre/",
+  "rc": true
+ },
+ {
+  "name": "Yaletown Partners",
+  "domain": "yaletown.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "White Star Capital Canada Inc.",
+  "domain": "whitestarvc.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Tandemlaunch Inc.",
+  "domain": "tandemlaunch.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.tandemlaunch.com/careers",
+  "rc": true
+ },
+ {
+  "name": "Tandem Expansion Management inc.",
+  "domain": "tandemexpansion.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Sherbrooke Innopole",
+  "domain": "sherbrooke-innopole.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Sanderling Ventures VII (Canada), LP",
+  "domain": "sanderling.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "RBC Marchés des Capitaux",
+  "domain": "rbccm.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.rbccm.com/en/careers",
+  "rc": true
+ },
+ {
+  "name": "Le CAMP – Québec international",
+  "domain": "lecampquebec.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://lecampquebec.com/emplois",
+  "rc": true
+ },
+ {
+  "name": "Novacap Management Inc.",
+  "domain": "novacapcorp.com",
+  "cat": "pe_vc",
+  "boards": [
+   [
+    "rippling",
+    "novacapexpress"
+   ],
+   [
+    "rippling",
+    "novacapexprimez"
+   ]
+  ],
+  "careers": "https://novacapcorp.com/careers/",
+  "rc": true
+ },
+ {
+  "name": "MacKinnon, Bennett & Co",
+  "domain": "mkbandco.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.mkbandco.com/fr/carrieres/",
+  "rc": true
+ },
+ {
+  "name": "Inno-centre",
+  "domain": "inno-centre.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.inno-centre.com/actualites/consigne-elargie-transformez-cette-obligation-en-opportunite-doptimisation",
+  "rc": true
+ },
+ {
+  "name": "Emmanuel Giner (GPL Assurance Inc.)",
+  "domain": "gplassurance.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://jobs.ajg.com/ajg-home",
+  "rc": true
+ },
+ {
+  "name": "Gestion Univalor",
+  "domain": "univalor.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.axelys.ca/careers/",
+  "rc": true
+ },
+ {
+  "name": "Axelys",
+  "domain": "axelys.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.axelys.ca/careers/",
+  "rc": true
+ },
+ {
+  "name": "Gestion Fonds XPND s.e.c.",
+  "domain": "xpnd.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Deloitte",
+  "domain": "deloitte.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.deloitte.com/ca/en/careers/explore-your-fit/students/campus-programs-and-events.html?icid=top_campus-programs-and-events",
+  "rc": true
+ },
+ {
+  "name": "Finalta Capital",
+  "domain": "finaltacapital.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "EnerTech Capital",
+  "domain": "enertechcapital.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Desjardins Capital",
+  "domain": "can01.safelinks.protection.outlook.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Life Sciences Manager (Canada) Inc.",
+  "domain": "ctisciences.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Clearspring Capital Partners",
+  "domain": "cscap.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Capital Financière agricole Inc",
+  "domain": "cfai.qc.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "La Caisse (Caisse de dépôt et placement du Québec)",
+  "domain": "lacaisse.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": "https://www.lacaisse.com/fr/carrieres",
+  "rc": true
+ },
+ {
+  "name": "Banque Scotia – Roynat Capital",
+  "domain": "roynat.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "AmorChem II Ventures Inc.",
+  "domain": "amorchem.com",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ },
+ {
+  "name": "Aligo Innovation",
+  "domain": "aligo.ca",
+  "cat": "pe_vc",
+  "boards": [],
+  "careers": null,
+  "rc": true
+ }
+]

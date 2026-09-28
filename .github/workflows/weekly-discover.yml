@@ -1,0 +1,35 @@
+name: Weekly firm discovery
+
+on:
+  schedule:
+    - cron: "0 7 * * 1"   # Mondays, before the daily pull
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-pull
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Refresh the Reseau Capital directory
+        run: python rc_directory.py
+      - name: Find every firm's job board
+        run: python discover.py && python clean_boards.py
+      - name: Save the board list
+        run: |
+          git config user.name  "position-book-bot"
+          git config user.email "position-book-bot@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || git commit -m "Board discovery $(date -u +%F)"
+          git push
