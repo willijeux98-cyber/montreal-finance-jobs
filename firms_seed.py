@@ -10,7 +10,7 @@ SEED = [
     ("Investissement Quebec", "investquebec.com", "pension"),
     ("BDC", "bdc.ca", "pe_vc"),
     ("Teralys Capital", "teralyscapital.com", "pe_vc"),
-    ("Power Corporation", "powercorporation.com", "pension"),
+    ("Power Corporation", "powercorporation.com", "pe_vc"),
     ("Sagard", "sagard.com", "pe_vc"),
     ("Power Sustainable", "powersustainable.com", "pe_vc"),
     ("Claridge", "claridge.ca", "pe_vc"),

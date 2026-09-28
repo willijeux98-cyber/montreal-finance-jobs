@@ -3,7 +3,7 @@ Montreal high-finance job desk.
 
 Pulls postings straight from each employer's hiring system (never from job
 sites), keeps the Montreal buy-side / investment banking / markets seats,
-ranks them against William's resume, and writes docs/index.html.
+ranks them against the owner's profile, and writes docs/index.html.
 
 Run:  python fetch.py
 """
@@ -83,7 +83,8 @@ STRONG = [
     (r"sales (&|and) trading|trading|trader|négoci|execution|exécution", "trading"),
     (r"derivatives|dérivés|fixed income|revenus? fixes?|rates|taux|structured|structurés|"
      r"securiti[sz]ation|titrisation", "markets"),
-    (r"portfolio manag|gestion de portefeuille|gestionnaire de portefeuille|asset allocation|"
+    (r"portfolio manag|gestion de portefeuille|gestionnaire de portefeuille|asset allocation|march[ée]s liquides|"
+     r"liquid markets|portfolio analyst|analyste de portefeuille|"
      r"répartition de l.actif|total fund|public markets|marchés publics|multi-asset|multiactifs",
      "portfolio management"),
     (r"capital markets|marchés des capitaux|global markets|marchés mondiaux", "capital markets"),
@@ -123,30 +124,30 @@ CAT_WORDS = {
     "corpdev": "a Montreal company's M&A team",
 }
 ANGLE = {
-    "fund investing": "Lead with CFA Level I, fund mechanics (GP/LP, NAV, DPI/TVPI, the J-curve) and the $20B merger diligence.",
-    "corporate development": "Buy-side M&A from inside a company: lead with the $20B merger and your integration modelling.",
+    "fund investing": "Lead with CFA Level I, fund mechanics (GP/LP, NAV, DPI/TVPI, the J-curve) and the large-merger diligence.",
+    "corporate development": "Buy-side M&A from inside a company: lead with the large merger and your integration modelling.",
     "deal advisory": "Transaction services and valuation are the classic bridge into PE. Lead with the merger diligence.",
-    "private equity": "Lead with the $20B merger diligence and your break-even and cost-volume models.",
-    "venture / growth": "Lead with the $20B merger diligence and the fact you've built and shipped products at Manulife.",
-    "investment banking": "Lead with the $20B merger diligence. That's M&A work, and bankers will recognize it.",
+    "private equity": "Lead with the large-merger diligence and your break-even and cost-volume models.",
+    "venture / growth": "Lead with the large-merger diligence and the fact you've built and shipped products in your current role.",
+    "investment banking": "Lead with the large-merger diligence. That's M&A work, and bankers will recognize it.",
     "private credit": "Lead with the modelling and your insurance background. Credit is about pricing downside.",
     "infrastructure investing": "Lead with the merger diligence and the cost modelling. Infra underwriting rewards operational detail.",
     "real estate investing": "Lead with break-even and scenario modelling. Real estate underwriting is exactly that.",
     "natural resources investing": "Lead with the modelling and diligence. The sector is learnable, the seat is the point.",
     "research": "Come in with a stock or a sector you can actually talk about. Research seats test that.",
-    "trading": "Lead with Bocconi derivatives, CFA Level I and your Python and SQL.",
-    "markets": "Lead with Bocconi derivatives and capital markets coursework plus CFA Level I.",
-    "portfolio management": "Lead with CFA Level I, Bocconi investment management and your data skills.",
-    "capital markets": "Lead with Bocconi capital markets, CFA Level I, and that you're fully bilingual.",
-    "investments": "Lead with CFA Level I and the $20B merger diligence.",
+    "trading": "Lead with derivatives, CFA Level I and your Python and SQL.",
+    "markets": "Lead with derivatives and capital markets coursework plus CFA Level I.",
+    "portfolio management": "Lead with CFA Level I, investment management and your data skills.",
+    "capital markets": "Lead with capital markets, CFA Level I, and that you're fully bilingual.",
+    "investments": "Lead with CFA Level I and the large-merger diligence.",
     "quant": "Only if you're ready for a stats and coding test. Your Python is real, the bar is high.",
     "valuation": "Lead with your break-even and scenario modelling and CFA Level I.",
     "markets operations": "A real way onto the markets side. Lead with your process work and CFA Level I.",
     "performance measurement": "Measuring how portfolios actually did. Lead with your data work and CFA Level I.",
     "investment risk": "Lead with the modelling and your insurance background.",
-    "due diligence": "This is literally what you did at Beneva. Say so.",
-    "strategy": "Same function as your Beneva seat, at a finance shop. Use it as the way in.",
-    "analytics": "Your Manulife skill set at a finance shop. A foot in the door, not an investment seat.",
+    "due diligence": "This is literally what you did at your M&A role. Say so.",
+    "strategy": "Same function as your your M&A role seat, at a finance shop. Use it as the way in.",
+    "analytics": "Your your current role skill set at a finance shop. A foot in the door, not an investment seat.",
     "treasury": "Corporate treasury. Finance-heavy, not deal work.",
     None: "A foot in the door at a finance shop. Not an investment seat.",
 }
@@ -175,7 +176,8 @@ LVL_EXEC = re.compile(r"director|directeur|directrice|vice[- ]president|\bVP\b|h
                       r"chief|\bchef\b|senior director", re.I)
 LVL_MGR = re.compile(r"manager|gestionnaire|\blead\b|principal\b|senior advisor|conseill(er|ère)\(?-?è?r?e?\)? "
                      r"(principal|senior|sénior)|premier\(?-?è?r?e?\)? conseill|expert", re.I)
-OPS = re.compile(r"operations|opérations|administration|settlement|règlement|control\b|contrôle|"
+OPS = re.compile(r"operations|opérations|administration|settlement|règlement|control\b|contrôle|oversight|"
+                 r"autoris|adjudicat|"
                  r"servicing|integration|intégration", re.I)
 LVL_ADV = re.compile(r"advisor|conseill|specialist|spécialiste", re.I)
 
@@ -184,6 +186,8 @@ def level_of(t):
     if STUDENT.search(t):
         return "student", -4
     up = LEVEL_UP.search(t)
+    if up and (LVL_EXEC.search(t) or (LVL_MGR.search(t) and not LEVEL_SENIOR_ANALYST.search(t)) or re.search(r"senior associate|associ[ée]\(?e?\)? principal", t, re.I)):
+        return "mixed", -1
     if LEVEL_SENIOR_ANALYST.search(t) and not re.search(r"analyst\s*/|/\s*senior", t, re.I):
         return "senior analyst", 0
     if up:
@@ -230,6 +234,15 @@ def score(job):
         s -= 2; sig = "markets operations"  # investment word, but an operations seat
     if TEMP.search(t):
         s -= 1
+    a = job.get("age")
+    job["fresh"] = ""
+    if a is not None:
+        if a <= 7:
+            s += 1
+        elif a > 180:
+            s -= 2; job["fresh"] = "evergreen"   # posted for months or years: a resume pipeline, not a live seat
+        elif a > 45 and a != 31:                 # Workday only ever says "30+" (stored as 31): don't penalise that
+            s -= 1
     if not job["mtl_explicit"]:
         s -= 1
     s = max(0, min(10, s))
@@ -244,6 +257,7 @@ def score(job):
 def why(job, kind, sig, level):
     lvl = {"fit": "At your level", "senior analyst": "Senior-analyst level, in reach at two years in",
            "advisor": "Advisor title, usually a step above analyst",
+           "mixed": "Posted at two levels, and you'd be the junior one",
            "senior": "Titled above you, so it's a stretch", "exec": "Well above your level",
            "student": "Student / intern seat, below where you are",
            "unclear": "Level isn't clear from the title"}[level]
@@ -251,6 +265,8 @@ def why(job, kind, sig, level):
     extra = " It's a fixed-term contract." if TEMP.search(job["t"]) else ""
     if not job["mtl_explicit"]:
         extra += " Posted across several cities, so check Montreal is one of them."
+    if job.get("fresh") == "evergreen":
+        extra += " It has been posted for months: likely an always-open pipeline rather than a live seat."
     return f"{lvl}: {what}.{extra} {ANGLE.get(sig, ANGLE[None])}"
 
 
@@ -269,7 +285,7 @@ OTHER = re.compile(r"toronto|vancouver|calgary|edmonton|ottawa|winnipeg|halifax|
 
 
 def keep_location(j):
-    loc = j["l"] or ""
+    loc = "" if (j["l"] or "").startswith("Location not stated") else (j["l"] or "")
     if MTL.search(loc) or MTL.search(j["t"]):
         j["mtl_explicit"] = True
         return True
@@ -312,7 +328,9 @@ def main():
             continue
         if not keep_location(j):
             continue
-        key = (j["c"], j["t"].lower(), j["u"])
+        if not re.match(r"https?://", j["u"] or "", re.I):
+            continue
+        key = j["u"].split("?")[0].rstrip("/")
         if key in dedupe:
             continue
         dedupe.add(key)
@@ -330,7 +348,7 @@ def main():
     for j in kept:
         seen.setdefault(j["u"], TODAY.isoformat())
         fs = dt.date.fromisoformat(seen[j["u"]])
-        j["new"] = fs == TODAY and baseline < TODAY
+        j["new"] = fs == TODAY and baseline < TODAY and (j["age"] is None or j["age"] <= 2)
         if j["age"] is None:
             j["age"] = (TODAY - fs).days if not first_run else None
     # forget postings gone for 60+ days so the file stays small
@@ -342,11 +360,24 @@ def main():
     kept.sort(key=lambda j: (-j["s"], j["age"] if j["age"] is not None else 999))
     jobs = [dict(s=j["s"], c=j["c"], cat=j["cat"], t=j["t"], l=j["l"], u=j["u"],
                  a=j["age"], n=j["new"], m=j["mtl_explicit"], w=j["why"]) for j in kept]
-    meta = dict(run=TODAY.strftime("%a %d %b %Y"), boards=len(SOURCES) - len(errors),
+    if len(errors) > len(SOURCES) / 3:
+        raise SystemExit(f"{len(errors)} of {len(SOURCES)} boards failed; keeping yesterday's page. {errors[:10]}")
+    # boards that failed today: keep yesterday's rows for them so the book doesn't flicker
+    failed = {e.split(":")[0] for e in errors}
+    if failed and os.path.exists(OUT):
+        try:
+            prev = open(OUT, encoding="utf-8").read()
+            i = prev.index("const DATA = ") + len("const DATA = ")
+            old_jobs = json.loads(prev[i:prev.index(";\nconst JOBS")].replace("\\u003c", "<"))["jobs"]
+            have = {j["u"] for j in jobs}
+            jobs += [dict(j, n=False) for j in old_jobs if j["c"] in failed and j["u"] not in have]
+        except Exception as e:
+            print("could not carry over yesterday's rows:", e)
+    meta = dict(run=TODAY.strftime("%a %d %b %Y"), iso=TODAY.isoformat(), boards=len(SOURCES) - len(errors),
                 scanned=scanned, errors=errors)
 
     page = open(TEMPLATE, encoding="utf-8").read()
-    payload = json.dumps({"meta": meta, "jobs": jobs}, ensure_ascii=True).replace("</", "<\\/")
+    payload = json.dumps({"meta": meta, "jobs": jobs}, ensure_ascii=True).replace("<", "\\u003c")
     page = page.replace("/*__DATA__*/null", payload)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     open(OUT, "w", encoding="utf-8").write(page)

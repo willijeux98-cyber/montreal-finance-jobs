@@ -1552,12 +1552,12 @@
   "rc": true
  },
  {
-  "name": "David Fortier",
+  "name": "Dissan",
   "domain": "dissan.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": "https://www.dissan.com/en/career-and-culture/",
-  "rc": true
+  "rc": false
  },
  {
   "name": "Holt Xchange",
@@ -1600,12 +1600,12 @@
   "rc": true
  },
  {
-  "name": "Rosalie Simard",
+  "name": "2Degres",
   "domain": "2degres.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": "https://2degres.com/nous-joindre/",
-  "rc": true
+  "rc": false
  },
  {
   "name": "Graphite Ventures",
@@ -1649,12 +1649,12 @@
   "rc": true
  },
  {
-  "name": "Sylvain Carle",
+  "name": "Metanoia",
   "domain": "metanoia.vc",
   "cat": "pe_vc",
   "boards": [],
   "careers": "https://www.linkedin.com/company/linkedin/jobs",
-  "rc": true
+  "rc": false
  },
  {
   "name": "Mitsubishi HC Capital Canada",
@@ -1681,12 +1681,12 @@
   "rc": true
  },
  {
-  "name": "Startup en Résidence",
+  "name": "Startup-Residence",
   "domain": "startup-residence.ca",
   "cat": "pe_vc",
   "boards": [],
   "careers": null,
-  "rc": true
+  "rc": false
  },
  {
   "name": "Pender & Howe",
@@ -1705,12 +1705,12 @@
   "rc": true
  },
  {
-  "name": "Propulsion Québec",
+  "name": "Propulsionquebec",
   "domain": "propulsionquebec.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": "https://propulsionquebec.com/en/careers",
-  "rc": true
+  "rc": false
  },
  {
   "name": "asterX | Québecor",
@@ -1721,12 +1721,12 @@
   "rc": true
  },
  {
-  "name": "BDG & associés",
+  "name": "Cfbdg",
   "domain": "cfbdg.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": null,
-  "rc": true
+  "rc": false
  },
  {
   "name": "Emend Vision Fund",
@@ -1737,12 +1737,12 @@
   "rc": true
  },
  {
-  "name": "Zù",
+  "name": "Zumtl",
   "domain": "zumtl.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": "https://zumtl.com/en/careers/",
-  "rc": true
+  "rc": false
  },
  {
   "name": "Cycle Momentum",
@@ -1777,12 +1777,12 @@
   "rc": true
  },
  {
-  "name": "BIOQuébec",
+  "name": "Bioquebec",
   "domain": "bioquebec.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": "https://bioquebec.com/nous-joindre/",
-  "rc": true
+  "rc": false
  },
  {
   "name": "Agetech Capital",
@@ -1865,12 +1865,12 @@
   "rc": true
  },
  {
-  "name": "Simon Lafrance",
+  "name": "Trxinvest",
   "domain": "trxinvest.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": null,
-  "rc": true
+  "rc": false
  },
  {
   "name": "Pender Ventures",
@@ -1905,7 +1905,7 @@
   "rc": true
  },
  {
-  "name": "Valeurs mobilières TD",
+  "name": "Tdsecurities",
   "domain": "tdsecurities.com",
   "cat": "pe_vc",
   "boards": [
@@ -1919,7 +1919,7 @@
    ]
   ],
   "careers": "https://www.tdsecurities.com/ca/en/careers",
-  "rc": true
+  "rc": false
  },
  {
   "name": "Silicon Valley Bank",
@@ -1930,20 +1930,20 @@
   "rc": true
  },
  {
-  "name": "Québec Tech",
+  "name": "Quebectech",
   "domain": "quebectech.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": null,
-  "rc": true
+  "rc": false
  },
  {
-  "name": "Écotech Québec",
+  "name": "Ecotechquebec",
   "domain": "ecotechquebec.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": "https://www.ecotechquebec.com/nous-joindre/",
-  "rc": true
+  "rc": false
  },
  {
   "name": "Holt Accelerator",
@@ -2074,20 +2074,20 @@
   "rc": true
  },
  {
-  "name": "DEV Vaudreuil Soulanges",
+  "name": "Developpementvs",
   "domain": "developpementvs.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": "https://developpementvs.com/carrieres/",
-  "rc": true
+  "rc": false
  },
  {
-  "name": "Club des Intrapreneurs",
+  "name": "Clubintrapreneurs",
   "domain": "clubintrapreneurs.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": null,
-  "rc": true
+  "rc": false
  },
  {
   "name": "La Capitale Assurance et services financiers",
@@ -2218,12 +2218,12 @@
   "rc": true
  },
  {
-  "name": "RBC Marchés des Capitaux",
+  "name": "Rbccm",
   "domain": "rbccm.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": "https://www.rbccm.com/en/careers",
-  "rc": true
+  "rc": false
  },
  {
   "name": "Le CAMP – Québec international",
@@ -2251,12 +2251,12 @@
   "rc": true
  },
  {
-  "name": "MacKinnon, Bennett & Co",
+  "name": "Mkbandco",
   "domain": "mkbandco.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": "https://www.mkbandco.com/fr/carrieres/",
-  "rc": true
+  "rc": false
  },
  {
   "name": "Inno-centre",
@@ -2317,14 +2317,6 @@
  {
   "name": "EnerTech Capital",
   "domain": "enertechcapital.com",
-  "cat": "pe_vc",
-  "boards": [],
-  "careers": null,
-  "rc": true
- },
- {
-  "name": "Desjardins Capital",
-  "domain": "can01.safelinks.protection.outlook.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": null,

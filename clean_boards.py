@@ -7,6 +7,10 @@ NOT_BUYSIDE = re.compile(r"dentons|norton rose|fasken|mccarthy|osler|stikeman|bo
                          r"chambre|montr[ée]al international|test\b|marsh\b", re.I)
 
 
+CORP = (r"capital|ventures?|partners|fund|fonds|group|groupe|inc\b|invest|gestion|management|holdings?|"
+        r"bank|banque|financ|equity|asset|placement|soci[ée]t[ée]|corporation|advis|conseil|labs?|studio|\bvc\b")
+
+
 def norm(s):
     return re.sub(r"[^a-z0-9]", "", s.lower())
 
@@ -30,8 +34,12 @@ def clean(path="data/boards.json", rc_path="data/rc_sites.json"):
         members = set()
     out = []
     for r in rows:
-        if NOT_BUYSIDE.search(r["name"]):
+        if NOT_BUYSIDE.search(r["name"]) or re.search(r"safelinks|outlook|protection\.", r["domain"] or "", re.I):
             continue
+        if (r["name"] in members and not re.search(CORP, r["name"], re.I) and len(r["name"].split()) <= 4
+                and norm(r["domain"].split(".")[0]) not in norm(r["name"])):
+            root = r["domain"].split(".")[0]
+            r["name"] = root.upper() if len(root) <= 4 else root.title()  # "Patrick Michetti (EDC)" -> "EDC"
         keep = []
         for kind, key in r["boards"]:
             tok = key[0] if isinstance(key, list) else key

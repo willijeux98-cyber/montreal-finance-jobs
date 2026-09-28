@@ -70,8 +70,8 @@ def _wd_days(txt):
         return 0
     if "yesterday" in t or "hier" in t:
         return 1
-    m = re.search(r"(\d+)\+?", t)
-    return int(m.group(1)) if m else None
+    m = re.search(r"(\d+)(\+?)", t)
+    return (int(m.group(1)) + (1 if m.group(2) else 0)) if m else None
 
 
 def workday(name, cat, hq, tenant, n, site):
@@ -290,17 +290,23 @@ def careers_page(name, cat, hq, url):
         if not (8 <= len(text) <= 110) or NAVISH.match(text) or NOT_JOB.search(text) or not JOBISH.search(text):
             continue
         link = requests.compat.urljoin(url, href)
+        if not re.match(r"https?://", link, re.I):
+            continue
+        if link.rstrip("/") == url.rstrip("/"):
+            link = url + "#" + re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
         if link in seen or text.lower() in seen:
             continue
         seen.add(link); seen.add(text.lower())
         oc = OTHER_CITY.search(text)
-        out.append(_p(name, cat, text, oc.group(0) if oc else "Montreal (from careers page)", link, None, hq))
+        out.append(_p(name, cat, text, oc.group(0) if oc else ("Montreal (head office)" if hq else "Location not stated"), link, None, hq))
     for h in re.findall(r"<h[2-4][^>]*>(.*?)</h[2-4]>", body, re.S | re.I):  # jobs listed as headings, no link
         text = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", h))).strip()
         text = re.sub(r"^\d{4}-\d{2}-\d{2}\s*", "", text)
         if 8 <= len(text) <= 110 and JOBISH.search(text) and not NOT_JOB.search(text) and text.lower() not in seen:
             seen.add(text.lower())
-            out.append(_p(name, cat, text, "Montreal (from careers page)", url, None, hq))
+            oc = OTHER_CITY.search(text)
+            out.append(_p(name, cat, text, oc.group(0) if oc else ("Montreal (head office)" if hq else "Location not stated"),
+                          url + "#" + re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-"), None, hq))
     return out, len(out)
 
 
@@ -377,14 +383,22 @@ OTHER_CITY = re.compile(r"\b(toronto|vancouver|calgary|edmonton|ottawa|winnipeg|
                         r"zurich|luxembourg|singapore|hong kong|tokyo|sydney|dubai)\b", re.I)
 
 
+MANUAL_NAMES = {m[2] for m in MANUAL} | {"National Bank"}
+
+
 def build_sources():
     """Merge hand-verified boards with data/boards.json from discover.py. Returns [(callable, label)]."""
-    seen, srcs = set(), []
+    seen, srcs, owner = set(), [], {}
 
     def add(kind, key, name, cat):
+        key = [str(x) for x in key] if isinstance(key, list) else key
         k = (kind, json.dumps(key, sort_keys=True).lower())
+        tenant = (kind, (key[0] if isinstance(key, list) else key).lower())
         if k in seen or kind not in FETCHERS:
             return
+        if kind != "careers" and owner.get(tenant, name) != name:
+            return  # e.g. Desjardins' own board listed again under "Desjardins Capital"
+        owner.setdefault(tenant, name)
         seen.add(k)
         hq = name in MTL_HQ
         srcs.append((lambda kind=kind, key=key, name=name, cat=cat, hq=hq: FETCHERS[kind](name, cat, hq, key), name))
@@ -405,6 +419,9 @@ def build_sources():
         if f["boards"]:
             for kind, key in f["boards"]:
                 add(kind, key, name, cat)
-        elif f.get("careers") and (name in MTL_HQ or rc):
+        elif f.get("careers") and (name in MTL_HQ or rc) and name not in MANUAL_NAMES:
+            host = re.sub(r"^https?://", "", f["careers"]).split("/")[0].lower()
+            if cat == "pe_vc" and re.match(r"(careers|jobs|talent)\.", host):
+                continue  # VC "careers." sites are portfolio-company talent boards, not the fund's own jobs
             add("careers", f["careers"], name, cat)
     return srcs

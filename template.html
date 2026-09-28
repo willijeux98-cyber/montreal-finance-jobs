@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Position Book</title>
+<meta name="robots" content="noindex,nofollow">
 <meta name="description" content="Montreal buy-side, banking and markets openings, ranked every morning.">
 <meta name="theme-color" content="#EDEDEB" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0C0C0C" media="(prefers-color-scheme: dark)">
@@ -19,13 +20,13 @@
 /* POSITION BOOK — Swiss. One grotesk, heavy rules, one blue. */
 :root{
   --bg:#EDEDEB; --bg-2:#E3E3E0; --ink:#0A0A0A; --ink-2:#3A3A38; --mut:#6A6A68;
-  --faint:#9A9A96; --rule:#0A0A0A; --hair:#C9C9C5; --blue:#0000C1; --blue-ink:#FFFFFF;
+  --faint:#6E6E6A; --rule:#0A0A0A; --hair:#C9C9C5; --blue:#0000C1; --blue-ink:#FFFFFF;
   color-scheme:light;
 }
 @media (prefers-color-scheme: dark){
   :root{
     --bg:#0C0C0C; --bg-2:#151515; --ink:#EDEDEB; --ink-2:#C4C4C0; --mut:#8E8E8A;
-    --faint:#5E5E5A; --rule:#EDEDEB; --hair:#2A2A28; --blue:#7B7BFF; --blue-ink:#0C0C0C;
+    --faint:#85857F; --rule:#EDEDEB; --hair:#2A2A28; --blue:#7B7BFF; --blue-ink:#0C0C0C;
     color-scheme:dark;
   }
 }
@@ -75,19 +76,19 @@ body{
 .segs::-webkit-scrollbar{display:none;}
 .seg{appearance:none; cursor:pointer; background:transparent; color:var(--mut); flex:0 0 auto;
   border:2px solid var(--ink); margin-left:-2px; font-family:inherit; font-size:9.5px; font-weight:700;
-  letter-spacing:.14em; text-transform:uppercase; padding:9px 13px; white-space:nowrap;
+  letter-spacing:.14em; text-transform:uppercase; padding:9px 13px; white-space:nowrap; min-height:44px;
   transition:background .12s linear, color .12s linear;}
 .seg:hover{color:var(--ink);}
 .seg[aria-pressed="true"]{background:var(--ink); color:var(--bg); position:relative; z-index:2;}
 .seg .n{opacity:.55; margin-left:6px;}
 .push{flex:1 1 auto;}
 .find{appearance:none; background:transparent; color:var(--ink); border:0; border-bottom:2px solid var(--ink);
-  border-radius:0; font-family:inherit; font-size:14px; font-weight:600; padding:7px 2px; width:min(240px,100%);}
+  border-radius:0; font-family:inherit; font-size:16px; font-weight:600; padding:9px 2px; width:min(260px,100%);}
 .find::placeholder{color:var(--faint); text-transform:uppercase; letter-spacing:.14em; font-size:9.5px;}
 .find:focus{border-bottom-color:var(--blue); outline:none;}
 .opt{display:inline-flex; align-items:center; gap:7px; cursor:pointer; font-size:9.5px; font-weight:700;
   letter-spacing:.13em; text-transform:uppercase; color:var(--mut); user-select:none; white-space:nowrap;}
-.opt input{accent-color:var(--blue); width:16px; height:16px; cursor:pointer;}
+.opt{min-height:44px;} .opt input{accent-color:var(--blue); width:20px; height:20px; cursor:pointer;}
 
 /* tiers & rows */
 .tier{margin-top:clamp(34px,4vw,54px);}
@@ -115,6 +116,8 @@ body{
 .nm .s .nw{background:var(--blue); color:var(--blue-ink); padding:0 5px;}
 .nm .s .ap{border:1.5px solid var(--ink-2); color:var(--ink-2); padding:0 4px;}
 .ag{font-size:10px; font-weight:700; color:var(--faint); white-space:nowrap;}
+.agm{display:none;}
+.stale{color:#B3261E; font-weight:800;}
 .cv{font-size:14px; font-weight:700; color:var(--faint); justify-self:end; transition:transform .16s linear;}
 .row.open .cv{transform:rotate(90deg);}
 .pan{display:none; padding:0 4px 24px 172px;}
@@ -148,9 +151,37 @@ body{
 @media (max-width:720px){
   .btn{grid-template-columns:40px minmax(0,1fr) 14px; gap:12px; padding:14px 2px;}
   .mt,.ag{display:none;}
+  .agm{display:inline;}
   .pan{padding:0 2px 22px 52px;}
   .find{width:100%;}
   .bar-row.opts{gap:8px 18px;}
+}
+/* view switch, applied list, toast */
+.views{display:flex;gap:0;}
+.vw{appearance:none;cursor:pointer;flex:1 1 0;background:transparent;color:var(--ink);border:2px solid var(--ink);margin-left:-2px;
+  font-family:inherit;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:11px 12px;min-height:44px;}
+.vw:first-child{margin-left:0;}
+.vw[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:var(--blue-ink);position:relative;z-index:2;}
+.vw .n{opacity:.7;margin-left:8px;}
+.mkb,.unmk{appearance:none;cursor:pointer;background:transparent;color:var(--ink);border:2px solid var(--ink);font-family:inherit;
+  font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:11px 18px;min-height:44px;}
+.mkb:hover,.unmk:hover{border-color:var(--blue);color:var(--blue);}
+.lead .acts{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+.aprow{display:grid;grid-template-columns:70px minmax(0,1fr) auto;gap:14px;align-items:center;padding:14px 4px;}
+.apd{font-size:10px;color:var(--mut);}
+.apa{display:flex;gap:14px;align-items:center;}
+.lnk{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);}
+.st-live{color:var(--blue);} .st-gone{color:var(--faint);}
+.hint{text-align:center;color:var(--mut);margin-top:-50px;}
+.toast{position:fixed;left:50%;bottom:max(18px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:80;
+  display:flex;gap:18px;align-items:center;background:var(--ink);color:var(--bg);padding:12px 18px;font-weight:700;font-size:14px;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);max-width:calc(100vw - 32px);}
+.bk{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;}
+.lnkb{appearance:none;background:none;border:0;padding:10px 0;min-height:44px;cursor:pointer;font-family:inherit;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);text-decoration:underline;}
+.toast button{appearance:none;background:none;border:0;color:var(--bg);font:inherit;font-weight:900;text-decoration:underline;cursor:pointer;min-height:36px;}
+@media (max-width:720px){
+  .aprow{grid-template-columns:minmax(0,1fr);gap:8px;}
+  .apd{order:-1;}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none !important;}}
 </style>
@@ -165,11 +196,12 @@ body{
       <span>Updated <b id="d-run">&mdash;</b></span>
       <span><b id="d-boards">&mdash;</b> hiring boards</span>
       <span><b id="d-scan">&mdash;</b> postings read</span>
+      <span class="stale" id="stale" hidden></span>
     </div>
     <div class="strip">
       <div class="stat on"><div class="v" id="c-strong">&mdash;</div><div class="k up">Apply today</div></div>
       <div class="stat"><div class="v" id="c-new">&mdash;</div><div class="k up">New today</div></div>
-      <div class="stat"><div class="v" id="c-total">&mdash;</div><div class="k up">Ranked</div></div>
+      <div class="stat"><div class="v" id="c-total">&mdash;</div><div class="k up">To apply</div></div>
       <div class="stat"><div class="v" id="c-done">0</div><div class="k up">Applied</div></div>
     </div>
   </header>
@@ -177,12 +209,13 @@ body{
   <section id="lead"></section>
 
   <div class="bar">
+    <div class="views" id="views" role="group" aria-label="Show"></div>
     <div class="segs" id="segs" role="group" aria-label="Type of firm"></div>
     <div class="bar-row opts">
       <input class="find" id="q" type="search" placeholder="Search firm or role" aria-label="Search roles and firms">
       <span class="push"></span>
-      <label class="opt"><input type="checkbox" id="f-new"> New only</label>
-      <label class="opt"><input type="checkbox" id="f-done"> Hide applied</label>
+      <label class="opt" id="f-new-wrap"><input type="checkbox" id="f-new"> New only</label>
+      <label class="opt" id="f-fresh-wrap"><input type="checkbox" id="f-fresh"> Last 2 weeks</label>
     </div>
   </div>
 
@@ -204,11 +237,13 @@ body{
     </div>
     <div>
       <h4>Working the book</h4>
-      Tap a row for the reasoning and the link. <b>Mark applied</b> strikes it through and is remembered on
-      this phone, so the book narrows to what you haven&rsquo;t acted on yet.
+      Tap a row for the reasoning and the link. <b>Mark applied</b> moves it off your list and into
+      <b>Applied</b>, with the date. It&rsquo;s remembered on this device; <b>Move back</b> undoes it.
     </div>
   </footer>
 </div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
 <script>
 const DATA = /*__DATA__*/null;
@@ -233,38 +268,75 @@ const CATS = [
   {k:"corpdev", name:"Corporate development"}
 ];
 
-const KEY = "position-book-applied";
-let done = new Set();
-try{ const r = localStorage.getItem(KEY); if(r) done = new Set(JSON.parse(r)); }catch(e){}
-const save = () => { try{ localStorage.setItem(KEY, JSON.stringify([...done])); }catch(e){} };
+// ---- applied tracking: {url: {t, c, l, s, d: "YYYY-MM-DD"}} kept on this device
+// A job's permanent ID: Workday requisition number or Greenhouse id, so an edited title
+// (which changes the URL) doesn't bring an applied job back.
+function jobKey(u){
+  u = String(u || "");
+  let m = u.match(/^https?:\/\/([^\/]+\.myworkdayjobs\.com)\/.*_([A-Za-z]{0,4}-?\d[\w-]*)$/);
+  if(m) return m[1] + ":" + m[2];
+  m = u.match(/(?:gh_jid=|greenhouse\.io\/.*\/jobs\/)(\d{5,})/);
+  if(m) return "gh:" + m[1];
+  return u.split("?")[0];
+}
+const KEY = "position-book-applied-v3", OLD_KEYS = ["position-book-applied-v2", "position-book-applied"];
+let applied = {};
+function upgrade(u, a){ const k = jobKey(u); if(!applied[k]) applied[k] = Object.assign({u}, a); }
+try{
+  const r = localStorage.getItem(KEY);
+  if(r) applied = JSON.parse(r) || {};
+  const v2 = localStorage.getItem(OLD_KEYS[0]);
+  if(v2) Object.entries(JSON.parse(v2) || {}).forEach(([u, a]) => upgrade(u, a));
+  const v1 = localStorage.getItem(OLD_KEYS[1]);
+  if(v1) JSON.parse(v1).forEach(u => { const j = JOBS.find(x => x.u === u) || {}; upgrade(u, {t:j.t || "Applied role", c:j.c || "", l:j.l || "", s:j.s || null, d:null}); });
+  localStorage.setItem(KEY, JSON.stringify(applied));   // old keys are left in place, so nothing is ever lost
+}catch(e){}
+const save = () => { try{ localStorage.setItem(KEY, JSON.stringify(applied)); }catch(e){} };
+const isApplied = u => Object.prototype.hasOwnProperty.call(applied, jobKey(u));
+const safe = u => /^https?:\/\//i.test(String(u || "")) ? u : "#";
+const FAILED = new Set((META.errors || []).map(e => String(e).split(":")[0]));
+const todayISO = () => { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0"); };
 
-let cat = "all", query = "";
+let cat = "all", query = "", view = "open", undo = null;
 const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
-const age = j => j.n ? "new" : (j.a == null ? "" : (j.a === 0 ? "today" : j.a + "d"));
+const fold = s => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const age = j => j.n ? "new" : (j.a == null ? "" : j.a === 0 ? "today" : j.a > 60 ? "60d+" : j.a > 30 ? "30d+" : j.a + "d");
+const catName = k => (CATS.find(c => c.k === k) || {}).name || "";
+const fmtDate = d => d ? new Date(d + "T12:00:00").toLocaleDateString("en-CA", {month:"short", day:"numeric"}) : "earlier";
 
+function matchesText(j){ return !query || fold(j.t + " " + j.c + " " + j.l + " " + (j.w || "") + " " + catName(j.cat)).includes(query); }
+function matches(j){ return (cat === "all" || j.cat === cat) && matchesText(j); }
 function pool(){
-  const onlyNew = document.getElementById("f-new").checked;
-  const hide = document.getElementById("f-done").checked;
-  return JOBS.filter(j => {
-    if(cat !== "all" && j.cat !== cat) return false;
-    if(onlyNew && !j.n) return false;
-    if(hide && done.has(j.u)) return false;
-    if(query && !((j.t + " " + j.c + " " + j.l).toLowerCase().includes(query))) return false;
-    return true;
-  });
+  const onlyNew = document.getElementById("f-new").checked, fresh = document.getElementById("f-fresh").checked;
+  return JOBS.filter(j => !isApplied(j.u) && matches(j) && (!onlyNew || j.n) && (!fresh || j.n || (j.a != null && j.a <= 14)));
+}
+
+function views(){
+  const open = JOBS.filter(j => !isApplied(j.u)).length, done = Object.keys(applied).length;
+  document.getElementById("views").innerHTML =
+    '<button class="vw" data-v="open" aria-pressed="' + (view === "open") + '">To apply<span class="n">' + open + '</span></button>' +
+    '<button class="vw" data-v="applied" aria-pressed="' + (view === "applied") + '">Applied<span class="n">' + done + '</span></button>';
+  document.querySelectorAll(".vw").forEach(b => b.onclick = () => { view = b.dataset.v; views(); segs(); paint(); });
+  document.getElementById("f-new-wrap").hidden = view !== "open";
+  document.getElementById("f-fresh-wrap").hidden = view !== "open";
 }
 
 function segs(){
-  const count = k => k === "all" ? JOBS.length : JOBS.filter(j => j.cat === k).length;
-  document.getElementById("segs").innerHTML = CATS.filter(d => count(d.k)).map(d =>
+  const onlyNew = document.getElementById("f-new").checked, fresh = document.getElementById("f-fresh").checked;
+  const base = (view === "open" ? JOBS.filter(j => !isApplied(j.u) && (!onlyNew || j.n) && (!fresh || j.n || (j.a != null && j.a <= 14))) : appliedRows()).filter(matchesText);
+  const count = k => k === "all" ? base.length : base.filter(j => j.cat === k).length;
+  document.getElementById("segs").innerHTML = CATS.filter(d => d.k === "all" || count(d.k)).map(d =>
     '<button class="seg" data-k="' + d.k + '" aria-pressed="' + (cat === d.k) + '">' +
     esc(d.name) + '<span class="n">' + count(d.k) + '</span></button>').join("");
-  document.querySelectorAll(".seg").forEach(b => b.onclick = () => { cat = b.dataset.k; segs(); paint(); });
+  document.querySelectorAll(".seg").forEach(b => b.onclick = () => {
+    cat = b.dataset.k; segs(); paint();
+    const on = document.querySelector('.seg[data-k="' + cat + '"]'); if(on) on.focus();
+  });
 }
 
 function lead(rows){
   const host = document.getElementById("lead");
-  const j = rows.find(x => !done.has(x.u));
+  const j = view === "open" ? rows[0] : null;
   if(!j){ host.innerHTML = ""; return; }
   host.innerHTML = '<div class="lead">' +
     '<div><span class="tag up">Top of the book</span>' +
@@ -273,8 +345,10 @@ function lead(rows){
         '<span>' + esc(j.l) + '</span>' +
         (age(j) ? '<span class="d">/</span><span>' + age(j) + '</span>' : '') + '</div>' +
       '<p>' + esc(j.w) + '</p>' +
-      '<a class="go" href="' + esc(j.u) + '" target="_blank" rel="noopener noreferrer">Open posting</a></div>' +
+      '<div class="acts"><a class="go" href="' + esc(j.u) + '" target="_blank" rel="noopener noreferrer">Open posting</a>' +
+      '<button class="mkb" data-u="' + esc(j.u) + '">Mark applied</button></div></div>' +
     '<div><span class="num">' + j.s + '</span><span class="den up">out of ten</span></div></div>';
+  host.querySelectorAll(".mkb").forEach(b => b.onclick = () => markApplied(b.dataset.u));
 }
 
 const meter = s => {
@@ -283,11 +357,23 @@ const meter = s => {
   return '<span class="mt' + (s >= 8 ? " on" : "") + '" aria-hidden="true">' + c + '</span>';
 };
 
+function appliedRows(){
+  return Object.entries(applied).map(([k, a]) => {
+    const live = JOBS.find(j => jobKey(j.u) === k);
+    const u = live ? live.u : (a.u || k);
+    const status = live ? "live" : (FAILED.has(a.c) ? "unknown" : "gone");
+    return Object.assign({k, u, t:a.t, c:a.c, l:a.l, s:a.s, cat:a.cat || (live && live.cat) || "", d:a.d, status}, live ? {w:live.w} : {});
+  });
+}
+
 function paint(){
-  const rows = pool().slice().sort((a, b) => b.s - a.s || (b.n - a.n) || ((a.a ?? 999) - (b.a ?? 999)));
+  if(view === "applied") return paintApplied();
+  const rows = pool().slice().sort((a, b) => b.s - a.s || (b.n - a.n) || ((a.a ?? 500) - (b.a ?? 500)));
   lead(rows);
   const host = document.getElementById("board");
-  if(!rows.length){ host.innerHTML = '<p class="nil">Nothing on these terms</p>'; return; }
+  if(!rows.length){
+    host.innerHTML = '<p class="nil">' + (JOBS.length ? "Nothing left on these terms" : "No roles loaded today") + '</p>'; return;
+  }
   let n = 0;
   host.innerHTML = TIERS.map(t => {
     const set = rows.filter(j => j.s >= t.lo && j.s <= t.hi);
@@ -297,51 +383,122 @@ function paint(){
       '<span class="ct up">' + set.length + '</span></div>' +
       set.map(j => {
         n++;
-        const id = "r" + n, is = done.has(j.u), a = age(j);
-        return '<article class="row' + (is ? " done" : "") + '" id="' + id + '">' +
+        const id = "r" + n, a = age(j);
+        return '<article class="row" id="' + id + '">' +
           '<button class="btn" aria-expanded="false" aria-controls="' + id + 'p" data-id="' + id + '">' +
             '<span class="sc' + (j.s >= 8 ? " on" : "") + '">' + j.s + '</span>' + meter(j.s) +
             '<span class="nm"><span class="t">' + esc(j.t) + '</span>' +
             '<span class="s"><span class="f">' + esc(j.c) + '</span><span class="d">/</span>' +
             '<span>' + esc(j.l) + '</span>' +
-            (j.n ? '<span class="nw">new</span>' : '') +
-            (is ? '<span class="ap">applied</span>' : '') + '</span></span>' +
+            (j.n ? '<span class="nw">new</span>' : (a ? '<span class="agm">' + a + '</span>' : '')) + '</span></span>' +
             '<span class="ag">' + (j.n ? "" : a) + '</span><span class="cv">&rsaquo;</span>' +
           '</button>' +
           '<div class="pan" id="' + id + 'p"><p>' + esc(j.w) + '</p><div class="acts">' +
-            '<a class="go" href="' + esc(j.u) + '" target="_blank" rel="noopener noreferrer">Open posting</a>' +
-            '<label class="mk"><input type="checkbox" data-u="' + esc(j.u) + '"' + (is ? " checked" : "") + '> Mark applied</label>' +
+            '<a class="go" href="' + esc(safe(j.u)) + '" target="_blank" rel="noopener noreferrer">Open posting</a>' +
+            '<button class="mkb" data-u="' + esc(j.u) + '">Mark applied</button>' +
           '</div></div></article>';
       }).join("") + '</section>';
   }).join("");
-
   host.querySelectorAll(".btn").forEach(b => b.onclick = () => {
     const row = document.getElementById(b.dataset.id);
     b.setAttribute("aria-expanded", row.classList.toggle("open"));
   });
-  host.querySelectorAll(".mk input").forEach(cb => cb.onchange = () => {
-    cb.checked ? done.add(cb.dataset.u) : done.delete(cb.dataset.u);
-    save(); tally(); paint();
-  });
+  host.querySelectorAll(".mkb").forEach(b => b.onclick = () => markApplied(b.dataset.u));
 }
+
+function paintApplied(){
+  document.getElementById("lead").innerHTML = "";
+  const host = document.getElementById("board");
+  const rows = appliedRows().filter(matches).sort((a, b) => String(b.d || "").localeCompare(String(a.d || "")));
+  if(!rows.length){
+    host.innerHTML = '<p class="nil">' + (Object.keys(applied).length ? "Nothing on these terms" : "Nothing applied to yet") + '</p>' +
+      (Object.keys(applied).length ? "" : '<p class="hint">Tap a role in To apply, then <b>Mark applied</b>. It moves here, off your main list.</p>') +
+      '<div class="bk"><button class="lnkb" id="bk-in">Restore a backup</button></div>';
+    bindBackup();
+    return;
+  }
+  host.innerHTML = '<section class="tier"><div class="tier-h"><h3>Applied</h3><span class="sy">newest first &middot; saved on this device &middot; back it up now and then</span>' +
+    '<span class="ct up">' + rows.length + '</span></div>' +
+    rows.map(j =>
+      '<article class="row ap-row"><div class="aprow">' +
+        '<span class="apd up">' + fmtDate(j.d) + '</span>' +
+        '<span class="nm"><span class="t">' + esc(j.t) + '</span>' +
+        '<span class="s"><span class="f">' + esc(j.c) + '</span>' + (j.l ? '<span class="d">/</span><span>' + esc(j.l) + '</span>' : '') +
+        '<span class="' + (j.status === "live" ? "st-live" : "st-gone") + '">' + ({live:"still posted", gone:"no longer posted", unknown:"board didn\u2019t load today"})[j.status] + '</span></span></span>' +
+        '<span class="apa"><a class="lnk" href="' + esc(safe(j.u)) + '" target="_blank" rel="noopener noreferrer">Posting</a>' +
+        '<button class="unmk" data-k="' + esc(j.k) + '">Move back</button></span>' +
+      '</div></article>').join("") + '</section>';
+  host.insertAdjacentHTML("beforeend", '<div class="bk"><button class="lnkb" id="bk-out">Back up my applied list</button><button class="lnkb" id="bk-in">Restore a backup</button></div>');
+  host.querySelectorAll(".unmk").forEach(b => b.onclick = () => {
+    const k = b.dataset.k, prev = applied[k];
+    delete applied[k]; save(); refresh();
+    toast("Moved back to To apply", () => { applied[k] = prev; save(); refresh(); });
+  });
+  bindBackup();
+}
+
+function markApplied(u){
+  const j = JOBS.find(x => x.u === u) || {}, k = jobKey(u);
+  applied[k] = {u, t:j.t, c:j.c, l:j.l, s:j.s, cat:j.cat, d:todayISO()};
+  save(); refresh();
+  toast("Moved to Applied", () => { delete applied[k]; save(); refresh(); });
+}
+
+function bindBackup(){
+  const out = document.getElementById("bk-out"), inp = document.getElementById("bk-in");
+  if(out) out.onclick = async () => {
+    const text = JSON.stringify(applied);
+    try{ await navigator.clipboard.writeText(text); toast("Copied. Paste it in a note or email to yourself."); }
+    catch(e){ window.prompt("Copy this and keep it somewhere safe:", text); }
+  };
+  if(inp) inp.onclick = () => {
+    const text = window.prompt("Paste a backup you copied earlier:");
+    if(!text) return;
+    try{
+      const data = JSON.parse(text); let n = 0;
+      Object.entries(data).forEach(([k, a]) => { if(!applied[k]){ applied[k] = a; n++; } });
+      save(); refresh(); toast("Restored " + n + " applied role" + (n === 1 ? "" : "s"));
+    }catch(e){ toast("That doesn't look like a backup. Copy it again and retry."); }
+  };
+}
+
+function toast(msg, onUndo){
+  const el = document.getElementById("toast");
+  clearTimeout(undo);
+  el.innerHTML = '<span>' + esc(msg) + '</span>' + (onUndo ? '<button id="undo">Undo</button>' : '');
+  el.hidden = false;
+  if(onUndo) document.getElementById("undo").onclick = () => { el.hidden = true; onUndo(); };
+  undo = setTimeout(() => { el.hidden = true; }, 5000);
+}
+
+function refresh(){ views(); segs(); tally(); paint(); }
 
 function tally(){
   document.getElementById("d-run").textContent    = META.run;
   document.getElementById("d-boards").textContent = META.boards;
   document.getElementById("d-scan").textContent   = Number(META.scanned).toLocaleString("en-CA");
-  document.getElementById("c-strong").textContent = JOBS.filter(j => j.s >= 8 && !done.has(j.u)).length;
-  document.getElementById("c-new").textContent    = JOBS.filter(j => j.n).length;
-  document.getElementById("c-total").textContent  = JOBS.length;
-  document.getElementById("c-done").textContent   = JOBS.filter(j => done.has(j.u)).length;
+  document.getElementById("c-strong").textContent = JOBS.filter(j => j.s >= 8 && !isApplied(j.u)).length;
+  document.getElementById("c-new").textContent    = JOBS.filter(j => j.n && !isApplied(j.u)).length;
+  document.getElementById("c-total").textContent  = JOBS.filter(j => !isApplied(j.u)).length;
+  document.getElementById("c-done").textContent   = Object.keys(applied).length;
   if(META.errors && META.errors.length)
     document.getElementById("errs").innerHTML = ' <span class="warn">Couldn’t reach today: ' +
       esc(META.errors.map(e => e.split(":")[0]).join(", ")) + '.</span>';
 }
 
-["f-new","f-done"].forEach(id => document.getElementById(id).onchange = paint);
-document.getElementById("q").oninput = e => { query = e.target.value.trim().toLowerCase(); paint(); };
+document.getElementById("f-new").onchange = () => { segs(); paint(); };
+document.getElementById("f-fresh").onchange = () => { segs(); paint(); };
+let qt = null;
+document.getElementById("q").oninput = e => {
+  clearTimeout(qt);
+  qt = setTimeout(() => { query = fold(e.target.value.trim()); segs(); paint(); }, 150);
+};
+if(META.iso){
+  const days = Math.floor((Date.now() - new Date(META.iso + "T12:00:00").getTime()) / 86400000);
+  if(days >= 2){ const st = document.getElementById("stale"); st.hidden = false; st.textContent = "Not refreshed for " + days + " days"; }
+}
 
-segs(); tally(); paint();
+refresh();
 </script>
 </body>
 </html>
