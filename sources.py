@@ -100,13 +100,27 @@ def workday(name, cat, hq, tenant, n, site):
         with cf.ThreadPoolExecutor(6) as ex:
             for d in ex.map(lambda o: page(o, q), range(20, min(tot, 2000), 20)):
                 posts += d.get("jobPostings", [])
+    hinted = set()
+    if total > 2000:
+        hinted = {p.get("externalPath") for p in posts}
+    elif not hq:
+        try:
+            d = page(0, "Montreal")
+            extra = list(d.get("jobPostings", []))
+            for off in range(20, min(d.get("total", 0) or 0, 400), 20):
+                extra += page(off, "Montreal").get("jobPostings", [])
+            hinted = {p.get("externalPath") for p in extra}
+        except Exception:
+            pass
     out, seen = [], set()
     for p in posts:
         u = f"{base}/{site}{p.get('externalPath', '')}"
         if u in seen:
             continue
         seen.add(u)
-        out.append(_p(name, cat, p.get("title"), p.get("locationsText"), u, _wd_days(p.get("postedOn")), hq))
+        row = _p(name, cat, p.get("title"), p.get("locationsText"), u, _wd_days(p.get("postedOn")), hq)
+        row["hint"] = p.get("externalPath") in hinted   # the board's own search says Montreal is involved
+        out.append(row)
     return out, total
 
 
@@ -160,17 +174,6 @@ def bamboohr(name, cat, hq, sub):
     return out, len(res)
 
 
-def workable(name, cat, hq, tok):
-    r = requests.post(f"https://apply.workable.com/api/v3/accounts/{tok}/jobs", json={"query": "", "location": [],
-                      "department": [], "worktype": [], "remote": []}, headers={**UA, "Content-Type": "application/json"}, timeout=40)
-    r.raise_for_status()
-    res = r.json().get("results", [])
-    out = []
-    for j in res:
-        loc = j.get("location") or {}
-        out.append(_p(name, cat, j.get("title"), ", ".join(x for x in (loc.get("city"), loc.get("region"), loc.get("country")) if x),
-                      f"https://apply.workable.com/{tok}/j/{j.get('shortcode')}/", _iso_age(j.get("published")), hq))
-    return out, len(res)
 
 
 def recruitee(name, cat, hq, sub):
@@ -220,30 +223,114 @@ def teamtailor(name, cat, hq, sub):
     return out, len(out)
 
 
-def ultipro(name, cat, hq, company, board):
-    base = f"https://recruiting.ultipro.com/{company}/JobBoard/{board}"
-    r = requests.post(f"{base}/JobBoardView/LoadSearchResults",
-                      json={"opportunitySearch": {"Top": 200, "Skip": 0, "QueryString": "", "OrderBy": [],
-                                                  "Filters": []}}, headers={**UA, "Content-Type": "application/json"}, timeout=40)
-    r.raise_for_status()
-    res = r.json().get("opportunities", [])
-    out = []
-    for j in res:
-        locs = j.get("Locations") or []
-        loc = ", ".join(((x.get("Address") or {}).get("City") or "") for x in locs if isinstance(x, dict))
-        out.append(_p(name, cat, j.get("Title"), loc, f"{base}/OpportunityDetail?opportunityId={j.get('Id')}",
-                      _iso_age(j.get("PostedDate")), hq))
-    return out, len(res)
+
+
+MTL_RX = re.compile(r"montr[eé]al|laval|longueuil|brossard|saint-laurent|st-laurent|dorval", re.I)
+
+
+def workable(name, cat, hq, tok):
+    url, out, nxt = f"https://apply.workable.com/api/v3/accounts/{tok}/jobs", [], None
+    for _ in range(30):
+        body = {"query": "", "location": [], "department": [], "worktype": [], "remote": []}
+        if nxt:
+            body["token"] = nxt
+        r = requests.post(url, json=body, headers={**UA, "Content-Type": "application/json"}, timeout=40)
+        r.raise_for_status()
+        d = r.json()
+        for j in d.get("results", []):
+            locs = [l.get("city") for l in (j.get("locations") or []) if l.get("city")] or [(j.get("location") or {}).get("city", "")]
+            mt = [l for l in locs if MTL_RX.search(l or "")]
+            out.append(_p(name, cat, j.get("title"), ", ".join(mt) if mt else ", ".join(x for x in locs if x),
+                          f"https://apply.workable.com/{tok}/j/{j.get('shortcode')}/", _iso_age(j.get("published")), hq))
+        nxt = d.get("nextPage")
+        if not nxt:
+            break
+    return out, len(out)
 
 
 def jobvite(name, cat, hq, tok):
-    t = _get(f"https://jobs.jobvite.com/{tok}/jobs", headers={**UA, "Accept": "text/html"}).text
-    rows = re.findall(r'<a[^>]+href="(/' + re.escape(tok) + r'/job/[^"]+)"[^>]*>(.*?)</a>(.*?)</tr>', t, re.S)
+    t = _get(f"https://jobs.jobvite.com/{tok}/jobs/positions", headers={**UA, "Accept": "text/html"}).text
     out = []
-    for href, title, rest in rows:
-        loc = re.sub(r"<[^>]+>", " ", rest)
-        out.append(_p(name, cat, html.unescape(re.sub(r"<[^>]+>", "", title)), re.sub(r"\s+", " ", html.unescape(loc)),
-                      "https://jobs.jobvite.com" + href, None, hq))
+    for href, inner in re.findall(r'<a[^>]+href="(/' + re.escape(tok) + r'/job/[^"]+)"[^>]*>(.*?)</a>', t, re.S):
+        parts = [x.strip() for x in re.split(r"<[^>]+>", inner) if x.strip()]
+        title = html.unescape(parts[0]) if parts else ""
+        loc = html.unescape(parts[-1]) if len(parts) > 1 else ""
+        out.append(_p(name, cat, title, loc, "https://jobs.jobvite.com" + href, None, hq))
+    return out, len(out)
+
+
+def ultipro(name, cat, hq, company, board, host="recruiting.ultipro.com"):
+    base, out, skip = f"https://{host}/{company}/JobBoard/{board}", [], 0
+    for _ in range(20):
+        r = requests.post(f"{base}/JobBoardView/LoadSearchResults",
+                          json={"opportunitySearch": {"Top": 100, "Skip": skip, "QueryString": "", "OrderBy": [], "Filters": []}},
+                          headers={**UA, "Content-Type": "application/json"}, timeout=40)
+        r.raise_for_status()
+        d = r.json()
+        res = d.get("opportunities", [])
+        for j in res:
+            loc = ", ".join(((x.get("Address") or {}).get("City") or "") for x in (j.get("Locations") or []) if isinstance(x, dict))
+            out.append(_p(name, cat, j.get("Title"), loc, f"{base}/OpportunityDetail?opportunityId={j.get('Id')}",
+                          _iso_age(j.get("PostedDate")), hq))
+        skip += 100
+        if not res or skip >= d.get("totalCount", 0):
+            break
+    return out, len(out)
+
+
+def rmk(name, cat, hq, base):
+    """SAP SuccessFactors career sites publish every job in /sitemap.xml."""
+    r = requests.get(base.rstrip("/") + "/sitemap.xml", headers=UA, timeout=90)
+    r.raise_for_status()
+    root = ET.fromstring(r.content)
+    out = []
+    items = list(root.iter("item"))
+    if items:
+        for it in items:
+            t = it.findtext("title") or ""
+            m = re.match(r"(.*)\s+\(([^()]*)\)\s*$", t)
+            out.append(_p(name, cat, m.group(1) if m else t, m.group(2) if m else "", it.findtext("link"), None, hq))
+    else:
+        ns = "{http://www.google.com/schemas/sitemap/0.9}"
+        for loc in root.iter(ns + "loc"):
+            u = loc.text or ""
+            m = re.search(r"/job/([^/]+)/\d+/?$", u)
+            if not m:
+                continue
+            slug = requests.utils.unquote(m.group(1)).replace("-", " ")
+            city = slug.split(" ")[0]
+            out.append(_p(name, cat, slug[len(city):].strip() or slug, city, u, None, hq))
+    return out, len(out)
+
+
+def jibe(name, cat, hq, base):
+    """Jibe career sites (KPMG): JSON API. Only a User-Agent header, or it returns nothing."""
+    out, page = [], 1
+    while page <= 20:
+        r = requests.get(f"{base}/api/jobs", params={"location": "Montreal", "limit": 100, "page": page},
+                         headers={"User-Agent": UA["User-Agent"]}, timeout=40)
+        r.raise_for_status()
+        jobs = r.json().get("jobs", [])
+        for j in jobs:
+            x = j.get("data", {})
+            out.append(_p(name, cat, x.get("title"), x.get("full_location") or x.get("city"),
+                          f"{base}/professionals/jobs/{x.get('slug')}", _iso_age(x.get("posted_date")), hq))
+        if len(jobs) < 100:
+            break
+        page += 1
+    return out, len(out)
+
+
+def wprss(name, cat, hq, feed):
+    """WordPress job feed (BNP Paribas Canada)."""
+    out = []
+    for p in range(1, 11):
+        r = requests.get(feed, params={"paged": p}, headers=UA, timeout=40)
+        items = re.findall(r"<item>.*?<title>(.*?)</title>.*?<link>(.*?)</link>", r.text, re.S)
+        if r.status_code != 200 or not items:
+            break
+        for t, l in items:
+            out.append(_p(name, cat, html.unescape(t).replace("\u200b", ""), "Montreal", l.strip(), None, hq))
     return out, len(out)
 
 
@@ -324,7 +411,10 @@ FETCHERS = {
     "breezy": lambda n, c, h, k: breezy(n, c, h, k),
     "pinpoint": lambda n, c, h, k: pinpoint(n, c, h, k),
     "teamtailor": lambda n, c, h, k: teamtailor(n, c, h, k),
-    "ultipro": lambda n, c, h, k: ultipro(n, c, h, k[0], k[1]),
+    "ultipro": lambda n, c, h, k: ultipro(n, c, h, *k),
+    "rmk": lambda n, c, h, k: rmk(n, c, h, k),
+    "jibe": lambda n, c, h, k: jibe(n, c, h, k),
+    "wprss": lambda n, c, h, k: wprss(n, c, h, k),
     "jobvite": lambda n, c, h, k: jobvite(n, c, h, k),
     "careers": lambda n, c, h, k: careers_page(n, c, h, k),
 }
@@ -369,6 +459,29 @@ MANUAL = [
     ("ashby", "pinebridge", "PineBridge", "am"),
     ("rippling", "novacap", "Novacap", "pe_vc"),
     ("bamboohr", "pictonmahoney", "Picton Mahoney", "am"),
+    # added after the 28 Sep coverage audit (each endpoint verified to return postings)
+    ("workday", ["bdc", 10, "BDC_Careers"], "BDC", "pe_vc"),
+    ("workday", ["intactfc", 3, "intactfc"], "Intact", "insurer"),
+    ("workday", ["cogeco", 3, "Cogeco_Careers"], "Cogeco", "corpdev"),
+    ("workday", ["cgf", 10, "CG"], "Canaccord Genuity", "ib"),
+    ("workday", ["rbc", 3, "RBCGLOBAL1"], "RBC", "ib"),
+    ("workday", ["rbc", 3, "RBCEARLYTALENT1"], "RBC", "ib"),
+    ("workday", ["pwc", 3, "Global_Experienced_Careers"], "PwC", "advisory"),
+    ("workday", ["pwc", 3, "Global_Campus_Careers"], "PwC", "advisory"),
+    ("greenhouse", "canadainfrastructurebank", "Canada Infrastructure Bank", "pension"),
+    ("workable", "export-development-canada", "EDC", "insurer"),
+    ("jobvite", "addendacapital-fr", "Addenda Capital", "am"),
+    ("ultipro", ["MNP5000MNPL", "062c8fba-7371-4cd7-9e8a-94a0b8019ffc", "recruiting.ultipro.ca"], "MNP", "advisory"),
+    ("rmk", "https://careers.deloitte.ca", "Deloitte", "advisory"),
+    ("rmk", "https://careers.ey.com", "EY", "advisory"),
+    ("rmk", "https://jobs.scotiabank.com", "Scotiabank", "ib"),
+    ("rmk", "https://careers.cn.ca", "CN", "corpdev"),
+    ("rmk", "https://jobs.bombardier.com", "Bombardier", "corpdev"),
+    ("rmk", "https://emploi.hydroquebec.com", "Hydro-Quebec", "corpdev"),
+    ("jibe", "https://careers.kpmg.ca", "KPMG", "advisory"),
+    ("wprss", "https://www.bnpparibas.ca/en/jobs/feed/", "BNP Paribas", "ib"),
+    ("careers", "https://valnetconcept.applytojob.com/apply", "Valnet", "pe_vc"),
+    ("careers", "https://www.boralex.com/fr/nous-rejoindre/nos-offres-demploi", "Boralex", "corpdev"),
 ]
 
 
@@ -384,6 +497,8 @@ OTHER_CITY = re.compile(r"\b(toronto|vancouver|calgary|edmonton|ottawa|winnipeg|
 
 
 MANUAL_NAMES = {m[2] for m in MANUAL} | {"National Bank"}
+BASE_HQ = set(MTL_HQ) | {"Valnet", "Canada Infrastructure Bank"}
+MTL_HQ |= {"Valnet", "Addenda Capital"}
 
 
 def build_sources():
@@ -400,7 +515,7 @@ def build_sources():
             return  # e.g. Desjardins' own board listed again under "Desjardins Capital"
         owner.setdefault(tenant, name)
         seen.add(k)
-        hq = name in MTL_HQ
+        hq = name in (MTL_HQ if kind == "careers" else BASE_HQ)
         srcs.append((lambda kind=kind, key=key, name=name, cat=cat, hq=hq: FETCHERS[kind](name, cat, hq, key), name))
 
     for kind, key, name, cat in MANUAL:

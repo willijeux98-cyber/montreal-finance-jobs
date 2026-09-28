@@ -36,7 +36,10 @@ def clean(path="data/boards.json", rc_path="data/rc_sites.json"):
     for r in rows:
         if NOT_BUYSIDE.search(r["name"]) or re.search(r"safelinks|outlook|protection\.", r["domain"] or "", re.I):
             continue
-        if (r["name"] in members and not re.search(CORP, r["name"], re.I) and len(r["name"].split()) <= 4
+        paren = re.search(r"\(([^)]+)\)\s*$", r["name"])
+        if r["name"] in members and paren:            # "Patrick Michetti (EDC)" -> "EDC"
+            r["name"] = paren.group(1).strip()
+        elif (r["name"] in members and not re.search(CORP, r["name"], re.I) and len(r["name"].split()) <= 4
                 and norm(r["domain"].split(".")[0]) not in norm(r["name"])):
             root = r["domain"].split(".")[0]
             r["name"] = root.upper() if len(root) <= 4 else root.title()  # "Patrick Michetti (EDC)" -> "EDC"
@@ -52,6 +55,8 @@ def clean(path="data/boards.json", rc_path="data/rc_sites.json"):
             if [kind, key] not in keep:
                 keep.append([kind, key])
         r["boards"] = keep
+        if r.get("careers") and re.search(r"linkedin\.|indeed\.|glassdoor\.|workopolis|jobillico", r["careers"], re.I):
+            r["careers"] = None
         r["rc"] = r["name"] in members
         out.append(r)
     json.dump(out, open(path, "w", encoding="utf-8"), indent=1, ensure_ascii=False)

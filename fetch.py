@@ -30,7 +30,8 @@ TODAY = dt.date.today()
 from sources import build_sources  # noqa: E402  (all job boards live in sources.py / data/boards.json)
 
 # ---------------------------------------------------------------- filters
-MTL = re.compile(r"montr[eé]al|laval|longueuil|brossard|boucherville|pointe-claire", re.I)
+MTL = re.compile(r"montr[eé]al|laval|longueuil|brossard|boucherville|pointe[- ]claire|saint-laurent|st-laurent|dorval|"
+                 r"mont-royal|westmount|verdun|lasalle|lachine|anjou|kirkland|terrebonne|boisbriand|blainville|repentigny", re.I)
 MULTI = re.compile(r"^\s*\d+\s+(locations|lieux|possible locations|lieux possibles)", re.I)
 
 EXCLUDE = re.compile(
@@ -61,6 +62,13 @@ EXCLUDE = re.compile(
 
 # front-office investment / deal / markets work
 STRONG = [
+    (r"\bdeals?\b|transaction diligence|contrôle préalable|stratégie de transaction|services? transactionnels?|value creation|"
+     r"création de valeur|financement d.entreprises|[ée]valuation d.entreprise", "deal advisory"),
+    (r"corporate debt|private debt|dette privée|dette (corporative|subordonnée)|mezzanine|leveraged|credit opportunit|"
+     r"structured credit|financement structuré|asset[- ]based lend", "private credit"),
+    (r"\bF&A\b|corporate banking|services bancaires aux (grandes )?entreprises|project financ|financement de projets",
+     "investment banking"),
+    (r"recherche fondamentale|fundamental research", "research"),
     (r"secondar|primaries|primary fund|funds? of funds|fonds de fonds|fund investments?|co-?invest|private markets|"
      r"marchés privés|placements privés", "fund investing"),
     (r"corporate development|développement corporatif|corp\.? dev", "corporate development"),
@@ -100,6 +108,39 @@ MEDIUM = [
     (r"analytics|analytique|data|données", "analytics"),
     (r"treasury|trésorerie", "treasury"),
 ]
+# Hard excludes always apply. The rest of EXCLUDE is skipped when the title is plainly a deal / investment seat
+# ("Corporate Development" contains "develop", "Fundamental Research Platform" contains "platform").
+HARD = re.compile(r"legal|juridique|counsel|avocat|lawyer|notaire|paralegal|law clerk|assistant|adjoint|administrative|réception|"
+                  r"recrut|recruit|talent|\bHR\b|\bRH\b|payroll|paie|developer|développeu|software|logiciel|engineer|ingénieur|"
+                  r"comptab|accounting|accountant|\btax\b|fiscal|marketing|designer|scientist|architect|personal banking|"
+                  r"services bancaires aux particuliers|financial advisor|conseill[eè]re? financi|itrade|mcleod|attorney|\bIT\b|"
+                  r"forensic|juricomptab|cyber|documentation negotiat", re.I)
+OVERRIDE = re.compile(r"corporate development|développement corporatif|\bM&A\b|\bF&A\b|mergers|fusions|investment banking|"
+                      r"private equity|placements? privés|capital[- ]investissement|venture|capital de risque|equity research|"
+                      r"fundamental research|recherche fondamentale|transaction (services|diligence|advisory)|deal advisory|\bdeals?\b|"
+                      r"valuations?\b|[ée]valuation d.entreprise|infrastructure invest|investissements? en infrastructure|"
+                      r"real estate invest|investissements? immobili|private (credit|debt)|dette privée|"
+                      r"\binvest(ment|ments|ing|issement|issements)\b", re.I)
+
+
+# Big mixed institutions: only clearly investment / deal titles count (a "Senior Analyst, Operational Risk" doesn't)
+STRICT = {"BDC", "EDC", "Intact", "Manulife", "Sun Life", "iA Financial Group", "Hydro-Quebec", "CN", "Bombardier"}
+
+
+def clean_title(t):
+    t = re.sub(r"\s*\((?:Montr[ée]al|Toronto|Ottawa)\)\s*Qu[ée]b\w*\s+[A-Z]\d[A-Z]\s?\d[A-Z]\d\s*$", "", t)
+    t = re.sub(r"\s+Qu[ée]b\w*\s+[A-Z]\d[A-Z]\s?\d[A-Z]\d\s*$", "", t)
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def excluded(t):
+    if HARD.search(t):
+        return True
+    if OVERRIDE.search(t):
+        return False
+    return bool(EXCLUDE.search(t))
+
+
 LEVEL_UP = re.compile(r"\b(analyst|analyste|associate|associé|junior|entry|early career)\b", re.I)
 LEVEL_SENIOR_ANALYST = re.compile(r"senior analyst|analyste (principal|senior|sénior)|sr\.? analyst", re.I)
 LEVEL_DOWN = re.compile(
@@ -185,6 +226,8 @@ LVL_ADV = re.compile(r"advisor|conseill|specialist|spécialiste", re.I)
 def level_of(t):
     if STUDENT.search(t):
         return "student", -4
+    if re.search(r"associate director|directeur associ|directrice associ", t, re.I):
+        return "senior", -3
     up = LEVEL_UP.search(t)
     if up and (LVL_EXEC.search(t) or (LVL_MGR.search(t) and not LEVEL_SENIOR_ANALYST.search(t)) or re.search(r"senior associate|associ[ée]\(?e?\)? principal", t, re.I)):
         return "mixed", -1
@@ -205,10 +248,10 @@ def score(job):
     t = job["t"]
     cat = job["cat"]
     kind, sig = classify(t, cat)
-    if cat == "ib" and re.search(r"investment associate", t, re.I):
+    if cat == "ib" and re.search(r"investment associate|associ\w* en (investissement|placements)", t, re.I):
         return None  # wealth-desk assistant seat at a bank
     # banks are huge: only keep their front-office seats
-    if cat in ("ib", "insurer", "markets", "advisory", "corpdev") and kind not in ("strong", "quant"):
+    if (cat in ("ib", "insurer", "markets", "advisory", "corpdev") or job["c"] in STRICT) and kind not in ("strong", "quant"):
         if not (cat in ("ib", "advisory") and sig in ("valuation", "markets operations", "due diligence")):
             return None
     if cat == "corpdev" and sig not in ("corporate development", "investment banking", "deal advisory", "fund investing"):
@@ -274,7 +317,7 @@ SOURCES = [(lambda _s, f=f: f(), None, label) for f, label in build_sources()]
 # Firms where even a non-investment seat is a real foot in the door
 CORE = {"CDPQ", "PSP Investments", "Ardian", "Novacap", "Sagard", "Power Corporation", "Fiera Capital",
         "Investissement Quebec", "Fonds de solidarite FTQ", "Fondaction", "Desjardins Capital", "Ivanhoe Cambridge",
-        "Inovia Capital", "Walter Capital Partners", "Claridge", "Squarepoint", "DRW", "Teralys Capital", "BDC",
+        "Inovia Capital", "Walter Capital Partners", "Claridge", "Squarepoint", "DRW", "Teralys Capital",
         "Letko Brosseau", "Jarislowsky Fraser", "Van Berkom", "Addenda Capital", "Montrusco Bolton"}
 
 
@@ -291,7 +334,7 @@ def keep_location(j):
         return True
     if OTHER.search(loc) or OTHER.search(j["t"]):
         return False
-    if j["hq"] and (MULTI.search(loc) or not loc.strip() or re.search(r"canada|qu[eé]bec", loc, re.I)):
+    if (j["hq"] or j.get("hint")) and (MULTI.search(loc) or not loc.strip() or re.search(r"canada|qu[eé]bec", loc, re.I)):
         j["mtl_explicit"] = False
         return True
     return False
@@ -309,7 +352,7 @@ def with_retry(fn, src, tries=3):
 
 
 def main():
-    raw, errors, scanned = [], [], 0
+    raw, errors, scanned, empty = [], [], 0, []
     with cf.ThreadPoolExecutor(10) as ex:
         futs = {ex.submit(with_retry, fn, src): label for fn, src, label in SOURCES}
         for f in cf.as_completed(futs):
@@ -318,13 +361,17 @@ def main():
                 jobs, n = f.result()
                 raw.extend(jobs)
                 scanned += n
+                if n == 0:
+                    empty.append(label)
             except Exception as e:
                 errors.append(f"{label}: {type(e).__name__}")
                 print(f"  ! {label} failed: {e}", file=sys.stderr)
 
     kept, dedupe = [], set()
     for j in raw:
-        if not j["t"] or EXCLUDE.search(j["t"]):
+        j["t"] = clean_title(j["t"] or "")
+        j["l"] = re.sub(r"\s+", " ", j["l"] or "").strip()
+        if not j["t"] or excluded(j["t"]):
             continue
         if not keep_location(j):
             continue
@@ -386,6 +433,8 @@ def main():
           f"{sum(j['n'] for j in jobs)} new, {sum(j['s'] >= 8 for j in jobs)} scored 8+")
     if errors:
         print("Board failures:", ", ".join(errors))
+    if empty:
+        print(f"{len(empty)} boards returned no postings:", ", ".join(sorted(set(empty))))
 
 
 if __name__ == "__main__":

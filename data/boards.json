@@ -1653,7 +1653,7 @@
   "domain": "metanoia.vc",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://www.linkedin.com/company/linkedin/jobs",
+  "careers": null,
   "rc": false
  },
  {
@@ -1833,12 +1833,12 @@
   "rc": true
  },
  {
-  "name": "Sean Languedoc (Outforce)",
+  "name": "Outforce",
   "domain": "outforce.ai",
   "cat": "pe_vc",
   "boards": [],
   "careers": "https://cdn.prod.website-files.com/64e8d1ca8b5b7b48829140c9/css/global-talent-accelerator.webflow.shared.ec55e9e8b.css",
-  "rc": true
+  "rc": false
  },
  {
   "name": "Theodorus",
@@ -1986,12 +1986,12 @@
   "rc": true
  },
  {
-  "name": "Annie Thabet (Celtis Capital)",
+  "name": "Celtis Capital",
   "domain": "celtiscapital.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": null,
-  "rc": true
+  "rc": false
  },
  {
   "name": "InnoHub La Centrale",
@@ -2010,12 +2010,12 @@
   "rc": true
  },
  {
-  "name": "Patrick Michetti (EDC)",
+  "name": "EDC",
   "domain": "edc.ca",
   "cat": "pe_vc",
   "boards": [],
   "careers": "https://www.edc.ca/en/about-us/careers.html",
-  "rc": true
+  "rc": false
  },
  {
   "name": "AFFQ",
@@ -2106,12 +2106,12 @@
   "rc": true
  },
  {
-  "name": "Pascale Rondeau (Assurart)",
+  "name": "Assurart",
   "domain": "assurart.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": "https://www.assurart.com/careers",
-  "rc": true
+  "rc": false
  },
  {
   "name": "Crédit Mutuel Equity",
@@ -2122,12 +2122,12 @@
   "rc": true
  },
  {
-  "name": "Patrick Dussault (Namakor)",
+  "name": "Namakor",
   "domain": "namakor.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": null,
-  "rc": true
+  "rc": false
  },
  {
   "name": "Kilmer Group",
@@ -2146,12 +2146,12 @@
   "rc": true
  },
  {
-  "name": "Développement économique de l’agglomération de Longueuil (DEL)",
+  "name": "DEL",
   "domain": "delagglo.ca",
   "cat": "pe_vc",
   "boards": [],
   "careers": "https://www.delagglo.ca/styles.css?v=yqzz-n9B6JoINvqrC1uMrkPQBJhgNGDxZ1uHw930370",
-  "rc": true
+  "rc": false
  },
  {
   "name": "Fonds d’investissement de la culture et des communications",
@@ -2267,12 +2267,12 @@
   "rc": true
  },
  {
-  "name": "Emmanuel Giner (GPL Assurance Inc.)",
+  "name": "GPL Assurance Inc.",
   "domain": "gplassurance.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": "https://jobs.ajg.com/ajg-home",
-  "rc": true
+  "rc": false
  },
  {
   "name": "Gestion Univalor",
@@ -2347,12 +2347,12 @@
   "rc": true
  },
  {
-  "name": "La Caisse (Caisse de dépôt et placement du Québec)",
+  "name": "Caisse de dépôt et placement du Québec",
   "domain": "lacaisse.com",
   "cat": "pe_vc",
   "boards": [],
   "careers": "https://www.lacaisse.com/fr/carrieres",
-  "rc": true
+  "rc": false
  },
  {
   "name": "Banque Scotia – Roynat Capital",
