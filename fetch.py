@@ -113,13 +113,14 @@ MEDIUM = [
 HARD = re.compile(r"legal|juridique|counsel|avocat|lawyer|notaire|paralegal|law clerk|assistant|adjoint|administrative|réception|"
                   r"recrut|recruit|talent|\bHR\b|\bRH\b|payroll|paie|developer|développeu|software|logiciel|engineer|ingénieur|"
                   r"comptab|accounting|accountant|\btax\b|fiscal|marketing|designer|scientist|architect|personal banking|"
-                  r"services bancaires aux particuliers|financial advisor|conseill[eè]re? financi|itrade|mcleod|attorney|\bIT\b|"
+                  r"services bancaires aux particuliers|financial advisor|conseill[eè]re? financi|itrade|mcleod|attorney|technicien|technician|scientifique|investment and retirement|investment and financing|placement et financement|retirement specialist|investment specialist|investment advisor|conseill[eè]re? en placement|financial planner|planificat|mortgage|hypoth|succursale|\bbranch\b|teller|caissi|personal financ|finances personnelles|\bIT\b|"
                   r"forensic|juricomptab|cyber|documentation negotiat", re.I)
 OVERRIDE = re.compile(r"corporate development|développement corporatif|\bM&A\b|\bF&A\b|mergers|fusions|investment banking|"
                       r"private equity|placements? privés|capital[- ]investissement|venture|capital de risque|equity research|"
                       r"fundamental research|recherche fondamentale|transaction (services|diligence|advisory)|deal advisory|\bdeals?\b|"
                       r"valuations?\b|[ée]valuation d.entreprise|infrastructure invest|investissements? en infrastructure|"
-                      r"real estate invest|investissements? immobili|private (credit|debt)|dette privée|"
+                      r"real estate invest|investissements? immobili|private (credit|debt)|dette privée|ventes institutionnelles|"
+                      r"institutional sales|"
                       r"\binvest(ment|ments|ing|issement|issements)\b", re.I)
 
 
@@ -213,7 +214,7 @@ def classify(title, cat=None):
     return "none", None
 
 
-LVL_EXEC = re.compile(r"director|directeur|directrice|vice[- ]president|\bVP\b|head of|managing|partner|"
+LVL_EXEC = re.compile(r"director|directeur|directrice|vice[- ]pr[ée]sident|\bVP\b|head of|managing|partner|"
                       r"chief|\bchef\b|senior director", re.I)
 LVL_MGR = re.compile(r"manager|gestionnaire|\blead\b|principal\b|senior advisor|conseill(er|ère)\(?-?è?r?e?\)? "
                      r"(principal|senior|sénior)|premier\(?-?è?r?e?\)? conseill|expert", re.I)
@@ -367,7 +368,7 @@ def main():
                 errors.append(f"{label}: {type(e).__name__}")
                 print(f"  ! {label} failed: {e}", file=sys.stderr)
 
-    kept, dedupe = [], set()
+    kept, dedupe = [], {}
     for j in raw:
         j["t"] = clean_title(j["t"] or "")
         j["l"] = re.sub(r"\s+", " ", j["l"] or "").strip()
@@ -378,11 +379,14 @@ def main():
         if not re.match(r"https?://", j["u"] or "", re.I):
             continue
         key = j["u"].split("?")[0].rstrip("/")
-        if key in dedupe:
-            continue
-        dedupe.add(key)
+        wd = re.search(r"//([^/]+\.myworkdayjobs\.com)/.*_([A-Za-z]{0,4}-?\d[\w-]*)$", key)
+        if wd:
+            key = wd.group(1) + ":" + wd.group(2)  # same requisition in English and French = one job
         if score(j):
-            kept.append(j)
+            prev = dedupe.get(key)
+            if prev is None or j["s"] > prev["s"]:
+                dedupe[key] = j
+    kept = list(dedupe.values())
 
     os.makedirs(os.path.dirname(SEEN_PATH), exist_ok=True)
     try:

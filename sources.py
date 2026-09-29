@@ -74,10 +74,12 @@ def _wd_days(txt):
     return (int(m.group(1)) + (1 if m.group(2) else 0)) if m else None
 
 
-def workday(name, cat, hq, tenant, n, site):
+def workday(name, cat, hq, tenant, n, site, lang=None):
     base = f"https://{tenant}.wd{n}.myworkdayjobs.com"
     api = f"{base}/wday/cxs/{tenant}/{site}/jobs"
     hdr = {**UA, "Content-Type": "application/json", "Accept": "application/json"}
+    if lang:
+        hdr["Accept-Language"] = lang
 
     def page(off, text=""):
         r = requests.post(api, json={"limit": 20, "offset": off, "searchText": text, "appliedFacets": {}},
@@ -334,6 +336,59 @@ def wprss(name, cat, hq, feed):
     return out, len(out)
 
 
+def phenom(name, cat, hq, base, prefix, locale, country):
+    """Phenom career sites (Air Canada, BRP, Bell): the page's own search widget endpoint."""
+    page = requests.get(base + prefix + "/search-results", headers=UA, timeout=40).text
+    m = re.search(r'"pageId"\s*:\s*"([^"]+)"', page)
+    page_id = m.group(1) if m else "page11"
+    out, frm, total = [], 0, 1
+    while frm < min(total, 2000):
+        body = {"lang": locale, "deviceType": "desktop", "country": country, "pageName": "search-results",
+                "ddoKey": "refineSearch", "sortBy": "", "subsearch": "", "from": frm, "jobs": True, "counts": True,
+                "all_fields": ["category", "city"], "size": 100, "clearAll": False, "jdsource": "facets",
+                "isSliderEnable": False, "pageId": page_id, "siteType": "external", "keywords": "", "global": True,
+                "selected_fields": {}, "locationData": {}}
+        r = requests.post(base + "/widgets", json=body, headers={**UA, "Content-Type": "application/json"}, timeout=40)
+        r.raise_for_status()
+        d = r.json().get("refineSearch", {})
+        total = d.get("totalHits") or 0
+        jobs = (d.get("data") or {}).get("jobs") or []
+        if not jobs:
+            break
+        for j in jobs:
+            loc = j.get("location") or ", ".join(x for x in (j.get("city"), j.get("state")) if x)
+            out.append(_p(name, cat, j.get("title"), loc, f"{base}{prefix}/job/{j.get('jobId')}",
+                          _iso_age(j.get("postedDate")), hq))
+        frm += len(jobs)
+    return out, total
+
+
+def lbc(name, cat, hq, base):
+    """Laurentian Bank's Next.js career site: CSRF token, then its search API."""
+    s = requests.Session()
+    s.headers.update(UA)
+    sf = {"Referer": base + "/fr", "Origin": base, "Sec-Fetch-Site": "same-origin", "Sec-Fetch-Mode": "cors", "Accept": "*/*"}
+    s.get(base + "/fr", timeout=40)
+    tok = s.get(base + "/api/csrf", headers=sf, timeout=40).json()["token"]
+    out, off = [], 0
+    while off < 1000:
+        body = {"index_name": "rs-lbc-index-fr-prod", "search_value": "", "offset": off, "limit": 100,
+                "facets": ["locations", "jobtype", "jobcategories"],
+                "query": {"filter_query": {"must": []}, "sort_query": [{"field": "postedon", "order": "desc"}], "search": ""},
+                "search_fields": ["title", "locations", "jobcategories", "jobtype"]}
+        r = s.post(base + "/api/jobs", json=body, headers={**sf, "x-csrf-token": tok, "accept": "application/json",
+                                                         "accept-language": "fr"}, timeout=40)
+        r.raise_for_status()
+        vals = r.json().get("value", [])
+        for j in vals:
+            out.append(_p(name, cat, j.get("title"), ", ".join(j.get("locations") or j.get("city") or []),
+                          base + "/fr/job-detail" + (j.get("joburl") or ""), _iso_age(j.get("postedon")), hq))
+        if len(vals) < 100:
+            break
+        off += 100
+    return out, len(out)
+
+
 # ---------------------------------------------------------------- National Bank (Avature HTML)
 NBC_ROW = re.compile(r'data-map="job-detail-link"\s+href="([^"]+)"\s+title="([^"]*)".*?</th>\s*<td>\s*(.*?)\s*</td>', re.S)
 
@@ -413,6 +468,9 @@ FETCHERS = {
     "teamtailor": lambda n, c, h, k: teamtailor(n, c, h, k),
     "ultipro": lambda n, c, h, k: ultipro(n, c, h, *k),
     "rmk": lambda n, c, h, k: rmk(n, c, h, k),
+    "workday_fr": lambda n, c, h, k: workday(n, c, h, k[0], int(k[1]), k[2], lang="fr-CA"),
+    "phenom": lambda n, c, h, k: phenom(n, c, h, *k),
+    "lbc": lambda n, c, h, k: lbc(n, c, h, k),
     "jibe": lambda n, c, h, k: jibe(n, c, h, k),
     "wprss": lambda n, c, h, k: wprss(n, c, h, k),
     "jobvite": lambda n, c, h, k: jobvite(n, c, h, k),
@@ -482,6 +540,15 @@ MANUAL = [
     ("wprss", "https://www.bnpparibas.ca/en/jobs/feed/", "BNP Paribas", "ib"),
     ("careers", "https://valnetconcept.applytojob.com/apply", "Valnet", "pe_vc"),
     ("careers", "https://www.boralex.com/fr/nous-rejoindre/nos-offres-demploi", "Boralex", "corpdev"),
+    # JavaScript-only career sites, read through the feeds their pages use
+    ("lbc", "https://jobs.banquelaurentienne.ca", "Laurentian Bank", "ib"),
+    ("phenom", ["https://careers.aircanada.com", "/ca/en", "en_ca", "ca"], "Air Canada", "corpdev"),
+    ("phenom", ["https://careers.brp.com", "/global/en", "en_global", "global"], "BRP", "corpdev"),
+    ("phenom", ["https://jobs.bell.ca", "/ca/en", "en_ca", "ca"], "Bell", "corpdev"),
+    ("smartrecruiters", "Videotron", "Quebecor", "corpdev"),
+    # Desjardins again in French: some titles only exist in French and would be missed in English
+    ("workday_fr", ["desjardins", 10, "Desjardins"], "Desjardins", "ib"),
+    ("workday_fr", ["cdpq", 10, "CDPQ"], "CDPQ", "pension"),
 ]
 
 
@@ -497,8 +564,8 @@ OTHER_CITY = re.compile(r"\b(toronto|vancouver|calgary|edmonton|ottawa|winnipeg|
 
 
 MANUAL_NAMES = {m[2] for m in MANUAL} | {"National Bank"}
-BASE_HQ = set(MTL_HQ) | {"Valnet", "Canada Infrastructure Bank"}
-MTL_HQ |= {"Valnet", "Addenda Capital"}
+BASE_HQ = set(MTL_HQ) | {"Valnet", "Canada Infrastructure Bank", "Bell"}
+MTL_HQ |= {"Valnet", "Addenda Capital", "Bell"}
 
 
 def build_sources():
