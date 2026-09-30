@@ -113,7 +113,7 @@ MEDIUM = [
 HARD = re.compile(r"legal|juridique|counsel|avocat|lawyer|notaire|paralegal|law clerk|assistant|adjoint|administrative|réception|"
                   r"recrut|recruit|talent|\bHR\b|\bRH\b|payroll|paie|developer|développeu|software|logiciel|engineer|ingénieur|"
                   r"comptab|accounting|accountant|\btax\b|fiscal|marketing|designer|scientist|architect|personal banking|"
-                  r"services bancaires aux particuliers|financial advisor|conseill[eè]re? financi|itrade|mcleod|attorney|technicien|technician|scientifique|investment and retirement|investment and financing|placement et financement|retirement specialist|investment specialist|investment advisor|conseill[eè]re? en placement|financial planner|planificat|mortgage|hypoth|succursale|\bbranch\b|teller|caissi|personal financ|finances personnelles|\bIT\b|"
+                  r"services bancaires aux particuliers|m365|microsoft|sharepoint|syst[eè]mes? d.information|information systems|salesforce|servicenow|financial advisor|conseill[eè]re? financi|itrade|mcleod|attorney|technicien|technician|scientifique|investment and retirement|investment and financing|placement et financement|retirement specialist|investment specialist|investment advisor|conseill[eè]re? en placement|financial planner|planificat|mortgage|hypoth|succursale|\bbranch\b|teller|caissi|personal financ|finances personnelles|\bIT\b|"
                   r"forensic|juricomptab|cyber|documentation negotiat", re.I)
 OVERRIDE = re.compile(r"corporate development|développement corporatif|\bM&A\b|\bF&A\b|mergers|fusions|investment banking|"
                       r"private equity|placements? privés|capital[- ]investissement|venture|capital de risque|equity research|"
