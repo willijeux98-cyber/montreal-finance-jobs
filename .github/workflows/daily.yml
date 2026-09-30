@@ -2,11 +2,18 @@ name: Daily job pull
 
 on:
   schedule:
-    - cron: "0 10 * * *"   # 6:00 am Montreal (summer time), 5:00 am in winter
+    # GitHub often starts scheduled jobs hours late, worst on the hour. Several off-peak attempts
+    # overnight (Montreal summer time: 1:17, 2:43, 4:17, 5:43 am) so the book is ready by 5 am.
+    # The first one that runs does the work; later ones see today's date on the page and skip.
+    - cron: "17 5 * * *"
+    - cron: "43 6 * * *"
+    - cron: "17 8 * * *"
+    - cron: "43 9 * * *"
+    - cron: "23 13 * * *"   # late-morning safety net
   workflow_dispatch:        # "Run workflow" button for an on-demand refresh
   push:                     # rebuild right away when the engine or board list changes
     branches: [main]
-    paths: ["fetch.py", "sources.py", "template.html", "data/boards.json", "firms_seed.py"]
+    paths: ["fetch.py", "sources.py", "template.html", "data/boards.json", "firms_seed.py", ".github/workflows/daily.yml"]
 
 permissions:
   contents: write
@@ -21,12 +28,25 @@ jobs:
     timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
+      - name: Already built today?
+        id: check
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && grep -q "iso.: .$(date -u +%F)" docs/index.html; then
+            echo "done=true" >> "$GITHUB_OUTPUT"
+            echo "Today's book is already published; skipping."
+          else
+            echo "done=false" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/setup-python@v5
+        if: steps.check.outputs.done != 'true'
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
+        if: steps.check.outputs.done != 'true'
       - run: python fetch.py
+        if: steps.check.outputs.done != 'true'
       - name: Save today's book
+        if: steps.check.outputs.done != 'true'
         run: |
           git config user.name  "position-book-bot"
           git config user.email "position-book-bot@users.noreply.github.com"
