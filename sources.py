@@ -293,15 +293,18 @@ def rmk(name, cat, hq, base):
             m = re.match(r"(.*)\s+\(([^()]*)\)\s*$", t)
             out.append(_p(name, cat, m.group(1) if m else t, m.group(2) if m else "", it.findtext("link"), None, hq))
     else:
-        ns = "{http://www.google.com/schemas/sitemap/0.9}"
-        for loc in root.iter(ns + "loc"):
+        for loc in (e for e in root.iter() if str(e.tag).endswith("loc")):   # any sitemap namespace
             u = loc.text or ""
             m = re.search(r"/job/([^/]+)/\d+/?$", u)
-            if not m:
+            if m:
+                slug = requests.utils.unquote(m.group(1)).replace("-", " ")
+                city = slug.split(" ")[0]
+                out.append(_p(name, cat, slug[len(city):].strip() or slug, city, u, None, hq))
                 continue
-            slug = requests.utils.unquote(m.group(1)).replace("-", " ")
-            city = slug.split(" ")[0]
-            out.append(_p(name, cat, slug[len(city):].strip() or slug, city, u, None, hq))
+            m = re.search(r"/jobs/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}-([^/]+)/?$", u)
+            if m:   # Metro-style URLs: title and place run together in the slug
+                slug = requests.utils.unquote(m.group(1)).replace("-", " ")
+                out.append(_p(name, cat, slug[:1].upper() + slug[1:], "", u, None, hq))
     return out, len(out)
 
 
@@ -418,12 +421,17 @@ NAVISH = re.compile(r"^(careers?|carri[eè]res?|jobs?|emplois?|join us|contact|l
                     r"en savoir plus|home|accueil|privacy)$", re.I)
 
 
-def careers_page(name, cat, hq, url):
-    t = _get(url, headers={**UA, "Accept": "text/html"}).text
-    body = re.sub(r"<(script|style|nav|footer|header)\b.*?</\1>", " ", t, flags=re.S | re.I)
+def _clean(s):
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", s or ""))).strip()
+
+
+def _scan_careers(t, name, cat, hq, url, strip_chrome):
+    drop = "script|style|nav|footer|header" if strip_chrome else "script|style|nav"
+    body = re.sub(r"<(" + drop + r")\b.*?</\1>", " ", t, flags=re.S | re.I)
     out, seen = [], set()
     for href, inner in re.findall(r'<a[^>]+href=["\']([^"\'#]+)["\'][^>]*>(.*?)</a>', body, re.S | re.I):
-        text = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", inner))).strip()
+        head = re.search(r"<h[1-6][^>]*>(.*?)</h[1-6]>", inner, re.S | re.I)   # job cards: the title is the heading
+        text = _clean(head.group(1) if head else inner)
         text = re.sub(r"^\d{4}-\d{2}-\d{2}\s*", "", text)
         if re.search(r"open jobs|\d{1,3}(,\d{3})+|discover more|view & apply|voir l.offre", text, re.I):
             text = re.split(r"\s{0,1}(view & apply|→|\d{1,3}(?:,\d{3})+)", text)[0].strip()
@@ -438,18 +446,64 @@ def careers_page(name, cat, hq, url):
             link = url + "#" + re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
         if link in seen or text.lower() in seen:
             continue
-        seen.add(link); seen.add(text.lower())
+        seen.add(link)
+        seen.add(text.lower())
+        locm = re.search(r'class="[^"]*location[^"]*"[^>]*>(.*?)</(?:p|div|li)>', inner, re.S | re.I)
+        loc = _clean(locm.group(1)) if locm else ""
         oc = OTHER_CITY.search(text)
-        out.append(_p(name, cat, text, oc.group(0) if oc else ("Montreal (head office)" if hq else "Location not stated"), link, None, hq))
+        out.append(_p(name, cat, text, loc or (oc.group(0) if oc else ("Montreal (head office)" if hq else "Location not stated")),
+                      link, None, hq))
     for h in re.findall(r"<h[2-4][^>]*>(.*?)</h[2-4]>", body, re.S | re.I):  # jobs listed as headings, no link
-        text = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", h))).strip()
-        text = re.sub(r"^\d{4}-\d{2}-\d{2}\s*", "", text)
+        text = re.sub(r"^\d{4}-\d{2}-\d{2}\s*", "", _clean(h))
         if 8 <= len(text) <= 110 and JOBISH.search(text) and not NOT_JOB.search(text) and text.lower() not in seen:
             seen.add(text.lower())
             oc = OTHER_CITY.search(text)
             out.append(_p(name, cat, text, oc.group(0) if oc else ("Montreal (head office)" if hq else "Location not stated"),
                           url + "#" + re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-"), None, hq))
+    return out
+
+
+def careers_page(name, cat, hq, url):
+    t = _get(url, headers={**UA, "Accept": "text/html"}).text
+    strip = True
+    out = _scan_careers(t, name, cat, hq, url, strip_chrome=True)
+    if not out:   # job cards often wrap each title in <header>/<footer>: look again without stripping those
+        strip = False
+        out = _scan_careers(t, name, cat, hq, url, strip_chrome=False)
+    # paged listings (Drupal / WordPress "?page=1"): follow up to 6 more pages
+    if out and re.search(r'href="[^"]*[?&]page=1\b', t):
+        have = {j["u"] for j in out}
+        for n in range(1, 7):
+            try:
+                more = _scan_careers(_get(url + ("&" if "?" in url else "?") + f"page={n}",
+                                          headers={**UA, "Accept": "text/html"}).text, name, cat, hq, url, strip)
+            except Exception:
+                break
+            fresh = [j for j in more if j["u"] not in have]
+            if not fresh:
+                break
+            have |= {j["u"] for j in fresh}
+            out += fresh
     return out, len(out)
+
+
+# ---------------------------------------------------------------- Oracle Recruiting Cloud (Innergex)
+def oracle(name, cat, hq, host, site):
+    out, off, total = [], 0, 1
+    while off < min(total, 1000):
+        u = (f"{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true"
+             f"&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber={site},facetsList=NONE,limit=100,offset={off}")
+        it = (_get(u).json().get("items") or [{}])[0]
+        total = it.get("TotalJobsCount") or 0
+        reqs = it.get("requisitionList") or []
+        for r in reqs:
+            locs = [r.get("PrimaryLocation") or ""] + [x.get("Name", "") for x in (r.get("secondaryLocations") or []) if isinstance(x, dict)]
+            out.append(_p(name, cat, r.get("Title"), ", ".join(x for x in locs if x),
+                          f"{host}/hcmUI/CandidateExperience/en/sites/{site}/job/{r.get('Id')}", _iso_age(r.get("PostedDate")), hq))
+        if not reqs:
+            break
+        off += len(reqs)
+    return out, total
 
 
 # ---------------------------------------------------------------- registry
@@ -475,6 +529,7 @@ FETCHERS = {
     "wprss": lambda n, c, h, k: wprss(n, c, h, k),
     "jobvite": lambda n, c, h, k: jobvite(n, c, h, k),
     "careers": lambda n, c, h, k: careers_page(n, c, h, k),
+    "oracle": lambda n, c, h, k: oracle(n, c, h, *k),
 }
 
 # Boards that discovery can't find on its own (verified by hand). kind, key, name, cat
@@ -549,6 +604,10 @@ MANUAL = [
     # Desjardins again in French: some titles only exist in French and would be missed in English
     ("workday_fr", ["desjardins", 10, "Desjardins"], "Desjardins", "ib"),
     ("workday_fr", ["cdpq", 10, "CDPQ"], "CDPQ", "pension"),
+    # added after the 2 Oct audit of boards that were returning nothing
+    ("oracle", ["https://fa-ewqm-saasfaprod1.fa.ocs.oraclecloud.com", "CX_1"], "Innergex", "corpdev"),
+    ("ashby", "lightspeedhq", "Lightspeed", "corpdev"),
+    ("rmk", "https://talent.metro.ca", "Metro", "corpdev"),
 ]
 
 
@@ -566,6 +625,17 @@ OTHER_CITY = re.compile(r"\b(toronto|vancouver|calgary|edmonton|ottawa|winnipeg|
 MANUAL_NAMES = {m[2] for m in MANUAL} | {"National Bank"}
 BASE_HQ = set(MTL_HQ) | {"Valnet", "Canada Infrastructure Bank", "Bell"}
 MTL_HQ |= {"Valnet", "Addenda Capital", "Bell"}
+
+
+CAREERS_PATH = re.compile(r"career|carri|job|emploi|join|joindre|rejoindre|talent|postes|opportunit|hiring|recrut|travailler|work-with", re.I)
+NEWSY_PATH = re.compile(r"/(news|nouvelles|announcements?|actualit[eé]s|blogue?|insights|news_items|investment_fund|press|communiques?)(/|$)", re.I)
+
+
+def real_careers_url(u):
+    """Discovery sometimes lands on a news story or blog post that mentions careers. Skip those."""
+    path = re.sub(r"^https?://[^/]+", "", u or "")
+    last = [x for x in path.split("/") if x][-1:] or [""]
+    return bool(CAREERS_PATH.search(path)) and not NEWSY_PATH.search(path) and last[0].count("-") <= 4
 
 
 def build_sources():
@@ -601,9 +671,12 @@ def build_sources():
         if f["boards"]:
             for kind, key in f["boards"]:
                 add(kind, key, name, cat)
-        elif f.get("careers") and (name in MTL_HQ or rc) and name not in MANUAL_NAMES:
+        elif f.get("careers") and (name in MTL_HQ or rc) and name not in MANUAL_NAMES and real_careers_url(f["careers"]):
             host = re.sub(r"^https?://", "", f["careers"]).split("/")[0].lower()
             if cat == "pe_vc" and re.match(r"(careers|jobs|talent)\.", host):
                 continue  # VC "careers." sites are portfolio-company talent boards, not the fund's own jobs
             add("careers", f["careers"], name, cat)
+    from net import linkedin, jobbank
+    srcs.append((linkedin, "LinkedIn sweep"))
+    srcs.append((jobbank, "Job Bank sweep"))
     return srcs

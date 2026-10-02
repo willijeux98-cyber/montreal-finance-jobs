@@ -1,9 +1,10 @@
 """
 Montreal high-finance job desk.
 
-Pulls postings straight from each employer's hiring system (never from job
-sites), keeps the Montreal buy-side / investment banking / markets seats,
-ranks them against the owner's profile, and writes docs/index.html.
+Pulls postings straight from each employer's hiring system, then sweeps public job
+searches (LinkedIn, Job Bank) for Montreal investment roles at firms the boards don't
+cover. Keeps the Montreal buy-side / investment banking / markets seats, ranks them
+against the owner's profile, and writes docs/index.html.
 
 Run:  python fetch.py
 """
@@ -25,7 +26,12 @@ OUT = os.path.join(ROOT, "docs", "index.html")
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/126 Safari/537.36",
       "Accept": "application/json"}
-TODAY = dt.date.today()
+try:
+    from zoneinfo import ZoneInfo
+    _NOW = dt.datetime.now(ZoneInfo("America/Toronto"))
+except Exception:   # no tz database on this machine: the workflow sets TZ=America/Toronto anyway
+    _NOW = dt.datetime.now()
+TODAY = _NOW.date()
 
 from sources import build_sources  # noqa: E402  (all job boards live in sources.py / data/boards.json)
 
@@ -96,6 +102,8 @@ STRONG = [
      r"répartition de l.actif|total fund|public markets|marchés publics|multi-asset|multiactifs",
      "portfolio management"),
     (r"capital markets|marchés des capitaux|global markets|marchés mondiaux", "capital markets"),
+    (r"acquisitions? (analyst|associate|manager)|analyste.{0,20}acquisitions?|financing analyst|"
+     r"analyste.{0,20}financement|asset management analyst|analyste.{0,20}gestion d.actifs", "real estate investing"),
     (r"\binvest(?!igat)|placement|co-invest|\balpha\b|hedge fund|fund investment|\bfonds\b", "investments"),
 ]
 MEDIUM = [
@@ -114,7 +122,9 @@ HARD = re.compile(r"legal|juridique|counsel|avocat|lawyer|notaire|paralegal|law 
                   r"recrut|recruit|talent|\bHR\b|\bRH\b|payroll|paie|developer|développeu|software|logiciel|engineer|ingénieur|"
                   r"comptab|accounting|accountant|\btax\b|fiscal|marketing|designer|scientist|architect|personal bank|banquier|"
                   r"services bancaires aux particuliers|m365|microsoft|sharepoint|syst[eè]mes? d.information|information systems|salesforce|servicenow|financial advisor|conseill[eè]re? financi|itrade|mcleod|attorney|technicien|technician|scientifique|investment and retirement|investment and financing|placement et financement|retirement specialist|investment specialist|investment advisor|conseill[eè]re? en placement|financial planner|planificat|mortgage|hypoth|succursale|\bbranch\b|teller|caissi|personal financ|finances personnelles|\bIT\b|"
-                  r"forensic|juricomptab|cyber|documentation negotiat", re.I)
+                  r"forensic|juricomptab|cyber|documentation negotiat|parajuriste|\bjuriste|soci[ée]taire|"
+                  r"portefeuille de projets|project portfolio|programs? portfolio|program/portfolio|project/program portfolio|"
+                  r"portfolio of projects|gestionnaire immobili|property manag|gestion immobili|building manag", re.I)
 OVERRIDE = re.compile(r"corporate development|développement corporatif|\bM&A\b|\bF&A\b|mergers|fusions|investment banking|"
                       r"private equity|placements? privés|capital[- ]investissement|venture|capital de risque|equity research|"
                       r"fundamental research|recherche fondamentale|transaction (services|diligence|advisory)|deal advisory|\bdeals?\b|"
@@ -153,7 +163,7 @@ STUDENT = re.compile(r"intern|stage|stagiaire|co-?op|student|étudiant|summer|é
 TEMP = re.compile(r"temporary|temporaire|contract|contrat|\d+\s*(months|mois)", re.I)
 
 CAT_BASE = {"pension": 6, "pe_vc": 6, "hedge": 6, "am": 5, "ib": 5, "markets": 5, "insurer": 4,
-            "advisory": 5, "corpdev": 5}
+            "advisory": 5, "corpdev": 5, "re": 5, "open": 4}
 CAT_WORDS = {
     "pension": "a Montreal pension investor",
     "pe_vc": "a private-markets investor",
@@ -164,6 +174,8 @@ CAT_WORDS = {
     "insurer": "an insurer's investment arm",
     "advisory": "a deal-advisory / valuation team",
     "corpdev": "a Montreal company's M&A team",
+    "re": "a real estate investor or developer",
+    "open": "a firm outside the usual list",
 }
 ANGLE = {
     "fund investing": "Lead with CFA Level I, fund mechanics (GP/LP, NAV, DPI/TVPI, the J-curve) and the large-merger diligence.",
@@ -187,9 +199,9 @@ ANGLE = {
     "markets operations": "A real way onto the markets side. Lead with your process work and CFA Level I.",
     "performance measurement": "Measuring how portfolios actually did. Lead with your data work and CFA Level I.",
     "investment risk": "Lead with the modelling and your insurance background.",
-    "due diligence": "This is literally what you did at your M&A role. Say so.",
-    "strategy": "Same function as your your M&A role seat, at a finance shop. Use it as the way in.",
-    "analytics": "Your your current role skill set at a finance shop. A foot in the door, not an investment seat.",
+    "due diligence": "This is literally what you did in the merger diligence. Say so.",
+    "strategy": "Strategy work at a finance shop: the same muscles as your current role. Use it as the way in.",
+    "analytics": "Your current skill set at a finance shop. A foot in the door, not an investment seat.",
     "treasury": "Corporate treasury. Finance-heavy, not deal work.",
     None: "A foot in the door at a finance shop. Not an investment seat.",
 }
@@ -252,7 +264,7 @@ def score(job):
     if cat == "ib" and re.search(r"investment associate|associ\w* en (investissement|placements)", t, re.I):
         return None  # wealth-desk assistant seat at a bank
     # banks are huge: only keep their front-office seats
-    if (cat in ("ib", "insurer", "markets", "advisory", "corpdev") or job["c"] in STRICT) and kind not in ("strong", "quant"):
+    if (cat in ("ib", "insurer", "markets", "advisory", "corpdev", "re", "open") or job["c"] in STRICT) and kind not in ("strong", "quant"):
         if not (cat in ("ib", "advisory") and sig in ("valuation", "markets operations", "due diligence")):
             return None
     if cat == "corpdev" and sig not in ("corporate development", "investment banking", "deal advisory", "fund investing"):
@@ -322,6 +334,85 @@ CORE = {"CDPQ", "PSP Investments", "Ardian", "Novacap", "Sagard", "Power Corpora
         "Letko Brosseau", "Jarislowsky Fraser", "Van Berkom", "Addenda Capital", "Montrusco Bolton"}
 
 
+# ---------------------------------------------------------------- the net: who is this firm?
+def fold(s):
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFD", str(s or "")) if unicodedata.category(c) != "Mn").lower()
+
+
+CO_STOP = re.compile(r"\b(inc|corp|corporation|ltd|ltee|limited|limitee|llc|lp|l\.p|senc|s\.e\.n\.c|group|groupe|the|le|la|les|de|du|des|"
+                     r"of|canada|canadian|co|company|compagnie)\b")
+
+
+def norm_co(s):
+    s = fold(s).split("|")[0]
+    s = re.sub(r"[^a-z0-9& ]+", " ", s)
+    return re.sub(r"\s+", " ", CO_STOP.sub(" ", s)).strip()
+
+
+ALIASES = {
+    "investissements psp": "PSP Investments", "psp investments": "PSP Investments", "caisse": "CDPQ",
+    "caisse depot et placement quebec": "CDPQ", "cdpq": "CDPQ", "national bank": "National Bank", "banque nationale": "National Bank",
+    "bmo financial": "BMO", "bmo": "BMO", "royal bank": "RBC", "rbc": "RBC", "td": "TD", "td bank": "TD", "scotiabank": "Scotiabank",
+    "cibc": "CIBC", "intact financial": "Intact", "intact": "Intact", "desjardins": "Desjardins", "mouvement desjardins": "Desjardins",
+    "hydro quebec": "Hydro-Quebec", "sun life": "Sun Life", "manulife": "Manulife", "ia financial": "iA Financial Group",
+    "ia groupe financier": "iA Financial Group", "industrielle alliance": "iA Financial Group", "beneva": "Beneva",
+    "business development bank": "BDC", "banque developpement": "BDC", "bdc": "BDC", "export development": "EDC", "edc": "EDC",
+    "power corporation": "Power Corporation", "laurentian bank": "Laurentian Bank", "banque laurentienne": "Laurentian Bank",
+    "infrastructure bank": "Canada Infrastructure Bank", "banque infrastructure": "Canada Infrastructure Bank",
+    "fonds solidarite ftq": "Fonds de solidarite FTQ", "ivanhoe cambridge": "Ivanhoe Cambridge", "ivanhoe": "Ivanhoe Cambridge",
+    "investissement quebec": "Investissement Quebec", "jarislowsky fraser": "Jarislowsky Fraser", "fiera": "Fiera Capital",
+    "couche tard": "Couche-Tard", "alimentation couche tard": "Couche-Tard", "cn": "CN", "canadian national railway": "CN",
+    "bmo financier": "BMO", "bmo groupe financier": "BMO", "rbc banque royale": "RBC", "banque royale": "RBC",
+    "banque scotia": "Scotiabank", "groupe financier banque td": "TD", "kpmg": "KPMG", "deloitte": "Deloitte", "ey": "EY", "ernst & young": "EY", "pwc": "PwC", "pricewaterhousecoopers": "PwC",
+}
+
+
+def firm_index(names):
+    idx = {norm_co(n): n for n in names if norm_co(n)}
+    idx.update(ALIASES)
+    return idx
+
+
+def match_firm(company, idx):
+    k = norm_co(company)
+    if not k:
+        return None
+    if k in idx:
+        return idx[k]
+    words = k.split()
+    for n in range(len(words), 0, -1):   # "fiera capital private debt" -> "fiera capital" -> "fiera"
+        head = " ".join(words[:n])
+        if head in idx and (n > 1 or len(head) >= 4 or head in ALIASES):
+            return idx[head]
+    return None
+
+
+# Law firms, staffing agencies and job sites post "investment" titles that aren't investment seats
+NOT_A_FIRM = re.compile(r"\bllp\b|s\.?e\.?n\.?c\.?r\.?l|avocats|lawyers|\blaw\b|osler|stikeman|mccarthy|fasken|borden ladner|"
+                        r"norton rose|davies ward|lavery|langlois|blakes|torys|dentons|gowling|miller thomson|mcmillan|"
+                        r"\bacca careers\b|jobillico|talent\.com|indeed|workopolis|eluta|\brecrutement\b|staffing|placement de personnel", re.I)
+
+
+def guess_cat(company):
+    c = fold(company)
+    if re.search(r"deloitte|kpmg|pwc|\bey\b|ernst|grant thornton|raymond chabot|\bmnp\b|\bbdo\b|richter|accuracy|valuation|evaluation|"
+                 r"transaction advis|alvarez|fti consulting", c):
+        return "advisory"
+    if re.search(r"\bbank\b|banque|securities|valeurs mobili|capital markets|merchant bank", c):
+        return "ib"
+    if re.search(r"asset management|gestion d.actifs|gestion de placements|investment management|gestion de portefeuille|"
+                 r"wealth|patrimoine|investment counsel|conseillers en placement", c):
+        return "am"
+    if re.search(r"immobili|real estate|realty|properties|proprietes|developpement|developments|construction|\breit\b|\bfpi\b|"
+                 r"habitations|residences", c):
+        return "re"
+    if re.search(r"capital|partners|partenaires|ventures|equity|private|invest|fonds|\bfund|holding|family office|"
+                 r"pension|retraite|endowment|fondation", c):
+        return "pe_vc"
+    return "open"
+
+
 # ---------------------------------------------------------------- pipeline
 OTHER = re.compile(r"toronto|vancouver|calgary|edmonton|ottawa|winnipeg|halifax|waterloo|mississauga|new york|"
                    r"boston|chicago|houston|london|paris|madrid|singapore|hong kong|qu[eé]bec city|ville de qu[eé]bec|"
@@ -353,20 +444,60 @@ def with_retry(fn, src, tries=3):
 
 
 def main():
-    raw, errors, scanned, empty = [], [], 0, []
+    raw, errors, scanned, empty, got, netraw, netread = [], [], 0, [], {}, [], 0
     with cf.ThreadPoolExecutor(10) as ex:
         futs = {ex.submit(with_retry, fn, src): label for fn, src, label in SOURCES}
         for f in cf.as_completed(futs):
             label = futs[f]
             try:
                 jobs, n = f.result()
+                for j in jobs:
+                    j["src"] = label
+                if label.endswith(" sweep"):
+                    netraw.extend(jobs)
+                    netread += n
+                    continue
                 raw.extend(jobs)
                 scanned += n
+                got[label] = got.get(label, 0) + n
                 if n == 0:
                     empty.append(label)
             except Exception as e:
                 errors.append(f"{label}: {type(e).__name__}")
                 print(f"  ! {label} failed: {e}", file=sys.stderr)
+
+    # Jarislowsky Fraser posts through Scotiabank's board: give those seats their real name
+    for j in raw:
+        if j["c"] == "Scotiabank" and re.search(r"jarislowsky|\bSJF\b", j["t"] or "", re.I):
+            j["c"], j["cat"], j["hq"] = "Jarislowsky Fraser", "am", True
+
+    # The net: keep a row only if its firm's own board didn't already give us postings
+    from sources import MTL_HQ
+    try:
+        boards = json.load(open(os.path.join(ROOT, "data", "boards.json"), encoding="utf-8"))
+    except Exception:
+        boards = []
+    cats = {b["name"]: b["cat"] for b in boards}
+    for _, _, label in SOURCES:
+        cats.setdefault(label, None)
+    for j in raw:
+        cats[j["c"]] = j["cat"]
+    idx = firm_index(list(cats) + list(MTL_HQ))
+    netkept, netdrop = 0, 0
+    for j in netraw:
+        if NOT_A_FIRM.search(j["c"] or ""):
+            netdrop += 1
+            continue
+        firm = match_firm(j["c"], idx)
+        if firm and got.get(firm, 0) > 0:
+            netdrop += 1
+            continue   # that firm's own board is read directly
+        if firm:
+            j["c"], j["cat"], j["hq"] = firm, cats.get(firm) or guess_cat(firm), firm in MTL_HQ
+        else:
+            j["cat"] = guess_cat(j["c"])
+        netkept += 1
+        raw.append(j)
 
     kept, dedupe = [], {}
     for j in raw:
@@ -379,6 +510,8 @@ def main():
         if not re.match(r"https?://", j["u"] or "", re.I):
             continue
         key = j["u"].split("?")[0].rstrip("/")
+        if j.get("net"):   # the same seat often shows up on both sweeps (and twice on LinkedIn)
+            key = "net:" + norm_co(j["c"]) + ":" + re.sub(r"[^a-z0-9]+", " ", fold(j["t"])).strip()
         wd = re.search(r"//([^/]+\.myworkdayjobs\.com)/.*_([A-Za-z]{0,4}-?\d[\w-]*)$", key)
         if wd:
             key = wd.group(1) + ":" + wd.group(2)  # same requisition in English and French = one job
@@ -410,22 +543,28 @@ def main():
 
     kept.sort(key=lambda j: (-j["s"], j["age"] if j["age"] is not None else 999))
     jobs = [dict(s=j["s"], c=j["c"], cat=j["cat"], t=j["t"], l=j["l"], u=j["u"],
-                 a=j["age"], n=j["new"], m=j["mtl_explicit"], w=j["why"]) for j in kept]
+                 a=j["age"], n=j["new"], m=j["mtl_explicit"], w=j["why"], o=j.get("net") or "", g=j.get("sig") or "")
+            for j in kept]
     if len(errors) > len(SOURCES) / 3:
         raise SystemExit(f"{len(errors)} of {len(SOURCES)} boards failed; keeping yesterday's page. {errors[:10]}")
     # boards that failed today: keep yesterday's rows for them so the book doesn't flicker
     failed = {e.split(":")[0] for e in errors}
+    if failed & {"LinkedIn sweep", "Job Bank sweep"}:
+        failed |= {x for x, lab in (("LinkedIn", "LinkedIn sweep"), ("Job Bank", "Job Bank sweep")) if lab in failed}
     if failed and os.path.exists(OUT):
         try:
             prev = open(OUT, encoding="utf-8").read()
             i = prev.index("const DATA = ") + len("const DATA = ")
             old_jobs = json.loads(prev[i:prev.index(";\nconst JOBS")].replace("\\u003c", "<"))["jobs"]
             have = {j["u"] for j in jobs}
-            jobs += [dict(j, n=False) for j in old_jobs if j["c"] in failed and j["u"] not in have]
+            jobs += [dict(j, n=False) for j in old_jobs if (j["c"] in failed or j.get("o") in failed) and j["u"] not in have]
         except Exception as e:
             print("could not carry over yesterday's rows:", e)
-    meta = dict(run=TODAY.strftime("%a %d %b %Y"), iso=TODAY.isoformat(), boards=len(SOURCES) - len(errors),
-                scanned=scanned, errors=errors)
+    direct = [l for _, _, l in SOURCES if not l.endswith(" sweep")]
+    meta = dict(run=TODAY.strftime("%a %d %b %Y"), iso=TODAY.isoformat(), at=_NOW.strftime("%H:%M"),
+                boards=len([l for l in direct if l not in failed]), scanned=scanned, errors=errors,
+                empty=len(empty), net=dict(read=netread, kept=netkept, dropped=netdrop),
+                firms=len({j["c"] for j in jobs}))
 
     page = open(TEMPLATE, encoding="utf-8").read()
     payload = json.dumps({"meta": meta, "jobs": jobs}, ensure_ascii=True).replace("<", "\\u003c")
@@ -433,6 +572,7 @@ def main():
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     open(OUT, "w", encoding="utf-8").write(page)
 
+    print(f"net: {netread} read, {netkept} from firms the boards miss, {netdrop} already covered")
     print(f"{scanned} postings read from {meta['boards']} boards -> {len(jobs)} kept, "
           f"{sum(j['n'] for j in jobs)} new, {sum(j['s'] >= 8 for j in jobs)} scored 8+")
     if errors:

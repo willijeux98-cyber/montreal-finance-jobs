@@ -2,18 +2,21 @@ name: Daily job pull
 
 on:
   schedule:
-    # GitHub often starts scheduled jobs hours late, worst on the hour. Several off-peak attempts
-    # overnight (Montreal summer time: 1:17, 2:43, 4:17, 5:43 am) so the book is ready by 5 am.
-    # The first one that runs does the work; later ones see today's date on the page and skip.
+    # GitHub starts scheduled jobs late, lately 6-7 hours late. So there are attempts spread across the whole night:
+    # the evening ones land after midnight in Montreal when GitHub is slow, the early-morning ones land on time when
+    # it isn't. The first run after midnight (Montreal time) builds the book; every later one sees today's date and stops.
+    - cron: "17 23 * * *"
+    - cron: "43 0 * * *"
+    - cron: "17 2 * * *"
+    - cron: "43 3 * * *"
     - cron: "17 5 * * *"
     - cron: "43 6 * * *"
     - cron: "17 8 * * *"
-    - cron: "43 9 * * *"
     - cron: "23 13 * * *"   # late-morning safety net
   workflow_dispatch:        # "Run workflow" button for an on-demand refresh
   push:                     # rebuild right away when the engine or board list changes
     branches: [main]
-    paths: ["fetch.py", "sources.py", "template.html", "data/boards.json", "firms_seed.py", ".github/workflows/daily.yml"]
+    paths: ["fetch.py", "sources.py", "net.py", "template.html", "data/boards.json", "firms_seed.py", ".github/workflows/daily.yml"]
 
 permissions:
   contents: write
@@ -25,15 +28,17 @@ concurrency:
 jobs:
   pull:
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    timeout-minutes: 60
+    env:
+      TZ: America/Toronto     # dates and "today" are Montreal's, not the server's
     steps:
       - uses: actions/checkout@v4
       - name: Already built today?
         id: check
         run: |
-          if [ "${{ github.event_name }}" = "schedule" ] && grep -q "iso.: .$(date -u +%F)" docs/index.html; then
+          if [ "${{ github.event_name }}" = "schedule" ] && grep -q "iso.: .$(date +%F)" docs/index.html; then
             echo "done=true" >> "$GITHUB_OUTPUT"
-            echo "Today's book is already published; skipping."
+            echo "Today's book ($(date +%F), Montreal) is already published; skipping."
           else
             echo "done=false" >> "$GITHUB_OUTPUT"
           fi
@@ -51,6 +56,6 @@ jobs:
           git config user.name  "position-book-bot"
           git config user.email "position-book-bot@users.noreply.github.com"
           git add docs data
-          git diff --cached --quiet || git commit -m "Book for $(date -u +%F)"
+          git diff --cached --quiet || git commit -m "Book for $(date +%F)"
           git pull --rebase --autostash origin main
           git push
