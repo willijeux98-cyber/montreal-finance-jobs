@@ -563,7 +563,7 @@ def main():
     direct = [l for _, _, l in SOURCES if not l.endswith(" sweep")]
     meta = dict(run=TODAY.strftime("%a %d %b %Y"), iso=TODAY.isoformat(), at=_NOW.strftime("%H:%M"),
                 boards=len([l for l in direct if l not in failed]), scanned=scanned, errors=errors,
-                empty=len(empty), net=dict(read=netread, kept=netkept, dropped=netdrop),
+                empty=len(empty), net=dict(read=netread, kept=netkept, dropped=netdrop, **__import__("net").STATS),
                 firms=len({j["c"] for j in jobs}))
 
     page = open(TEMPLATE, encoding="utf-8").read()

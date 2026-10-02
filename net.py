@@ -47,26 +47,34 @@ def _age(iso):
         return None
 
 
-def linkedin():
-    """LinkedIn's public (logged-out) job search, last 30 days, Montreal. Polite: one request at a time."""
-    out, seen, read, blocked = [], set(), 0, 0
+STATS = {"li_requests": 0, "li_limited": 0, "li_cards": 0, "li_unique": 0, "jb_requests": 0, "jb_cards": 0}
+
+
+def linkedin(budget=540):
+    """LinkedIn's public (logged-out) job search, last 30 days, Montreal. 10 results a page; one request at a time,
+    with patient retries when LinkedIn asks us to slow down. Stops after `budget` seconds whatever happens."""
+    out, seen, read = [], set(), 0
+    t0 = time.time()
     s = requests.Session()
     s.headers.update(UA)
     for q in QUERIES:
-        for start in (0, 25, 50):
-            r = s.get(LI_URL, params={"keywords": q, "location": "Montreal, Quebec, Canada", "f_TPR": "r2592000",
-                                      "start": start}, timeout=40)
-            if r.status_code == 429:
-                blocked += 1
-                if blocked > 2:
-                    if not out:
-                        raise RuntimeError("LinkedIn rate-limited the sweep")
-                    return out, read
-                time.sleep(25)
-                continue
-            if r.status_code != 200:
+        for start in range(0, 100, 10):
+            if time.time() - t0 > budget:
+                STATS["li_unique"] = len(out)
+                return out, read
+            r = None
+            for wait in (0, 20, 45):
+                time.sleep(wait)
+                STATS["li_requests"] += 1
+                r = s.get(LI_URL, params={"keywords": q, "location": "Montreal, Quebec, Canada", "f_TPR": "r2592000",
+                                          "start": start}, timeout=40)
+                if r.status_code != 429:
+                    break
+                STATS["li_limited"] += 1
+            if r is None or r.status_code != 200:
                 break
             cards = re.split(r"<li>\s*<div", r.text)[1:]
+            fresh = 0
             for c in cards:
                 urn = re.search(r"jobPosting:(\d+)", c)
                 title = re.search(r'base-search-card__title">(.*?)</h3>', c, re.S)
@@ -76,16 +84,21 @@ def linkedin():
                 if not (urn and title and comp):
                     continue
                 read += 1
+                STATS["li_cards"] += 1
                 jid = urn.group(1)
                 if jid in seen:
                     continue
                 seen.add(jid)
+                fresh += 1
                 out.append(dict(c=_text(comp.group(1)), cat=None, t=_text(title.group(1)), l=_text(loc.group(1) if loc else ""),
                                 u=f"https://www.linkedin.com/jobs/view/{jid}/", age=_age(when.group(1)) if when else None,
                                 hq=False, net="LinkedIn"))
-            if len(cards) < 10:
+            if len(cards) < 10 or not fresh:
                 break
-            time.sleep(1.2)
+            time.sleep(1.5)
+    STATS["li_unique"] = len(out)
+    if not out and STATS["li_limited"]:
+        raise RuntimeError("LinkedIn rate-limited the sweep")
     return out, read
 
 
@@ -97,10 +110,12 @@ def jobbank():
     """Government of Canada Job Bank: newest postings first, Montreal area."""
     out, seen, read = [], set(), 0
     for q in QUERIES[:12] + ["analyste financier placements", "investment manager", "analyste financier investissements"]:
+        STATS["jb_requests"] += 1
         r = requests.get(JB_URL, params={"searchstring": q, "locationstring": "Montréal, QC", "sort": "D"}, headers=UA, timeout=40)
         r.raise_for_status()
         for jid, body in re.findall(r'<article id="article-(\d+)"(.*?)</article>', r.text, re.S):
             read += 1
+            STATS["jb_cards"] += 1
             if jid in seen:
                 continue
             seen.add(jid)
