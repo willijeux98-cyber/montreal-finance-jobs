@@ -331,6 +331,7 @@ def why(job, kind, sig, level):
 
 
 SOURCES = [(lambda _s, f=f: f(), None, label) for f, label in build_sources()]
+MIN_SHOW = 8   # he only applies to 8+; everything scored 4+ is still tracked so Applied can tell "still posted"
 # Firms where even a non-investment seat is a real foot in the door
 CORE = {"CDPQ", "PSP Investments", "Ardian", "Novacap", "Sagard", "Power Corporation", "Fiera Capital",
         "Investissement Quebec", "Fonds de solidarite FTQ", "Fondaction", "Desjardins Capital", "Ivanhoe Cambridge",
@@ -548,9 +549,10 @@ def main():
     json.dump(seen, open(SEEN_PATH, "w", encoding="utf-8"), indent=0, sort_keys=True)
 
     kept.sort(key=lambda j: (-j["s"], j["age"] if j["age"] is not None else 999))
+    alive = sorted({j["u"] for j in kept})
     jobs = [dict(s=j["s"], c=j["c"], cat=j["cat"], t=j["t"], l=j["l"], u=j["u"],
                  a=j["age"], n=j["new"], m=j["mtl_explicit"], w=j["why"], o=j.get("net") or "", g=j.get("sig") or "")
-            for j in kept]
+            for j in kept if j["s"] >= MIN_SHOW]
     if len(errors) > len(SOURCES) / 3:
         raise SystemExit(f"{len(errors)} of {len(SOURCES)} boards failed; keeping yesterday's page. {errors[:10]}")
     # boards that failed today: keep yesterday's rows for them so the book doesn't flicker
@@ -563,17 +565,20 @@ def main():
             i = prev.index("const DATA = ") + len("const DATA = ")
             old_jobs = json.loads(prev[i:prev.index(";\nconst JOBS")].replace("\\u003c", "<"))["jobs"]
             have = {j["u"] for j in jobs}
-            jobs += [dict(j, n=False) for j in old_jobs if (j["c"] in failed or j.get("o") in failed) and j["u"] not in have]
+            carried = [dict(j, n=False) for j in old_jobs
+                       if (j["c"] in failed or j.get("o") in failed) and j["u"] not in have and j.get("s", 0) >= MIN_SHOW]
+            jobs += carried
+            alive = sorted(set(alive) | {j["u"] for j in carried})
         except Exception as e:
             print("could not carry over yesterday's rows:", e)
     direct = [l for _, _, l in SOURCES if not l.endswith(" sweep")]
     meta = dict(run=TODAY.strftime("%a %d %b %Y"), iso=TODAY.isoformat(), at=_NOW.strftime("%H:%M"),
                 boards=len([l for l in direct if l not in failed]), scanned=scanned, errors=errors,
                 empty=len(empty), net=dict(read=netread, kept=netkept, dropped=netdrop, **__import__("net").STATS),
-                firms=len({j["c"] for j in jobs}))
+                firms=len({j["c"] for j in jobs}), min=MIN_SHOW, tracked=len(alive))
 
     page = open(TEMPLATE, encoding="utf-8").read()
-    payload = json.dumps({"meta": meta, "jobs": jobs}, ensure_ascii=True).replace("<", "\\u003c")
+    payload = json.dumps({"meta": meta, "jobs": jobs, "alive": alive}, ensure_ascii=True).replace("<", "\\u003c")
     page = page.replace("/*__DATA__*/null", payload)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     open(OUT, "w", encoding="utf-8").write(page)

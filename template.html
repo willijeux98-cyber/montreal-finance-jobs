@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
 <style>
 /* POSITION BOOK — Montreal at dawn. One building per firm, one lit window per open seat.
-   Night-first palette; a greystone day palette for light mode. Amber = apply today. */
+   Night-first palette; a greystone day palette for light mode. Gold = 10, amber = 9, ice = 8. */
 :root{
   --bg:#0A0F1E; --bg-2:#0E1528; --panel:#111A30; --panel-2:#17223D; --line:#243154; --line-2:#2F3E66;
   --text:#E9EDF6; --text-2:#C3CBDD; --mut:#8D99B8; --faint:#5E6A8C;
@@ -83,7 +83,7 @@ a{color:inherit}
 .tip ul{margin:0;padding:0;list-style:none;display:grid;gap:5px}
 .tip li{display:grid;grid-template-columns:24px minmax(0,1fr);gap:6px;align-items:baseline;line-height:1.3}
 .tip li b{font-family:var(--mono);font-size:11.5px;color:#FFC977}
-.tip li b.s6{color:#CFE3FF}.tip li b.s4{color:#9AB0DA}
+.tip li b.s10{color:#FFD98A}.tip li b.s8{color:#CFE3FF}
 .tip .tm{margin-top:7px;font-family:var(--mono);font-size:10.5px;color:rgba(238,242,250,.55)}
 
 /* ---------------- ticker tape */
@@ -134,7 +134,7 @@ a{color:inherit}
 .tier-h h3{font-family:var(--display);font-weight:900;font-size:clamp(30px,4vw,44px);line-height:.85;margin:0;text-transform:uppercase;letter-spacing:.01em}
 .tier-h .sy{font-size:13px;color:var(--mut);padding-bottom:2px}
 .tier-h .ct{font-family:var(--display);font-weight:800;font-size:28px;line-height:.9;color:var(--mut)}
-.t8 .tier-h h3{color:var(--amber)}
+.t10 .tier-h h3{color:var(--amber)}
 .rowj{border-bottom:1px solid var(--line)}
 .rb{appearance:none;width:100%;display:grid;grid-template-columns:44px 38px minmax(0,1fr) auto 18px;gap:14px;align-items:center;background:none;border:0;padding:13px 4px;text-align:left;cursor:pointer;min-height:64px}
 .rb:hover{background:linear-gradient(90deg,var(--panel-2),transparent)}
@@ -143,9 +143,9 @@ a{color:inherit}
 .gauge b{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:19px}
 .ga{fill:none;stroke:var(--line);stroke-width:3}
 .gf{fill:none;stroke-width:3;stroke-linecap:round}
-.s8 .gf{stroke:var(--amber)} .s8 .gauge b{color:var(--amber)}
-.s6 .gf{stroke:var(--ice)}
-.s4 .gf{stroke:var(--dim)} .s4 .gauge b{color:var(--mut)}
+.s10 .gf,.s9 .gf{stroke:var(--amber)} .s10 .gauge b,.s9 .gauge b{color:var(--amber)}
+.s10 .gauge svg{filter:drop-shadow(0 0 4px var(--amber))}
+.s8 .gf{stroke:var(--ice)}
 .tile{width:38px;height:38px;border-radius:9px;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:16px;letter-spacing:.02em;color:#fff;background:hsl(var(--h) 45% 32%);box-shadow:inset 0 -3px 0 rgba(0,0,0,.25)}
 .nm{min-width:0}
 .nm .t{display:block;font-weight:600;font-size:15.5px;line-height:1.3;color:var(--text)}
@@ -228,9 +228,9 @@ a{color:inherit}
     <p class="lede" id="lede"></p>
   </div>
   <div class="legend" aria-hidden="true">
-    <span>apply today<i style="background:#FFB547"></i></span>
-    <span>worth a shot<i style="background:#CFE3FF"></i></span>
-    <span>stretch<i style="background:#5D74A6"></i></span>
+    <span>10 &middot; bullseye<i style="background:#FFD98A"></i></span>
+    <span>9 &middot; strong case<i style="background:#FFB547"></i></span>
+    <span>8 &middot; solid case<i style="background:#CFE3FF"></i></span>
     <span>new overnight<i style="background:#FF8A6B"></i></span>
   </div>
   <div class="hint" id="hint">Each tower is a firm &middot; tap one</div>
@@ -264,7 +264,7 @@ a{color:inherit}
       <h4>How it ranks</h4>
       Every posting is scored 0&ndash;10 against your r&eacute;sum&eacute;: the kind of firm, whether the seat is
       investment, deal or markets work, and whether the title is at your level (two years in, CFA Level&nbsp;I passed,
-      Level&nbsp;II candidate). Under 4 is left out. In the skyline, higher windows hold higher scores.
+      Level&nbsp;II candidate). <b>Only 8 and above are shown</b>: the rest are still tracked, just hidden. In the skyline, higher windows hold higher scores.
     </div>
     <div>
       <h4>Where it looks</h4>
@@ -288,9 +288,9 @@ const JOBS = (DATA && DATA.jobs) || [];
 const META = (DATA && DATA.meta) || {run:"-", boards:0, scanned:0, errors:[]};
 
 const TIERS = [
-  {k:"t8", lo:8, hi:10, name:"Apply today", sy:"your résumé already argues for these"},
-  {k:"t6", lo:6, hi:7,  name:"Worth a shot", sy:"winnable, but the application has to work"},
-  {k:"t4", lo:4, hi:5,  name:"Stretch", sy:"right firm, wrong level or wrong seat"}
+  {k:"t10", lo:10, hi:10, name:"Bullseye", sy:"firm, seat and level all line up"},
+  {k:"t9",  lo:9,  hi:9,  name:"Strong case", sy:"one small gap, easy to argue"},
+  {k:"t8",  lo:8,  hi:8,  name:"Solid case", sy:"a real shot if the application is sharp"}
 ];
 const CATS = [
   {k:"all", name:"All", h:220},
@@ -353,7 +353,8 @@ const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, m => ({"&":"&amp;
 const fold = s => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 const age = j => j.a == null ? "" : j.a === 0 ? "today" : j.a === 1 ? "1d" : j.a > 60 ? "60d+" : j.a > 30 ? "30d+" : j.a + "d";
 const catOf = k => CATS.find(c => c.k === k) || CATS[CATS.length - 1];
-const tierOf = s => s >= 8 ? "s8" : s >= 6 ? "s6" : "s4";
+const tierOf = s => s >= 10 ? "s10" : s >= 9 ? "s9" : "s8";
+const ALIVE = new Set(((DATA && DATA.alive) || []).map(jobKey));
 const initials = c => { const w = String(c).replace(/[^A-Za-zÀ-ÿ0-9 &]/g, " ").split(/\s+/).filter(x => x && !/^(the|de|du|des|la|le|les|of|and|&|inc|ltd|group|groupe)$/i.test(x)); return ((w[0] || "?")[0] + (w[1] ? w[1][0] : (w[0] || "")[1] || "")).toUpperCase(); };
 const fmtDate = d => d ? new Date(d + "T12:00:00").toLocaleDateString("en-CA", {month:"short", day:"numeric"}) : "earlier";
 
@@ -463,9 +464,9 @@ function buildCity(){
     });
     g += '<path d="' + dark + '" fill="#2A3962" opacity="' + (f.big ? .6 : .45) + '"/>';
     lit.sort((a, b) => a.fl - b.fl || a.c - b.c).forEach((s, i) => {
-      const j = f.js[i], col = j.s >= 8 ? "#FFB547" : j.s >= 6 ? "#CFE3FF" : "#6B83B8";
+      const j = f.js[i], col = j.s >= 10 ? "#FFD98A" : j.s >= 9 ? "#FFB547" : "#CFE3FF";
       const isNew = j.n || since.has(jobKey(j.u));
-      g += '<rect class="w' + (isNew ? " w-nw" : "") + '" x="' + (f.x + f.P + s.c * (f.WW + f.GX)) + '" y="' + (y0 + f.P + s.fl * (f.WH + f.GY)) + '" width="' + f.WW + '" height="' + f.WH + '" fill="' + (isNew ? "#FF8A6B" : col) + '"' + (j.s >= 8 || isNew ? ' filter="url(#gl)"' : "") + '/>';
+      g += '<rect class="w' + (isNew ? " w-nw" : "") + '" x="' + (f.x + f.P + s.c * (f.WW + f.GX)) + '" y="' + (y0 + f.P + s.fl * (f.WH + f.GY)) + '" width="' + f.WW + '" height="' + f.WH + '" fill="' + (isNew ? "#FF8A6B" : col) + '"' + (j.s >= 9 || isNew ? ' filter="url(#gl)"' : "") + '/>';
     });
     return g + '</g>';
   };
@@ -541,16 +542,16 @@ function clock(){
 
 function lede(){
   const open = openJobs(), firms = new Set(open.map(j => j.c)).size;
-  const fresh = open.filter(j => j.n).length, top = open.filter(j => j.s >= 8).length;
+  const fresh = open.filter(j => j.n).length, top = open.filter(j => j.s >= 10).length;
   document.getElementById("lede").innerHTML = "<b>" + open.length + " investment seats</b> open across <b>" + firms + " firms</b>. " +
-    (fresh ? "<b>" + fresh + "</b> lit up overnight. " : "") + (top ? "<b>" + top + "</b> are apply-today." : "");
+    (fresh ? "<b>" + fresh + "</b> lit up overnight. " : "") + (top ? "<b>" + top + "</b> " + (top === 1 ? "is a" : "are a") + " perfect 10." : "");
 }
 
 function tape(){
   const open = openJobs(), net = META.net || {};
   const items = [
     '<span class="up">&#9650; <b>' + open.filter(j => j.n).length + '</b> new overnight</span>',
-    '<span class="am"><b>' + open.filter(j => j.s >= 8).length + '</b> apply today</span>',
+    '<span class="am"><b>' + open.filter(j => j.s >= 10).length + '</b> perfect 10s</span>',
     '<span><b>' + open.length + '</b> seats</span>',
     '<span><b>' + new Set(open.map(j => j.c)).size + '</b> firms</span>',
     '<span><b>' + META.boards + '</b> firm boards read' + (net.read ? ' + LinkedIn &amp; Job Bank sweeps' : '') + '</span>',
@@ -646,7 +647,7 @@ function appliedRows(){
   return Object.entries(applied).map(([k, a]) => {
     const live = JOBS.find(j => jobKey(j.u) === k);
     const u = live ? live.u : (a.u || k);
-    const status = live ? "live" : (FAILED.has(a.c) ? "unknown" : "gone");
+    const status = (live || ALIVE.has(k)) ? "live" : (FAILED.has(a.c) ? "unknown" : "gone");
     return Object.assign({k, u, t:a.t, c:a.c, l:a.l, s:a.s, cat:a.cat || (live && live.cat) || "", d:a.d, st:a.st || "applied", status}, live ? {w:live.w} : {});
   });
 }
