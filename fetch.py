@@ -126,9 +126,9 @@ HARD = re.compile(r"legal|juridique|counsel|avocat|lawyer|notaire|paralegal|law 
                   r"portefeuille de projets|project portfolio|programs? portfolio|program/portfolio|project/program portfolio|"
                   r"portfolio of projects|gestionnaire immobili|property manag|gestion immobili|building manag|"
                   r"g[ée]nie|\bCPI\b|charg[ée]e? (ou charg[ée] )?de projets?|infrastructures? (urbaines|municipales)|"
-                  r"quantity surveyor|arpenteur|m[ée]dia|\bbudget|courtier immobilier|real estate broker|"
+                  r"quantity surveyor|arpenteur|m[ée]dia|\bbudget|courtier immobilier|real estate broker(?!age)|"
                   r"contr[ôo]leur|controller|capex|capital projects?|projets? d.investissement|commercialisation|"
-                  r"product portfolio|account manager|\bcommercial (manager|insights|director)", re.I)
+                  r"product portfolio|account manager(?!.*restructur)|\bcommercial (manager|insights|director)", re.I)
 OVERRIDE = re.compile(r"corporate development|développement corporatif|\bM&A\b|\bF&A\b|mergers|fusions|investment banking|"
                       r"private equity|placements? privés|capital[- ]investissement|venture|capital de risque|equity research|"
                       r"fundamental research|recherche fondamentale|transaction (services|diligence|advisory)|deal advisory|\bdeals?\b|"
