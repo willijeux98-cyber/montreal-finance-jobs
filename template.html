@@ -10,8 +10,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Position Book">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230A0F1E'/%3E%3Crect x='10' y='26' width='12' height='30' fill='%23243154'/%3E%3Crect x='26' y='12' width='14' height='44' fill='%23314270'/%3E%3Crect x='44' y='32' width='10' height='24' fill='%23243154'/%3E%3Crect x='30' y='18' width='3' height='4' fill='%23FFB547'/%3E%3Crect x='35' y='26' width='3' height='4' fill='%23FFB547'/%3E%3Crect x='30' y='34' width='3' height='4' fill='%23CFE3FF'/%3E%3Crect x='14' y='32' width='3' height='4' fill='%23FFB547'/%3E%3C/svg%3E">
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' fill='%230A0F1E'/%3E%3Crect x='30' y='74' width='34' height='84' fill='%23243154'/%3E%3Crect x='74' y='34' width='38' height='124' fill='%23314270'/%3E%3Crect x='122' y='92' width='28' height='66' fill='%23243154'/%3E%3Crect x='84' y='50' width='8' height='11' fill='%23FFB547'/%3E%3Crect x='98' y='74' width='8' height='11' fill='%23FFB547'/%3E%3Crect x='84' y='98' width='8' height='11' fill='%23CFE3FF'/%3E%3Crect x='40' y='92' width='8' height='11' fill='%23FFB547'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
@@ -43,7 +44,7 @@
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;font-kerning:normal;overflow-x:clip}
 button{font:inherit;color:inherit}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--amber);outline-offset:2px;border-radius:4px}
@@ -55,7 +56,7 @@ a{color:inherit}
 .hero .sky{order:2;margin-top:-34px}
 .sky{position:relative;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .sky::-webkit-scrollbar{display:none}
-.sky svg{display:block;width:100%;height:auto;min-width:880px;max-height:72vh}
+.sky svg{display:block;width:100%;height:auto;min-width:880px;max-height:72vh;text-rendering:geometricPrecision}
 .hero-copy{position:relative;z-index:2;pointer-events:none;padding:calc(20px + env(safe-area-inset-top,0px)) clamp(16px,4vw,40px) 0;max-width:1180px;margin:0 auto 0}
 .place{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(238,242,250,.72)}
 .place b{color:#FFC977;font-weight:500}
@@ -396,17 +397,20 @@ function buildCity(){
   const shape = (f, big) => {
     const r = rng(hash(f.c)), n = f.js.length;
     f.WW = big ? 6 : 4; f.WH = big ? 8 : 6; f.GX = big ? 4 : 3; f.GY = big ? 5 : 4; f.P = big ? 6 : 4;
-    f.cols = Math.max(2, Math.min(big ? 6 : 4, Math.ceil(Math.sqrt(n)) + 1 + (r() < .35 ? 1 : 0)));
+    f.cols = Math.max(2, Math.min(big ? 6 : 4, 2 + Math.floor(r() * (big ? 4 : 3)) + (n > 6 ? 1 : 0)));
     const minF = Math.ceil(n / f.cols);
-    f.floors = big ? Math.min(46, Math.max(12, minF + 6 + Math.round(f.top * 2.2) + Math.floor(r() * 10)))
-                   : Math.min(30, Math.max(7, minF + 4 + Math.round(f.top * 1.2) + Math.floor(r() * 8)));
+    // height = how much is open there, plus each building's own character
+    f.floors = big ? Math.min(48, Math.max(10, minF + 4 + n * 2 + Math.floor(r() * 20)))
+                   : Math.min(26, Math.max(6, minF + 3 + n + Math.floor(r() * 12)));
     f.w = f.P * 2 + f.cols * f.WW + (f.cols - 1) * f.GX;
     f.h = f.P + f.floors * (f.WH + f.GY) + 6;
-    f.roof = f.top >= 9 && big ? "spire" : ["flat", "setback", "crown", "slant", "setback", "flat", "antenna"][Math.floor(r() * 7)];
+    const roofs = ["flat", "setback", "crown", "slant", "setback", "flat", "antenna", "flat", "crown"];
+    f.roof = roofs[Math.floor(r() * roofs.length)];
     f.big = big;
   };
   front.forEach(f => shape(f, true));
   back.forEach(f => shape(f, false));
+  firms.slice(0, 3).forEach(f => { if(f.big) f.roof = "spire"; });   // the three busiest firms get spires and beacons
   let x = 70;
   front.forEach(f => { const r = rng(hash(f.c) + 7); f.x = x; x += f.w + 6 + Math.floor(r() * 12); });
   const W = Math.max(x + 70, 1000);
@@ -416,7 +420,7 @@ function buildCity(){
   document.getElementById("hero").style.setProperty("--sky-top", pal.stops[0]);
 
   const out = [];
-  out.push('<svg viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="' + firms.length + ' firms, ' + jobs.length + ' open roles">');
+  out.push('<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="' + firms.length + ' firms, ' + jobs.length + ' open roles">');
   out.push('<defs>' +
     '<linearGradient id="sk" x1="0" y1="0" x2="0" y2="1">' + pal.stops.map((c, i) => '<stop offset="' + (i / (pal.stops.length - 1)) + '" stop-color="' + c + '"/>').join("") + '</linearGradient>' +
     '<linearGradient id="bd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#202B4F"/><stop offset=".5" stop-color="#151E3A"/><stop offset="1" stop-color="#0E1529"/></linearGradient>' +
@@ -451,7 +455,7 @@ function buildCity(){
     if(f.roof === "slant"){ g += '<path d="M' + f.x + ' ' + y0 + ' L' + (f.x + f.w) + ' ' + (y0 - 16) + ' L' + (f.x + f.w) + ' ' + y0 + ' Z" fill="' + fill + '"/>'; }
     if(f.roof === "antenna"){ const ax = f.x + f.w * (.3 + r() * .4); g += '<line x1="' + ax + '" y1="' + y0 + '" x2="' + ax + '" y2="' + (y0 - 18 - r() * 14) + '" stroke="#34446F" stroke-width="1.4"/>'; }
     if(f.roof === "spire"){ const sx = f.x + f.w / 2, sh = 34 + Math.floor(r() * 26); g += '<path d="M' + (sx - 7) + ' ' + y0 + ' L' + sx + ' ' + (y0 - 20) + ' L' + (sx + 7) + ' ' + y0 + ' Z" fill="' + fill + '"/><line x1="' + sx + '" y1="' + (y0 - 20) + '" x2="' + sx + '" y2="' + (y0 - sh) + '" stroke="#3E4F80" stroke-width="1.8"/><circle class="beacon" cx="' + sx + '" cy="' + (y0 - sh) + '" r="2.4" fill="#FF5A4E" filter="url(#gl)"/>'; }
-    g += '<rect class="body" x="' + f.x + '" y="' + y0 + '" width="' + f.w + '" height="' + f.h + '" fill="' + fill + '"/>';
+    g += '<rect class="body" shape-rendering="crispEdges" x="' + f.x + '" y="' + y0 + '" width="' + f.w + '" height="' + f.h + '" fill="' + fill + '"/>';
     g += '<rect x="' + f.x + '" y="' + y0 + '" width="2" height="' + f.h + '" fill="hsl(' + tint + ' 75% 72%)" opacity="' + (f.big ? .35 : .18) + '"/>';
     const slots = [];
     for(let fl = 0; fl < f.floors; fl++) for(let c = 0; c < f.cols; c++) slots.push({fl, c, k: fl + r() * 3});
@@ -462,11 +466,11 @@ function buildCity(){
       if(litSet.has(s.fl + ":" + s.c)) return;
       dark += "M" + (f.x + f.P + s.c * (f.WW + f.GX)) + " " + (y0 + f.P + s.fl * (f.WH + f.GY)) + "h" + f.WW + "v" + f.WH + "h-" + f.WW + "z";
     });
-    g += '<path d="' + dark + '" fill="#2A3962" opacity="' + (f.big ? .6 : .45) + '"/>';
+    g += '<path d="' + dark + '" shape-rendering="crispEdges" fill="#2A3962" opacity="' + (f.big ? .6 : .45) + '"/>';
     lit.sort((a, b) => a.fl - b.fl || a.c - b.c).forEach((s, i) => {
       const j = f.js[i], col = j.s >= 10 ? "#FFD98A" : j.s >= 9 ? "#FFB547" : "#CFE3FF";
       const isNew = j.n || since.has(jobKey(j.u));
-      g += '<rect class="w' + (isNew ? " w-nw" : "") + '" x="' + (f.x + f.P + s.c * (f.WW + f.GX)) + '" y="' + (y0 + f.P + s.fl * (f.WH + f.GY)) + '" width="' + f.WW + '" height="' + f.WH + '" fill="' + (isNew ? "#FF8A6B" : col) + '"' + (j.s >= 9 || isNew ? ' filter="url(#gl)"' : "") + '/>';
+      g += '<rect class="w' + (isNew ? " w-nw" : "") + '" shape-rendering="crispEdges" x="' + (f.x + f.P + s.c * (f.WW + f.GX)) + '" y="' + (y0 + f.P + s.fl * (f.WH + f.GY)) + '" width="' + f.WW + '" height="' + f.WH + '" fill="' + (isNew ? "#FF8A6B" : col) + '"' + (j.s >= 9 || isNew ? ' filter="url(#gl)"' : "") + '/>';
     });
     return g + '</g>';
   };
