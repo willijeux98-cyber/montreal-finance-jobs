@@ -29,7 +29,7 @@
   --text:#121314; --text-2:#3A3D42; --muted:#6C7077; --faint:#979BA2;
   --accent:#B0502A; --accent-ink:#FFFFFF; --accent-soft:rgba(176,80,42,.08); --accent-line:rgba(176,80,42,.32);
   --pos:#1F7A4D; --pos-soft:rgba(31,122,77,.09); --warn:#9A5B0B; --neg:#B42318;
-  --tw:#EEEBE5; --tw-9:#E3DFD7; --tw-10:#D9D3C9; --tw-edge:#CFCAC0; --tw-hi:#D0CABF; --band-9:#4A4E55; --band-8:#BDB8AD;
+  --tw:#EEEBE5; --tw-9:#E3DFD7; --tw-10:#D9D3C9; --tw-edge:#CFCAC0; --tw-hi:#D0CABF; --band-9:#4A4E55; --band-8:#BDB8AD; --band-7:#DDD9D0;
   --shadow-panel:0 0 0 1px rgba(18,19,20,.06), 0 24px 64px -24px rgba(18,19,20,.28);
   --shadow-pop:0 0 0 1px rgba(18,19,20,.07), 0 12px 32px -12px rgba(18,19,20,.22);
   --serif:"Newsreader", "Iowan Old Style", Georgia, serif;
@@ -46,7 +46,7 @@
     --text:#ECEDEF; --text-2:#C3C6CC; --muted:#8C9199; --faint:#60656D;
     --accent:#E08158; --accent-ink:#141518; --accent-soft:rgba(224,129,88,.1); --accent-line:rgba(224,129,88,.38);
     --pos:#56C08F; --pos-soft:rgba(86,192,143,.1); --warn:#E0A84E; --neg:#F07167;
-    --tw:#191B1F; --tw-9:#202226; --tw-10:#282A2F; --tw-edge:#30333A; --tw-hi:#2E3036; --band-9:#C3C6CC; --band-8:#464A52;
+    --tw:#191B1F; --tw-9:#202226; --tw-10:#282A2F; --tw-edge:#30333A; --tw-hi:#2E3036; --band-9:#C3C6CC; --band-8:#464A52; --band-7:#2E3137;
     --shadow-panel:0 0 0 1px rgba(255,255,255,.06), 0 24px 64px -24px rgba(0,0,0,.8);
     --shadow-pop:0 0 0 1px rgba(255,255,255,.07), 0 12px 32px -12px rgba(0,0,0,.7);
     color-scheme:dark;
@@ -105,7 +105,7 @@ kbd{font-family:var(--mono);font-size:10.5px;line-height:1;padding:3px 5px;borde
 .map-h p{margin:0;color:var(--muted);font-size:12.5px}
 .key{margin-left:auto;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--muted)}
 .key i{display:inline-block;width:12px;height:4px;border-radius:1px;margin-right:6px;vertical-align:2px}
-.key .k10{background:var(--accent)}.key .k9{background:var(--band-9)}.key .k8{background:var(--band-8)}
+.key .k10{background:var(--accent)}.key .k9{background:var(--band-9)}.key .k8{background:var(--band-8)}.key .k7{background:var(--band-7);box-shadow:inset 0 0 0 1px var(--line-2)}
 .key .kn{width:6px;height:6px;border-radius:50%;background:var(--pos);vertical-align:1px}
 .map-body{position:relative}
 .map-scroll{overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:var(--line-2) transparent;-webkit-overflow-scrolling:touch}
@@ -211,6 +211,8 @@ kbd{font-family:var(--mono);font-size:10.5px;line-height:1;padding:3px 5px;borde
 .role .f > span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .role .m{display:none;gap:6px;margin-top:3px;font-size:12.5px;color:var(--muted);flex-wrap:wrap}
 .dotn{width:6px;height:6px;border-radius:50%;background:var(--pos);flex:none}
+.req{font-family:var(--mono);font-size:11px;letter-spacing:-.01em;white-space:nowrap;flex:none;color:var(--muted)}
+.req.ok{color:var(--pos)}.req.far{color:var(--warn)}
 .tag{font-size:11.5px;color:var(--muted);border:1px solid var(--line-2);border-radius:4px;padding:0 5px;line-height:17px;white-space:nowrap;flex:none}
 .area,.loc{font-size:13px;color:var(--text-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .loc{color:var(--muted)}
@@ -283,6 +285,9 @@ mark{background:var(--accent-soft);color:inherit;border-radius:2px;box-shadow:0 
 .why li .ico{margin-top:2px}
 .why .ok{color:var(--pos)} .why .mid{color:var(--faint)} .why .warn{color:var(--warn)}
 .why li span{color:var(--text)}
+.req-q{margin:14px 0 0;padding:10px 0 0 14px;border-left:2px solid var(--line-2)}
+.req-q blockquote{margin:0;font-family:var(--serif);font-size:15px;line-height:1.45;color:var(--text-2);font-style:italic}
+.req-q figcaption{margin-top:6px;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint)}
 .pitch{font-size:13.5px;color:var(--text-2);line-height:1.5;margin:0}
 .facts{display:grid;grid-template-columns:110px minmax(0,1fr);gap:9px 12px;margin:0;font-size:13.5px}
 .facts dt{color:var(--muted)}
@@ -409,7 +414,7 @@ mark{background:var(--accent-soft);color:inherit;border-radius:2px;box-shadow:0 
         <div class="map-h">
           <h2 id="map-title">Market map</h2>
           <p>Every firm with an open match. Taller towers hold better and deeper opportunities.</p>
-          <div class="key" aria-hidden="true"><span><i class="k10"></i>10</span><span><i class="k9"></i>9</span><span><i class="k8"></i>8</span><span><i class="kn"></i>New this week</span></div>
+          <div class="key" aria-hidden="true"><span><i class="k10"></i>10</span><span><i class="k9"></i>9</span><span><i class="k8"></i>8</span><span><i class="k7"></i>7</span><span><i class="kn"></i>New this week</span></div>
         </div>
         <div class="map-body">
           <div class="map-scroll" id="map-scroll"></div>
@@ -474,8 +479,33 @@ const JOBS = (DATA && DATA.jobs) || [];
 const META = (DATA && DATA.meta) || {run:"-", boards:0, scanned:0, errors:[]};
 
 /* ---------------------------------------------------------------- vocabulary */
-const LABEL = {10:"Top match", 9:"Strong match", 8:"Good match"};
-const GROUP_NOTE = {10:"Firm, seat and level all line up.", 9:"One small gap, easy to argue.", 8:"A real shot with a sharp application."};
+const LABEL = {10:"Top match", 9:"Strong match", 8:"Good match", 7:"Worth a shot"};
+const GROUP_NOTE = {10:"A seat on your path, and you clear the bar it sets.", 9:"Within about a year of the bar, or one small gap.",
+  8:"A real shot with a sharp application.", 7:"A stretch on experience, or a smaller seat. Apply selectively."};
+/* what the posting asks for, against where you are (fields come from the nightly read of each posting) */
+const yr = n => String(Math.round(n * 2) / 2);
+function barText(r){
+  if(!r || r.y == null) return r && r.jr ? "Early career" : "";
+  if(r.y === 0 && r.yh != null) return "Up to " + yr(r.yh) + " yrs";
+  return r.yh != null ? yr(r.y) + "–" + yr(r.yh) + " yrs" : yr(r.y) + "+ yrs";
+}
+const barCls = r => !r || r.gap == null ? "" : r.gap <= 0 ? "ok" : r.gap <= 1 ? "near" : "far";
+function reqTag(j){
+  const t = barText(j.r);
+  if(!t) return "";
+  const c = barCls(j.r);
+  const tip = c === "ok" ? "You meet the experience this posting asks for" : c === "near" ? "About a year short of the experience asked for" : "Asks for more experience than you have";
+  return '<span class="req ' + c + '" title="' + tip + '">' + esc(t) + '</span>';
+}
+function domainText(d){
+  const has = x => (d || []).includes(x);
+  if(has("investing") && has("deals")) return "in investing, banking or deal work";
+  if(has("investing")) return "in investing or banking";
+  if(has("deals")) return "in deal, M&A or advisory work";
+  if(has("ops")) return "in operations";
+  return "of relevant experience";
+}
+const haveText = h => h >= 2 ? "You have about two" : h >= 1 ? "You have about one, on M&A work" : "You have none in that kind of seat";
 const FIRM_TYPE = {pension:"Pension investor", pe_vc:"Private markets", am:"Asset manager", hedge:"Trading firm", re:"Real estate",
   insurer:"Insurer", ib:"Bank", markets:"Exchange", advisory:"Deal advisory", corpdev:"Corporate M&A", open:"Other firm"};
 const DISTRICTS = [
@@ -572,7 +602,7 @@ function hl(text, q){
   if(i < 0) return esc(t);
   return esc(t.slice(0, i)) + "<mark>" + esc(t.slice(i, i + q.length)) + "</mark>" + esc(t.slice(i + q.length));
 }
-const sClass = s => "s" + Math.max(8, Math.min(10, s || 8));
+const sClass = s => "s" + Math.max(7, Math.min(10, s || 7));
 const METER = '<span class="meter" aria-hidden="true"><i></i><i></i><i></i></span>';
 const plural = (n, w) => n + " " + w + (n === 1 ? "" : "s");
 
@@ -587,6 +617,7 @@ function matches(j, ignore){
   if(!ignore.chip){
     if(S.chip === "new" && !isNew(j) && !fresh(j)) return false;
     if(S.chip === "strong" && j.s < 9) return false;
+    if(S.chip === "reach" && !inReach(j)) return false;
     if(S.chip === "saved" && stageOf(j.u) !== "saved") return false;
     if(["invest", "deals", "markets"].includes(S.chip) && seatOf(j) !== S.chip) return false;
   }
@@ -635,7 +666,7 @@ function buildMap(){
     return {c, js, best:js[0].s, strong:js.filter(j => j.s >= 9).length, cat:js[0].cat, nw:js.filter(isNew).length};
   });
   const H = 284, BASE = 238, LEFT = 40, GAP = 6, DGAP = 44;
-  const band = s => 46 + (s - 8) * 66;
+  const band = s => 34 + (s - 7) * 48;
   firms.forEach(f => {
     f.h = Math.round(band(f.best) + Math.min(Math.max(f.strong, f.js.length) - 1, 5) * 9);
     f.w = Math.round(14 + Math.min(f.js.length, 8) * 4.5);
@@ -650,9 +681,9 @@ function buildMap(){
     const x0 = x;
     row.forEach(f => { f.x = x; x += f.w + GAP; order.push(f); });
     marks.push({name:d.name, n:fs.length, x0, x1:x - GAP});
-    x += DGAP;
+    x = Math.max(x + DGAP, x0 + (d.name.length + 6) * 7 + 24);
   });
-  const W = Math.max(x - DGAP + 28, 640);
+  const W = Math.max(x - DGAP + 28 + 230, 640);
   mapFirms = order;
   let g = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '" role="group" aria-label="Market map, ' + order.length + ' firms">';
   const cx = W + 60, cy = BASE + 40;   // Mont-Royal as survey contours rising off the right edge: the one geographic cue
@@ -663,7 +694,7 @@ function buildMap(){
   }
   g += '<text class="dist" x="' + (W - 14) + '" y="18" text-anchor="end" opacity=".8">CONTOURS: MONT-ROYAL, 233 M</text>';
   g += '<text class="grid-t" x="' + (LEFT - 10) + '" y="18" text-anchor="end">SCORE</text>';
-  [8, 9, 10].forEach(s => {
+  [7, 8, 9, 10].forEach(s => {
     const yy = BASE - band(s);
     g += '<line class="grid-l" x1="' + LEFT + '" x2="' + (W - 14) + '" y1="' + yy + '" y2="' + yy + '" stroke-dasharray="2 4"/>';
     g += '<text class="grid-t" x="' + (LEFT - 10) + '" y="' + (yy + 3.5) + '" text-anchor="end">' + s + '</text>';
@@ -674,7 +705,7 @@ function buildMap(){
     g += '<g class="tw b' + f.best + '" tabindex="' + (i === 0 ? 0 : -1) + '" role="button" data-i="' + i + '" aria-label="' + esc(f.c) + ', best match ' + f.best + ', ' + plural(f.js.length, "role") + (f.nw ? ", " + f.nw + " new this week" : "") + '"><g class="lift">';
     g += '<rect class="body" x="' + (f.x + .5) + '" y="' + (top + .5) + '" width="' + (f.w - 1) + '" height="' + (f.h - .5) + '" rx="1"/>';
     f.js.slice(0, room).forEach((j, b) => {
-      const col = j.s >= 10 ? "var(--accent)" : j.s >= 9 ? "var(--band-9)" : "var(--band-8)";
+      const col = j.s >= 10 ? "var(--accent)" : j.s >= 9 ? "var(--band-9)" : j.s >= 8 ? "var(--band-8)" : "var(--band-7)";
       g += '<rect x="' + (f.x + 3) + '" y="' + (top + 5 + b * 6) + '" width="' + (f.w - 6) + '" height="3" fill="' + col + '" rx=".5"/>';
     });
     if(f.nw) g += '<circle cx="' + (f.x + f.w / 2) + '" cy="' + (top - 7) + '" r="2.5" fill="var(--pos)"/>';
@@ -741,10 +772,11 @@ function bindMap(){
   $("#map-scroll").onscroll = hide;
 }
 
+const inReach = j => !!(j.r && ((j.r.gap != null && j.r.gap <= 1) || (j.r.y == null && j.r.jr)));
 /* ---------------------------------------------------------------- toolbar */
 function chips(){
   const base = JOBS.filter(j => matches(j, {chip:true}));
-  const defs = [["all", "All", base.length], ["new", "New", base.filter(j => isNew(j) || fresh(j)).length], ["strong", "Strong matches", base.filter(j => j.s >= 9).length],
+  const defs = [["all", "All", base.length], ["new", "New", base.filter(j => isNew(j) || fresh(j)).length], ["strong", "Strong matches", base.filter(j => j.s >= 9).length], ["reach", "Within reach", base.filter(inReach).length],
     ["invest", "Investing", base.filter(j => seatOf(j) === "invest").length], ["deals", "Deals", base.filter(j => seatOf(j) === "deals").length],
     ["markets", "Markets", base.filter(j => seatOf(j) === "markets").length], ["saved", "Saved", base.filter(j => stageOf(j.u) === "saved").length]];
   $("#chips").innerHTML = defs.filter(d => d[0] === "all" || d[0] === S.chip || d[2]).map(([k, n, c]) =>
@@ -767,7 +799,7 @@ function rowHtml(j){
     '<button class="row-main cols" data-open="' + esc(j.u) + '" aria-label="' + esc(j.t + ", " + j.c + ", " + LABEL[j.s] + " " + j.s) + '">' +
       '<span class="sc"><b>' + j.s + '</b>' + METER + '</span>' +
       '<span class="role"><span class="t">' + hl(j.t, q) + '</span><span class="f"><span>' + hl(j.c, q) + '</span>' +
-        (fresh(j) ? '<i class="dotn" title="New since your last visit"></i>' : "") + (j.o ? '<span class="tag">via ' + esc(j.o) + '</span>' : "") + '</span>' +
+        (fresh(j) ? '<i class="dotn" title="New since your last visit"></i>' : "") + reqTag(j) + (j.o ? '<span class="tag">via ' + esc(j.o) + '</span>' : "") + '</span>' +
         '<span class="m"><span>' + esc(area(j)) + '</span><span aria-hidden="true">·</span><span>' + esc(place(j)) + '</span><span aria-hidden="true">·</span><span>' + posted(j) + '</span></span></span>' +
       '<span class="area">' + hl(area(j), q) + '</span>' +
       '<span class="loc">' + esc(place(j)) + '</span>' +
@@ -786,7 +818,7 @@ function list(){
   if(!rows.length){ host.innerHTML = emptyState(); const b = host.querySelector("[data-reset]"); if(b) b.onclick = resetAll; return; }
   let h = '<div class="th cols" aria-hidden="true"><span>Score</span><span>Role</span><span>Area</span><span>Location</span><span>Posted</span><span></span></div>';
   if(S.sort === "best"){
-    [10, 9, 8].forEach(s => {
+    [10, 9, 8, 7].forEach(s => {
       const set = rows.filter(j => j.s === s);
       if(set.length) h += '<div class="grp-h"><b>' + LABEL[s] + '</b><span>' + GROUP_NOTE[s] + '</span><span class="c">' + set.length + '</span></div><ul class="rows">' + set.map(rowHtml).join("") + '</ul>';
     });
@@ -869,14 +901,27 @@ function closePanel(){
   if(lastFocus && document.contains(lastFocus)) lastFocus.focus({preventScroll:true});
 }
 function evidence(j){
-  const L = [], core = ["pension", "pe_vc", "am", "hedge"].includes(j.cat);
+  const L = [], core = ["pension", "pe_vc", "am", "hedge"].includes(j.cat), r = j.r;
   L.push([core || j.cat === "re" ? "ok" : "mid", (FIRM_TYPE[j.cat] || "Firm") + (core ? ", a core buy-side employer" : "")]);
   if(j.g) L.push([j.k === "strong" || j.k === "quant" ? "ok" : "mid", cap(j.g) + (j.k === "strong" ? " seat, on your target path" : " seat")]);
+  if(r && r.y != null){
+    const ask = "Asks for " + barText(r).replace("Up to", "up to").replace("yrs", "years") + " " + domainText(r.d) + ". ";
+    if(r.gap <= 0) L.push(["ok", ask + "You meet it."]);
+    else if(r.gap <= 1) L.push(["mid", ask + haveText(r.h) + ": close enough to argue."]);
+    else L.push(["warn", ask + haveText(r.h) + ": a long shot on experience."]);
+  } else if(r && r.jr) L.push(["ok", "Open to early-career candidates"]);
+  else if(r) L.push(["mid", "No experience bar stated in the posting"]);
+  else L.push(["mid", "The posting couldn\u2019t be read, so this is scored from the title alone"]);
+  if(r && r.cfa === "progress") L.push(["ok", "Values CFA progress: Level I passed, Level II in May"]);
+  if(r && r.cfa === "charter") L.push(["warn", "Requires the CFA charter"]);
+  if(r && r.mba) L.push(["warn", "A post-MBA seat"]);
+  if(r && r.cpa) L.push(["warn", "Requires a CPA"]);
+  if(r && r.fr) L.push(["ok", "Bilingual role, an edge in Montréal"]);
   const lv = {"fit":["ok", "Analyst or associate title, at your level"], "senior analyst":["ok", "Senior-analyst title, within reach at two years in"],
     "mixed":["mid", "Posted at two levels; you would be the junior hire"], "advisor":["mid", "Advisor title, usually a step above analyst"],
     "senior":["warn", "Titled above your level"], "exec":["warn", "Well above your level"], "student":["warn", "Student or intern seat"],
     "unclear":["mid", "Level not stated in the title"]}[j.lv];
-  if(lv) L.push(lv);
+  if(lv && !(r && (r.y != null || r.jr))) L.push(lv);
   L.push(j.m ? ["ok", "Based in Montréal"] : ["mid", "Multi-city posting; confirm Montréal is one of them"]);
   if(j.ev) L.push(["warn", "Open for months; likely a standing pipeline"]);
   else if(j.a != null && j.a <= 7) L.push(["ok", "Posted " + postedLong(j).toLowerCase()]);
@@ -897,10 +942,11 @@ function openRole(u, from){
   if(r.s){
     h += '<div class="scorebox ' + sClass(r.s) + '"><span class="big">' + r.s + '</span><span class="lbl">' + (LABEL[r.s] || "Match") + '</span>' +
       '<span class="sub">Personal relevance score out of 10. <button id="why-score" aria-expanded="false" aria-controls="explain">How it works</button></span>' +
-      '<div class="explain" id="explain" hidden>The score adds up the kind of firm, whether the seat is investment, deal or markets work, how the title fits two years&rsquo; experience with CFA Level&nbsp;I passed, and whether the role is confirmed in Montréal. Recent postings get a small lift. It is a fixed set of rules for one profile, not a prediction of your chances.</div></div>';
+      '<div class="explain" id="explain" hidden>Only investing, banking, M&amp;A, deal-advisory, markets and corporate-finance seats are kept; operations, risk, reporting and analytics seats are dropped, even when the posting reads that way under an investment title. The score starts from the firm and the seat, then reads the posting itself: the years it asks for against your roughly two (about one on M&amp;A work, none in an investment seat), plus hard requirements such as a CFA charter, MBA or CPA. Meeting the bar adds a point; every year short takes points off. Confirmed Montréal and recent postings get a small lift. Fixed rules for one profile, not a prediction of your chances.</div></div>';
   }
   const ev = j ? evidence(j) : [];
-  if(ev.length) h += '<div class="p-sec"><h3>Why this matches</h3><ul class="why">' + ev.map(([k, txt]) => '<li class="' + k + '">' + (k === "ok" ? I.check : k === "warn" ? I.alert : I.dot) + '<span>' + esc(txt) + '</span></li>').join("") + '</ul></div>';
+  if(ev.length) h += '<div class="p-sec"><h3>Why this matches</h3><ul class="why">' + ev.map(([k, txt]) => '<li class="' + k + '">' + (k === "ok" ? I.check : k === "warn" ? I.alert : I.dot) + '<span>' + esc(txt) + '</span></li>').join("") + '</ul>' +
+    (j && j.r && j.r.q ? '<figure class="req-q"><blockquote>' + esc(j.r.q) + '</blockquote><figcaption>From the posting</figcaption></figure>' : "") + '</div>';
   if(j && j.ad) h += '<div class="p-sec"><h3>How to pitch it</h3><p class="pitch">' + esc(j.ad) + '</p></div>';
   h += '<div class="p-sec"><h3>Details</h3><dl class="facts">' +
     '<dt>Area</dt><dd>' + esc(cap(r.g) || "Not specified") + '</dd>' +

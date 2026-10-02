@@ -16,7 +16,7 @@ on:
   workflow_dispatch:        # "Run workflow" button for an on-demand refresh
   push:                     # rebuild right away when the engine or board list changes
     branches: [main]
-    paths: ["fetch.py", "sources.py", "net.py", "template.html", "data/boards.json", "firms_seed.py", ".github/workflows/daily.yml"]
+    paths: ["fetch.py", "sources.py", "net.py", "reqs.py", "template.html", "data/boards.json", "firms_seed.py", ".github/workflows/daily.yml"]
 
 permissions:
   contents: write

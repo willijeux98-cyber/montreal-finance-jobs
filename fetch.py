@@ -34,6 +34,7 @@ except Exception:   # no tz database on this machine: the workflow sets TZ=Ameri
 TODAY = _NOW.date()
 
 from sources import build_sources  # noqa: E402  (all job boards live in sources.py / data/boards.json)
+import reqs  # noqa: E402  (reads what each posting actually asks for)
 
 # ---------------------------------------------------------------- filters
 MTL = re.compile(r"montr[eé]al|laval|longueuil|brossard|boucherville|pointe[- ]claire|saint-laurent|st-laurent|dorval|"
@@ -128,7 +129,8 @@ HARD = re.compile(r"legal|juridique|counsel|avocat|lawyer|notaire|paralegal|law 
                   r"g[ée]nie|\bCPI\b|charg[ée]e? (ou charg[ée] )?de projets?|infrastructures? (urbaines|municipales)|"
                   r"quantity surveyor|arpenteur|m[ée]dia|\bbudget|courtier immobilier|real estate broker(?!age)|"
                   r"contr[ôo]leur|controller|capex|capital projects?|projets? d.investissement|commercialisation|"
-                  r"product portfolio|account manager(?!.*restructur)|\bcommercial (manager|insights|director)", re.I)
+                  r"product portfolio|account manager(?!.*restructur)|\bcommercial (manager|insights|director)|"
+                  r"financial services representative|représentant\w* (en|aux) services financiers", re.I)
 OVERRIDE = re.compile(r"corporate development|développement corporatif|\bM&A\b|\bF&A\b|mergers|fusions|investment banking|"
                       r"private equity|placements? privés|capital[- ]investissement|venture|capital de risque|equity research|"
                       r"fundamental research|recherche fondamentale|transaction (services|diligence|advisory)|deal advisory|\bdeals?\b|"
@@ -234,9 +236,12 @@ LVL_EXEC = re.compile(r"director|directeur|directrice|vice[- ]pr[ée]sident|\bVP
                       r"chief|\bchef\b|senior director", re.I)
 LVL_MGR = re.compile(r"manager|gestionnaire|\blead\b|principal\b|senior advisor|conseill(er|ère)\(?-?è?r?e?\)? "
                      r"(principal|senior|sénior)|premier\(?-?è?r?e?\)? conseill|expert", re.I)
-OPS = re.compile(r"operations|opérations|administration|settlement|règlement|control\b|contrôle|oversight|"
-                 r"autoris|adjudicat|"
-                 r"servicing|integration|intégration", re.I)
+# support seats that borrow an investment word: "Investment Operations", "Trading Risk", "Fund Reporting"
+OPS = re.compile(r"operations|operational|opérations|opérationnel|due diligence officer|\bKYC\b|know your client|administration|settlement|règlement|control\b|contrôle|oversight|"
+                 r"autoris|adjudicat|servicing|integration|intégration|\brisk|risque|performance|analytics|analytique|"
+                 r"reporting|\bdata\b|données|compliance|conformité|middle office|back office|fund accounting|"
+                 r"information financière|financial information", re.I)
+FRONT_MEDIUM = {"valuation", "due diligence"}   # the only "medium" seats that still lead to deal work
 LVL_ADV = re.compile(r"advisor|conseill|specialist|spécialiste", re.I)
 
 
@@ -265,6 +270,7 @@ def score(job):
     t = job["t"]
     cat = job["cat"]
     kind, sig = classify(t, cat)
+    job["_trk"] = kind != "none"   # tracked for "still posted" even when it isn't shown
     if cat == "ib" and re.search(r"investment associate|associ\w* en (investissement|placements)", t, re.I):
         return None  # wealth-desk assistant seat at a bank
     # banks are huge: only keep their front-office seats
@@ -275,8 +281,15 @@ def score(job):
         return None  # at an operating company only the M&A / corp-dev seats count
     if cat == "advisory" and sig not in ("deal advisory", "investment banking", "valuation", "due diligence"):
         return None
-    if kind == "none" and job["c"] not in CORE:
-        return None  # a non-investment seat is only worth showing at a core buy-side firm
+    if kind == "none":
+        return None  # only investing, deal, markets and corporate-finance seats
+    if kind == "medium" and sig not in FRONT_MEDIUM:
+        return None  # risk, performance, analytics, strategy, treasury: support seats, not the target path
+    if kind in ("strong", "quant", "medium") and OPS.search(t):
+        return None  # investment word, support seat (model risk, operational due diligence, KYC...)
+    if cat in ("open", "corpdev") and sig == "real estate investing" and not re.search(
+            r"acqui|invest|placement|financement|financing|capital|transaction", t, re.I):
+        return None  # a retailer's or operator's own real estate team: leasing and sites, not investing
     s = CAT_BASE[cat]
     if kind == "strong":
         s += 3
@@ -290,8 +303,6 @@ def score(job):
     s += adj
     if kind == "quant" and re.search(r"research", t, re.I):
         s = min(s, 5)
-    if kind == "strong" and OPS.search(t):
-        s -= 2; sig = "markets operations"  # investment word, but an operations seat
     if TEMP.search(t):
         s -= 1
     a = job.get("age")
@@ -305,6 +316,7 @@ def score(job):
             s -= 1
     if not job["mtl_explicit"]:
         s -= 1
+    job["_raw"], job["_ladj"] = s, adj   # kept so the posting's own requirements can replace the title's guess
     s = max(0, min(10, s))
     if s < 4:
         return None
@@ -333,13 +345,117 @@ def why(job, kind, sig, level):
     return f"{lvl}: {what}.{extra} {ANGLE.get(sig, ANGLE[None])}"
 
 
+# ---------------------------------------------------------------- fit: what the posting asks for vs where he is
+# About two years of full-time work, roughly one of it on M&A / corporate-strategy work, none in an investment seat.
+# CFA Level I passed, Level II candidate. Edit these three numbers as that changes.
+PROFILE = dict(general=2, ops=2, deals=1, investing=0)
+REQS_PATH = os.path.join(ROOT, "data", "reqs.json")
+REQS_STATS = dict(read=0, cached=0, failed=0, linkedin_limited=0)
+
+
+TOP = {"advisory": 9, "corpdev": 9, "re": 9, "open": 9, "insurer": 9, "markets": 9}
+
+
+def have_years(domains):
+    """His years for the kind of experience asked for. A list of alternatives ("IB, PE or consulting") counts the best."""
+    return max(PROFILE.get(d, PROFILE["general"]) for d in (domains or ["general"]))
+
+
+def gap_adj(gap):
+    """Years short of the bar -> score change. At or past the bar is a plus; three years short is a long shot."""
+    if gap <= 0:
+        return 1
+    if gap <= 1:
+        return 0
+    if gap <= 2:
+        return -2
+    if gap <= 3:
+        return -3
+    if gap <= 4:
+        return -4
+    return -5
+
+
+def apply_reqs(j, rq):
+    """Re-rank a role on what its posting asks for. False = the posting shows a support seat, drop it."""
+    j["r"] = None
+    if not rq or not rq.get("ok"):
+        return True
+    if reqs.back_office(rq):
+        return False
+    have = have_years(rq.get("yd"))
+    gap = None
+    if rq.get("y") is not None:
+        gap = round(rq["y"] - have, 1)
+    elif rq.get("jr"):
+        gap = -1.0
+    s = j["_raw"] - j["_ladj"]            # take the title's guess at the level back out
+    if gap is None:
+        s += j["_ladj"] - (1 if rq.get("inv") and j["_ladj"] > 0 else 0)   # no bar stated: keep the title's read
+    else:
+        fit = gap_adj(gap)
+        if j.get("lv") in ("exec", "senior", "student"):
+            fit = min(fit, j["_ladj"])    # a manager or intern title still caps it
+        s += fit
+    if rq.get("cfa") == "charter":
+        s -= 1
+    if rq.get("mba"):
+        s -= 2
+    if rq.get("cpa"):
+        s -= 1
+    j["s"] = max(0, min(TOP.get(j["cat"], 10), s))
+    j["r"] = dict(y=rq.get("y"), yh=rq.get("yh"), d=rq.get("yd") or [], q=rq.get("q") or "", h=have, gap=gap,
+                  cfa=rq.get("cfa") or "", mba=bool(rq.get("mba")), cpa=bool(rq.get("cpa")), fr=bool(rq.get("fr")),
+                  jr=bool(rq.get("jr")), inv=bool(rq.get("inv")))
+    return j["s"] >= 4
+
+
+def read_reqs(cands):
+    """Posting requirements for each candidate, read once per posting and cached in data/reqs.json."""
+    import time
+    try:
+        cache = json.load(open(REQS_PATH, encoding="utf-8"))
+    except Exception:
+        cache = {}
+    if cache.get("_v") != reqs.VERSION:
+        cache = {}
+    todo = [j for j in cands if j["u"] not in cache]
+    REQS_STATS["cached"] = len(cands) - len(todo)
+
+    def one(j):
+        try:
+            text = reqs.description(j["u"], j.get("api"))
+        except Exception as e:
+            REQS_STATS["failed"] += 1
+            if "429" in str(e):
+                REQS_STATS["linkedin_limited"] += 1
+            return j["u"], None
+        REQS_STATS["read"] += 1
+        r = reqs.parse(text, j["t"])
+        r["d"] = TODAY.isoformat()
+        return j["u"], r
+    li = [j for j in todo if "linkedin.com" in j["u"]]
+    rest = [j for j in todo if "linkedin.com" not in j["u"]]
+    with cf.ThreadPoolExecutor(8) as ex:
+        for u, r in ex.map(one, rest):
+            if r is not None and r.get("ok"):
+                cache[u] = r
+    for j in li:                           # LinkedIn's public pages: one at a time, and stop if it pushes back
+        if REQS_STATS["linkedin_limited"] >= 3:
+            break
+        u, r = one(j)
+        if r is not None and r.get("ok"):
+            cache[u] = r
+        time.sleep(1.2)
+    live = {j["u"] for j in cands}
+    cache = {u: r for u, r in cache.items() if u in live}
+    os.makedirs(os.path.dirname(REQS_PATH), exist_ok=True)
+    json.dump(dict(cache, _v=reqs.VERSION), open(REQS_PATH, "w", encoding="utf-8"), indent=0, sort_keys=True, ensure_ascii=False)
+    return cache
+
+
 SOURCES = [(lambda _s, f=f: f(), None, label) for f, label in build_sources()]
-MIN_SHOW = 8   # he only applies to 8+; everything scored 4+ is still tracked so Applied can tell "still posted"
-# Firms where even a non-investment seat is a real foot in the door
-CORE = {"CDPQ", "PSP Investments", "Ardian", "Novacap", "Sagard", "Power Corporation", "Fiera Capital",
-        "Investissement Quebec", "Fonds de solidarite FTQ", "Fondaction", "Desjardins Capital", "Ivanhoe Cambridge",
-        "Inovia Capital", "Walter Capital Partners", "Claridge", "Squarepoint", "DRW", "Teralys Capital",
-        "Letko Brosseau", "Jarislowsky Fraser", "Van Berkom", "Addenda Capital", "Montrusco Bolton"}
+MIN_SHOW = 7   # shown from 7 up; every investment-titled posting is still tracked so Applied can tell "still posted"
 
 
 # ---------------------------------------------------------------- the net: who is this firm?
@@ -401,7 +517,7 @@ NOT_A_FIRM = re.compile(r"\bllp\b|s\.?e\.?n\.?c\.?r\.?l|avocats|lawyers|\blaw\b|
                         r"norton rose|davies ward|lavery|langlois|blakes|torys|dentons|gowling|miller thomson|mcmillan|"
                         r"\bacca careers\b|jobillico|talent\.com|indeed|workopolis|eluta|\brecrutement\b|staffing|placement de personnel|"
                         r"hunter bond|anson mccade|robert half|\bhays\b|michael page|page group|randstad|adecco|kforce|"
-                        r"morgan mckinley|selby jennings|harnham|venatus|teksystems|\bbaro\s?rh\b|dialectica", re.I)
+                        r"morgan mckinley|selby jennings|harnham|venatus|teksystems|\bbaro\s?rh\b|dialectica|fed finance", re.I)
 
 
 def guess_cat(company):
@@ -509,7 +625,7 @@ def main():
         netkept += 1
         raw.append(j)
 
-    kept, dedupe = [], {}
+    kept, dedupe, trk = [], {}, set()
     for j in raw:
         j["t"] = clean_title(j["t"] or "")
         j["l"] = re.sub(r"\s+", " ", j["l"] or "").strip()
@@ -525,11 +641,28 @@ def main():
         wd = re.search(r"//([^/]+\.myworkdayjobs\.com)/.*_([A-Za-z]{0,4}-?\d[\w-]*)$", key)
         if wd:
             key = wd.group(1) + ":" + wd.group(2)  # same requisition in English and French = one job
-        if score(j):
+        ok = score(j)
+        if j.get("_trk"):
+            trk.add(j["u"])
+        if ok:
             prev = dedupe.get(key)
             if prev is None or j["s"] > prev["s"]:
                 dedupe[key] = j
     kept = list(dedupe.values())
+
+    # read what each serious candidate actually asks for, and re-rank on it
+    cands = [j for j in kept if j["s"] >= MIN_SHOW - 2]
+    found = read_reqs(cands)
+    dropped_support = 0
+    final = []
+    for j in kept:
+        if j["s"] >= MIN_SHOW - 2 and not apply_reqs(j, found.get(j["u"])):
+            dropped_support += 1
+            continue
+        final.append(j)
+    kept = final
+    print(f"requirements: {REQS_STATS['read']} read, {REQS_STATS['cached']} cached, {REQS_STATS['failed']} failed; "
+          f"{dropped_support} support seats dropped")
 
     os.makedirs(os.path.dirname(SEEN_PATH), exist_ok=True)
     try:
@@ -552,10 +685,11 @@ def main():
     json.dump(seen, open(SEEN_PATH, "w", encoding="utf-8"), indent=0, sort_keys=True)
 
     kept.sort(key=lambda j: (-j["s"], j["age"] if j["age"] is not None else 999))
-    alive = sorted({j["u"] for j in kept})
+    alive = sorted({j["u"] for j in kept} | trk)
     jobs = [dict(s=j["s"], c=j["c"], cat=j["cat"], t=j["t"], l=j["l"], u=j["u"],
                  a=j["age"], n=j["new"], m=j["mtl_explicit"], w=j["why"], o=j.get("net") or "", g=j.get("sig") or "",
-                 lv=j.get("lv"), k=j.get("k"), ad=j.get("ad"), tm=j.get("tm", False), ev=j.get("fresh") == "evergreen")
+                 lv=j.get("lv"), k=j.get("k"), ad=j.get("ad"), tm=j.get("tm", False), ev=j.get("fresh") == "evergreen",
+                 r=j.get("r"))
             for j in kept if j["s"] >= MIN_SHOW]
     if len(errors) > len(SOURCES) / 3:
         raise SystemExit(f"{len(errors)} of {len(SOURCES)} boards failed; keeping yesterday's page. {errors[:10]}")
@@ -579,7 +713,8 @@ def main():
     meta = dict(run=TODAY.strftime("%a %d %b %Y"), iso=TODAY.isoformat(), at=_NOW.strftime("%H:%M"),
                 boards=len([l for l in direct if l not in failed]), scanned=scanned, errors=errors,
                 empty=len(empty), net=dict(read=netread, kept=netkept, dropped=netdrop, **__import__("net").STATS),
-                firms=len({j["c"] for j in jobs}), min=MIN_SHOW, tracked=len(alive))
+                firms=len({j["c"] for j in jobs}), min=MIN_SHOW, tracked=len(alive), reqs=dict(REQS_STATS),
+                profile=PROFILE)
 
     page = open(TEMPLATE, encoding="utf-8").read()
     payload = json.dumps({"meta": meta, "jobs": jobs, "alive": alive}, ensure_ascii=True).replace("<", "\\u003c")
@@ -589,7 +724,7 @@ def main():
 
     print(f"net: {netread} read, {netkept} from firms the boards miss, {netdrop} already covered")
     print(f"{scanned} postings read from {meta['boards']} boards -> {len(jobs)} kept, "
-          f"{sum(j['n'] for j in jobs)} new, {sum(j['s'] >= 8 for j in jobs)} scored 8+")
+          f"{sum(j['n'] for j in jobs)} new, {sum(j['s'] >= 9 for j in jobs)} scored 9+")
     if errors:
         print("Board failures:", ", ".join(errors))
     if empty:

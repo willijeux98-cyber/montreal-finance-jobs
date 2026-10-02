@@ -129,8 +129,13 @@ def workday(name, cat, hq, tenant, n, site, lang=None):
 # ---------------------------------------------------------------- JSON ATS
 def greenhouse(name, cat, hq, tok):
     jobs = _get(f"https://boards-api.greenhouse.io/v1/boards/{tok}/jobs").json().get("jobs", [])
-    return [_p(name, cat, j["title"], (j.get("location") or {}).get("name"), j["absolute_url"],
-               _iso_age(j.get("first_published") or j.get("updated_at")), hq) for j in jobs], len(jobs)
+    out = []
+    for j in jobs:
+        row = _p(name, cat, j["title"], (j.get("location") or {}).get("name"), j["absolute_url"],
+                 _iso_age(j.get("first_published") or j.get("updated_at")), hq)
+        row["api"] = f"https://boards-api.greenhouse.io/v1/boards/{tok}/jobs/{j.get('id')}"
+        out.append(row)
+    return out, len(jobs)
 
 
 def lever(name, cat, hq, tok):
