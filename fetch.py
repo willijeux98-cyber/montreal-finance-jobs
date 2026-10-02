@@ -124,7 +124,11 @@ HARD = re.compile(r"legal|juridique|counsel|avocat|lawyer|notaire|paralegal|law 
                   r"services bancaires aux particuliers|m365|microsoft|sharepoint|syst[eè]mes? d.information|information systems|salesforce|servicenow|financial advisor|conseill[eè]re? financi|itrade|mcleod|attorney|technicien|technician|scientifique|investment and retirement|investment and financing|placement et financement|retirement specialist|investment specialist|investment advisor|conseill[eè]re? en placement|financial planner|planificat|mortgage|hypoth|succursale|\bbranch\b|teller|caissi|personal financ|finances personnelles|\bIT\b|"
                   r"forensic|juricomptab|cyber|documentation negotiat|parajuriste|\bjuriste|soci[ée]taire|"
                   r"portefeuille de projets|project portfolio|programs? portfolio|program/portfolio|project/program portfolio|"
-                  r"portfolio of projects|gestionnaire immobili|property manag|gestion immobili|building manag", re.I)
+                  r"portfolio of projects|gestionnaire immobili|property manag|gestion immobili|building manag|"
+                  r"g[ée]nie|\bCPI\b|charg[ée]e? (ou charg[ée] )?de projets?|infrastructures? (urbaines|municipales)|"
+                  r"quantity surveyor|arpenteur|m[ée]dia|\bbudget|courtier immobilier|real estate broker|"
+                  r"contr[ôo]leur|controller|capex|capital projects?|projets? d.investissement|commercialisation|"
+                  r"product portfolio|account manager|\bcommercial (manager|insights|director)", re.I)
 OVERRIDE = re.compile(r"corporate development|développement corporatif|\bM&A\b|\bF&A\b|mergers|fusions|investment banking|"
                       r"private equity|placements? privés|capital[- ]investissement|venture|capital de risque|equity research|"
                       r"fundamental research|recherche fondamentale|transaction (services|diligence|advisory)|deal advisory|\bdeals?\b|"
@@ -364,7 +368,7 @@ ALIASES = {
     "investissement quebec": "Investissement Quebec", "jarislowsky fraser": "Jarislowsky Fraser", "fiera": "Fiera Capital",
     "couche tard": "Couche-Tard", "alimentation couche tard": "Couche-Tard", "cn": "CN", "canadian national railway": "CN",
     "bmo financier": "BMO", "bmo groupe financier": "BMO", "rbc banque royale": "RBC", "banque royale": "RBC",
-    "banque scotia": "Scotiabank", "groupe financier banque td": "TD", "kpmg": "KPMG", "deloitte": "Deloitte", "ey": "EY", "ernst & young": "EY", "pwc": "PwC", "pricewaterhousecoopers": "PwC",
+    "banque scotia": "Scotiabank", "groupe financier banque td": "TD", "ia financier": "iA Financial Group", "financier banque td": "TD", "caisse depot et placement quebec": "CDPQ", "kpmg": "KPMG", "deloitte": "Deloitte", "ey": "EY", "ernst & young": "EY", "pwc": "PwC", "pricewaterhousecoopers": "PwC",
 }
 
 
@@ -391,7 +395,9 @@ def match_firm(company, idx):
 # Law firms, staffing agencies and job sites post "investment" titles that aren't investment seats
 NOT_A_FIRM = re.compile(r"\bllp\b|s\.?e\.?n\.?c\.?r\.?l|avocats|lawyers|\blaw\b|osler|stikeman|mccarthy|fasken|borden ladner|"
                         r"norton rose|davies ward|lavery|langlois|blakes|torys|dentons|gowling|miller thomson|mcmillan|"
-                        r"\bacca careers\b|jobillico|talent\.com|indeed|workopolis|eluta|\brecrutement\b|staffing|placement de personnel", re.I)
+                        r"\bacca careers\b|jobillico|talent\.com|indeed|workopolis|eluta|\brecrutement\b|staffing|placement de personnel|"
+                        r"hunter bond|anson mccade|robert half|\bhays\b|michael page|page group|randstad|adecco|kforce|"
+                        r"morgan mckinley|selby jennings|harnham|venatus|teksystems|\bbaro\s?rh\b|dialectica", re.I)
 
 
 def guess_cat(company):
