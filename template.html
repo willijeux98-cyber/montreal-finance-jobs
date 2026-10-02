@@ -66,7 +66,7 @@ a{color:inherit}
 .lede b{color:#fff}
 .legend{position:absolute;right:clamp(16px,4vw,40px);top:calc(20px + env(safe-area-inset-top,0px));display:flex;flex-direction:column;gap:5px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:rgba(238,242,250,.7);pointer-events:none;text-align:right}
 .legend i{display:inline-block;width:7px;height:9px;margin-left:7px;vertical-align:-1px;border-radius:1px}
-.hint{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(238,242,250,.55);pointer-events:none;white-space:nowrap}
+.hint{position:absolute;z-index:3;left:50%;bottom:10px;transform:translateX(-50%);font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(238,242,250,.55);pointer-events:none;white-space:nowrap}
 .b{cursor:pointer;transition:opacity .25s ease}
 .b:focus{outline:none}
 .b:focus-visible .body{stroke:#FFC977;stroke-width:1.5}
@@ -198,6 +198,7 @@ a{color:inherit}
 
 @media (max-width:760px){
   .legend{display:none}
+  .tape .wrap{font-size:11px;gap:3px 14px}
   .lead{grid-template-columns:minmax(0,1fr)}
   .big{text-align:left}
   .rb{grid-template-columns:42px minmax(0,1fr) auto;gap:12px}
@@ -558,7 +559,7 @@ function tape(){
     '<span class="am"><b>' + open.filter(j => j.s >= 10).length + '</b> perfect 10s</span>',
     '<span><b>' + open.length + '</b> seats</span>',
     '<span><b>' + new Set(open.map(j => j.c)).size + '</b> firms</span>',
-    '<span><b>' + META.boards + '</b> firm boards read' + (net.read ? ' + LinkedIn &amp; Job Bank sweeps' : '') + '</span>',
+    '<span><b>' + META.boards + '</b> firm boards' + (net.read ? ' + LinkedIn &amp; Job Bank' : '') + '</span>',
     '<span><b>' + Number(META.scanned || 0).toLocaleString("en-CA") + '</b> postings scanned</span>',
     '<span>book of <b>' + esc(META.run) + '</b>' + (META.at ? ' &middot; built <b>' + esc(META.at) + '</b>' : '') + '</span>'
   ];
