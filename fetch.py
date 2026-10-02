@@ -311,6 +311,9 @@ def score(job):
     job["s"] = s
     job["sig"] = sig or ""
     job["why"] = why(job, kind, sig, level)
+    job["lv"], job["k"] = level, kind
+    job["ad"] = ANGLE.get(sig or None, ANGLE[None])
+    job["tm"] = bool(TEMP.search(t))
     return job
 
 
@@ -551,7 +554,8 @@ def main():
     kept.sort(key=lambda j: (-j["s"], j["age"] if j["age"] is not None else 999))
     alive = sorted({j["u"] for j in kept})
     jobs = [dict(s=j["s"], c=j["c"], cat=j["cat"], t=j["t"], l=j["l"], u=j["u"],
-                 a=j["age"], n=j["new"], m=j["mtl_explicit"], w=j["why"], o=j.get("net") or "", g=j.get("sig") or "")
+                 a=j["age"], n=j["new"], m=j["mtl_explicit"], w=j["why"], o=j.get("net") or "", g=j.get("sig") or "",
+                 lv=j.get("lv"), k=j.get("k"), ad=j.get("ad"), tm=j.get("tm", False), ev=j.get("fresh") == "evergreen")
             for j in kept if j["s"] >= MIN_SHOW]
     if len(errors) > len(SOURCES) / 3:
         raise SystemExit(f"{len(errors)} of {len(SOURCES)} boards failed; keeping yesterday's page. {errors[:10]}")
