@@ -1114,27 +1114,6 @@
 ],
 "yh": null
 },
-"https://investquebec.wd10.myworkdayjobs.com/ext/job/Montral/Conseiller--Fonds-d-investissement--Placements-privs--Montral-_R3541": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
-"fr": false,
-"front": 3,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6507,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum de trois (3) années d’expérience pertinente comme professionnel en analyse financière, investissements,",
-"y": 3,
-"yd": [
-"investing"
-],
-"yh": null
-},
 "https://investquebec.wd10.myworkdayjobs.com/ext/job/Montral/Conseiller-principal--Investissements--Dette-subordonne--quit--quasi-quit---Montral-_R3505": {
 "cfa": "mention",
 "cpa": false,
@@ -1700,6 +1679,27 @@
 ],
 "yh": 3.0
 },
+"https://www.linkedin.com/jobs/view/4407045989/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-03",
+"fpa": 0,
+"fr": true,
+"front": 9,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 5143,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "10+ years of experience working in the asset management industry;",
+"y": 10.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4442243023/": {
 "cfa": "",
 "cpa": false,
@@ -1717,6 +1717,27 @@
 "q": "",
 "y": null,
 "yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4446247904/": {
+"cfa": "mention",
+"cpa": false,
+"d": "2026-10-03",
+"fpa": 0,
+"fr": true,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4974,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum of 5 years of finance leadership experience is essential, with a strong background in accounting, corporate investor relations, and financial communications.",
+"y": 5.0,
+"yd": [
+"investing"
+],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4455946961/": {
@@ -1912,28 +1933,6 @@
 ],
 "yh": 3.0
 },
-"https://www.linkedin.com/jobs/view/4470317162/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 3,
-"fr": true,
-"front": 36,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 7643,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "2 à 5 ans d’expérience en acquisition immobilière commerciale, investissement immobilier, courtage, développement ou gestion d’actifs.",
-"y": 2.0,
-"yd": [
-"investing",
-"deals"
-],
-"yh": 5.0
-},
 "https://www.linkedin.com/jobs/view/4470884667/": {
 "cfa": "",
 "cpa": false,
@@ -2077,6 +2076,27 @@
 ],
 "yh": 4.0
 },
+"https://www.linkedin.com/jobs/view/4473393229/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-03",
+"fpa": 0,
+"fr": true,
+"front": 8,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5037,
+"ok": true,
+"ops": 4,
+"opsy": true,
+"q": "Minimum 6 ans d'expérience en analyse d'affaires, dans un contexte de livraison de solutions intégrées bout en bout pour le secteur marché des capitaux",
+"y": 6.0,
+"yd": [
+"ops"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4473563901/": {
 "cfa": "",
 "cpa": false,
@@ -2136,6 +2156,27 @@
 "yd": [
 "investing",
 "deals"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4475055412/": {
+"cfa": "mention",
+"cpa": false,
+"d": "2026-10-03",
+"fpa": 1,
+"fr": true,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 8123,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "12 ans et plus d'expérience directe dans un environnement de conseil en finance ou en placement,",
+"y": 12.0,
+"yd": [
+"general"
 ],
 "yh": null
 },
