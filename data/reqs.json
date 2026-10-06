@@ -82,28 +82,6 @@
 ],
 "yh": 4.0
 },
-"https://ats.rippling.com/novacap/jobs/a82ba886-801b-4dea-ae2d-fa965d1a25d8": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
-"fr": true,
-"front": 14,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 2277,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "4-6 years of experience in Investment Banking, Private Equity, Big 4 Audit/Transaction Services or other relevant fast-paced and analytically driven investment organization.",
-"y": 4.0,
-"yd": [
-"investing",
-"deals"
-],
-"yh": 6.0
-},
 "https://bdc.wd10.myworkdayjobs.com/BDC_Careers/job/Kitchener/SENIOR-MANAGER--PORTFOLIO-MANAGEMENT_R-8264": {
 "cfa": "",
 "cpa": false,
@@ -124,6 +102,27 @@
 "investing"
 ],
 "yh": 5
+},
+"https://bdc.wd10.myworkdayjobs.com/BDC_Careers/job/Montreal/SPECIALIST--INFRASTRUCTURE-DELIVERY_R-8310": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-06",
+"fpa": 4,
+"fr": true,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6344,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "You have at least 10 years of proven experience in IT initiative management, with in-depth knowledge of initiative management methodologies and tools.",
+"y": 10.0,
+"yd": [
+"general"
+],
+"yh": null
 },
 "https://bdo.wd3.myworkdayjobs.com/BDO/job/Montreal---1000-Rue-De-La-Gauchetire-Ouest/Manager--Valuations---Modelling_JR7009": {
 "cfa": "progress",
@@ -563,6 +562,25 @@
 "deals"
 ],
 "yh": 3.0
+},
+"https://desjardins.wd10.myworkdayjobs.com/Desjardins/job/Lvis/Parcours-de-dveloppement--Solutions-de-placement_R2611992-1": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-06",
+"fpa": 0,
+"fr": true,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4780,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
 },
 "https://desjardins.wd10.myworkdayjobs.com/Desjardins/job/Montral/Analyste--Financement-corporatif_R2611482-1": {
 "cfa": "mention",
@@ -1071,27 +1089,6 @@
 ],
 "yh": null
 },
-"https://investquebec.wd10.myworkdayjobs.com/ext/job/Montral/Conseiller-principal--Investissements--Dette-subordonne--quit--quasi-quit---Montral-_R3505": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
-"fr": true,
-"front": 12,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 7163,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Posséder un minimum de cinq (5) années d’expérience pertinente comme professionnel en investissement par équité, dette subordonnée et quasi équité",
-"y": 5,
-"yd": [
-"investing"
-],
-"yh": null
-},
 "https://jobs.banquelaurentienne.ca/fr/job-detail/analyste-senior-titrisation-montreal-2-28392": {
 "cfa": "mention",
 "cpa": false,
@@ -1173,27 +1170,6 @@
 "general"
 ],
 "yh": 3
-},
-"https://jobs.scotiabank.com/JFL/job/Montreal-Senior-Manager%2C-Investment-Distribution-Management-JFL-Equity-Research-QC-H3B4G7/602006917/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
-"fr": true,
-"front": 10,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 7098,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "10+ years of experience working in the asset management industry;",
-"y": 10.0,
-"yd": [
-"investing"
-],
-"yh": null
 },
 "https://jobs.scotiabank.com/job/Montreal-Services-bancaires-commerciaux-Nouveaux-dipl%C3%B4m%C3%A9s-Financement-immobilier-Juin-2027-Montr%C3%A9al-QC/605920917/": {
 "cfa": "",
@@ -1615,67 +1591,6 @@
 ],
 "yh": 3.0
 },
-"https://www.linkedin.com/jobs/view/4407045989/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-03",
-"fpa": 0,
-"fr": true,
-"front": 9,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 5143,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "10+ years of experience working in the asset management industry;",
-"y": 10.0,
-"yd": [
-"investing"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4442243023/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
-"fr": true,
-"front": 22,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 8262,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4446247904/": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-10-03",
-"fpa": 0,
-"fr": true,
-"front": 0,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4974,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum of 5 years of finance leadership experience is essential, with a strong background in accounting, corporate investor relations, and financial communications.",
-"y": 5.0,
-"yd": [
-"investing"
-],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4455946961/": {
 "cfa": "mention",
 "cpa": false,
@@ -1847,26 +1762,26 @@
 ],
 "yh": 12.0
 },
-"https://www.linkedin.com/jobs/view/4467809189/": {
+"https://www.linkedin.com/jobs/view/4466383955/": {
 "cfa": "",
 "cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
+"d": "2026-10-06",
+"fpa": 7,
 "fr": false,
-"front": 14,
+"front": 1,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 3718,
+"n": 10873,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "1+ year experience in a real estate or financial position is an asset",
-"y": 1.0,
+"q": "3 à 5 ans d’expérience dans la gestion de la croissance des revenus, la gestion des catégories, la stratégie de vente, la planification commerciale, les finances ou des domaines connexes.",
+"y": 3.0,
 "yd": [
-"general"
+"deals"
 ],
-"yh": null
+"yh": 5.0
 },
 "https://www.linkedin.com/jobs/view/4470307797/": {
 "cfa": "",
@@ -1988,6 +1903,27 @@
 "y": 5.0,
 "yd": [
 "general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4472797293/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-06",
+"fpa": 0,
+"fr": true,
+"front": 29,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 10301,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "3+ years of experience in grain (or agricultural commodities) trading, with a proven track record of building and running a profitable book.",
+"y": 3.0,
+"yd": [
+"investing"
 ],
 "yh": null
 },
