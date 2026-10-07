@@ -166,6 +166,27 @@
 ],
 "yh": null
 },
+"https://bmo.wd3.myworkdayjobs.com/External/job/Toronto-ON-CAN/Analyst--Analyst--Corporate-Banking--Treasury---Payment-Solutions_R260026796": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-07",
+"fpa": 0,
+"fr": false,
+"front": 3,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 7148,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Typically 1 to 3 years of relevant experience and a post-secondary degree in a related field, or an equivalent combination of education and experience.",
+"y": 1.0,
+"yd": [
+"investing"
+],
+"yh": 3.0
+},
 "https://cae.wd3.myworkdayjobs.com/career/job/Montreal-St-Laurent/Senior-Analyst--Corporate-Finance-and-M-A_122630": {
 "cfa": "progress",
 "cpa": false,
@@ -582,27 +603,6 @@
 "yd": [],
 "yh": null
 },
-"https://desjardins.wd10.myworkdayjobs.com/Desjardins/job/Montral/Analyste--Financement-corporatif_R2611482-1": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
-"fr": true,
-"front": 16,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4669,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "0 to 5 years of relevant experience",
-"y": 0.0,
-"yd": [
-"general"
-],
-"yh": 5.0
-},
 "https://desjardins.wd10.myworkdayjobs.com/Desjardins/job/Montral/Conseiller-principal-ou-conseillre-principale--Investissement-responsable_R2611552-1": {
 "cfa": "",
 "cpa": false,
@@ -641,6 +641,27 @@
 "opsy": false,
 "q": "A minimum of eight years of relevant experience",
 "y": 8,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://desjardins.wd10.myworkdayjobs.com/Desjardins/job/Montral/Responsable-de-Produits--Solutions-March-des-capitaux_R2611840-1": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-07",
+"fpa": 0,
+"fr": true,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3956,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "A minimum of six years of relevant experience",
+"y": 6,
 "yd": [
 "general"
 ],
@@ -1004,27 +1025,6 @@
 ],
 "yh": null
 },
-"https://investpsp.wd3.myworkdayjobs.com/psp_careers/job/Montreal/Senior-Advisor--Public-Markets-Solutions_R4967": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
-"fr": true,
-"front": 0,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 5740,
-"ok": true,
-"ops": 2,
-"opsy": false,
-"q": "A minimum of eight (8) years of relevant experience in investment technology, business and systems analysis, digital solutions, financial analytics or a comparable role in asset management or financial services",
-"y": 8,
-"yd": [
-"investing"
-],
-"yh": null
-},
 "https://investpsp.wd3.myworkdayjobs.com/psp_careers/job/Montreal/Senior-Analyst---Associate--Global-Alpha--Fundamental-Research-Platform_R4873": {
 "cfa": "progress",
 "cpa": false,
@@ -1170,25 +1170,6 @@
 "general"
 ],
 "yh": 3
-},
-"https://jobs.scotiabank.com/job/Montreal-Services-bancaires-commerciaux-Nouveaux-dipl%C3%B4m%C3%A9s-Financement-immobilier-Juin-2027-Montr%C3%A9al-QC/605920917/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
-"fr": true,
-"front": 5,
-"inv": false,
-"jr": true,
-"mba": false,
-"n": 11937,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
 },
 "https://manulife.wd3.myworkdayjobs.com/MFCJH_Jobs/job/Toronto-Ontario/Senior-Financial-Analyst--Private-Markets_JR26081934": {
 "cfa": "",
@@ -1591,6 +1572,27 @@
 ],
 "yh": 3.0
 },
+"https://www.linkedin.com/jobs/view/4446247904/": {
+"cfa": "mention",
+"cpa": false,
+"d": "2026-10-07",
+"fpa": 0,
+"fr": true,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4974,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum of 5 years of finance leadership experience is essential, with a strong background in accounting, corporate investor relations, and financial communications.",
+"y": 5.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4455946961/": {
 "cfa": "mention",
 "cpa": false,
@@ -1656,48 +1658,6 @@
 ],
 "yh": 2.0
 },
-"https://www.linkedin.com/jobs/view/4463686603/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 2,
-"fr": true,
-"front": 25,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 14726,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Plus de 1 ans d’expérience professionnelle en comptabilité publique, services transactionnels, consultation, finance corporative ou dans un environnement similaire de services professionnels",
-"y": 1.0,
-"yd": [
-"deals"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4463921641/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
-"fr": true,
-"front": 4,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 5989,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Cinq à dix ans d’expérience en investissement, ainsi qu’une expérience des régimes à prestations déterminées à titre de conseiller, de gestionnaire de relations ou de gestionnaire de placements.",
-"y": 5,
-"yd": [
-"investing"
-],
-"yh": 10
-},
 "https://www.linkedin.com/jobs/view/4465882599/": {
 "cfa": "progress",
 "cpa": false,
@@ -1762,27 +1722,6 @@
 ],
 "yh": 12.0
 },
-"https://www.linkedin.com/jobs/view/4466383955/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-06",
-"fpa": 7,
-"fr": false,
-"front": 1,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 10873,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "3 à 5 ans d’expérience dans la gestion de la croissance des revenus, la gestion des catégories, la stratégie de vente, la planification commerciale, les finances ou des domaines connexes.",
-"y": 3.0,
-"yd": [
-"deals"
-],
-"yh": 5.0
-},
 "https://www.linkedin.com/jobs/view/4470307797/": {
 "cfa": "",
 "cpa": false,
@@ -1826,44 +1765,6 @@
 ],
 "yh": 4.0
 },
-"https://www.linkedin.com/jobs/view/4470925397/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
-"fr": true,
-"front": 22,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 9367,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4470967579/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
-"fr": false,
-"front": 2,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4685,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4471513878/": {
 "cfa": "progress",
 "cpa": false,
@@ -1903,27 +1804,6 @@
 "y": 5.0,
 "yd": [
 "general"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4472797293/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-06",
-"fpa": 0,
-"fr": true,
-"front": 29,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 10301,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "3+ years of experience in grain (or agricultural commodities) trading, with a proven track record of building and running a profitable book.",
-"y": 3.0,
-"yd": [
-"investing"
 ],
 "yh": null
 },
@@ -1969,25 +1849,23 @@
 ],
 "yh": 4.0
 },
-"https://www.linkedin.com/jobs/view/4473393229/": {
+"https://www.linkedin.com/jobs/view/4473563901/": {
 "cfa": "",
 "cpa": false,
-"d": "2026-10-03",
+"d": "2026-10-07",
 "fpa": 0,
 "fr": true,
-"front": 8,
+"front": 4,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 5037,
+"n": 3038,
 "ok": true,
-"ops": 4,
-"opsy": true,
-"q": "Minimum 6 ans d'expérience en analyse d'affaires, dans un contexte de livraison de solutions intégrées bout en bout pour le secteur marché des capitaux",
-"y": 6.0,
-"yd": [
-"ops"
-],
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4473591973/": {
@@ -2033,25 +1911,86 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4475055412/": {
-"cfa": "mention",
+"https://www.linkedin.com/jobs/view/4475126499/": {
+"cfa": "",
 "cpa": false,
-"d": "2026-10-03",
+"d": "2026-10-07",
+"fpa": 0,
+"fr": false,
+"front": 6,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5162,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum 5 years of Strategy consulting experience from a Tier 1 consulting firm, or internal Strategy equivalent",
+"y": 5.0,
+"yd": [
+"deals"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4476344357/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-07",
 "fpa": 1,
 "fr": true,
+"front": 10,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6719,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Baccalauréat et au moins six ans d’expérience pertinente en financement commercial et/ou corporatif (ou un agencement équivalent d’études et d’expérience)",
+"y": 6,
+"yd": [
+"investing"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4476372784/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-07",
+"fpa": 4,
+"fr": true,
+"front": 17,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 3542,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum de 4 ans d’expérience pertinente, dont au moins 1 an en diligence financière, finance corporative, banque d’investissement ou développement corporatif.",
+"y": 4.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4476383231/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-07",
+"fpa": 0,
+"fr": false,
 "front": 1,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 8123,
+"n": 7336,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "12 ans et plus d'expérience directe dans un environnement de conseil en finance ou en placement,",
-"y": 12.0,
-"yd": [
-"general"
-],
+"q": "",
+"y": null,
+"yd": [],
 "yh": null
 },
 "https://www.powercorporation.com/en/other/careers/65/": {
