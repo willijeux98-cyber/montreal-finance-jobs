@@ -124,6 +124,27 @@
 ],
 "yh": null
 },
+"https://bdo.wd3.myworkdayjobs.com/BDO/job/Montreal---1000-Rue-De-La-Gauchetire-Ouest/Financial-Analyst--Valuations---Modelling_JR7200": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-09",
+"fpa": 1,
+"fr": false,
+"front": 18,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 7519,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "1-2 years working experience in an Audit or Valuations/Mergers and Acquisitions practice",
+"y": 1.0,
+"yd": [
+"deals"
+],
+"yh": 2.0
+},
 "https://bdo.wd3.myworkdayjobs.com/BDO/job/Montreal---1000-Rue-De-La-Gauchetire-Ouest/Manager--Valuations---Modelling_JR7009": {
 "cfa": "progress",
 "cpa": false,
@@ -145,6 +166,27 @@
 ],
 "yh": 8.0
 },
+"https://bdo.wd3.myworkdayjobs.com/BDO/job/Montreal---1000-Rue-De-La-Gauchetire-Ouest/Senior-Financial-Analyst--Valuations---Modelling_JR7201-1": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-09",
+"fpa": 1,
+"fr": false,
+"front": 20,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7570,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "2-3 years of working experience in an Audit or Valuations/Mergers and Acquisitions practice;",
+"y": 2.0,
+"yd": [
+"deals"
+],
+"yh": 3.0
+},
 "https://bdo.wd3.myworkdayjobs.com/BDO/job/Montreal---1000-Rue-De-La-Gauchetire-Ouest/Senior-Manager--Transaction-Services_JR6956": {
 "cfa": "progress",
 "cpa": false,
@@ -162,6 +204,28 @@
 "q": "Minimum of 5 years of deal experience in either financial due diligence, mergers and acquisitions, corporate finance or corporate development, some of which must have been at a supervisory level",
 "y": 5.0,
 "yd": [
+"deals"
+],
+"yh": null
+},
+"https://bmo.wd3.myworkdayjobs.com/External/job/MONTREAL-QC-CAN/Associate--Asset-Based-Lending_R260024617": {
+"cfa": "mention",
+"cpa": false,
+"d": "2026-10-09",
+"fpa": 1,
+"fr": true,
+"front": 5,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6096,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum 2 years of commercial or corporate credit experience, preferably in a transaction execution role.",
+"y": 2.0,
+"yd": [
+"investing",
 "deals"
 ],
 "yh": null
@@ -207,6 +271,48 @@
 "investing"
 ],
 "yh": 3.0
+},
+"https://cae.wd3.myworkdayjobs.com/career/job/Montreal-St-Laurent/Experienced-Analyst--Corporate-Finance-and-M-A_123448": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-09",
+"fpa": 0,
+"fr": true,
+"front": 11,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4496,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Relevant Experience: 2 to 4 years of professional experience in the fields of corporate finance and/or M&A",
+"y": 2.0,
+"yd": [
+"deals"
+],
+"yh": 4.0
+},
+"https://cae.wd3.myworkdayjobs.com/career/job/Montreal-St-Laurent/Financial-Analyst_118908": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-09",
+"fpa": 0,
+"fr": true,
+"front": 11,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 4327,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "1 to 2 years of professional experience in the fields of corporate finance and/or M&A",
+"y": 1.0,
+"yd": [
+"deals"
+],
+"yh": 2.0
 },
 "https://cae.wd3.myworkdayjobs.com/career/job/Montreal-St-Laurent/Senior-Analyst--Corporate-Finance-and-M-A_122630": {
 "cfa": "progress",
@@ -688,6 +794,27 @@
 ],
 "yh": null
 },
+"https://desjardins.wd10.myworkdayjobs.com/Desjardins/job/Montral/Ngociateur-ou-ngociatrice-XVA--Produits-drivs_R2612296-1": {
+"cfa": "mention",
+"cpa": false,
+"d": "2026-10-09",
+"fpa": 0,
+"fr": true,
+"front": 23,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6184,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "A minimum of five to ten years of relevant experience",
+"y": 5,
+"yd": [
+"general"
+],
+"yh": 10
+},
 "https://desjardins.wd10.myworkdayjobs.com/Desjardins/job/Montral/Responsable-de-Produits--Solutions-March-des-capitaux_R2611840-1": {
 "cfa": "",
 "cpa": false,
@@ -704,6 +831,27 @@
 "opsy": false,
 "q": "A minimum of six years of relevant experience",
 "y": 6,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://desjardins.wd10.myworkdayjobs.com/Desjardins/job/Montral/Spcialiste-de-produits--Fonds-d-investissement_R2612233-1": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-09",
+"fpa": 0,
+"fr": true,
+"front": 7,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6212,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "A minimum of eight years of relevant experience",
+"y": 8,
 "yd": [
 "general"
 ],
@@ -892,27 +1040,6 @@
 "y": 8.0,
 "yd": [
 "general"
-],
-"yh": null
-},
-"https://investpsp.wd3.myworkdayjobs.com/psp_careers/job/Montreal/Advisor--Public-Markets-Solutions_R4975": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
-"fr": true,
-"front": 0,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 6271,
-"ok": true,
-"ops": 3,
-"opsy": false,
-"q": "A minimum of five (5) years of relevant experience in investment technology, business or systems analysis, digital solutions, financial analytics, asset management or financial services",
-"y": 5,
-"yd": [
-"investing"
 ],
 "yh": null
 },
@@ -1171,6 +1298,27 @@
 ],
 "yh": null
 },
+"https://investquebec.wd10.myworkdayjobs.com/ext/job/Montral/Conseiller--Investissement--Capital-de-croissance--Montral-_R3612-1": {
+"cfa": "mention",
+"cpa": false,
+"d": "2026-10-09",
+"fpa": 1,
+"fr": false,
+"front": 17,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7630,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum de 3 années d’expérience professionnelle probante en analyse commerciale ou sectorielle, analyse financière et en évaluation d’entreprise, en modélisation financière, notamment en banque d’investissement, en c…",
+"y": 3.0,
+"yd": [
+"deals"
+],
+"yh": null
+},
 "https://jobs.banquelaurentienne.ca/fr/job-detail/analyste-senior-titrisation-montreal-2-28392": {
 "cfa": "mention",
 "cpa": false,
@@ -1226,6 +1374,25 @@
 "n": 6928,
 "ok": true,
 "ops": 1,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://jobs.banquelaurentienne.ca/fr/job-detail/stagiaire--coordonnateur-immobilier-montreal-2-28632": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-09",
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4096,
+"ok": true,
+"ops": 0,
 "opsy": false,
 "q": "",
 "y": null,
@@ -1610,6 +1777,25 @@
 ],
 "yh": null
 },
+"https://www.fondaction.com/job/etudiant-stagiaire-evaluation-dentreprises/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-09",
+"fpa": 0,
+"fr": false,
+"front": 13,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3670,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4375068798/": {
 "cfa": "mention",
 "cpa": false,
@@ -1653,28 +1839,6 @@
 "deals"
 ],
 "yh": 3.0
-},
-"https://www.linkedin.com/jobs/view/4446352142/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-08",
-"fpa": 0,
-"fr": true,
-"front": 2,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3333,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "15 or more years of progressive investment experience, ideally gained in a client-service oriented environment (consulting, investment management or portfolio management)",
-"y": 15.0,
-"yd": [
-"investing",
-"deals"
-],
-"yh": null
 },
 "https://www.linkedin.com/jobs/view/4455946961/": {
 "cfa": "mention",
@@ -2012,6 +2176,25 @@
 ],
 "yh": 4.0
 },
+"https://www.linkedin.com/jobs/view/4473563901/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-09",
+"fpa": 0,
+"fr": true,
+"front": 4,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3038,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4473591973/": {
 "cfa": "",
 "cpa": false,
@@ -2053,25 +2236,6 @@
 "investing",
 "deals"
 ],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4475448773/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-08",
-"fpa": 1,
-"fr": true,
-"front": 29,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 5818,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4475495449/": {
