@@ -980,27 +980,6 @@
 ],
 "yh": 12.0
 },
-"https://intactfc.wd3.myworkdayjobs.com/intactfc/job/Montral-Quebec-CAN/Analyste-en-placement--revenus-fixes_R155921": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-10-11",
-"fpa": 0,
-"fr": true,
-"front": 10,
-"inv": false,
-"jr": true,
-"mba": false,
-"n": 11509,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "0 à 2 ans d’expérience en investissements.",
-"y": 0.0,
-"yd": [
-"investing"
-],
-"yh": 2.0
-},
 "https://intactfc.wd3.myworkdayjobs.com/intactfc/job/Montral-Quebec-CAN/Spcialiste-Financier--Placements-Privs_R153743": {
 "cfa": "mention",
 "cpa": false,
@@ -2034,6 +2013,27 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4466371366/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-12",
+"fpa": 5,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 10323,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "De 8 à 12 années d'expérience en transformation, stratégie d'affaires, commerce électronique, consultation, gestion de programme ou dans un domaine connexe.",
+"y": 8.0,
+"yd": [
+"deals"
+],
+"yh": 12.0
+},
 "https://www.linkedin.com/jobs/view/4466383955/": {
 "cfa": "",
 "cpa": false,
@@ -2323,6 +2323,27 @@
 "deals"
 ],
 "yh": null
+},
+"https://www.linkedin.com/jobs/view/4475475898/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-12",
+"fpa": 4,
+"fr": true,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3583,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Posséder de sept (7) à dix (10) années d’expérience pertinente à l’emploi dont une expérience reliée à la planification, l’estimation, le maintien et le suivi des projets de construction.",
+"y": 7,
+"yd": [
+"general"
+],
+"yh": 10
 },
 "https://www.linkedin.com/jobs/view/4475495449/": {
 "cfa": "progress",
