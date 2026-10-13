@@ -980,6 +980,44 @@
 ],
 "yh": 12.0
 },
+"https://frontrow.ventures/en/join-us/#venture-analyst": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-13",
+"fpa": 0,
+"fr": true,
+"front": 44,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 20673,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://frontrow.ventures/en/join-us/#venture-manager": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-13",
+"fpa": 0,
+"fr": true,
+"front": 44,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 20673,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://intactfc.wd3.myworkdayjobs.com/intactfc/job/Montral-Quebec-CAN/Spcialiste-Financier--Placements-Privs_R153743": {
 "cfa": "mention",
 "cpa": false,
@@ -1797,6 +1835,27 @@
 "yd": [],
 "yh": null
 },
+"https://www.jobbank.gc.ca/jobsearch/jobposting/50479718": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-13",
+"fpa": 0,
+"fr": true,
+"front": 5,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5068,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Experience:* minimum 2 years in equity research",
+"y": 2.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4375068798/": {
 "cfa": "mention",
 "cpa": false,
@@ -1840,28 +1899,6 @@
 "deals"
 ],
 "yh": 3.0
-},
-"https://www.linkedin.com/jobs/view/4446352142/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-10",
-"fpa": 0,
-"fr": true,
-"front": 2,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3333,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "15 or more years of progressive investment experience, ideally gained in a client-service oriented environment (consulting, investment management or portfolio management)",
-"y": 15.0,
-"yd": [
-"investing",
-"deals"
-],
-"yh": null
 },
 "https://www.linkedin.com/jobs/view/4455946961/": {
 "cfa": "mention",
@@ -1928,69 +1965,6 @@
 ],
 "yh": 2.0
 },
-"https://www.linkedin.com/jobs/view/4463686603/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-08",
-"fpa": 2,
-"fr": true,
-"front": 25,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 14726,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Plus de 1 ans d’expérience professionnelle en comptabilité publique, services transactionnels, consultation, finance corporative ou dans un environnement similaire de services professionnels",
-"y": 1.0,
-"yd": [
-"deals"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4463921641/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-08",
-"fpa": 0,
-"fr": true,
-"front": 4,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 5989,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Cinq à dix ans d’expérience en investissement, ainsi qu’une expérience des régimes à prestations déterminées à titre de conseiller, de gestionnaire de relations ou de gestionnaire de placements.",
-"y": 5,
-"yd": [
-"investing"
-],
-"yh": 10
-},
-"https://www.linkedin.com/jobs/view/4465882599/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
-"fr": true,
-"front": 1,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4762,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Five to ten years of experience working with defined benefit plans as a consultant or relationship manager.",
-"y": 5,
-"yd": [
-"deals"
-],
-"yh": 10
-},
 "https://www.linkedin.com/jobs/view/4466354481/": {
 "cfa": "",
 "cpa": false,
@@ -2012,48 +1986,6 @@
 "deals"
 ],
 "yh": null
-},
-"https://www.linkedin.com/jobs/view/4466371366/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-12",
-"fpa": 5,
-"fr": false,
-"front": 1,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 10323,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "De 8 à 12 années d'expérience en transformation, stratégie d'affaires, commerce électronique, consultation, gestion de programme ou dans un domaine connexe.",
-"y": 8.0,
-"yd": [
-"deals"
-],
-"yh": 12.0
-},
-"https://www.linkedin.com/jobs/view/4466383955/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-10",
-"fpa": 7,
-"fr": false,
-"front": 1,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 10873,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "3 à 5 ans d’expérience dans la gestion de la croissance des revenus, la gestion des catégories, la stratégie de vente, la planification commerciale, les finances ou des domaines connexes.",
-"y": 3.0,
-"yd": [
-"deals"
-],
-"yh": 5.0
 },
 "https://www.linkedin.com/jobs/view/4470307797/": {
 "cfa": "",
@@ -2098,44 +2030,6 @@
 ],
 "yh": 4.0
 },
-"https://www.linkedin.com/jobs/view/4470925397/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-08",
-"fpa": 0,
-"fr": true,
-"front": 22,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 9373,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4470967579/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-08",
-"fpa": 0,
-"fr": false,
-"front": 2,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4685,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4471513878/": {
 "cfa": "progress",
 "cpa": false,
@@ -2151,48 +2045,6 @@
 "ops": 0,
 "opsy": false,
 "q": "Minimum de 3 ans d’expérience en immobilier commercial, avec un accent sur l’analyse financière et l’analyse de faisabilité financière ( underwriting ).",
-"y": 3.0,
-"yd": [
-"investing"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4471599818/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 9,
-"fr": true,
-"front": 1,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 7711,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum de 5 ans d’expérience en marketing pharmaceutique ou dans un rôle similaire.",
-"y": 5.0,
-"yd": [
-"general"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4472797293/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-10",
-"fpa": 0,
-"fr": true,
-"front": 29,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 10301,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "3+ years of experience in grain (or agricultural commodities) trading, with a proven track record of building and running a profitable book.",
 "y": 3.0,
 "yd": [
 "investing"
@@ -2241,46 +2093,6 @@
 ],
 "yh": 4.0
 },
-"https://www.linkedin.com/jobs/view/4473393229/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-10",
-"fpa": 0,
-"fr": true,
-"front": 8,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 5037,
-"ok": true,
-"ops": 4,
-"opsy": true,
-"q": "Minimum 6 ans d'expérience en analyse d'affaires, dans un contexte de livraison de solutions intégrées bout en bout pour le secteur marché des capitaux",
-"y": 6.0,
-"yd": [
-"ops"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4473563901/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-09",
-"fpa": 0,
-"fr": true,
-"front": 4,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3038,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4473591973/": {
 "cfa": "",
 "cpa": false,
@@ -2324,52 +2136,10 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4475475898/": {
+"https://www.linkedin.com/jobs/view/4476333755/": {
 "cfa": "",
 "cpa": false,
-"d": "2026-10-12",
-"fpa": 4,
-"fr": true,
-"front": 0,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3583,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Posséder de sept (7) à dix (10) années d’expérience pertinente à l’emploi dont une expérience reliée à la planification, l’estimation, le maintien et le suivi des projets de construction.",
-"y": 7,
-"yd": [
-"general"
-],
-"yh": 10
-},
-"https://www.linkedin.com/jobs/view/4475495449/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-08",
-"fpa": 0,
-"fr": false,
-"front": 13,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 9266,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum de 2 ans d’expérience en analyse financière ou en marchés financiers ;",
-"y": 2.0,
-"yd": [
-"general"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4476344357/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-07",
+"d": "2026-10-13",
 "fpa": 1,
 "fr": true,
 "front": 10,
@@ -2385,46 +2155,6 @@
 "yd": [
 "investing"
 ],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4476372784/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-07",
-"fpa": 4,
-"fr": true,
-"front": 17,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 3542,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum de 4 ans d’expérience pertinente, dont au moins 1 an en diligence financière, finance corporative, banque d’investissement ou développement corporatif.",
-"y": 4.0,
-"yd": [
-"investing"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4476383231/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-11",
-"fpa": 0,
-"fr": false,
-"front": 1,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 7336,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4476801945/": {
@@ -2447,65 +2177,6 @@
 "general"
 ],
 "yh": 5.0
-},
-"https://www.linkedin.com/jobs/view/4477667104/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-11",
-"fpa": 3,
-"fr": true,
-"front": 4,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 7136,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Au moins 5 ans d’expérience en gestion de catégories.",
-"y": 5.0,
-"yd": [
-"general"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4477885774/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-10",
-"fpa": 0,
-"fr": true,
-"front": 7,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4166,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4477890419/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-10",
-"fpa": 0,
-"fr": true,
-"front": 4,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6612,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
 },
 "https://www.powercorporation.com/en/other/careers/65/": {
 "cfa": "progress",
