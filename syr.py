@@ -49,7 +49,7 @@ PROFILE = dict(software=3.5, ops=1.5, techbiz=3.5, edu=2, other=4.5)
 
 # ---------------------------------------------------------------- families
 SOFTWARE = re.compile(
-    r"software|developer|développeur|programmer|full[- ]?stack|back[- ]?end|front[- ]?end|\bjava\b|spring|angular|"
+    r"software|developer|développeur|programmer|full[- ]?stack|back[- ]?end|front[- ]?end|\bjava\b|spring(?!\s*(20)?\d{2}\b|\s+(semester|term|session|break|cleaning))|angular|"
     r"\breact\b|\.net\b|\bweb (engineer|developer|application)|application (developer|engineer)|devops|\bsre\b|"
     r"site reliability|cloud (engineer|developer|architect)|platform engineer|(data|software automation|test automation|qa|"
     r"security|cyber|embedded|firmware|ai|ml|machine learning|computer|it) engineer|"
@@ -109,7 +109,7 @@ STAFF = re.compile(r"\bstaff\b|\bstf\b|principal|architect|distinguished|fellow\
 EXEC = re.compile(r"vice president|\bvp\b|chief|\bcto\b|\bcio\b|\bcoo\b|head of|executive director|president\b", re.I)
 MANAGER = re.compile(r"manager|director|supervisor|superintendent", re.I)
 JUNIOR = re.compile(r"junior|\bjr\.?\b|entry[- ]level|associate\b|\bi\b|level (1|i)\b|early career|new grad|e1\b|e2\b|asc\b", re.I)
-STACK = re.compile(r"\bjava\b|spring|angular|full[- ]?stack|j2ee|microservices", re.I)
+STACK = re.compile(r"\bjava\b|spring(?!\s*(20)?\d{2}\b|\s+(semester|term|session|break|cleaning))|angular|full[- ]?stack|j2ee|microservices", re.I)
 FRENCH = re.compile(r"french|bilingual|francophone", re.I)
 
 PITCH = {
@@ -372,10 +372,11 @@ LI_QUERIES = [
 LI_STATS = dict(requests=0, limited=0, cards=0, unique=0)
 
 
-def linkedin(budget=600):
+def linkedin(budget=720):
     """LinkedIn's public job search within 25 miles of Syracuse, last 30 days: the targeted queries, then broad
     sweeps by seniority (associate, mid-senior, director) for anything the queries didn't name."""
     out, seen = [], set()
+    time.sleep(60)          # let LinkedIn cool off after the Montreal sweep that ran just before
     t0 = time.time()
     s = requests.Session()
     s.headers.update(UA)
@@ -386,7 +387,7 @@ def linkedin(budget=600):
                 LI_STATS["unique"] = len(out)
                 return out
             r = None
-            for wait in (0, 20, 45):
+            for wait in (0, 30):
                 time.sleep(wait)
                 LI_STATS["requests"] += 1
                 r = s.get(LI_URL, params={"keywords": q, "location": "Syracuse, New York, United States", "distance": 25,
@@ -424,7 +425,8 @@ def linkedin(budget=600):
                 out.append(rw)
             if len(cards) < 10 or not fresh:
                 break
-            time.sleep(1.5)
+            time.sleep(2.5)
+        time.sleep(1.5)
     LI_STATS["unique"] = len(out)
     return out
 
@@ -448,7 +450,8 @@ ALIASES = {"src": "SRC Inc.", "src inc": "SRC Inc.", "jma": "JMA Wireless", "jma
            "terakeet": "Terakeet"}
 RECRUITERS = re.compile(r"robert half|insight global|teksystems|kforce|randstad|adecco|aerotek|actalent|manpower|"
                         r"apex systems|cybercoders|jobot|dice|staffing|recruit|talent|hire|search group|"
-                        r"lensa|jobs via|clickjob|hiring|careers?\b|motion recruitment|kelly services|express employment", re.I)
+                        r"lensa|jobs via|clickjob|hiring|careers?\b|motion recruitment|kelly services|express employment|ssi people|axelon|"
+                        r"people\b|consulting group|solutions inc|tech mahindra|infosys|cognizant|programmers\.io|brightpath", re.I)
 
 
 def norm(c):
@@ -520,7 +523,7 @@ def read_reqs(cands):
 MIN_SHOW = 4
 
 
-def build(li_budget=600):
+def build(li_budget=720):
     raw, errors, got = [], [], {}
     with cf.ThreadPoolExecutor(8) as ex:
         futs = {ex.submit(fn): label for fn, label in BOARDS}
