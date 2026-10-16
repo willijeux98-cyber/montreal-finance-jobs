@@ -270,6 +270,27 @@
 ],
 "yh": 6.0
 },
+"https://bmo.wd3.myworkdayjobs.com/External/job/New-York-NY-USA/Associate--Corporate-Banking--Real-Estate_R260023942": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-16",
+"fpa": 0,
+"fr": false,
+"front": 20,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 8673,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Typically between 4 - 6 years of relevant experience and post-secondary degree in related field of study or an equivalent combination of education and experience.",
+"y": 4.0,
+"yd": [
+"investing"
+],
+"yh": 6.0
+},
 "https://bmo.wd3.myworkdayjobs.com/External/job/Toronto-ON-CAN/Analyst--Analyst--Corporate-Banking--Treasury---Payment-Solutions_R260026796": {
 "cfa": "",
 "cpa": false,
@@ -476,27 +497,6 @@
 ],
 "yh": 4
 },
-"https://careers.ey.com/ey/job/Montr%C3%A9al-Senior%2C-Transaction-Diligence-%28Montreal%29-Queb-H3A-0A8/1278272701/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
-"fr": true,
-"front": 28,
-"inv": false,
-"jr": true,
-"mba": false,
-"n": 13646,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "Preferably 3 or more years of accounting experience including minimum 2 years at a public accounting firm.",
-"y": 3.0,
-"yd": [
-"general"
-],
-"yh": null
-},
 "https://careers.ey.com/ey/job/Montr%C3%A9al-Senior-Associate-%28Manager%29%2C-M&A-%28Montreal%29-Queb-H3A-0A8/1431146033/": {
 "cfa": "progress",
 "cpa": false,
@@ -684,28 +684,6 @@
 ],
 "yh": 4
 },
-"https://cdpq.wd10.myworkdayjobs.com/CDPQ/job/Montreal/Analyste-principal-e----Pilotage--Marchs-liquides_R05139-1": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
-"fr": true,
-"front": 4,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 5672,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Entre trois (3) à cinq (5) années d’expérience en analyse des marchés boursiers, en stratégies quantitatives ou en gestion de portefeuille;",
-"y": 3,
-"yd": [
-"investing",
-"deals"
-],
-"yh": 5
-},
 "https://cdpq.wd10.myworkdayjobs.com/CDPQ/job/Montreal/Analyste-principal-e---Placements-privs---Infrastructures_R05136": {
 "cfa": "progress",
 "cpa": false,
@@ -770,6 +748,25 @@
 "deals"
 ],
 "yh": 3
+},
+"https://cibc.wd3.myworkdayjobs.com/search/job/Montral-QC/Investment-Representative--ISI---Bilingual_2621121": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-16",
+"fpa": 0,
+"fr": true,
+"front": 2,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4850,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
 },
 "https://cogeco.wd3.myworkdayjobs.com/Cogeco_Careers/job/Montral-QC/Analyst--Corporate-Development_JR9844": {
 "cfa": "progress",
@@ -1584,27 +1581,6 @@
 ],
 "yh": 3
 },
-"https://manulife.wd3.myworkdayjobs.com/MFCJH_Jobs/job/Toronto-Ontario/Senior-Financial-Analyst--Private-Markets_JR26081934": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-11",
-"fpa": 4,
-"fr": false,
-"front": 5,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 7136,
-"ok": true,
-"ops": 4,
-"opsy": false,
-"q": "2–3 years of accounting/finance experience (preferably in private equity, funds, or real estate).",
-"y": 2.0,
-"yd": [
-"investing"
-],
-"yh": 3.0
-},
 "https://pwc.wd3.myworkdayjobs.com/Global_Experienced_Careers/job/Montreal---1250-Rene-Levesque-Boulevard-Ouest/Delivering-Deal-Value-Manager_752520WD-1": {
 "cfa": "",
 "cpa": false,
@@ -1699,6 +1675,44 @@
 "jr": false,
 "mba": false,
 "n": 9423,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://pwc.wd3.myworkdayjobs.com/Global_Experienced_Careers/job/Toronto/Transaction-Services-Manager----Financial-Services_734286WD": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-16",
+"fpa": 1,
+"fr": true,
+"front": 26,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 9984,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://pwc.wd3.myworkdayjobs.com/Global_Experienced_Careers/job/Toronto/Transaction-Services-Senior-Manager---Financial-Services---Bilingual-FR-EN-_739658WD": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-16",
+"fpa": 2,
+"fr": true,
+"front": 25,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 9690,
 "ok": true,
 "ops": 0,
 "opsy": false,
@@ -1922,26 +1936,26 @@
 ],
 "yh": 5.0
 },
-"https://www.bnpparibas.ca/en/jobs/capital-markets-senior-analyst-18-months-contract/": {
+"https://www.bnpparibas.ca/en/jobs/corporate-coverage-graduate-analyst/": {
 "cfa": "",
 "cpa": false,
-"d": "2026-10-02",
-"fpa": 2,
+"d": "2026-10-16",
+"fpa": 1,
 "fr": false,
-"front": 6,
-"inv": false,
-"jr": false,
+"front": 11,
+"inv": true,
+"jr": true,
 "mba": false,
-"n": 11069,
+"n": 10148,
 "ok": true,
-"ops": 4,
+"ops": 0,
 "opsy": false,
-"q": "Minimum 5 years of financial and/or management accounting experience, preferably from an accounting firm (Big 4 or medium-sized) or within the Financial Services/Banking Industry.",
-"y": 5.0,
+"q": "Has less than 1 year full-time professional experience excluding relevant internship experience",
+"y": 0,
 "yd": [
 "general"
 ],
-"yh": null
+"yh": 1.0
 },
 "https://www.bnpparibas.ca/en/jobs/credit-officer-securitization-private-debt-financing-and-clo-warehousing/": {
 "cfa": "",
@@ -2156,28 +2170,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4470307797/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
-"fr": true,
-"front": 39,
-"inv": false,
-"jr": true,
-"mba": false,
-"n": 7621,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "1 à 3 ans d’expérience pertinente en immobilier commercial, finance, investissement, acquisitions, courtage ou analyse financière.",
-"y": 1.0,
-"yd": [
-"investing",
-"deals"
-],
-"yh": 3.0
-},
 "https://www.linkedin.com/jobs/view/4470884667/": {
 "cfa": "",
 "cpa": false,
@@ -2215,48 +2207,6 @@
 "opsy": false,
 "q": "Minimum de 3 ans d’expérience en immobilier commercial, avec un accent sur l’analyse financière et l’analyse de faisabilité financière ( underwriting ).",
 "y": 3.0,
-"yd": [
-"investing"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4471599818/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-14",
-"fpa": 9,
-"fr": true,
-"front": 1,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 7711,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum de 5 ans d’expérience en marketing pharmaceutique ou dans un rôle similaire.",
-"y": 5.0,
-"yd": [
-"general"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4472945727/": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 4,
-"fr": false,
-"front": 18,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 10972,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "Minimum de 5 ans d’expérience pertinente en financement de projets ou en financement structuré, acquise dans un environnement bancaire, de conseil ou du côté des sponsors (fonds d’investissement, développeurs, etc.)",
-"y": 5.0,
 "yd": [
 "investing"
 ],
@@ -2343,107 +2293,6 @@
 "investing",
 "deals"
 ],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4476344357/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-14",
-"fpa": 1,
-"fr": true,
-"front": 10,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6719,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Baccalauréat et au moins six ans d’expérience pertinente en financement commercial et/ou corporatif (ou un agencement équivalent d’études et d’expérience)",
-"y": 6,
-"yd": [
-"investing"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4476801945/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-10",
-"fpa": 0,
-"fr": true,
-"front": 49,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 16583,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Level: Intermediate (2 to 5 years of experience)",
-"y": 2.0,
-"yd": [
-"general"
-],
-"yh": 5.0
-},
-"https://www.linkedin.com/jobs/view/4477667104/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-14",
-"fpa": 3,
-"fr": true,
-"front": 4,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 7136,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Au moins 5 ans d’expérience en gestion de catégories.",
-"y": 5.0,
-"yd": [
-"general"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4477885774/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-14",
-"fpa": 0,
-"fr": true,
-"front": 7,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4166,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4477890419/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-14",
-"fpa": 0,
-"fr": true,
-"front": 4,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6612,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
 "yh": null
 },
 "https://www.powercorporation.com/en/other/careers/65/": {
