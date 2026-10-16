@@ -716,8 +716,23 @@ def main():
                 firms=len({j["c"] for j in jobs}), min=MIN_SHOW, tracked=len(alive), reqs=dict(REQS_STATS),
                 profile=PROFILE)
 
+    # the Syracuse desk: a second market and a second profile, built after the Montreal book
+    syr_data = None
+    try:
+        import syr
+        syr_data = syr.build()
+        syr_data["meta"].update(iso=TODAY.isoformat(), at=_NOW.strftime("%H:%M"))
+    except Exception as e:
+        print("syracuse desk failed, keeping the previous one:", e)
+        try:
+            prev = open(OUT, encoding="utf-8").read()
+            i = prev.index("const DATA = ") + len("const DATA = ")
+            syr_data = json.loads(prev[i:prev.index(";\nconst JOBS")].replace("\\u003c", "<")).get("syr")
+        except Exception:
+            syr_data = None
+
     page = open(TEMPLATE, encoding="utf-8").read()
-    payload = json.dumps({"meta": meta, "jobs": jobs, "alive": alive}, ensure_ascii=True).replace("<", "\\u003c")
+    payload = json.dumps({"meta": meta, "jobs": jobs, "alive": alive, "syr": syr_data}, ensure_ascii=True).replace("<", "\\u003c")
     page = page.replace("/*__DATA__*/null", payload)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     open(OUT, "w", encoding="utf-8").write(page)

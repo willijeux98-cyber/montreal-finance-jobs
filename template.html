@@ -73,6 +73,21 @@ a{color:inherit}
 .brand b{font-family:var(--mono);font-weight:500;font-size:12.5px;letter-spacing:.14em}
 .brand span{font-size:12.5px;color:var(--muted)}
 .brand span i{font-style:normal;color:var(--faint);margin-inline:2px}
+/* desk switch: one book per market */
+.desk{position:relative;display:inline-grid;grid-auto-flow:column;grid-auto-columns:1fr;padding:2px;border:1px solid var(--line-2);border-radius:999px;background:var(--surface)}
+.desk button{position:relative;z-index:1;border:0;background:none;cursor:pointer;font-size:12.5px;font-weight:500;color:var(--muted);padding:4px 12px;border-radius:999px;white-space:nowrap;transition:color .2s var(--ease)}
+.desk button:hover{color:var(--text)}
+.desk button[aria-selected="true"]{color:var(--bg)}
+.desk .pill{position:absolute;z-index:0;top:2px;bottom:2px;left:2px;border-radius:999px;background:var(--text)}
+.desk.ready .pill{transition:transform .28s var(--ease),width .28s var(--ease)}
+.desk-m{display:none;margin:0 0 18px}
+.desk-m .desk{display:grid;width:100%}
+.desk-m .desk button{padding:7px 12px;font-size:13.5px}
+.profile{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:16px}
+.profile .lh{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);margin-right:4px}
+.profile span.p{font-size:12px;color:var(--text-2);border:1px solid var(--line-2);border-radius:999px;padding:2px 9px;background:var(--surface)}
+#view-overview{transition:opacity .18s var(--ease)}
+#view-overview.swap{opacity:0}
 .nav{display:flex;gap:2px;margin-left:8px}
 .nav a{position:relative;text-decoration:none;color:var(--muted);font-weight:500;font-size:13.5px;padding:8px 10px;border-radius:var(--r);transition:color .15s var(--ease),background .15s var(--ease)}
 .nav a:hover{color:var(--text);background:var(--hover)}
@@ -352,6 +367,8 @@ mark{background:var(--accent-soft);color:inherit;border-radius:2px;box-shadow:0 
 @media (max-width:720px){
   .top .wrap{gap:10px;height:52px}
   .brand span{display:none}
+  .top .desk{display:none}
+  .desk-m{display:block}
   .nav{margin-left:0}
   .nav a{padding:8px 7px}
   .nav a[data-nav="overview"]{display:none}
@@ -385,7 +402,8 @@ mark{background:var(--accent-soft);color:inherit;border-radius:2px;box-shadow:0 
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#overview" aria-label="Position Book, overview"><b>POSITION BOOK</b><span>Montréal <i>·</i> Finance</span></a>
+    <a class="brand" href="#overview" aria-label="Position Book, overview"><b>POSITION BOOK</b><span id="brand-sub">Montréal <i>·</i> Finance</span></a>
+    <div class="desk" id="desk" role="tablist" aria-label="Market"></div>
     <nav class="nav" aria-label="Sections">
       <a href="#overview" data-nav="overview">Overview</a>
       <a href="#roles" data-nav="roles">Roles<span class="n" id="nav-roles"></span></a>
@@ -402,9 +420,11 @@ mark{background:var(--accent-soft);color:inherit;border-radius:2px;box-shadow:0 
   <div id="view-overview">
     <section class="intro wrap" id="overview">
       <div>
+        <div class="desk-m" id="desk-m-wrap"><div class="desk" id="desk-m" role="tablist" aria-label="Market"></div></div>
         <div class="eyebrow" id="edition"></div>
-        <h1>The Montréal finance market, filtered for you.</h1>
-        <p>Investment, deal and markets roles from more than a hundred Montréal employers, scored against your profile every night. Only the strongest matches make the book.</p>
+        <h1 id="intro-h">The Montréal finance market, filtered for you.</h1>
+        <p id="intro-p">Investment, deal and markets roles from more than a hundred Montréal employers, scored against your profile every night. Only the strongest matches make the book.</p>
+        <div class="profile" id="profile"></div>
       </div>
       <div class="figures" id="figures" aria-label="Today at a glance"></div>
     </section>
@@ -414,7 +434,7 @@ mark{background:var(--accent-soft);color:inherit;border-radius:2px;box-shadow:0 
         <div class="map-h">
           <h2 id="map-title">Market map</h2>
           <p>Every firm with an open match. Taller towers hold better and deeper opportunities.</p>
-          <div class="key" aria-hidden="true"><span><i class="k10"></i>10</span><span><i class="k9"></i>9</span><span><i class="k8"></i>8</span><span><i class="k7"></i>7</span><span><i class="kn"></i>New this week</span></div>
+          <div class="key" id="map-key" aria-hidden="true"></div>
         </div>
         <div class="map-body">
           <div class="map-scroll" id="map-scroll"></div>
@@ -442,7 +462,7 @@ mark{background:var(--accent-soft);color:inherit;border-radius:2px;box-shadow:0 
           <div class="pop" id="pop" role="dialog" aria-label="More filters">
             <div class="grp"><h4>Posted</h4><div class="seg" data-f="posted"><button data-v="0">Any time</button><button data-v="7">7 days</button><button data-v="14">14 days</button><button data-v="30">30 days</button></div></div>
             <div class="grp"><h4>Source</h4><div class="seg" data-f="source"><button data-v="all">All</button><button data-v="direct">Firm boards</button><button data-v="net">Job sites</button></div></div>
-            <div class="grp"><h4>Location</h4><div class="seg" data-f="mtl"><button data-v="0">Any</button><button data-v="1">Montréal confirmed</button></div></div>
+            <div class="grp"><h4>Location</h4><div class="seg" data-f="mtl"><button data-v="0">Any</button><button data-v="1" id="loc-only">Montréal confirmed</button></div></div>
             <div class="pop-f"><button class="link-b" id="pop-reset">Reset</button><button class="link-b" id="pop-close">Done</button></div>
           </div>
         </div>
@@ -458,7 +478,7 @@ mark{background:var(--accent-soft);color:inherit;border-radius:2px;box-shadow:0 
   </section>
 
   <footer class="foot wrap">
-    <div><h4>Scoring</h4><p>Each role gets a personal relevance score out of 10, built from the kind of firm, whether the seat is investment, deal or markets work, how the title fits two years&rsquo; experience with CFA Level&nbsp;I passed, and whether it is confirmed in Montréal. Recent postings get a small lift; long-open ones a small cut. Only 8 and above are listed.</p></div>
+    <div><h4>Scoring</h4><p id="scoring"></p></div>
     <div><h4>Coverage</h4><p id="coverage"></p></div>
     <div><h4>Your data</h4><p>Saved roles and your pipeline live in this browser only. Back them up from the Pipeline before switching devices.</p></div>
   </footer>
@@ -475,8 +495,13 @@ mark{background:var(--accent-soft);color:inherit;border-radius:2px;box-shadow:0 
 
 <script>
 const DATA = /*__DATA__*/null;
-const JOBS = (DATA && DATA.jobs) || [];
-const META = (DATA && DATA.meta) || {run:"-", boards:0, scanned:0, errors:[]};
+const JOBS_MTL = ((DATA && DATA.jobs) || []).map(j => (j.dk = "mtl", j));
+const SYR = (DATA && DATA.syr) || null;
+const JOBS_SYR = ((SYR && SYR.jobs) || []).map(j => (j.dk = "syr", j));
+const ALL_JOBS = JOBS_MTL.concat(JOBS_SYR);
+const META_MTL = (DATA && DATA.meta) || {run:"-", boards:0, scanned:0, errors:[]};
+const META_SYR = Object.assign({}, META_MTL, {errors:[]}, (SYR && SYR.meta) || {});
+let JOBS = JOBS_MTL, META = META_MTL;
 
 /* ---------------------------------------------------------------- vocabulary */
 const LABEL = {10:"Top match", 9:"Strong match", 8:"Good match", 7:"Worth a shot"};
@@ -519,6 +544,34 @@ const SEATS = {
   markets:["trading", "markets", "capital markets", "quant", "markets operations", "investment risk", "performance measurement"]
 };
 const seatOf = j => { const g = (j.g || "").toLowerCase(); for(const k in SEATS) if(SEATS[k].includes(g)) return k; return "invest"; };
+/* ---------------------------------------------------------------- desks: one book per market, each with its own profile */
+const SYR_TYPE = {software:"Software engineering", ops:"Operations & logistics", techbiz:"Tech & business", edu:"Teaching", other:"Other professional"};
+const DESKS = {
+  mtl:{key:"mtl", name:"Montréal", sub:"Montréal <i>·</i> Finance", jobs:JOBS_MTL, meta:META_MTL, min:7, strong:9, grid:[7, 8, 9, 10], tiers:[10, 9, 8, 7],
+    title:"The Montréal finance market, filtered for you.",
+    lede:"Investment, deal and markets roles from more than a hundred Montréal employers, scored against your profile every night. Only the strongest matches make the book.",
+    profile:["CFA Level I passed", "Level II candidate", "About two years in", "M&A exposure", "English and French"],
+    types:FIRM_TYPE, districts:DISTRICTS, chips:[["invest", "Investing"], ["deals", "Deals"], ["markets", "Markets"]], seat:j => seatOf(j),
+    groups:[[10, 10, "Top match", GROUP_NOTE[10]], [9, 9, "Strong match", GROUP_NOTE[9]], [8, 8, "Good match", GROUP_NOTE[8]], [7, 7, "Worth a shot", GROUP_NOTE[7]]],
+    legend:[["k10", "10"], ["k9", "9"], ["k8", "8"], ["k7", "7"]], loc:"Montréal confirmed", typeHead:"Firm type",
+    scoring:"Each role gets a personal score out of 10. Only investing, banking, M&amp;A, deal-advisory, markets and corporate-finance seats are kept. The score starts from the firm and the seat, then reads the posting itself: the years of experience it asks for against yours, and hard requirements such as a CFA charter, MBA or CPA. Confirmed Montréal and recent postings get a small lift. 7 and above are listed.",
+    explain:"Only investing, banking, M&amp;A, deal-advisory, markets and corporate-finance seats are kept; operations, risk, reporting and analytics seats are dropped, even when the posting reads that way under an investment title. The score starts from the firm and the seat, then reads the posting itself: the years it asks for against your roughly two (about one on M&amp;A work, none in an investment seat), plus hard requirements such as a CFA charter, MBA or CPA. Meeting the bar adds a point; every year short takes points off. Confirmed Montréal and recent postings get a small lift. Fixed rules for one profile, not a prediction of your chances."},
+  syr:{key:"syr", name:"Syracuse", sub:"Syracuse <i>·</i> Tech &amp; operations", jobs:JOBS_SYR, meta:META_SYR, min:4, strong:7, grid:[4, 6, 8, 10], tiers:[9, 7, 5, 4],
+    title:"The Syracuse job market, filtered for one profile.",
+    lede:"Software, operations and logistics, and tech-business roles within about 25 miles of Syracuse, scored every night against a software engineer turned operations lead. Unrelated professional roles are kept too, lower down, so nothing is missed.",
+    profile:["Java, Spring, Angular", "3.5 years full-stack", "Fleet and event operations", "Leads 25+ staff", "CS and math degree", "English and French"],
+    types:SYR_TYPE, districts:[{name:"SOFTWARE", cats:["software"]}, {name:"OPERATIONS & LOGISTICS", cats:["ops"]}, {name:"TECH & BUSINESS", cats:["techbiz", "edu"]}, {name:"OTHER", cats:["other"]}],
+    chips:[["software", "Software"], ["ops", "Operations"], ["techbiz", "Tech & business"], ["other", "Other"]], seat:j => j.cat === "edu" ? "techbiz" : j.cat,
+    groups:[[9, 10, "Top match", "Squarely the skill set, and the bar is met."], [7, 8, "Strong match", "On one of the two tracks, with a gap or two."],
+      [5, 6, "Worth a look", "Adjacent work, or a stretch on level."], [0, 4, "Other roles", "Outside both tracks; kept so nothing is missed."]],
+    legend:[["k10", "9–10"], ["k9", "7–8"], ["k8", "5–6"], ["k7", "4"]], loc:"Syracuse area, on site", typeHead:"Track",
+    scoring:"Each role gets a score out of 10 for one profile: a Java full-stack engineer of three and a half years who now runs fleet and event operations. Software and operations roles score highest, tech-business bridge roles next, and every other professional role is kept lower down. The posting is read for the years it asks for, the tech stack and any clearance or citizenship requirement. Recent postings get a small lift.",
+    explain:"Software roles start highest, with a boost when the title names his stack (Java, Spring, Angular, full stack). Operations and logistics roles score the same, since that is the work he runs today, with manager-level titles favoured. Tech-business bridge roles (business or systems analyst, project and product roles, implementation) come next; every other professional role is kept but capped at 5. The posting itself is read for the years it asks for against his experience on that track. Meeting the bar adds a point, each year short takes points off. Staff, principal and executive titles are marked down. Fixed rules for one profile, not a prediction."}
+};
+let D = DESKS.mtl;
+const deskOf = j => DESKS[(j && j.dk) || "mtl"] || DESKS.mtl;
+const labelOf = (s, d) => { const g = (d || D).groups.find(g => s >= g[0] && s <= g[1]); return g ? g[2] : "Match"; };
+const typeOf = j => (deskOf(j).types[j.cat] || "");
 const STAGES = [["saved", "Saved"], ["applied", "Applied"], ["interview", "Interview"], ["offer", "Offer"], ["closed", "Closed"]];
 
 /* ---------------------------------------------------------------- icons (one family: 24px grid, 1.5 stroke) */
@@ -556,7 +609,7 @@ try{
   const v2 = localStorage.getItem(OLD_KEYS[0]);
   if(v2) Object.entries(JSON.parse(v2) || {}).forEach(([u, a]) => upgrade(u, a));
   const v1 = localStorage.getItem(OLD_KEYS[1]);
-  if(v1) JSON.parse(v1).forEach(u => { const j = JOBS.find(x => x.u === u) || {}; upgrade(u, {t:j.t || "Applied role", c:j.c || "", l:j.l || "", s:j.s || null, d:null}); });
+  if(v1) JSON.parse(v1).forEach(u => { const j = ALL_JOBS.find(x => x.u === u) || {}; upgrade(u, {t:j.t || "Applied role", c:j.c || "", l:j.l || "", s:j.s || null, d:null}); });
   localStorage.setItem(KEY, JSON.stringify(tracked));
 }catch(e){}
 const save = () => { try{ localStorage.setItem(KEY, JSON.stringify(tracked)); }catch(e){} };
@@ -567,12 +620,12 @@ const SEEN_KEY = "position-book-seen-v1";
 let sinceVisit = new Set();
 try{
   const raw = JSON.parse(localStorage.getItem(SEEN_KEY) || "null");
-  if(raw && Array.isArray(raw.k)){ const old = new Set(raw.k); JOBS.forEach(j => { if(!old.has(jobKey(j.u))) sinceVisit.add(jobKey(j.u)); }); }
+  if(raw && Array.isArray(raw.k)){ const old = new Set(raw.k); ALL_JOBS.forEach(j => { if(!old.has(jobKey(j.u))) sinceVisit.add(jobKey(j.u)); }); }
   const keep = raw && Array.isArray(raw.k) ? raw.k : [];
-  localStorage.setItem(SEEN_KEY, JSON.stringify({t:new Date().toISOString(), k:Array.from(new Set(keep.concat(JOBS.map(j => jobKey(j.u))))).slice(-3000)}));
+  localStorage.setItem(SEEN_KEY, JSON.stringify({t:new Date().toISOString(), k:Array.from(new Set(keep.concat(ALL_JOBS.map(j => jobKey(j.u))))).slice(-5000)}));
 }catch(e){}
-const ALIVE = new Set(((DATA && DATA.alive) || []).map(jobKey));
-const FAILED = new Set((META.errors || []).map(e => String(e).split(":")[0]));
+const ALIVE = new Set(((DATA && DATA.alive) || []).concat((SYR && SYR.alive) || []).map(jobKey));
+const FAILED = new Set((META_MTL.errors || []).concat(META_SYR.errors || []).map(e => String(e).split(":")[0]));
 
 /* ---------------------------------------------------------------- helpers */
 const $ = s => document.querySelector(s);
@@ -586,9 +639,15 @@ const posted = j => j.a == null ? "—" : j.a === 0 ? "Today" : j.a >= 31 ? "30d
 const postedLong = j => j.a == null ? "Date not given" : j.a === 0 ? "Today" : j.a === 1 ? "Yesterday" : j.a >= 31 ? "30+ days ago" : j.a + " days ago";
 const today = () => { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
 const fmtDay = d => d ? new Date(d + "T12:00:00").toLocaleDateString("en-CA", {month:"short", day:"numeric"}) : "Earlier";
-const area = j => cap(j.g) || FIRM_TYPE[j.cat] || "";
+const area = j => cap(j.g) || typeOf(j);
+const TOWN = /north syracuse|east syracuse|syracuse|liverpool|\bclay\b|cicero|dewitt|fayetteville|manlius|camillus|baldwinsville|salina|solvay|jamesville|skaneateles|cazenovia|auburn|fulton|oswego|cortland|chittenango|canastota|brewerton|onondaga/i;
 function place(j){
   const l = String(j.l || "").trim();
+  if(j.dk === "syr"){
+    if(j.rm) return "Remote, NY";
+    const m = l.match(TOWN);
+    return m ? m[0].replace(/\b\w/g, c => c.toUpperCase()).replace("Dewitt", "DeWitt") : (l.split(/[,;|]/)[0] || "Syracuse area").slice(0, 22);
+  }
   if(!l || /not stated/i.test(l)) return j.m ? "Montréal" : "Not stated";
   if(/head office/i.test(l) || /^montr[eé]al/i.test(l)) return "Montréal";
   if(/^\d+\s+(locations|lieux)/i.test(l)) return "Multiple cities";
@@ -602,13 +661,13 @@ function hl(text, q){
   if(i < 0) return esc(t);
   return esc(t.slice(0, i)) + "<mark>" + esc(t.slice(i, i + q.length)) + "</mark>" + esc(t.slice(i + q.length));
 }
-const sClass = s => "s" + Math.max(7, Math.min(10, s || 7));
+function sClass(s, d){ const t = (d || D).tiers; return s >= t[0] ? "s10" : s >= t[1] ? "s9" : s >= t[2] ? "s8" : "s7"; }
 const METER = '<span class="meter" aria-hidden="true"><i></i><i></i><i></i></span>';
 const plural = (n, w) => n + " " + w + (n === 1 ? "" : "s");
 
 /* ---------------------------------------------------------------- state */
 const S = {view:"overview", chip:"all", q:"", posted:0, source:"all", mtl:0, sort:"best", firm:null, peek:null};
-const hay = j => fold(j.t + " " + j.c + " " + (j.g || "") + " " + (FIRM_TYPE[j.cat] || "") + " " + j.l);
+const hay = j => fold(j.t + " " + j.c + " " + (j.g || "") + " " + typeOf(j) + " " + j.l);
 function matches(j, ignore){
   ignore = ignore || {};
   if(isOff(j.u)) return false;
@@ -616,10 +675,10 @@ function matches(j, ignore){
   if(S.q && !hay(j).includes(S.q)) return false;
   if(!ignore.chip){
     if(S.chip === "new" && !isNew(j) && !fresh(j)) return false;
-    if(S.chip === "strong" && j.s < 9) return false;
+    if(S.chip === "strong" && j.s < D.strong) return false;
     if(S.chip === "reach" && !inReach(j)) return false;
     if(S.chip === "saved" && stageOf(j.u) !== "saved") return false;
-    if(["invest", "deals", "markets"].includes(S.chip) && seatOf(j) !== S.chip) return false;
+    if(D.chips.some(c => c[0] === S.chip) && D.seat(j) !== S.chip) return false;
   }
   if(S.posted && !(j.n || (j.a != null && j.a <= S.posted))) return false;
   if(S.source === "direct" && j.o) return false;
@@ -644,13 +703,15 @@ function header(){
 }
 function figures(){
   const open = openJobs();
-  const f = [[open.length, "Relevant roles", ""], [open.filter(j => j.s >= 9).length, "Strong matches", "acc"],
+  const f = [[open.length, "Relevant roles", ""], [open.filter(j => j.s >= D.strong).length, "Strong matches", "acc"],
     [open.filter(isNew).length, "New this week", ""], [pipelineCount(), "In your pipeline", ""]];
   $("#figures").innerHTML = f.map(([v, k, c]) => '<div class="fig ' + c + '"><b>' + v + '</b><span>' + k + '</span></div>').join("");
 }
 function coverage(){
   const net = META.net || {};
-  let h = "Read directly from " + (META.boards || 0) + " firms&rsquo; own hiring systems" + (net.read ? ", then LinkedIn&rsquo;s public job search and the federal Job Bank for anything those miss" : "") +
+  let h = D.key === "syr"
+    ? "Read directly from " + (META.boards || 0) + " Syracuse-area employers&rsquo; hiring systems (Lockheed Martin, SRC, Micron, Carrier, Amazon, JMA Wireless, New York State and more), then LinkedIn&rsquo;s public job search within 25 miles for everyone else. " + Number(META.scanned || 0).toLocaleString("en-CA") + " postings screened in the last build; rebuilt nightly."
+    : "Read directly from " + (META.boards || 0) + " firms&rsquo; own hiring systems" + (net.read ? ", then LinkedIn&rsquo;s public job search and the federal Job Bank for anything those miss" : "") +
     ". " + Number(META.scanned || 0).toLocaleString("en-CA") + " postings screened in the last build; rebuilt nightly after midnight.";
   if(META.errors && META.errors.length) h += ' <span class="warn">Unreachable in this build: ' + esc(META.errors.map(e => e.split(":")[0]).join(", ")) + '. Their roles from the previous build are kept.</span>';
   $("#coverage").innerHTML = h;
@@ -663,17 +724,17 @@ function buildMap(){
   openJobs().forEach(j => { if(!by.has(j.c)) by.set(j.c, []); by.get(j.c).push(j); });
   const firms = Array.from(by, ([c, js]) => {
     js.sort((a, b) => b.s - a.s || (a.a ?? 99) - (b.a ?? 99));
-    return {c, js, best:js[0].s, strong:js.filter(j => j.s >= 9).length, cat:js[0].cat, nw:js.filter(isNew).length};
+    return {c, js, best:js[0].s, strong:js.filter(j => j.s >= D.strong).length, cat:js[0].cat, nw:js.filter(isNew).length};
   });
   const H = 284, BASE = 238, LEFT = 40, GAP = 6, DGAP = 44;
-  const band = s => 34 + (s - 7) * 48;
+  const band = s => 34 + (Math.max(s, D.min) - D.min) * (144 / (10 - D.min));
   firms.forEach(f => {
     f.h = Math.round(band(f.best) + Math.min(Math.max(f.strong, f.js.length) - 1, 5) * 9);
     f.w = Math.round(14 + Math.min(f.js.length, 8) * 4.5);
   });
   let x = LEFT + 20;
   const order = [], marks = [];
-  DISTRICTS.forEach(d => {
+  D.districts.forEach(d => {
     const fs = firms.filter(f => d.cats.includes(f.cat)).sort((a, b) => b.h - a.h || b.js.length - a.js.length || a.c.localeCompare(b.c));
     if(!fs.length) return;
     const row = [];
@@ -694,7 +755,7 @@ function buildMap(){
   }
   g += '<text class="dist" x="' + (W - 14) + '" y="18" text-anchor="end" opacity=".8">CONTOURS: MONT-ROYAL, 233 M</text>';
   g += '<text class="grid-t" x="' + (LEFT - 10) + '" y="18" text-anchor="end">SCORE</text>';
-  [7, 8, 9, 10].forEach(s => {
+  D.grid.forEach(s => {
     const yy = BASE - band(s);
     g += '<line class="grid-l" x1="' + LEFT + '" x2="' + (W - 14) + '" y1="' + yy + '" y2="' + yy + '" stroke-dasharray="2 4"/>';
     g += '<text class="grid-t" x="' + (LEFT - 10) + '" y="' + (yy + 3.5) + '" text-anchor="end">' + s + '</text>';
@@ -702,10 +763,10 @@ function buildMap(){
   g += '<line x1="' + LEFT + '" x2="' + (W - 14) + '" y1="' + BASE + '" y2="' + BASE + '" stroke="var(--line-3)" stroke-width="1"/>';
   order.forEach((f, i) => {
     const top = BASE - f.h, room = Math.max(1, Math.floor((f.h - 10) / 6));
-    g += '<g class="tw b' + f.best + '" tabindex="' + (i === 0 ? 0 : -1) + '" role="button" data-i="' + i + '" aria-label="' + esc(f.c) + ', best match ' + f.best + ', ' + plural(f.js.length, "role") + (f.nw ? ", " + f.nw + " new this week" : "") + '"><g class="lift">';
+    g += '<g class="tw b' + sClass(f.best).slice(1) + '" tabindex="' + (i === 0 ? 0 : -1) + '" role="button" data-i="' + i + '" aria-label="' + esc(f.c) + ', best match ' + f.best + ', ' + plural(f.js.length, "role") + (f.nw ? ", " + f.nw + " new this week" : "") + '"><g class="lift">';
     g += '<rect class="body" x="' + (f.x + .5) + '" y="' + (top + .5) + '" width="' + (f.w - 1) + '" height="' + (f.h - .5) + '" rx="1"/>';
     f.js.slice(0, room).forEach((j, b) => {
-      const col = j.s >= 10 ? "var(--accent)" : j.s >= 9 ? "var(--band-9)" : j.s >= 8 ? "var(--band-8)" : "var(--band-7)";
+      const t = D.tiers, col = j.s >= t[0] ? "var(--accent)" : j.s >= t[1] ? "var(--band-9)" : j.s >= t[2] ? "var(--band-8)" : "var(--band-7)";
       g += '<rect x="' + (f.x + 3) + '" y="' + (top + 5 + b * 6) + '" width="' + (f.w - 6) + '" height="3" fill="' + col + '" rx=".5"/>';
     });
     if(f.nw) g += '<circle cx="' + (f.x + f.w / 2) + '" cy="' + (top - 7) + '" r="2.5" fill="var(--pos)"/>';
@@ -719,7 +780,7 @@ function buildMap(){
   $("#map-cap").textContent = plural(order.length, "firm") + " · " + plural(openJobs().length, "role");
   const lead = firms.slice().sort((a, b) => b.best - a.best || b.js.length - a.js.length || b.strong - a.strong).slice(0, 5);
   $("#leaders").innerHTML = lead.length ? '<span class="lh">Deepest benches</span>' + lead.map(f =>
-    '<button data-firm-lead="' + esc(f.c) + '">' + esc(f.c) + '<span>' + (f.best >= 10 ? "<b>" + f.best + "</b>" : f.best) + ' · ' + plural(f.js.length, "role") + '</span></button>').join("") : "";
+    '<button data-firm-lead="' + esc(f.c) + '">' + esc(f.c) + '<span>' + (f.best >= D.tiers[0] ? "<b>" + f.best + "</b>" : f.best) + ' · ' + plural(f.js.length, "role") + '</span></button>').join("") : "";
   document.querySelectorAll("[data-firm-lead]").forEach(b => {
     const i = mapFirms.findIndex(f => f.c === b.dataset.firmLead), t = document.querySelector('.tw[data-i="' + i + '"]');
     b.onmouseenter = () => t && t.classList.add("sel");
@@ -741,8 +802,8 @@ function bindMap(){
   const tt = $("#tt"), body = document.querySelector(".map-body");
   const show = t => {
     const f = mapFirms[+t.dataset.i];
-    tt.innerHTML = '<div class="tf">' + esc(f.c) + '</div><div class="tk">' + esc(FIRM_TYPE[f.cat] || "") + '</div>' +
-      '<div class="tr"><div class="' + (f.best >= 10 ? "ac" : "") + '"><b>' + f.best + '</b>Best match</div><div><b>' + f.js.length + '</b>' + (f.js.length === 1 ? "Role" : "Roles") + '</div>' + (f.nw ? '<div><b>' + f.nw + '</b>New</div>' : "") + '</div>';
+    tt.innerHTML = '<div class="tf">' + esc(f.c) + '</div><div class="tk">' + esc(D.types[f.cat] || "") + '</div>' +
+      '<div class="tr"><div class="' + (f.best >= D.tiers[0] ? "ac" : "") + '"><b>' + f.best + '</b>Best match</div><div><b>' + f.js.length + '</b>' + (f.js.length === 1 ? "Role" : "Roles") + '</div>' + (f.nw ? '<div><b>' + f.nw + '</b>New</div>' : "") + '</div>';
     const r = t.getBoundingClientRect(), b = body.getBoundingClientRect();
     let left = r.left - b.left + r.width / 2 - 122;
     left = Math.max(8, Math.min(left, b.width - 252));
@@ -776,9 +837,8 @@ const inReach = j => !!(j.r && ((j.r.gap != null && j.r.gap <= 1) || (j.r.y == n
 /* ---------------------------------------------------------------- toolbar */
 function chips(){
   const base = JOBS.filter(j => matches(j, {chip:true}));
-  const defs = [["all", "All", base.length], ["new", "New", base.filter(j => isNew(j) || fresh(j)).length], ["strong", "Strong matches", base.filter(j => j.s >= 9).length], ["reach", "Within reach", base.filter(inReach).length],
-    ["invest", "Investing", base.filter(j => seatOf(j) === "invest").length], ["deals", "Deals", base.filter(j => seatOf(j) === "deals").length],
-    ["markets", "Markets", base.filter(j => seatOf(j) === "markets").length], ["saved", "Saved", base.filter(j => stageOf(j.u) === "saved").length]];
+  const defs = [["all", "All", base.length], ["new", "New", base.filter(j => isNew(j) || fresh(j)).length], ["strong", "Strong matches", base.filter(j => j.s >= D.strong).length], ["reach", "Within reach", base.filter(inReach).length],
+    ...D.chips.map(([k, n]) => [k, n, base.filter(j => D.seat(j) === k).length]), ["saved", "Saved", base.filter(j => stageOf(j.u) === "saved").length]];
   $("#chips").innerHTML = defs.filter(d => d[0] === "all" || d[0] === S.chip || d[2]).map(([k, n, c]) =>
     '<button class="chip" data-k="' + k + '" aria-pressed="' + (S.chip === k) + '">' + n + '<span class="n">' + c + '</span></button>').join("");
   document.querySelectorAll(".chip").forEach(b => b.onclick = () => { S.chip = S.chip === b.dataset.k ? "all" : b.dataset.k; render(); });
@@ -796,7 +856,7 @@ let lastListSig = null;
 function rowHtml(j){
   const st = stageOf(j.u), q = S.q;
   return '<li class="row ' + sClass(j.s) + '">' +
-    '<button class="row-main cols" data-open="' + esc(j.u) + '" aria-label="' + esc(j.t + ", " + j.c + ", " + LABEL[j.s] + " " + j.s) + '">' +
+    '<button class="row-main cols" data-open="' + esc(j.u) + '" aria-label="' + esc(j.t + ", " + j.c + ", " + labelOf(j.s) + " " + j.s) + '">' +
       '<span class="sc"><b>' + j.s + '</b>' + METER + '</span>' +
       '<span class="role"><span class="t">' + hl(j.t, q) + '</span><span class="f"><span>' + hl(j.c, q) + '</span>' +
         (fresh(j) ? '<i class="dotn" title="New since your last visit"></i>' : "") + reqTag(j) + (j.o ? '<span class="tag">via ' + esc(j.o) + '</span>' : "") + '</span>' +
@@ -818,9 +878,9 @@ function list(){
   if(!rows.length){ host.innerHTML = emptyState(); const b = host.querySelector("[data-reset]"); if(b) b.onclick = resetAll; return; }
   let h = '<div class="th cols" aria-hidden="true"><span>Score</span><span>Role</span><span>Area</span><span>Location</span><span>Posted</span><span></span></div>';
   if(S.sort === "best"){
-    [10, 9, 8, 7].forEach(s => {
-      const set = rows.filter(j => j.s === s);
-      if(set.length) h += '<div class="grp-h"><b>' + LABEL[s] + '</b><span>' + GROUP_NOTE[s] + '</span><span class="c">' + set.length + '</span></div><ul class="rows">' + set.map(rowHtml).join("") + '</ul>';
+    D.groups.forEach(([lo, hi, name, note]) => {
+      const set = rows.filter(j => j.s >= lo && j.s <= hi);
+      if(set.length) h += '<div class="grp-h"><b>' + name + '</b><span>' + note + '</span><span class="c">' + set.length + '</span></div><ul class="rows">' + set.map(rowHtml).join("") + '</ul>';
     });
   } else h += '<ul class="rows">' + rows.map(rowHtml).join("") + '</ul>';
   host.innerHTML = h;
@@ -838,10 +898,48 @@ function emptyState(){
 }
 function resetAll(){ S.chip = "all"; S.q = ""; S.posted = 0; S.source = "all"; S.mtl = 0; S.firm = null; $("#q").value = ""; render(); }
 
+/* ---------------------------------------------------------------- desk switch */
+function deskChrome(){
+  $("#brand-sub").innerHTML = D.sub;
+  $("#intro-h").textContent = D.title;
+  $("#intro-p").textContent = D.lede;
+  $("#profile").innerHTML = '<span class="lh">Scored for</span>' + D.profile.map(p => '<span class="p">' + esc(p) + '</span>').join("");
+  $("#map-key").innerHTML = D.legend.map(([c, t]) => '<span><i class="' + c + '"></i>' + t + '</span>').join("") + '<span><i class="kn"></i>New this week</span>';
+  $("#loc-only").textContent = D.loc;
+  $("#scoring").innerHTML = D.scoring;
+  document.title = "Position Book · " + D.name;
+  document.body.dataset.desk = D.key;
+  ["#desk", "#desk-m"].forEach(id => {
+    const el = $(id);
+    el.querySelectorAll("button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.desk === D.key)));
+    const on = el.querySelector('[aria-selected="true"]'), pill = el.querySelector(".pill");
+    if(on && pill && on.offsetWidth){ pill.style.width = on.offsetWidth + "px"; pill.style.transform = "translateX(" + (on.offsetLeft - 2) + "px)"; }
+    requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add("ready")));   // slide only after the first paint
+  });
+  coverage();
+}
+function setDesk(k, quiet){
+  if(!DESKS[k] || (k === "syr" && !JOBS_SYR.length)) k = "mtl";
+  const changed = D.key !== k;
+  D = DESKS[k]; JOBS = D.jobs; META = D.meta;
+  if(changed){ S.chip = "all"; S.firm = null; S.peek = null; S.q = ""; S.mtl = 0; S.source = "all"; $("#q").value = ""; mapSig = null; lastListSig = null; }
+  try{ localStorage.setItem("position-book-desk", k); }catch(e){}
+  try{ const u = new URL(location.href); if(k === "syr") u.searchParams.set("desk", "syracuse"); else u.searchParams.delete("desk"); history.replaceState(null, "", u); }catch(e){}
+  if(quiet || !changed){ deskChrome(); render(); return; }
+  const v = $("#view-overview"); v.classList.add("swap");
+  setTimeout(() => { deskChrome(); render(); v.classList.remove("swap"); }, 160);
+}
+function deskButtons(){
+  const h = '<span class="pill" aria-hidden="true"></span>' + Object.values(DESKS).filter(d => d.jobs.length || d.key === "mtl").map(d => '<button role="tab" data-desk="' + d.key + '">' + d.name + '</button>').join("");
+  ["#desk", "#desk-m"].forEach(id => { $(id).innerHTML = h; $(id).querySelectorAll("button").forEach(b => b.onclick = () => setDesk(b.dataset.desk)); });
+  const one = !JOBS_SYR.length;
+  $("#desk").hidden = one; $("#desk-m-wrap").hidden = one;
+}
+
 /* ---------------------------------------------------------------- pipeline */
 function pipeline(){
   const items = Object.entries(tracked).map(([k, a]) => {
-    const live = JOBS.find(j => jobKey(j.u) === k);
+    const live = ALL_JOBS.find(j => jobKey(j.u) === k);
     const status = (live || ALIVE.has(k)) ? "live" : (FAILED.has(a.c) ? "unknown" : "gone");
     return Object.assign({k}, a, {st:a.st || "applied", status}, live ? {s:live.s, u:live.u} : {});
   });
@@ -870,7 +968,7 @@ function setStage(k, st){
   save(); render();
 }
 function track(u, st){
-  const j = JOBS.find(x => x.u === u) || {}, k = jobKey(u), prev = tracked[k] ? Object.assign({}, tracked[k]) : null;
+  const j = ALL_JOBS.find(x => x.u === u) || {}, k = jobKey(u), prev = tracked[k] ? Object.assign({}, tracked[k]) : null;
   tracked[k] = Object.assign({u, t:j.t, c:j.c, l:j.l, s:j.s, cat:j.cat}, prev || {}, {st, d:(st === "saved" && prev && prev.d) ? prev.d : today()});
   save(); render();
   return prev;
@@ -901,6 +999,7 @@ function closePanel(){
   if(lastFocus && document.contains(lastFocus)) lastFocus.focus({preventScroll:true});
 }
 function evidence(j){
+  if(j.dk === "syr") return evidenceSyr(j);
   const L = [], core = ["pension", "pe_vc", "am", "hedge"].includes(j.cat), r = j.r;
   L.push([core || j.cat === "re" ? "ok" : "mid", (FIRM_TYPE[j.cat] || "Firm") + (core ? ", a core buy-side employer" : "")]);
   if(j.g) L.push([j.k === "strong" || j.k === "quant" ? "ok" : "mid", cap(j.g) + (j.k === "strong" ? " seat, on your target path" : " seat")]);
@@ -929,28 +1028,63 @@ function evidence(j){
   if(j.tm) L.push(["mid", "Fixed-term contract"]);
   return L;
 }
+const HIS_STACK = ["java", "spring", "spring boot", "angular", "sql", "python", "aws", "docker", "microservices", "c#", "react", "typescript"];
+function evidenceSyr(j){
+  const L = [], r = j.r;
+  L.push({software:["ok", "Software engineering: the core of his background (Java, Spring, Angular)"], ops:["ok", "Operations and logistics: the work he runs today"],
+    techbiz:["ok", "Tech-business bridge role: requirements, delivery and operations in one"], edu:["mid", "Teaching: he was a computer science teaching assistant"],
+    other:["mid", "Outside his two tracks; kept so nothing is missed"]}[j.cat] || ["mid", "Professional role"]);
+  if(r && r.stack && r.stack.length){
+    const hit = r.stack.filter(x => HIS_STACK.includes(x));
+    if(r.cs === false && j.cat === "software") L.push(["warn", "Reads more like electrical or controls work than software"]);
+    if(hit.length) L.push(["ok", "Stack overlap: " + hit.map(x => x === "c#" ? "C#" : x.replace(/\b\w/g, c => c.toUpperCase())).join(", ")]);
+    else if(j.cat === "software") L.push(["mid", "Different stack: " + r.stack.slice(0, 4).join(", ")]);
+  }
+  if(r && r.y != null){
+    const ask = "Asks for " + barText(r).replace("Up to", "up to").replace("yrs", "years") + " of experience. ";
+    const have = "He has about " + yr(r.h) + (j.cat === "ops" ? " leading operations" : j.cat === "software" ? " in software" : "");
+    if(r.gap <= 0) L.push(["ok", ask + "He meets it."]);
+    else if(r.gap <= 1) L.push(["mid", ask + have + ": close enough to argue."]);
+    else L.push(["warn", ask + have + ": a stretch."]);
+  } else if(r && r.jr) L.push(["ok", "Open to early-career candidates"]);
+  else if(r) L.push(["mid", "No experience bar stated in the posting"]);
+  else L.push(["mid", "The posting couldn\u2019t be read, so this is scored from the title alone"]);
+  const lv = {"student":["warn", "Student or intern seat"], "exec":["warn", "Executive title, well above"], "staff":["warn", "Staff or principal level, a big step up"],
+    "eng manager":["mid", "Engineering manager title, a step up"], "senior":["mid", "Senior title; arguable at three and a half years"],
+    "director":["ok", "Director-level operations, what he does today"], "manager":["ok", "Manager-level, matches his leadership experience"],
+    "coordinator":["mid", "Coordinator level, a step below his current role"], "junior":["mid", "Junior or entry title, below his experience"],
+    "mid":["ok", "Mid-level title, right at his level"]}[j.lv];
+  if(lv && !(r && r.y != null)) L.push(lv);
+  if(r && r.cl) L.push(["warn", "Needs U.S. citizenship or a security clearance: check eligibility"]);
+  if(r && r.fr) L.push(["ok", "French is a plus here, and he is native"]);
+  L.push(j.rm ? ["ok", "Remote within New York"] : ["ok", "In the Syracuse area"]);
+  if(j.a != null && j.a <= 7) L.push(["ok", "Posted " + postedLong(j).toLowerCase()]);
+  else if(j.a != null && j.a > 45 && j.a !== 31) L.push(["mid", "Open for more than six weeks"]);
+  return L;
+}
 function openRole(u, from){
-  const j = JOBS.find(x => x.u === u), t = tracked[jobKey(u)];
+  const j = ALL_JOBS.find(x => x.u === u), t = tracked[jobKey(u)];
   if(!j && !t) return;
   const r = j || {u, t:t.t, c:t.c, l:t.l, s:t.s, cat:t.cat};
   if(from) panelStack = [from];
   const st = stageOf(u);
   const status = st ? STAGES.find(s => s[0] === st)[1] : "Not tracked";
-  let h = '<div class="p-h"><span class="crumb">' + (panelStack.length ? '<button id="p-back">' + I.back + esc(panelStack[0]) + '</button>' : esc(FIRM_TYPE[r.cat] || "Role")) + '</span>' +
+  let h = '<div class="p-h"><span class="crumb">' + (panelStack.length ? '<button id="p-back">' + I.back + esc(panelStack[0]) + '</button>' : esc(typeOf(r) || "Role")) + '</span>' +
     '<button class="icon-b" id="p-close" aria-label="Close">' + I.x + '</button></div><div class="p-b">';
   h += '<div class="p-firm"><button data-firm="' + esc(r.c) + '">' + esc(r.c) + '</button></div><h2 class="p-title" id="p-title" data-first tabindex="-1">' + esc(r.t) + '</h2>';
   if(r.s){
-    h += '<div class="scorebox ' + sClass(r.s) + '"><span class="big">' + r.s + '</span><span class="lbl">' + (LABEL[r.s] || "Match") + '</span>' +
+    const rd = deskOf(j || t);
+    h += '<div class="scorebox ' + sClass(r.s, rd) + '"><span class="big">' + r.s + '</span><span class="lbl">' + labelOf(r.s, rd) + '</span>' +
       '<span class="sub">Personal relevance score out of 10. <button id="why-score" aria-expanded="false" aria-controls="explain">How it works</button></span>' +
-      '<div class="explain" id="explain" hidden>Only investing, banking, M&amp;A, deal-advisory, markets and corporate-finance seats are kept; operations, risk, reporting and analytics seats are dropped, even when the posting reads that way under an investment title. The score starts from the firm and the seat, then reads the posting itself: the years it asks for against your roughly two (about one on M&amp;A work, none in an investment seat), plus hard requirements such as a CFA charter, MBA or CPA. Meeting the bar adds a point; every year short takes points off. Confirmed Montréal and recent postings get a small lift. Fixed rules for one profile, not a prediction of your chances.</div></div>';
+      '<div class="explain" id="explain" hidden>' + rd.explain + '</div></div>';
   }
   const ev = j ? evidence(j) : [];
   if(ev.length) h += '<div class="p-sec"><h3>Why this matches</h3><ul class="why">' + ev.map(([k, txt]) => '<li class="' + k + '">' + (k === "ok" ? I.check : k === "warn" ? I.alert : I.dot) + '<span>' + esc(txt) + '</span></li>').join("") + '</ul>' +
     (j && j.r && j.r.q ? '<figure class="req-q"><blockquote>' + esc(j.r.q) + '</blockquote><figcaption>From the posting</figcaption></figure>' : "") + '</div>';
   if(j && j.ad) h += '<div class="p-sec"><h3>How to pitch it</h3><p class="pitch">' + esc(j.ad) + '</p></div>';
   h += '<div class="p-sec"><h3>Details</h3><dl class="facts">' +
-    '<dt>Area</dt><dd>' + esc(cap(r.g) || "Not specified") + '</dd>' +
-    '<dt>Firm type</dt><dd>' + esc(FIRM_TYPE[r.cat] || "—") + '</dd>' +
+    (r.dk === "syr" || (j && j.dk === "syr") ? "" : '<dt>Area</dt><dd>' + esc(cap(r.g) || "Not specified") + '</dd>') +
+    '<dt>' + deskOf(j || t).typeHead + '</dt><dd>' + esc(typeOf(r) || "—") + '</dd>' +
     '<dt>Location</dt><dd>' + esc(r.l || "Not stated") + '</dd>' +
     '<dt>Posted</dt><dd>' + (j ? postedLong(j) : "—") + (j && j.n ? ' · <span style="color:var(--pos)">new overnight</span>' : "") + '</dd>' +
     '<dt>Source</dt><dd>' + (r.o ? "Found via " + esc(r.o) : "The firm&rsquo;s own job board") + '</dd>' +
@@ -977,9 +1111,9 @@ function openRole(u, from){
 }
 function openFirm(c){
   const js = JOBS.filter(j => j.c === c && !isOff(j.u)).sort((a, b) => b.s - a.s);
-  const cat = (JOBS.find(j => j.c === c) || {}).cat;
+  const first = JOBS.find(j => j.c === c) || {}, cat = first.cat;
   S.peek = c; panelStack = []; dimMap();
-  let h = '<div class="p-h"><span class="crumb">' + esc(FIRM_TYPE[cat] || "Firm") + '</span><button class="icon-b" id="p-close" aria-label="Close">' + I.x + '</button></div><div class="p-b">' +
+  let h = '<div class="p-h"><span class="crumb">' + esc(D.types[cat] || "Firm") + '</span><button class="icon-b" id="p-close" aria-label="Close">' + I.x + '</button></div><div class="p-b">' +
     '<h2 class="p-title" id="p-title" data-first tabindex="-1">' + esc(c) + '</h2>' +
     '<div class="firm-stats"><div><b>' + js.length + '</b>' + (js.length === 1 ? "Open role" : "Open roles") + '</div><div><b>' + (js[0] ? js[0].s : "—") + '</b>Best match</div><div><b>' + js.filter(isNew).length + '</b>New this week</div></div>' +
     (js.length ? '<ul class="firm-list">' + js.map(j => '<li class="' + sClass(j.s) + '"><button data-role="' + esc(j.u) + '"><span class="fs">' + j.s + '</span><span><div class="ft">' + esc(j.t) + '</div><div class="fm">' + esc([area(j), place(j), posted(j)].filter(Boolean).join(" · ")) + '</div></span><span>' + (fresh(j) ? '<i class="dotn"></i>' : "") + '</span></button></li>').join("") + '</ul>'
@@ -1089,9 +1223,16 @@ $("#bk-in").onclick = () => {
   catch(e){ toast("That doesn't look like a backup. Copy it again and retry."); }
 };
 
-coverage();
+deskButtons();
+(function(){
+  let k = "mtl";
+  try{ const q = new URLSearchParams(location.search).get("desk"); if(q) k = /^syr/i.test(q) ? "syr" : "mtl"; else k = localStorage.getItem("position-book-desk") || "mtl"; }catch(e){}
+  D = DESKS[k] && (k !== "syr" || JOBS_SYR.length) ? DESKS[k] : DESKS.mtl; JOBS = D.jobs; META = D.meta;
+})();
 route();
+deskChrome();
 render();
+window.addEventListener("resize", () => deskChrome());
 </script>
 </body>
 </html>
