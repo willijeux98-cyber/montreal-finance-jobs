@@ -1052,7 +1052,7 @@ function evidenceSyr(j){
   const lv = {"student":["warn", "Student or intern seat"], "exec":["warn", "Executive title, well above"], "staff":["warn", "Staff or principal level, a big step up"],
     "eng manager":["mid", "Engineering manager title, a step up"], "senior":["mid", "Senior title; arguable at three and a half years"],
     "director":["ok", "Director-level operations, what he does today"], "manager":["ok", "Manager-level, matches his leadership experience"],
-    "coordinator":["mid", "Coordinator level, a step below his current role"], "junior":["mid", "Junior or entry title, below his experience"],
+    "coordinator":["mid", "Coordinator level, a step below his current role"], "frontline":["warn", "Floor-level logistics work, well below running an operation"], "unclear":["mid", "Level not clear from the title"], "junior":["mid", "Junior or entry title, below his experience"],
     "mid":["ok", "Mid-level title, right at his level"]}[j.lv];
   if(lv && !(r && r.y != null)) L.push(lv);
   if(r && r.cl) L.push(["warn", "Needs U.S. citizenship or a security clearance: check eligibility"]);

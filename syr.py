@@ -155,9 +155,11 @@ def level(t, fam):
             return "director", 1          # he runs a logistics operation today
         if MANAGER.search(t) or re.search(r"\blead\b", t, re.I):
             return "manager", 1
+        if re.search(r"dispatcher|support|associate|clerk|handler|loader|picker|\bwarehouse\b(?!.*(manager|supervisor|director|lead))", t, re.I):
+            return "frontline", -3        # floor-level logistics work, well below running an operation
         if re.search(r"coordinator|planner|scheduler|analyst|specialist|buyer", t, re.I):
             return "coordinator", -1
-        return "unclear", 0
+        return "unclear", -1
     if STAFF.search(t):
         return "staff", -3
     if fam in ("software", "techbiz") and re.search(r"(engineering|development|software|it) manager|director", t, re.I):
@@ -215,7 +217,7 @@ def apply_reqs(j, rq, text_flags):
         fit = 1 if gap <= 0 else 0 if gap <= 1 else -1 if gap <= 2 else -2 if gap <= 3 else -3
         if j["lv"] in ("student", "exec", "staff"):
             fit = min(fit, j["_ladj"])
-        elif j["lv"] in ("coordinator", "junior"):
+        elif j["lv"] in ("coordinator", "junior", "frontline", "unclear"):
             fit = min(fit, 0)   # meeting a junior bar is no reason to rank it above his level
         s = s - j["_ladj"] + fit
     hit = [x for x in (text_flags.get("stack") or []) if x in HIS_STACK]
