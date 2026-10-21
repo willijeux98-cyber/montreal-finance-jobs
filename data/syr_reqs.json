@@ -1,51 +1,5 @@
 {
 "_v": 3,
-"https://agilitas.wd503.myworkdayjobs.com/LMC/job/Syracuse-NY/Administrator--Desktop-Systems_JR100252": {
-"cfa": "",
-"cl": false,
-"cpa": false,
-"cs": true,
-"fpa": 0,
-"fr": false,
-"front": 3,
-"inv": false,
-"jr": true,
-"mba": false,
-"n": 10154,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "1-3 years of relevant experience supporting desktop, software, and mobile computing systems.",
-"stack": [],
-"y": 1.0,
-"yd": [
-"general"
-],
-"yh": 3.0
-},
-"https://agilitas.wd503.myworkdayjobs.com/LMC/job/Syracuse-NY/Assistant-Registrar_JR100358": {
-"cfa": "",
-"cl": false,
-"cpa": false,
-"cs": true,
-"fpa": 0,
-"fr": false,
-"front": 0,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 8733,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "Bachelor’s degree and 2-5 years of related experience in a higher education setting (experience in a Registrar’s Office is preferred).",
-"stack": [],
-"y": 2.0,
-"yd": [
-"general"
-],
-"yh": 5.0
-},
 "https://agilitas.wd503.myworkdayjobs.com/LMC/job/Syracuse-NY/Associate-Director--Career-Advising-and-Development_JR100362-1": {
 "cfa": "",
 "cl": false,
@@ -228,6 +182,29 @@
 ],
 "yh": null
 },
+"https://carrier.wd5.myworkdayjobs.com/jobs/job/CAF77-CCS---CIB-13995-Pasteur-Boulevard-Palm-Beach-Gardens-FL-33418-USA/Senior-Project-Engineer_30220096-1": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 5,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7134,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "4+ years of experience in Engineering Operations, Portfolio Management, Program Management, PMO, Business Operations, Strategic Planning, Finance, or related functions.",
+"stack": [],
+"y": 4.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
 "https://carrier.wd5.myworkdayjobs.com/jobs/job/CAN01-Carrier-Syracuse-6304-Carrier-Parkway-East-Syracuse-NY-13057-USA/Codes-and-Standards-Engineer_30219070": {
 "cfa": "",
 "cl": false,
@@ -270,29 +247,6 @@
 "stack": [],
 "y": null,
 "yd": [],
-"yh": null
-},
-"https://carrier.wd5.myworkdayjobs.com/jobs/job/CAN01-Carrier-Syracuse-6304-Carrier-Parkway-East-Syracuse-NY-13057-USA/Inside-Sales-Engineer_30218575": {
-"cfa": "",
-"cl": false,
-"cpa": false,
-"cs": false,
-"fpa": 0,
-"fr": false,
-"front": 0,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 5887,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "5+ years of HVAC experience.",
-"stack": [],
-"y": 5.0,
-"yd": [
-"general"
-],
 "yh": null
 },
 "https://carrier.wd5.myworkdayjobs.com/jobs/job/CAN01-Carrier-Syracuse-6304-Carrier-Parkway-East-Syracuse-NY-13057-USA/New-Product-Development---Refrigeration-Systems-Engineer_30218137": {
@@ -359,29 +313,6 @@
 "q": "Associate’s degree in engineering or Engineering technology with 2+ years of HVAC/R systems experience.",
 "stack": [],
 "y": 2.0,
-"yd": [
-"general"
-],
-"yh": null
-},
-"https://carrier.wd5.myworkdayjobs.com/jobs/job/CANHQ-CCS-HQ---Syracuse-6304-Carrier-Parkway-East-Syracuse-NY-13057-USA/Compressor-CAD-Product-Designer_30218567": {
-"cfa": "",
-"cl": false,
-"cpa": false,
-"cs": false,
-"fpa": 0,
-"fr": false,
-"front": 0,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6387,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Associate’s Degree in Mechanical or Aerospace Engineering with 5+ years of experience in an engineering environment, OR Bachelor’s Degree in Mechanical or Aerospace Engineering with 3+ years of experience in an engine…",
-"stack": [],
-"y": 5.0,
 "yd": [
 "general"
 ],
@@ -523,29 +454,6 @@
 "yd": [],
 "yh": null
 },
-"https://jobs.jobvite.com/src-inc/job/oWJkAfwj": {
-"cfa": "",
-"cl": true,
-"cpa": false,
-"cs": true,
-"fpa": 0,
-"fr": false,
-"front": 5,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 7571,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum 4 years of experience supporting:",
-"stack": [],
-"y": 4.0,
-"yd": [
-"general"
-],
-"yh": null
-},
 "https://jobs.jobvite.com/src-inc/job/oXnXAfwB": {
 "cfa": "",
 "cl": false,
@@ -643,27 +551,27 @@
 "yd": [],
 "yh": null
 },
-"https://jobs.jobvite.com/src-inc/job/ootuAfwF": {
+"https://jobs.jobvite.com/src-inc/job/ongYAfwV": {
 "cfa": "",
-"cl": true,
+"cl": false,
 "cpa": false,
 "cs": true,
 "fpa": 0,
 "fr": false,
-"front": 0,
+"front": 1,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 3271,
+"n": 3504,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "High school diploma and 9+ years of experience performing TechELINT analysis OR any equivalent combination of education, training, and relevant experience.",
-"stack": [],
-"y": 9.0,
-"yd": [
-"general"
+"q": "",
+"stack": [
+"python"
 ],
+"y": null,
+"yd": [],
 "yh": null
 },
 "https://jobs.jobvite.com/src-inc/job/orAFAfw0": {
@@ -709,6 +617,29 @@
 "python"
 ],
 "y": 2.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://jobs.jobvite.com/src-inc/job/owtuAfwN": {
+"cfa": "",
+"cl": true,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3326,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "High school diploma and 12+ years of experience performing TechELINT analysis OR Bachelor’s Degree and 8+ years TechELINT analysis experience; any equivalent combination of education, training, and relevant experience.",
+"stack": [],
+"y": 12.0,
 "yd": [
 "general"
 ],
@@ -1036,7 +967,7 @@
 ],
 "yh": null
 },
-"https://lockheedmartin.eightfold.ai/careers/job/996476941047": {
+"https://lockheedmartin.eightfold.ai/careers/job/996476941177": {
 "cfa": "",
 "cl": true,
 "cpa": false,
@@ -1050,27 +981,6 @@
 "n": 5918,
 "ok": true,
 "ops": 1,
-"opsy": false,
-"q": "",
-"stack": [],
-"y": null,
-"yd": [],
-"yh": null
-},
-"https://lockheedmartin.eightfold.ai/careers/job/996476949137": {
-"cfa": "",
-"cl": true,
-"cpa": false,
-"cs": true,
-"fpa": 0,
-"fr": false,
-"front": 1,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3155,
-"ok": true,
-"ops": 0,
 "opsy": false,
 "q": "",
 "stack": [],
@@ -1167,6 +1077,29 @@
 "investing"
 ],
 "yh": null
+},
+"https://lockheedmartin.eightfold.ai/careers/job/996477446994": {
+"cfa": "",
+"cl": true,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 4625,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Bachelor’s degree from an accredited college with minimum of 1-2 years relevant work experience",
+"stack": [],
+"y": 1.0,
+"yd": [
+"investing"
+],
+"yh": 2.0
 },
 "https://micron.wd1.myworkdayjobs.com/External/job/Clay-NY/Construction-Design-Electrical-Engineer_JR110632": {
 "cfa": "",
@@ -1645,6 +1578,31 @@
 ],
 "yh": null
 },
+"https://statejobs.ny.gov/public/vacancyDetailsView.cfm?id=227327": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7888,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "A Juris Doctor, master's or higher degree in a related field can substitute for one year of specialized experience.",
+"stack": [
+"aws"
+],
+"y": 1,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://www.amazon.jobs/en/jobs/10402985/senior-station-manager": {
 "cfa": "",
 "cl": false,
@@ -1827,28 +1785,28 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4219686082/": {
+"https://www.linkedin.com/jobs/view/4284038258/": {
 "cfa": "",
 "cl": false,
 "cpa": false,
 "cs": false,
-"fpa": 2,
+"fpa": 4,
 "fr": false,
-"front": 1,
+"front": 0,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 4453,
+"n": 3756,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "Minimum qualifications include a minimum 10 years of Civil Engineering experience in municipal/public works projects.",
+"q": "A licensed, New York State Professional Engineer with 8-15 years of Bridge Project Management experience and previous NYDOT experience",
 "stack": [],
-"y": 10.0,
+"y": 8.0,
 "yd": [
 "general"
 ],
-"yh": null
+"yh": 15.0
 },
 "https://www.linkedin.com/jobs/view/4328242754/": {
 "cfa": "",
@@ -1873,32 +1831,120 @@
 ],
 "yh": 5.0
 },
-"https://www.linkedin.com/jobs/view/4400306132/": {
+"https://www.linkedin.com/jobs/view/4367635466/": {
 "cfa": "",
 "cl": false,
 "cpa": false,
 "cs": true,
-"fpa": 2,
+"fpa": 0,
 "fr": false,
 "front": 0,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 3370,
+"n": 3458,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "Required: 3-5 or more years’ previous experience in a related position",
+"q": "5+ years professional experience",
 "stack": [
-"java",
-"python",
-"sql"
+"python"
 ],
-"y": 3.0,
+"y": 5.0,
 "yd": [
 "general"
 ],
-"yh": 5.0
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4376104606/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 4,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3284,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "10+ years of project management experience in building infrastructure, construction, or energy-focused projects.",
+"stack": [],
+"y": 10.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4383335180/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 2443,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4384863049/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7430,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "Bachelor’s degree and one year of experience in conducting investigations of tax crimes, white collar crime and/or conducting related field investigations of criminal activities which includes establishing a chain of …",
+"stack": [],
+"y": 1,
+"yd": [
+"investing"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4398327815/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 2,
+"fr": false,
+"front": 2,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6435,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "5+ years of Experience managing and leading people with financial responsibility",
+"stack": [],
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
 },
 "https://www.linkedin.com/jobs/view/4417459839/": {
 "cfa": "",
@@ -1923,7 +1969,7 @@
 ],
 "yh": 12.0
 },
-"https://www.linkedin.com/jobs/view/4418145903/": {
+"https://www.linkedin.com/jobs/view/4419528569/": {
 "cfa": "",
 "cl": true,
 "cpa": false,
@@ -1934,15 +1980,15 @@
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 3752,
+"n": 3728,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "3+ years professional experience",
+"q": "5+ years industry experience.",
 "stack": [
 "python"
 ],
-"y": 3.0,
+"y": 5.0,
 "yd": [
 "general"
 ],
@@ -1967,6 +2013,29 @@
 "stack": [],
 "y": null,
 "yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4426535139/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 2,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5957,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "5+ years in leadership roles within plant operations",
+"stack": [],
+"y": 5.0,
+"yd": [
+"general"
+],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4427123224/": {
@@ -2015,6 +2084,29 @@
 ],
 "yh": 9.0
 },
+"https://www.linkedin.com/jobs/view/4431262323/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 1,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6456,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Requires bachelor's or master's degree (or international equivalent) and 13-15 years of relevant experience or 17-19 years of relevant work experience",
+"stack": [],
+"y": 17.0,
+"yd": [
+"general"
+],
+"yh": 19.0
+},
 "https://www.linkedin.com/jobs/view/4431273259/": {
 "cfa": "",
 "cl": false,
@@ -2037,6 +2129,29 @@
 "general"
 ],
 "yh": 9.0
+},
+"https://www.linkedin.com/jobs/view/4431936929/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 1,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5784,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum of five (5) years of experience managing people in a manufacturing environment",
+"stack": [],
+"y": 5,
+"yd": [
+"general"
+],
+"yh": null
 },
 "https://www.linkedin.com/jobs/view/4432655772/": {
 "cfa": "",
@@ -2061,6 +2176,29 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4433359797/": {
+"cfa": "",
+"cl": true,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5579,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "3+ years of relevant experience",
+"stack": [],
+"y": 3.0,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4435171312/": {
 "cfa": "",
 "cl": false,
@@ -2079,6 +2217,52 @@
 "q": "Bond, Schoeneck & King PLLC, a full-service law firm of more than 300 attorneys in 14 offices located throughout New York, as well as in Boston, Kansas City, FL and NJ is seeking applications for an experienced latera…",
 "stack": [],
 "y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4435918367/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 1,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4772,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum of 5+ years' experience in consulting engineering to electric, gas, water, or similar industries.",
+"stack": [],
+"y": 5.0,
+"yd": [
+"deals"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4436102340/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3981,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "High school diploma or general education degree (GED) required, and two years related experience and/or training.",
+"stack": [],
+"y": 2,
 "yd": [
 "general"
 ],
@@ -2109,6 +2293,29 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4437813487/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 3,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5964,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "6+ years of related site/civil land development experience;",
+"stack": [],
+"y": 6.0,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4438286062/": {
 "cfa": "",
 "cl": false,
@@ -2127,6 +2334,29 @@
 "q": "A minimum of ten years of commercial and white-collar experience in a law firm setting",
 "stack": [],
 "y": 10,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4444652426/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 8096,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "At least 1 year of general work experience.",
+"stack": [],
+"y": 1.0,
 "yd": [
 "general"
 ],
@@ -2178,7 +2408,53 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4447094616/": {
+"https://www.linkedin.com/jobs/view/4446911224/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 12200,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Program management experience consistent with the following requirements: A minimum of ten (10) years of program management experience, with at least four (4) years as a Senior Program Manager, and Experience leading …",
+"stack": [],
+"y": 10,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4447076940/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 1,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4407,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum of 15 years of progressively responsible experience in transportation engineering.",
+"stack": [],
+"y": 15.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4449685233/": {
 "cfa": "",
 "cl": false,
 "cpa": false,
@@ -2189,17 +2465,40 @@
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 3822,
+"n": 7056,
 "ok": true,
-"ops": 3,
+"ops": 0,
 "opsy": false,
-"q": "",
-"stack": [
-"sql"
+"q": "2+ Years Relevant Experience.",
+"stack": [],
+"y": 2.0,
+"yd": [
+"general"
 ],
-"y": null,
-"yd": [],
 "yh": null
+},
+"https://www.linkedin.com/jobs/view/4450638507/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 5,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7314,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "7-10 years’ experience in the transmission field of designing/managing projects and leading multi-disciplinary teams",
+"stack": [],
+"y": 7.0,
+"yd": [
+"general"
+],
+"yh": 10.0
 },
 "https://www.linkedin.com/jobs/view/4450667877/": {
 "cfa": "",
@@ -2219,6 +2518,96 @@
 "q": "Minimum 2 years of hands-on experience with Microsoft Dynamics365 or Salesforce.com CRM.",
 "stack": [],
 "y": 2.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4451439717/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4698,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4451728627/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3731,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum of four years of related work experience",
+"stack": [],
+"y": 4,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4452594740/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 3,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5625,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "5 years of experience supporting water/wastewater projects",
+"stack": [],
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4452730538/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 3,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6656,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "5 years experience managing one or more direct reports in a Service Shop/Manufacturing/Building Construction Environment OR 2 years of experience with WillScot",
+"stack": [],
+"y": 5.0,
 "yd": [
 "general"
 ],
@@ -2272,6 +2661,27 @@
 ],
 "yh": 8.0
 },
+"https://www.linkedin.com/jobs/view/4453492049/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 2851,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4454083481/": {
 "cfa": "",
 "cl": true,
@@ -2293,6 +2703,50 @@
 "yd": [
 "general"
 ],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4457248897/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5817,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Five (5) years of warehousing, shipping and receiving experience.",
+"stack": [],
+"y": 5,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4457711930/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7397,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4458092783/": {
@@ -2318,6 +2772,27 @@
 "yd": [
 "general"
 ],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4458279954/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5965,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4458910193/": {
@@ -2395,29 +2870,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4459570266/": {
-"cfa": "",
-"cl": false,
-"cpa": false,
-"cs": true,
-"fpa": 4,
-"fr": false,
-"front": 1,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 9454,
-"ok": true,
-"ops": 3,
-"opsy": false,
-"q": "3+ Years experience in a procurement role",
-"stack": [],
-"y": 3.0,
-"yd": [
-"general"
-],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4459841385/": {
 "cfa": "",
 "cl": false,
@@ -2468,6 +2920,29 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4460726189/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5345,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "2+ years of relevant work experience",
+"stack": [],
+"y": 2.0,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4461780573/": {
 "cfa": "",
 "cl": false,
@@ -2505,6 +2980,27 @@
 "jr": false,
 "mba": false,
 "n": 6704,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4462519444/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 1,
+"fr": false,
+"front": 3,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5701,
 "ok": true,
 "ops": 0,
 "opsy": false,
@@ -2631,6 +3127,29 @@
 ],
 "yh": 7.0
 },
+"https://www.linkedin.com/jobs/view/4465160174/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6263,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Four years experience in dialysis is preferred",
+"stack": [],
+"y": 4,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4466542914/": {
 "cfa": "",
 "cl": false,
@@ -2654,24 +3173,47 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4468303443/": {
+"https://www.linkedin.com/jobs/view/4467539814/": {
 "cfa": "",
 "cl": false,
 "cpa": false,
 "cs": true,
-"fpa": 1,
+"fpa": 0,
 "fr": false,
-"front": 6,
+"front": 3,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 6004,
+"n": 5872,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "Four years of practical experience and knowledge with various motor and variable frequency drive types is desirable.",
+"stack": [],
+"y": 4,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4467786703/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 2386,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "Experience: 2+ years of experience in a cybersecurity or IT role.",
+"q": "Associate's degree and three (3) years of relevant experience; or an equivalent combination of education and experience.",
 "stack": [],
-"y": 2.0,
+"y": 3,
 "yd": [
 "general"
 ],
@@ -2697,6 +3239,146 @@
 "python"
 ],
 "y": 3.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4468902195/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6088,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum of two (2) years of engineering experience within a manufacturing environment, including relevant internship or Co-Op experience.",
+"stack": [],
+"y": 2,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4468918653/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7090,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "5+ years work experience in a customer facing team environment",
+"stack": [],
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4469233733/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 7617,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "9+ years of air quality related experience",
+"stack": [],
+"y": 9.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4469614932/": {
+"cfa": "",
+"cl": true,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5488,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "2 years relevant experience with Bachelors in related field; 0 years experience with Masters in related field",
+"stack": [
+"python"
+],
+"y": 2.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4469738695/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 3,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6527,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "1+ years of experience in service operations, customer service, order management, logistics, administrative support, data processing, or a related environment.",
+"stack": [],
+"y": 1.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4469758996/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 1,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5145,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Bachelor’s Degree in Engineering or a Business-related field and minimum 3 years of experience or Associates Degree with 4 years of experience",
+"stack": [],
+"y": 4.0,
 "yd": [
 "general"
 ],
@@ -2771,6 +3453,29 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4470501941/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6907,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "At least two years of shipping, logistics, warehouse, or related coordination experience preferred.",
+"stack": [],
+"y": 2,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4470522057/": {
 "cfa": "",
 "cl": false,
@@ -2823,29 +3528,6 @@
 ],
 "yh": 5.0
 },
-"https://www.linkedin.com/jobs/view/4470979341/": {
-"cfa": "",
-"cl": false,
-"cpa": false,
-"cs": true,
-"fpa": 0,
-"fr": false,
-"front": 0,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 8208,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "3+ years of hands-on PLC programming experience in an industrial automation, controls, manufacturing, or systems integration environment.",
-"stack": [],
-"y": 3.0,
-"yd": [
-"general"
-],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4470989277/": {
 "cfa": "",
 "cl": false,
@@ -2869,6 +3551,121 @@
 ],
 "yh": 4.0
 },
+"https://www.linkedin.com/jobs/view/4471046383/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7675,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4471106181/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 2,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5206,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4471493439/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 1,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7356,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Required bachelor's degree (or international equivalent) and 5-8 years of relevant experience or 9-12 years of relevant work experience",
+"stack": [],
+"y": 9.0,
+"yd": [
+"general"
+],
+"yh": 12.0
+},
+"https://www.linkedin.com/jobs/view/4471787694/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 2,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4588,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "3 years of management and leadership experience in an industrial setting.",
+"stack": [],
+"y": 3.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4471902776/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 8961,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "7+ years or equivalent demonstrated experience in enterprise network engineering, administration, troubleshooting and design.",
+"stack": [
+"aws",
+"azure",
+"python"
+],
+"y": 7.0,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4472044721/": {
 "cfa": "",
 "cl": false,
@@ -2889,6 +3686,75 @@
 "spring"
 ],
 "y": 2,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4472183499/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7238,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "5+ years of experience in kitting, assembly, manufacturing, or related operations, preferably within a regulated medical device or healthcare environment.",
+"stack": [],
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4472205992/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4091,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "3–5 years of experience in supplier quality management, supplier development, or supply chain operations",
+"stack": [],
+"y": 3.0,
+"yd": [
+"general"
+],
+"yh": 5.0
+},
+"https://www.linkedin.com/jobs/view/4472207611/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 8285,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "Bachelor’s degree in supply chain management or culinary arts and 5 years of experience operating in a high-volume food service operation.",
+"stack": [],
+"y": 5.0,
 "yd": [
 "general"
 ],
@@ -2964,6 +3830,29 @@
 "yd": [],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4472345112/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 2,
+"fr": false,
+"front": 2,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 2397,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "",
+"stack": [
+"sql"
+],
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4472355153/": {
 "cfa": "",
 "cl": false,
@@ -2982,6 +3871,52 @@
 "q": "Bachelor's degree and 3 years relevant professional work experience or equivalent combination of education and experience.",
 "stack": [],
 "y": 3.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4472624507/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4938,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "3–5 years of experience in Supplier Quality, Supplier Development, Manufacturing Quality, or a related engineering function.",
+"stack": [],
+"y": 3.0,
+"yd": [
+"general"
+],
+"yh": 5.0
+},
+"https://www.linkedin.com/jobs/view/4472740955/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 1,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 9645,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum of 5+ years of relevant post-education experience in related job capacity.",
+"stack": [],
+"y": 5.0,
 "yd": [
 "general"
 ],
@@ -3035,24 +3970,47 @@
 "yd": [],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4473025691/": {
+"https://www.linkedin.com/jobs/view/4473021487/": {
 "cfa": "",
-"cl": false,
+"cl": true,
 "cpa": false,
 "cs": true,
-"fpa": 1,
+"fpa": 0,
 "fr": false,
-"front": 1,
+"front": 0,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 5709,
+"n": 4095,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "Five or more years’ experience as a practicing attorney.",
+"q": "",
+"stack": [
+"python"
+],
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4473061286/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 1,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 1587,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Graduation from high school or possession of a high school equivalency diploma and six years of experience in one of the areas outlined in (A) above, one year of which shall have been in a supervisory capacity.",
 "stack": [],
-"y": 5,
+"y": 6,
 "yd": [
 "general"
 ],
@@ -3080,6 +4038,52 @@
 "general"
 ],
 "yh": null
+},
+"https://www.linkedin.com/jobs/view/4473177262/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6552,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "5+ years of relevant experience in toolmaking, mould making, fixture building, machining, precision manufacturing or a closely related field.",
+"stack": [],
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4473273637/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 1,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4092,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "5-10 years of progressive manufacturing leadership experience.",
+"stack": [],
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": 10.0
 },
 "https://www.linkedin.com/jobs/view/4473312843/": {
 "cfa": "",
@@ -3173,6 +4177,29 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4473916754/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 1,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 5221,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "1-3 Years Relevant Experience",
+"stack": [],
+"y": 1.0,
+"yd": [
+"general"
+],
+"yh": 3.0
+},
 "https://www.linkedin.com/jobs/view/4473981443/": {
 "cfa": "",
 "cl": false,
@@ -3195,6 +4222,52 @@
 "y": null,
 "yd": [],
 "yh": null
+},
+"https://www.linkedin.com/jobs/view/4474134493/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4885,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "3–5 years of experience in Supplier Quality, Supplier Development, Manufacturing Quality, or a related engineering function.",
+"stack": [],
+"y": 3.0,
+"yd": [
+"general"
+],
+"yh": 5.0
+},
+"https://www.linkedin.com/jobs/view/4474215168/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3736,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "3 - 5 years' experience within the construction industry in project management or similar role.",
+"stack": [],
+"y": 3.0,
+"yd": [
+"general"
+],
+"yh": 5.0
 },
 "https://www.linkedin.com/jobs/view/4474288517/": {
 "cfa": "",
@@ -3263,28 +4336,28 @@
 "yd": [],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4474457751/": {
+"https://www.linkedin.com/jobs/view/4474470813/": {
 "cfa": "",
-"cl": true,
+"cl": false,
 "cpa": false,
 "cs": false,
 "fpa": 0,
 "fr": false,
-"front": 1,
+"front": 2,
 "inv": false,
-"jr": true,
+"jr": false,
 "mba": false,
-"n": 2284,
+"n": 5846,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "0-2 years’ work experience in a technical role with customer interaction (internships and co-ops considered).",
+"q": "A minimum of 2 years of industry experience – (ex. logistics, shipping, 3PL) with at least 1 year of demonstrated leadership experience",
 "stack": [],
-"y": 0.0,
+"y": 2.0,
 "yd": [
 "general"
 ],
-"yh": 2.0
+"yh": null
 },
 "https://www.linkedin.com/jobs/view/4474477987/": {
 "cfa": "",
@@ -3328,6 +4401,27 @@
 "yd": [],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4474577429/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 4529,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4474603960/": {
 "cfa": "",
 "cl": false,
@@ -3348,29 +4442,6 @@
 "y": 7.0,
 "yd": [
 "general"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4474613764/": {
-"cfa": "",
-"cl": false,
-"cpa": false,
-"cs": true,
-"fpa": 0,
-"fr": false,
-"front": 9,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 5405,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Seven plus years of legal experience, including time at a leading law firm and experience in an in-house role at a professional services, consulting, financial advisory or investment banking firm",
-"stack": [],
-"y": 7,
-"yd": [
-"deals"
 ],
 "yh": null
 },
@@ -3400,6 +4471,50 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4474620762/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4266,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "4+ years’ experience with equipment and small engine maintenance (i.e., carbonator cleaning, sparkplugs, oil changes)",
+"stack": [],
+"y": 4.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4474630011/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 1688,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4474800021/": {
 "cfa": "",
 "cl": false,
@@ -3412,6 +4527,27 @@
 "jr": false,
 "mba": false,
 "n": 5719,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4474804155/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7574,
 "ok": true,
 "ops": 0,
 "opsy": false,
@@ -3490,6 +4626,29 @@
 ],
 "yh": 5.0
 },
+"https://www.linkedin.com/jobs/view/4475189519/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 1,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6588,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "High school diploma or GED required with a minimum of 2 years of supervisor or management experience in a warehouse setting.",
+"stack": [],
+"y": 2.0,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4475259949/": {
 "cfa": "",
 "cl": false,
@@ -3511,6 +4670,119 @@
 "python"
 ],
 "y": 8.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4475470772/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5658,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Two or more years of experience in healthcare or completion of a Medical Assistant program",
+"stack": [],
+"y": 2,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4475592503/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4799,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4475599589/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 2,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5334,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum of 15 years of progressive engineering experience required, including technical leadership and client-facing project management experience",
+"stack": [],
+"y": 15.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4475616652/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7291,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum 2 years of modeling / design / applications engineering experience",
+"stack": [],
+"y": 2.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4475675167/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 3,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5705,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Education, Experience, and Training: Requires three years of supervisory/management experience in the airline industry.",
+"stack": [],
+"y": 3,
 "yd": [
 "general"
 ],
@@ -3564,51 +4836,46 @@
 "yd": [],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4475948583/": {
+"https://www.linkedin.com/jobs/view/4475961434/": {
 "cfa": "",
 "cl": false,
 "cpa": false,
 "cs": true,
-"fpa": 0,
+"fpa": 1,
 "fr": false,
 "front": 0,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 2759,
+"n": 6425,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "Bachelor’s degree in electrical engineering, electrical engineering technology or related field and 5 years of experience in job offered or related occupation.",
+"q": "HS diploma or GED and 8+ years of experience with system administration OR",
 "stack": [],
-"y": 5.0,
+"y": 8.0,
 "yd": [
 "general"
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4476010994/": {
+"https://www.linkedin.com/jobs/view/4476102264/": {
 "cfa": "",
 "cl": false,
 "cpa": false,
-"cs": true,
+"cs": false,
 "fpa": 0,
 "fr": false,
 "front": 0,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 8178,
+"n": 5762,
 "ok": true,
-"ops": 1,
+"ops": 0,
 "opsy": false,
 "q": "",
-"stack": [
-"azure",
-"java",
-"python",
-"sql"
-],
+"stack": [],
 "y": null,
 "yd": [],
 "yh": null
@@ -3661,6 +4928,29 @@
 ],
 "yh": 3.0
 },
+"https://www.linkedin.com/jobs/view/4476336104/": {
+"cfa": "",
+"cl": true,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 2307,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "2+ years’ work experience in a technical role with customer interaction.",
+"stack": [],
+"y": 2.0,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4476340240/": {
 "cfa": "",
 "cl": false,
@@ -3681,33 +4971,6 @@
 "python"
 ],
 "y": 2.0,
-"yd": [
-"general"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4476483448/": {
-"cfa": "",
-"cl": false,
-"cpa": false,
-"cs": true,
-"fpa": 7,
-"fr": false,
-"front": 0,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6199,
-"ok": true,
-"ops": 4,
-"opsy": false,
-"q": "or Bachelor’s degree in non-quantitative field + 5 years of relevant experience",
-"stack": [
-"azure",
-"python",
-"sql"
-],
-"y": 5.0,
 "yd": [
 "general"
 ],
@@ -3734,6 +4997,29 @@
 ],
 "y": null,
 "yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4476690240/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4719,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "5+ years of experience in utility coordination, field engineering, or a comparable role on heavy civil or DOT infrastructure projects.",
+"stack": [],
+"y": 5.0,
+"yd": [
+"investing"
+],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4476692503/": {
@@ -3782,6 +5068,29 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4476794096/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4893,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "3+ years of experience leading DOT-regulated drivers, fleet operations, transportation scheduling, or related transportation functions.",
+"stack": [],
+"y": 3.0,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4476799439/": {
 "cfa": "",
 "cl": false,
@@ -3803,7 +5112,51 @@
 "yd": [],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4476839609/": {
+"https://www.linkedin.com/jobs/view/4476819649/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4369,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4476837078/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 9102,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "High school diploma/GED and completion of an Apprenticeship Program; or an associate’s degree plus four or more years of related experience and/or training; or an equivalent combination of education and experience.",
+"stack": [],
+"y": 4,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4476843480/": {
 "cfa": "",
 "cl": false,
 "cpa": false,
@@ -3814,14 +5167,60 @@
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 2890,
+"n": 3805,
 "ok": true,
-"ops": 3,
+"ops": 0,
 "opsy": false,
 "q": "",
 "stack": [],
 "y": null,
 "yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4476864569/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5480,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "You’ve acquired 2+ years of experience in a diagnostic imaging (field or hospital-based) service environment or 4+ years’ in electromechanical industries.",
+"stack": [],
+"y": 2.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4477018182/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5862,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Associate's degree or equivalent from two-year College or technical school; or six months to one year related experience and/or training; or equivalent combination of education and experience.",
+"stack": [],
+"y": 1,
+"yd": [
+"general"
+],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4477029093/": {
@@ -3847,6 +5246,52 @@
 ],
 "yh": 8.0
 },
+"https://www.linkedin.com/jobs/view/4477184749/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 1,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4936,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "3-5 years related experience or any equivalent combination of education, training, and experience",
+"stack": [],
+"y": 3.0,
+"yd": [
+"general"
+],
+"yh": 5.0
+},
+"https://www.linkedin.com/jobs/view/4477406768/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 7,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 10396,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "70.4 Transfer Qualifications to State Fair Administrator Trainee 1: Applicants may be appointed to this position permanently if they have: one year of permanent, competitive service in a Grade 11 title or higher.",
+"stack": [],
+"y": 1,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4477422913/": {
 "cfa": "",
 "cl": false,
@@ -3867,6 +5312,138 @@
 "python",
 "sql"
 ],
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4477424323/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 8253,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4477438413/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4382,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Bachelor’s degree in electrical engineering, electrical engineering technology or related electrical field and 5 years of experience in job offered or related occupation.",
+"stack": [],
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4477464989/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4488,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4477465750/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6279,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum of three years of experience in transportation/delivery or warehouse distribution required.",
+"stack": [],
+"y": 3,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4477466472/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 7,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 11870,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "At a future date (within one year of permanent appointment), it is expected employees hired under NY HELPS will have their non-competitive employment status converted to competitive status, without having to compete i…",
+"stack": [],
+"y": 1,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4477729349/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 5,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 8375,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
 "y": null,
 "yd": [],
 "yh": null
@@ -3968,6 +5545,27 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4477876608/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 2,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4217,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4477882253/": {
 "cfa": "",
 "cl": true,
@@ -4014,9 +5612,32 @@
 ],
 "yh": 7.0
 },
-"https://www.linkedin.com/jobs/view/4477938554/": {
+"https://www.linkedin.com/jobs/view/4477936169/": {
 "cfa": "",
 "cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5076,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "10+ years of procurement experience in the utilities or infrastructure sector, with a focus on transmission or energy projects.",
+"stack": [],
+"y": 10.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4477965581/": {
+"cfa": "",
+"cl": true,
 "cpa": false,
 "cs": false,
 "fpa": 0,
@@ -4025,14 +5646,16 @@
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 1321,
+"n": 4159,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "",
+"q": "This is an APDP position requiring completion of Practitioner Level certification within Engineering &Technology Management (ETM) within two years of appointment.",
 "stack": [],
-"y": null,
-"yd": [],
+"y": 2,
+"yd": [
+"general"
+],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4477995797/": {
@@ -4082,6 +5705,73 @@
 "yd": [],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4478061670/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4488,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4478156520/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 16,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6137,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "At least 5 years of experience in education, coaching, learning and development, or a related leadership role.",
+"stack": [],
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4478157202/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 2,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6258,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum three (3) years bridge inspection, bridge design or bridge construction experience or equivalent combination with minimum 3 months field work experience",
+"stack": [],
+"y": 3,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4478293343/": {
 "cfa": "",
 "cl": false,
@@ -4104,6 +5794,73 @@
 "general"
 ],
 "yh": 4.0
+},
+"https://www.linkedin.com/jobs/view/4478482248/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 1,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 6936,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "High School Diploma/GED AND 2-3 years of experience in transportation/logistics, business administration, account management, &/or equivalent military experience AND the ability to work across multiple shifts includin…",
+"stack": [],
+"y": 2.0,
+"yd": [
+"general"
+],
+"yh": 3.0
+},
+"https://www.linkedin.com/jobs/view/4478494781/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 1826,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Qualifications include a bachelor’s degree in a related field, five or more years of supply chain or purchasing leadership experience, strong analytical and communication skills, big box stores retail compliance, and …",
+"stack": [],
+"y": 5,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4478686118/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 1,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 3046,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
 },
 "https://www.linkedin.com/jobs/view/4478824122/": {
 "cfa": "",
@@ -4148,6 +5905,117 @@
 "y": 8.0,
 "yd": [
 "general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4478914837/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5150,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4478928164/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 4,
+"fr": false,
+"front": 2,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 7504,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "High School Diploma with 3-5 years of Transportation/Logistics experience and/or 3-5 years of supervisory experience, &/or military equivalent; ability to work across multiple shifts including nights and/or weekends i…",
+"stack": [],
+"y": 3.0,
+"yd": [
+"general"
+],
+"yh": 5.0
+},
+"https://www.linkedin.com/jobs/view/4478931135/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 1,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6474,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "5 years of relevant experience in areas of utility operations, utility construction & operations or similar industry is preferred",
+"stack": [],
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4479081567/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 6,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4863,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4479099864/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4631,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "At least 5 years of consulting experience with industrial water and wastewater clients",
+"stack": [],
+"y": 5.0,
+"yd": [
+"deals"
 ],
 "yh": null
 },
@@ -4227,6 +6095,54 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4479202226/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3859,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Bachelors or Associates degree or equivalent work experience and/or 5 plus years of progressive supervisory work experience preferred.",
+"stack": [
+"aws"
+],
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4479207419/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 7,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6796,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum of 2 years of experience preferred in Project / Construction Management, preferably in the utility, commercial or related mechanical/electrical industries.",
+"stack": [],
+"y": 2.0,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4479212606/": {
 "cfa": "",
 "cl": false,
@@ -4268,6 +6184,52 @@
 "q": "Non-Competitive: seven years of experience with crime analysis tools/systems or related analytical or computer systems experience**.",
 "stack": [],
 "y": 7,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4479220474/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 5749,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Bachelor’s degree or equivalent plus 1-3 years relevant experience in information technologies/computer science as necessary.",
+"stack": [],
+"y": 1.0,
+"yd": [
+"general"
+],
+"yh": 3.0
+},
+"https://www.linkedin.com/jobs/view/4479325797/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3275,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Must have minimal medical training or telecommunications experience or, have at least one year's experience as an EMS or public safety dispatcher.",
+"stack": [],
+"y": 1,
 "yd": [
 "general"
 ],
@@ -4390,6 +6352,75 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4479590706/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 1,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 8514,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Bachelor's or Master's degree in Geology/Hydrogeology and 8+ years of relevant experience in a consulting environment",
+"stack": [],
+"y": 8.0,
+"yd": [
+"deals"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4479635496/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 1,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5153,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum of 3 years of dispatching or related experience",
+"stack": [],
+"y": 3.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4479706121/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 2,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 2575,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "Approximately 8+ years of experience supporting large, complex enterprise database environments, or equivalent technical experience.",
+"stack": [],
+"y": 8.0,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4479715065/": {
 "cfa": "",
 "cl": false,
@@ -4506,30 +6537,28 @@
 ],
 "yh": 8.0
 },
-"https://www.linkedin.com/jobs/view/4480276126/": {
+"https://www.linkedin.com/jobs/view/4480280730/": {
 "cfa": "",
 "cl": false,
 "cpa": false,
-"cs": false,
+"cs": true,
 "fpa": 0,
 "fr": false,
 "front": 0,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 1570,
+"n": 5923,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "Candidates must have 2 + years of litigation experience, including drafting pleadings, discovery documents, and dispositive motions; conducting depositions; and managing e-discovery projects and experience in Federal …",
+"q": "",
 "stack": [],
-"y": 2.0,
-"yd": [
-"general"
-],
+"y": null,
+"yd": [],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4480282395/": {
+"https://www.linkedin.com/jobs/view/4480293073/": {
 "cfa": "",
 "cl": false,
 "cpa": false,
@@ -4540,17 +6569,17 @@
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 2381,
+"n": 4088,
 "ok": true,
-"ops": 0,
-"opsy": false,
-"q": "2 to 5 years of experience (salary commensurate with experience - range $110,000-$150,000).",
+"ops": 1,
+"opsy": true,
+"q": "2 years of experience in logistics or transportation, inventory control and merchandise reconciliation",
 "stack": [],
 "y": 2.0,
 "yd": [
-"general"
+"ops"
 ],
-"yh": 5.0
+"yh": null
 },
 "https://www.linkedin.com/jobs/view/4480342814/": {
 "cfa": "",
@@ -4576,6 +6605,124 @@
 "general"
 ],
 "yh": null
+},
+"https://www.linkedin.com/jobs/view/4480442272/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4105,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Key Responsibilities: Details BS or MS degree in computer science, computer engineering, or other technical discipline, or equivalent work experience. 5+ years of hands-on software development experience with Big Data…",
+"stack": [
+"python",
+"sql"
+],
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4480489393/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 1,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5369,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum of 3 years of related experience",
+"stack": [],
+"y": 3.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4480518910/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 3940,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "1-2 years prior experience in the retail automotive service industry, preferably in an",
+"stack": [],
+"y": 1.0,
+"yd": [
+"general"
+],
+"yh": 2.0
+},
+"https://www.linkedin.com/jobs/view/4480539317/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 4190,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Experience: 1-3 years telephone operations or business administration experience required.",
+"stack": [],
+"y": 1.0,
+"yd": [
+"general"
+],
+"yh": 3.0
+},
+"https://www.linkedin.com/jobs/view/4480566925/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6310,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "A Bachelor’s degree and 2-3 years of experience with gaming or Esports-related technology.",
+"stack": [],
+"y": 2.0,
+"yd": [
+"general"
+],
+"yh": 3.0
 },
 "https://www.linkedin.com/jobs/view/4480571829/": {
 "cfa": "",
@@ -4623,6 +6770,169 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4480721949/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 2,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 8993,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "1–2 years of experience working with ERP systems highly preferred",
+"stack": [],
+"y": 1.0,
+"yd": [
+"general"
+],
+"yh": 2.0
+},
+"https://www.linkedin.com/jobs/view/4480722684/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 1,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3033,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Three (3) years of relevant experience.",
+"stack": [],
+"y": 3,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4480737539/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 312,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Experience: Bachelor’s/Master’s in Engineering with 9+ years in PLM/Windchill, technical architecture, project management, customer coordination, and team leadership.",
+"stack": [
+"java"
+],
+"y": 9.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4480741823/": {
+"cfa": "",
+"cl": true,
+"cpa": false,
+"cs": true,
+"fpa": 1,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 1457,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "At least 5+ years of experience in a leadership role managing other people managers.",
+"stack": [],
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4480759073/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 1,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4422,
+"ok": true,
+"ops": 2,
+"opsy": false,
+"q": "",
+"stack": [
+"sql"
+],
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4480808895/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 2,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6594,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "5 years of experience leading service associates in a retail or consumer service industry.",
+"stack": [],
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4480878903/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6476,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "3-5+ years of commercial HVAC engineering or applications experience, or technical knowledge of HVAC.",
+"stack": [],
+"y": 3.0,
+"yd": [
+"general"
+],
+"yh": 5.0
+},
 "https://www.linkedin.com/jobs/view/4480886513/": {
 "cfa": "",
 "cl": false,
@@ -4646,6 +6956,27 @@
 ],
 "yh": 5.0
 },
+"https://www.linkedin.com/jobs/view/4480890392/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5184,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4480968602/": {
 "cfa": "",
 "cl": false,
@@ -4666,6 +6997,29 @@
 "y": null,
 "yd": [],
 "yh": null
+},
+"https://www.linkedin.com/jobs/view/4480989695/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6737,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Requires bachelor's degree (or international equivalent) and 2-5 years of relevant experience or 6-9 years of relevant work experience",
+"stack": [],
+"y": 6.0,
+"yd": [
+"general"
+],
+"yh": 9.0
 },
 "https://www.linkedin.com/jobs/view/4481224385/": {
 "cfa": "",
@@ -4690,7 +7044,7 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4481273116/": {
+"https://www.linkedin.com/jobs/view/4481272132/": {
 "cfa": "",
 "cl": false,
 "cpa": false,
@@ -4699,9 +7053,32 @@
 "fr": false,
 "front": 0,
 "inv": false,
-"jr": false,
+"jr": true,
 "mba": false,
-"n": 6421,
+"n": 7121,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Requires a University Hire with 1-2 years of experience or 5-6 years of relevant work experience",
+"stack": [],
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": 6.0
+},
+"https://www.linkedin.com/jobs/view/4481513035/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 7376,
 "ok": true,
 "ops": 1,
 "opsy": false,
@@ -4711,34 +7088,51 @@
 "yd": [],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4481284547/": {
+"https://www.linkedin.com/jobs/view/4481526541/": {
 "cfa": "",
 "cl": false,
 "cpa": false,
-"cs": true,
+"cs": false,
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6772,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "",
+"stack": [],
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4481724729/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": false,
 "fpa": 0,
 "fr": false,
 "front": 0,
 "inv": false,
-"jr": false,
+"jr": true,
 "mba": false,
-"n": 6398,
+"n": 9368,
 "ok": true,
-"ops": 3,
+"ops": 0,
 "opsy": false,
-"q": "Minimum 3 years of proven experience in a data engineering role.",
-"stack": [
-"azure",
-"python",
-"sql"
-],
-"y": 3.0,
+"q": "GS-6 Experience: One year of experience equivalent to the GS-5 grade level",
+"stack": [],
+"y": 1,
 "yd": [
 "general"
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4481517491/": {
+"https://www.linkedin.com/jobs/view/4481757757/": {
 "cfa": "",
 "cl": false,
 "cpa": false,
@@ -4761,48 +7155,98 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4481518125/": {
+"https://www.linkedin.com/jobs/view/4481774533/": {
 "cfa": "",
 "cl": false,
 "cpa": false,
-"cs": false,
+"cs": true,
+"fpa": 2,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5821,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Five years of work experience, in the not-for-profit or human services sector, demonstrating progressively higher levels of responsibility for managing all aspects of a project or program, overseeing partnerships and …",
+"stack": [],
+"y": 5,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4481781768/": {
+"cfa": "",
+"cl": false,
+"cpa": false,
+"cs": true,
 "fpa": 0,
 "fr": false,
 "front": 0,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 6421,
+"n": 6516,
 "ok": true,
-"ops": 1,
+"ops": 0,
 "opsy": false,
-"q": "",
+"q": "2-3 years of experience managing a team of 10 - 20 Team Members in a fast-paced and highly dynamic retail environment",
 "stack": [],
-"y": null,
-"yd": [],
+"y": 2.0,
+"yd": [
+"general"
+],
+"yh": 3.0
+},
+"https://www.linkedin.com/jobs/view/4482007559/": {
+"cfa": "",
+"cl": true,
+"cpa": false,
+"cs": true,
+"fpa": 2,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6873,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "18+ years of experience in a technical/engineering environment with at least 5+ years in a leadership role focused on engineering management and leading other people managers.",
+"stack": [
+"java"
+],
+"y": 18.0,
+"yd": [
+"general"
+],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4481527123/": {
+"https://www.linkedin.com/jobs/view/4482018777/": {
 "cfa": "",
 "cl": false,
 "cpa": false,
 "cs": true,
-"fpa": 6,
+"fpa": 1,
 "fr": false,
-"front": 2,
+"front": 0,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 5046,
+"n": 4422,
 "ok": true,
-"ops": 0,
+"ops": 2,
 "opsy": false,
-"q": "5-8 years of experience in water/wastewater consulting.",
-"stack": [],
-"y": 5.0,
-"yd": [
-"deals"
+"q": "",
+"stack": [
+"sql"
 ],
-"yh": 8.0
+"y": null,
+"yd": [],
+"yh": null
 }
 }

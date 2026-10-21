@@ -646,25 +646,6 @@
 ],
 "yh": 3
 },
-"https://cibc.wd3.myworkdayjobs.com/search/job/Montral-QC/Investment-Representative--ISI---Bilingual_2621121": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-16",
-"fpa": 0,
-"fr": true,
-"front": 2,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4850,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://cogeco.wd3.myworkdayjobs.com/Cogeco_Careers/job/Montral-QC/Analyst--Corporate-Development_JR9844": {
 "cfa": "progress",
 "cpa": false,
@@ -1247,6 +1228,25 @@
 "yd": [],
 "yh": null
 },
+"https://investpsp.wd3.myworkdayjobs.com/psp_careers/job/Montreal/Intern--Portfolio-Management--Real-Estate-Investments--January---April-2027-_R4844": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-21",
+"fpa": 0,
+"fr": true,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3273,
+"ok": true,
+"ops": 3,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://investpsp.wd3.myworkdayjobs.com/psp_careers/job/Montreal/Manager--Credit-Investments_R4902": {
 "cfa": "progress",
 "cpa": false,
@@ -1329,6 +1329,27 @@
 "y": 2,
 "yd": [
 "general"
+],
+"yh": null
+},
+"https://investpsp.wd3.myworkdayjobs.com/psp_careers/job/Montreal/Senior-Analyst--Public-Markets-Solutions_R5005": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-21",
+"fpa": 0,
+"fr": true,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5769,
+"ok": true,
+"ops": 5,
+"opsy": false,
+"q": "Minimum of 3 years of relevant experience in business or systems analysis supporting investment applications and solutions",
+"y": 3.0,
+"yd": [
+"investing"
 ],
 "yh": null
 },
@@ -1811,27 +1832,6 @@
 ],
 "yh": 1.0
 },
-"https://www.bnpparibas.ca/en/jobs/credit-officer-securitization-private-debt-financing-and-clo-warehousing/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
-"fr": false,
-"front": 5,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 9169,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "7 to 12 years+ experience.",
-"y": 7.0,
-"yd": [
-"general"
-],
-"yh": 12.0
-},
 "https://www.boralex.com/fr/nous-rejoindre/nos-offres-demploi/analyste-financement-de-projets": {
 "cfa": "mention",
 "cpa": false,
@@ -1937,6 +1937,28 @@
 ],
 "yh": 3.0
 },
+"https://www.linkedin.com/jobs/view/4412028982/": {
+"cfa": "mention",
+"cpa": false,
+"d": "2026-10-21",
+"fpa": 0,
+"fr": true,
+"front": 14,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5256,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "Minimum de 7 ans d’expérience pertinente, dont une expérience significative en fusions et acquisitions, développement corporatif, investissement ou services-conseils transactionnels (banque d’investissement, cabinet d…",
+"y": 7.0,
+"yd": [
+"investing",
+"deals"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4455946961/": {
 "cfa": "mention",
 "cpa": false,
@@ -1979,6 +2001,27 @@
 "deals"
 ],
 "yh": 7.0
+},
+"https://www.linkedin.com/jobs/view/4463686603/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-21",
+"fpa": 2,
+"fr": true,
+"front": 25,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 14726,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Plus de 1 ans d’expérience professionnelle en comptabilité publique, services transactionnels, consultation, finance corporative ou dans un environnement similaire de services professionnels",
+"y": 1.0,
+"yd": [
+"deals"
+],
+"yh": null
 },
 "https://www.linkedin.com/jobs/view/4466354481/": {
 "cfa": "",
@@ -2066,26 +2109,47 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4473019680/": {
+"https://www.linkedin.com/jobs/view/4471599818/": {
 "cfa": "",
 "cpa": false,
-"d": "2026-10-02",
-"fpa": 1,
-"fr": false,
-"front": 10,
+"d": "2026-10-21",
+"fpa": 9,
+"fr": true,
+"front": 1,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 4951,
+"n": 7711,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "2 to 4 years of relevant experience in real estate finance, debt structuring, or financial analysis.",
-"y": 2.0,
+"q": "Minimum de 5 ans d’expérience en marketing pharmaceutique ou dans un rôle similaire.",
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4472945727/": {
+"cfa": "mention",
+"cpa": false,
+"d": "2026-10-21",
+"fpa": 4,
+"fr": false,
+"front": 23,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 12338,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "Minimum de 5 ans d’expérience pertinente et directe en financement de projets ou en financement structuré, acquise au sein d’une banque, d’un cabinet-conseil ou du côté des promoteurs/sponsors (fonds d’investissement,…",
+"y": 5.0,
 "yd": [
 "investing"
 ],
-"yh": 4.0
+"yh": null
 },
 "https://www.linkedin.com/jobs/view/4473563901/": {
 "cfa": "",
@@ -2127,6 +2191,49 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4474339372/": {
+"cfa": "mention",
+"cpa": false,
+"d": "2026-10-21",
+"fpa": 0,
+"fr": false,
+"front": 19,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 9402,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "Minimum 5+ years of direct, relevant experience in project finance or structured finance, gained within banking, advisory, or sponsor‑side platforms (investment funds, developers, etc.)",
+"y": 5.0,
+"yd": [
+"investing",
+"deals"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4476344357/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-21",
+"fpa": 1,
+"fr": true,
+"front": 10,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6719,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Baccalauréat et au moins six ans d’expérience pertinente en financement commercial et/ou corporatif (ou un agencement équivalent d’études et d’expérience)",
+"y": 6,
+"yd": [
+"investing"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4476801945/": {
 "cfa": "progress",
 "cpa": false,
@@ -2147,6 +2254,25 @@
 "general"
 ],
 "yh": 5.0
+},
+"https://www.linkedin.com/jobs/view/4477885774/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-21",
+"fpa": 0,
+"fr": true,
+"front": 7,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4166,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
 },
 "https://www.linkedin.com/jobs/view/4479588676/": {
 "cfa": "",
@@ -2169,6 +2295,25 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4479921545/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-21",
+"fpa": 0,
+"fr": true,
+"front": 18,
+"inv": true,
+"jr": true,
+"mba": false,
+"n": 5352,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4480505133/": {
 "cfa": "mention",
 "cpa": false,
@@ -2189,6 +2334,49 @@
 "investing"
 ],
 "yh": 2
+},
+"https://www.linkedin.com/jobs/view/4480511909/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-21",
+"fpa": 6,
+"fr": true,
+"front": 4,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7123,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Plus de 2 ans d’expérience en gestion de comptes clés, de portefeuille ou de marque — idéalement dans le secteur des produits de grande consommation (CPG), les boissons alcoolisées ou les industries de style de vie ha…",
+"y": 2.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4480705930/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-21",
+"fpa": 2,
+"fr": true,
+"front": 10,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3265,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "De 4 à 6 ans d’expérience en fusions et acquisitions, en banque d’investissement, en financement corporatif ou immobilier, en évaluation ou dans un rôle comparable.",
+"y": 4.0,
+"yd": [
+"investing",
+"deals"
+],
+"yh": 6.0
 },
 "https://www.linkedin.com/jobs/view/4481274407/": {
 "cfa": "progress",
