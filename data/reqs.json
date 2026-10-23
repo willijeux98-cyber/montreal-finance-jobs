@@ -1,5 +1,24 @@
 {
 "_v": 3,
+"https://ardian.wd103.myworkdayjobs.com/ArdianCareers/job/Montreal/Fund-Finance-Infrastructure-Intern---December-2026---MTL_JR1002272": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-23",
+"fpa": 0,
+"fr": true,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 2009,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://ardian.wd103.myworkdayjobs.com/ArdianCareers/job/Montreal/Secondaries---Primaries-Analyst---Montreal_JR1001419": {
 "cfa": "",
 "cpa": false,
@@ -81,6 +100,27 @@
 "deals"
 ],
 "yh": 4.0
+},
+"https://bdc.wd10.myworkdayjobs.com/BDC_Careers/job/Montreal/ASSOCIATE--SEEDS-FUND_R-8385-1": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-23",
+"fpa": 0,
+"fr": true,
+"front": 13,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 6236,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Three or more years of relevant work experience; experience in venture capital, private equity, fund investments or other areas of the innovation ecosystem would be an asset;",
+"y": 3,
+"yd": [
+"general"
+],
+"yh": null
 },
 "https://bdo.wd3.myworkdayjobs.com/BDO/job/Montreal---1000-Rue-De-La-Gauchetire-Ouest/Financial-Analyst--Valuations---Modelling_JR7200": {
 "cfa": "",
@@ -187,26 +227,27 @@
 ],
 "yh": 6.0
 },
-"https://bmo.wd3.myworkdayjobs.com/External/job/MONTREAL-QC-CAN/Gestionnaire-de-portefeuille_R260028221": {
-"cfa": "",
+"https://bmo.wd3.myworkdayjobs.com/External/job/MONTREAL-QC-CAN/Associate--Asset-Based-Lending_R260024617": {
+"cfa": "mention",
 "cpa": false,
-"d": "2026-10-11",
-"fpa": 0,
-"fr": false,
-"front": 3,
+"d": "2026-10-23",
+"fpa": 1,
+"fr": true,
+"front": 5,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 8105,
+"n": 6096,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "Typically between 4 - 6 years of relevant experience and post-secondary degree in related field of study or an equivalent combination of education and experience.",
-"y": 4.0,
+"q": "Minimum 2 years of commercial or corporate credit experience, preferably in a transaction execution role.",
+"y": 2.0,
 "yd": [
-"investing"
+"investing",
+"deals"
 ],
-"yh": 6.0
+"yh": null
 },
 "https://cae.wd3.myworkdayjobs.com/career/job/Montreal-St-Laurent/Experienced-Analyst--Corporate-Finance-and-M-A_123448": {
 "cfa": "progress",
@@ -835,27 +876,6 @@
 ],
 "yh": null
 },
-"https://desjardins.wd10.myworkdayjobs.com/Desjardins/job/Montral/Ngociateur-ou-ngociatrice-XVA--Produits-drivs_R2612296-1": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-10-18",
-"fpa": 0,
-"fr": true,
-"front": 23,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6177,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "A minimum of five to ten years of relevant experience",
-"y": 5,
-"yd": [
-"general"
-],
-"yh": 10
-},
 "https://desjardins.wd10.myworkdayjobs.com/Desjardins/job/Montral/Spcialiste-de-produits--Fonds-d-investissement_R2612233-1": {
 "cfa": "progress",
 "cpa": false,
@@ -1001,6 +1021,25 @@
 "investing"
 ],
 "yh": 12.0
+},
+"https://fondsclimatmontreal.com/carriere/#analyste-en-investissement-d-impact-et-innovation-financi-re-stage": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-23",
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 1505,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
 },
 "https://frontrow.ventures/en/join-us/#venture-analyst": {
 "cfa": "",
@@ -1377,27 +1416,6 @@
 ],
 "yh": null
 },
-"https://investquebec.wd10.myworkdayjobs.com/ext/job/Montral/Conseiller--Investissement--Capital-de-croissance--Montral-_R3612-1": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-10-18",
-"fpa": 1,
-"fr": false,
-"front": 17,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 7630,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum de 3 années d’expérience professionnelle probante en analyse commerciale ou sectorielle, analyse financière et en évaluation d’entreprise, en modélisation financière, notamment en banque d’investissement, en c…",
-"y": 3.0,
-"yd": [
-"deals"
-],
-"yh": null
-},
 "https://investquebec.wd10.myworkdayjobs.com/ext/job/Montral/Conseiller-spcialis--Exportations--Secteur-transport-et-logistique--Marchs-des-USA--remplacement---1-an---bas--Montral-_R3633": {
 "cfa": "",
 "cpa": false,
@@ -1593,6 +1611,25 @@
 "jr": false,
 "mba": false,
 "n": 9984,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://pwc.wd3.myworkdayjobs.com/Global_Experienced_Careers/job/Toronto/Transaction-Services-Senior-Associate---Financial-Services--Bilingual-FR-EN-_768241WD-2": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-23",
+"fpa": 1,
+"fr": true,
+"front": 26,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 9099,
 "ok": true,
 "ops": 0,
 "opsy": false,
@@ -1877,10 +1914,10 @@
 ],
 "yh": null
 },
-"https://www.jobbank.gc.ca/jobsearch/jobposting/50517540": {
+"https://www.jobbank.gc.ca/jobsearch/jobposting/50563938": {
 "cfa": "",
 "cpa": false,
-"d": "2026-10-19",
+"d": "2026-10-23",
 "fpa": 0,
 "fr": true,
 "front": 5,
@@ -1962,27 +1999,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4425324437/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-22",
-"fpa": 0,
-"fr": false,
-"front": 0,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3975,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "5 à 8 ans d’expérience en développement logiciel et administration de systèmes.",
-"y": 5.0,
-"yd": [
-"general"
-],
-"yh": 8.0
-},
 "https://www.linkedin.com/jobs/view/4455946961/": {
 "cfa": "mention",
 "cpa": false,
@@ -2046,27 +2062,6 @@
 "deals"
 ],
 "yh": null
-},
-"https://www.linkedin.com/jobs/view/4463921641/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-22",
-"fpa": 0,
-"fr": true,
-"front": 4,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 5989,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Cinq à dix ans d’expérience en investissement, ainsi qu’une expérience des régimes à prestations déterminées à titre de conseiller, de gestionnaire de relations ou de gestionnaire de placements.",
-"y": 5,
-"yd": [
-"investing"
-],
-"yh": 10
 },
 "https://www.linkedin.com/jobs/view/4465882599/": {
 "cfa": "progress",
@@ -2234,27 +2229,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4472797293/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-22",
-"fpa": 0,
-"fr": true,
-"front": 29,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 10301,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "3+ years of experience in grain (or agricultural commodities) trading, with a proven track record of building and running a profitable book.",
-"y": 3.0,
-"yd": [
-"investing"
-],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4472945727/": {
 "cfa": "mention",
 "cpa": false,
@@ -2296,25 +2270,6 @@
 "investing"
 ],
 "yh": 4.0
-},
-"https://www.linkedin.com/jobs/view/4473243457/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-22",
-"fpa": 0,
-"fr": true,
-"front": 19,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6742,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
 },
 "https://www.linkedin.com/jobs/view/4473393229/": {
 "cfa": "",
@@ -2374,27 +2329,6 @@
 "y": 5.0,
 "yd": [
 "investing"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4474026167/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-22",
-"fpa": 0,
-"fr": false,
-"front": 1,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3888,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum de 10 ans d'expérience en processus opérationnels TI;",
-"y": 10.0,
-"yd": [
-"general"
 ],
 "yh": null
 },
@@ -2542,27 +2476,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4479137378/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-22",
-"fpa": 0,
-"fr": true,
-"front": 0,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6008,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Cinq (5) années d’expérience, dont trois (3) ans d’expérience dans des fonctions similaires au cours des cinq (5) dernières années;",
-"y": 5,
-"yd": [
-"general"
-],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4479429766/": {
 "cfa": "",
 "cpa": false,
@@ -2645,25 +2558,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4481128592/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-22",
-"fpa": 1,
-"fr": true,
-"front": 1,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4036,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4481274407/": {
 "cfa": "progress",
 "cpa": false,
@@ -2684,6 +2578,27 @@
 "investing"
 ],
 "yh": null
+},
+"https://www.linkedin.com/jobs/view/4481376130/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-23",
+"fpa": 14,
+"fr": false,
+"front": 10,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 12525,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum 10–15 years of relevant experience in engineering, product development, portfolio management, program management, or technology-driven organizations.",
+"y": 10.0,
+"yd": [
+"investing"
+],
+"yh": 15.0
 },
 "https://www.linkedin.com/jobs/view/4482138870/": {
 "cfa": "progress",
