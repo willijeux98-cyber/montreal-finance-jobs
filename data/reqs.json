@@ -897,27 +897,6 @@
 ],
 "yh": null
 },
-"https://desjardins.wd10.myworkdayjobs.com/Desjardins/job/Montral/Conseiller-expert-ou-conseillre-experte--Vrification-diligente-financire_R2610538-1": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-18",
-"fpa": 1,
-"fr": true,
-"front": 8,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4315,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "A minimum of eight years of relevant experience",
-"y": 8,
-"yd": [
-"general"
-],
-"yh": null
-},
 "https://desjardins.wd10.myworkdayjobs.com/Desjardins/job/Montral/Conseiller-ou-conseillre-aux-ventes-et-ngociations--March-des-capitaux_R2612290": {
 "cfa": "",
 "cpa": false,
@@ -1941,46 +1920,6 @@
 ],
 "yh": 12.0
 },
-"https://www.jobbank.gc.ca/jobsearch/jobposting/50479718": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-19",
-"fpa": 0,
-"fr": true,
-"front": 5,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4224,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Experience:* minimum 2 years in equity research",
-"y": 2.0,
-"yd": [
-"investing"
-],
-"yh": null
-},
-"https://www.jobbank.gc.ca/jobsearch/jobposting/50563938": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-23",
-"fpa": 0,
-"fr": true,
-"front": 5,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6100,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4375068798/": {
 "cfa": "mention",
 "cpa": false,
@@ -2047,6 +1986,27 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4425324437/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3975,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "5 à 8 ans d’expérience en développement logiciel et administration de systèmes.",
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": 8.0
+},
 "https://www.linkedin.com/jobs/view/4455946961/": {
 "cfa": "mention",
 "cpa": false,
@@ -2090,6 +2050,69 @@
 ],
 "yh": 7.0
 },
+"https://www.linkedin.com/jobs/view/4463686603/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 2,
+"fr": true,
+"front": 25,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 14726,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Plus de 1 ans d’expérience professionnelle en comptabilité publique, services transactionnels, consultation, finance corporative ou dans un environnement similaire de services professionnels",
+"y": 1.0,
+"yd": [
+"deals"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4463921641/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 0,
+"fr": true,
+"front": 4,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5989,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Cinq à dix ans d’expérience en investissement, ainsi qu’une expérience des régimes à prestations déterminées à titre de conseiller, de gestionnaire de relations ou de gestionnaire de placements.",
+"y": 5,
+"yd": [
+"investing"
+],
+"yh": 10
+},
+"https://www.linkedin.com/jobs/view/4465882599/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 0,
+"fr": true,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4762,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Five to ten years of experience working with defined benefit plans as a consultant or relationship manager.",
+"y": 5,
+"yd": [
+"deals"
+],
+"yh": 10
+},
 "https://www.linkedin.com/jobs/view/4466354481/": {
 "cfa": "",
 "cpa": false,
@@ -2111,6 +2134,27 @@
 "deals"
 ],
 "yh": null
+},
+"https://www.linkedin.com/jobs/view/4466371366/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 5,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 10323,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "De 8 à 12 années d'expérience en transformation, stratégie d'affaires, commerce électronique, consultation, gestion de programme ou dans un domaine connexe.",
+"y": 8.0,
+"yd": [
+"deals"
+],
+"yh": 12.0
 },
 "https://www.linkedin.com/jobs/view/4470307797/": {
 "cfa": "",
@@ -2155,6 +2199,25 @@
 ],
 "yh": 4.0
 },
+"https://www.linkedin.com/jobs/view/4470925397/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 0,
+"fr": true,
+"front": 22,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 9373,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4471513878/": {
 "cfa": "progress",
 "cpa": false,
@@ -2170,6 +2233,48 @@
 "ops": 0,
 "opsy": false,
 "q": "Minimum de 3 ans d’expérience en immobilier commercial, avec un accent sur l’analyse financière et l’analyse de faisabilité financière ( underwriting ).",
+"y": 3.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4471599818/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 9,
+"fr": true,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7711,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum de 5 ans d’expérience en marketing pharmaceutique ou dans un rôle similaire.",
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4472797293/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 0,
+"fr": true,
+"front": 29,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 10301,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "3+ years of experience in grain (or agricultural commodities) trading, with a proven track record of building and running a profitable book.",
 "y": 3.0,
 "yd": [
 "investing"
@@ -2218,6 +2323,46 @@
 ],
 "yh": 4.0
 },
+"https://www.linkedin.com/jobs/view/4473243457/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 0,
+"fr": true,
+"front": 19,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6742,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4473393229/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 0,
+"fr": true,
+"front": 8,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5037,
+"ok": true,
+"ops": 4,
+"opsy": true,
+"q": "Minimum 6 ans d'expérience en analyse d'affaires, dans un contexte de livraison de solutions intégrées bout en bout pour le secteur marché des capitaux",
+"y": 6.0,
+"yd": [
+"ops"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4473563901/": {
 "cfa": "",
 "cpa": false,
@@ -2258,6 +2403,27 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4474026167/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3888,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum de 10 ans d'expérience en processus opérationnels TI;",
+"y": 10.0,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4474339372/": {
 "cfa": "mention",
 "cpa": false,
@@ -2277,6 +2443,27 @@
 "yd": [
 "investing",
 "deals"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4475495449/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 0,
+"fr": false,
+"front": 13,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 9266,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum de 2 ans d’expérience en analyse financière ou en marchés financiers ;",
+"y": 2.0,
+"yd": [
+"general"
 ],
 "yh": null
 },
@@ -2322,6 +2509,86 @@
 ],
 "yh": 5.0
 },
+"https://www.linkedin.com/jobs/view/4477885774/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 0,
+"fr": true,
+"front": 7,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4166,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4478274876/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 4,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 2679,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4479008023/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 0,
+"fr": false,
+"front": 10,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5938,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "5 ans d’expérience préalable en analyse d’affaires dans un contexte de projet de livraison de solutions d’affaires pour le secteur marché des capitaux, sur des sujets affaires du pupitre de dérivés et revenu fixe.",
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4479137378/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 0,
+"fr": true,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6008,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Cinq (5) années d’expérience, dont trois (3) ans d’expérience dans des fonctions similaires au cours des cinq (5) dernières années;",
+"y": 5,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4479429766/": {
 "cfa": "",
 "cpa": false,
@@ -2362,6 +2629,28 @@
 "yd": [],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4480503219/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 0,
+"fr": true,
+"front": 13,
+"inv": true,
+"jr": true,
+"mba": false,
+"n": 8531,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "1-2 years of relevant professional experience in finance, investment banking, corporate banking, project finance, private equity, consulting, development finance, asset management, portfolio management, or related field.",
+"y": 1.0,
+"yd": [
+"investing",
+"deals"
+],
+"yh": 2.0
+},
 "https://www.linkedin.com/jobs/view/4480505133/": {
 "cfa": "mention",
 "cpa": false,
@@ -2382,6 +2671,46 @@
 "investing"
 ],
 "yh": 2
+},
+"https://www.linkedin.com/jobs/view/4480511909/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 6,
+"fr": true,
+"front": 4,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7123,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Plus de 2 ans d’expérience en gestion de comptes clés, de portefeuille ou de marque — idéalement dans le secteur des produits de grande consommation (CPG), les boissons alcoolisées ou les industries de style de vie ha…",
+"y": 2.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4481128592/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-25",
+"fpa": 1,
+"fr": true,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4036,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
 },
 "https://www.linkedin.com/jobs/view/4481274407/": {
 "cfa": "progress",
