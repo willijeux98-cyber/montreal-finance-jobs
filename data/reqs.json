@@ -792,6 +792,27 @@
 ],
 "yh": 3
 },
+"https://cdpq.wd10.myworkdayjobs.com/CDPQ/job/Montreal/Directeur--trice--principal-e---Marchs-liquides-et-portefeuilles-global_R05182": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 0,
+"fr": true,
+"front": 4,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6225,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Un minimum de 15 années d’expérience dans un environnement de placement, de gestion des risques ou de finance quantitative, dont 5 années en gestion d’équipe, idéalement dans les marchés des capitaux ou en gestion des…",
+"y": 15.0,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://cib-bic.ca/en/jobs/?gh_jid=5254348008": {
 "cfa": "progress",
 "cpa": false,
@@ -1272,6 +1293,27 @@
 ],
 "yh": 5
 },
+"https://investpsp.wd3.myworkdayjobs.com/psp_careers/job/Montreal/Associate--Real-Estate-Investments_R5030": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 3,
+"fr": true,
+"front": 9,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 5695,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Three (3) to five (5) years of experience in analyzing and structuring complex international real estate transactions, including institutional assets and multi-market portfolios",
+"y": 3,
+"yd": [
+"deals"
+],
+"yh": 5
+},
 "https://investpsp.wd3.myworkdayjobs.com/psp_careers/job/Montreal/Intern--Natural-Resources-Investments--Latin-America--January---April-2027-_R5004": {
 "cfa": "progress",
 "cpa": false,
@@ -1434,27 +1476,6 @@
 "y": 3,
 "yd": [
 "ops"
-],
-"yh": null
-},
-"https://investquebec.wd10.myworkdayjobs.com/ext/job/Montral/Conseiller-spcialis--Exportations--Secteur-transport-et-logistique--Marchs-des-USA--remplacement---1-an---bas--Montral-_R3633": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-18",
-"fpa": 0,
-"fr": true,
-"front": 0,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6411,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Posséder un minimum de trois (3) années d'expérience dans les secteurs du transport et de la logistique, idéalement en développement de marché et exportations.",
-"y": 3,
-"yd": [
-"general"
 ],
 "yh": null
 },
@@ -1960,6 +1981,27 @@
 ],
 "yh": 3.0
 },
+"https://www.linkedin.com/jobs/view/4425324437/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3975,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "5 à 8 ans d’expérience en développement logiciel et administration de systèmes.",
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": 8.0
+},
 "https://www.linkedin.com/jobs/view/4455946961/": {
 "cfa": "mention",
 "cpa": false,
@@ -2002,6 +2044,27 @@
 "deals"
 ],
 "yh": 7.0
+},
+"https://www.linkedin.com/jobs/view/4463686603/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 2,
+"fr": true,
+"front": 25,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 14726,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Plus de 1 ans d’expérience professionnelle en comptabilité publique, services transactionnels, consultation, finance corporative ou dans un environnement similaire de services professionnels",
+"y": 1.0,
+"yd": [
+"deals"
+],
+"yh": null
 },
 "https://www.linkedin.com/jobs/view/4463921641/": {
 "cfa": "progress",
@@ -2088,6 +2151,25 @@
 ],
 "yh": 4.0
 },
+"https://www.linkedin.com/jobs/view/4470925397/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 0,
+"fr": true,
+"front": 22,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 9373,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4471513878/": {
 "cfa": "progress",
 "cpa": false,
@@ -2103,6 +2185,48 @@
 "ops": 0,
 "opsy": false,
 "q": "Minimum de 3 ans d’expérience en immobilier commercial, avec un accent sur l’analyse financière et l’analyse de faisabilité financière ( underwriting ).",
+"y": 3.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4471599818/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 9,
+"fr": true,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7711,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum de 5 ans d’expérience en marketing pharmaceutique ou dans un rôle similaire.",
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4472797293/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 0,
+"fr": true,
+"front": 29,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 10301,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "3+ years of experience in grain (or agricultural commodities) trading, with a proven track record of building and running a profitable book.",
 "y": 3.0,
 "yd": [
 "investing"
@@ -2151,6 +2275,65 @@
 ],
 "yh": 4.0
 },
+"https://www.linkedin.com/jobs/view/4473243457/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 0,
+"fr": true,
+"front": 19,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6742,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4473393229/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 0,
+"fr": true,
+"front": 8,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5037,
+"ok": true,
+"ops": 4,
+"opsy": true,
+"q": "Minimum 6 ans d'expérience en analyse d'affaires, dans un contexte de livraison de solutions intégrées bout en bout pour le secteur marché des capitaux",
+"y": 6.0,
+"yd": [
+"ops"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4473563901/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 0,
+"fr": true,
+"front": 4,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3038,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4473591973/": {
 "cfa": "",
 "cpa": false,
@@ -2169,6 +2352,27 @@
 "y": 5.0,
 "yd": [
 "investing"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4474026167/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3888,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum de 10 ans d'expérience en processus opérationnels TI;",
+"y": 10.0,
+"yd": [
+"general"
 ],
 "yh": null
 },
@@ -2194,27 +2398,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4475495449/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-27",
-"fpa": 0,
-"fr": false,
-"front": 13,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 9266,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum de 2 ans d’expérience en analyse financière ou en marchés financiers ;",
-"y": 2.0,
-"yd": [
-"general"
-],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4476801945/": {
 "cfa": "progress",
 "cpa": false,
@@ -2235,6 +2418,107 @@
 "general"
 ],
 "yh": 5.0
+},
+"https://www.linkedin.com/jobs/view/4477850433/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 1,
+"fr": true,
+"front": 13,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 11165,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "De deux à sept ans d’expérience en placement, en recherche quantitative ou en développement quantitatif, en analyse de portefeuille, en répartition de l’actif, en services-conseils en actuariat ou en placement, ou en …",
+"y": 2,
+"yd": [
+"investing"
+],
+"yh": 7
+},
+"https://www.linkedin.com/jobs/view/4477885774/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 0,
+"fr": true,
+"front": 7,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4166,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4478274876/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 4,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 2679,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4479008023/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 0,
+"fr": false,
+"front": 10,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5938,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "5 ans d’expérience préalable en analyse d’affaires dans un contexte de projet de livraison de solutions d’affaires pour le secteur marché des capitaux, sur des sujets affaires du pupitre de dérivés et revenu fixe.",
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4479137378/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 0,
+"fr": true,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6008,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Cinq (5) années d’expérience, dont trois (3) ans d’expérience dans des fonctions similaires au cours des cinq (5) dernières années;",
+"y": 5,
+"yd": [
+"general"
+],
+"yh": null
 },
 "https://www.linkedin.com/jobs/view/4479429766/": {
 "cfa": "",
@@ -2296,6 +2580,67 @@
 "investing"
 ],
 "yh": 2
+},
+"https://www.linkedin.com/jobs/view/4480511909/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 6,
+"fr": true,
+"front": 4,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7123,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Plus de 2 ans d’expérience en gestion de comptes clés, de portefeuille ou de marque — idéalement dans le secteur des produits de grande consommation (CPG), les boissons alcoolisées ou les industries de style de vie ha…",
+"y": 2.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4481128592/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 1,
+"fr": true,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4036,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4482138870/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 4,
+"fr": true,
+"front": 14,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 2834,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "10 years of relevant experience in managing financial projects related to M&A, restructurings, or integrations.",
+"y": 10.0,
+"yd": [
+"deals"
+],
+"yh": null
 },
 "https://www.linkedin.com/jobs/view/4482149942/": {
 "cfa": "",
@@ -2360,6 +2705,49 @@
 "investing"
 ],
 "yh": 4.0
+},
+"https://www.linkedin.com/jobs/view/4483650295/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 0,
+"fr": true,
+"front": 11,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 2141,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Environ 7 à 12 ans d’expérience en M&A, corporate development, Big Four (Deals / Transaction Services) ou private equity",
+"y": 7.0,
+"yd": [
+"investing",
+"deals"
+],
+"yh": 12.0
+},
+"https://www.linkedin.com/jobs/view/4484244578/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-10-28",
+"fpa": 0,
+"fr": false,
+"front": 3,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 13878,
+"ok": true,
+"ops": 2,
+"opsy": false,
+"q": "Minimum two (2) years of experience in investment research, economic analysis, financial markets, data analysis, or a related field.",
+"y": 2,
+"yd": [
+"investing"
+],
+"yh": null
 },
 "https://www.squarepoint-capital.com/open-opportunities?id=2546549&gh_jid=2546549": {
 "cfa": "",
