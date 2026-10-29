@@ -312,6 +312,27 @@
 ],
 "yh": 6.0
 },
+"https://bmo.wd3.myworkdayjobs.com/External/job/New-York-NY-USA/Associate--Corporate-Banking--FIG_R260030299": {
+"cfa": "mention",
+"cpa": false,
+"d": "2026-10-29",
+"fpa": 0,
+"fr": false,
+"front": 18,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 8194,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Typically 4 – 6 years of relevant experience in covering the FIG segment from a corporate or commercial banking and lending perspective, including credit underwriting, transaction structuring, and client management wi…",
+"y": 4.0,
+"yd": [
+"investing"
+],
+"yh": 6.0
+},
 "https://cae.wd3.myworkdayjobs.com/career/job/Montreal-St-Laurent/Experienced-Analyst--Corporate-Finance-and-M-A_123448": {
 "cfa": "progress",
 "cpa": false,
@@ -857,6 +878,27 @@
 ],
 "yh": 3.0
 },
+"https://desjardins.wd10.myworkdayjobs.com/Desjardins/job/Lvis/Conseiller-ou-conseillre--Rmunration-globale--valuation-des-emplois-et-vigie-de-march_R2612999-1": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-29",
+"fpa": 0,
+"fr": true,
+"front": 2,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 2994,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "A minimum of four years of relevant experience",
+"y": 4,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://desjardins.wd10.myworkdayjobs.com/Desjardins/job/Lvis/Parcours-de-dveloppement--Solutions-de-placement_R2611992-1": {
 "cfa": "",
 "cpa": false,
@@ -874,27 +916,6 @@
 "q": "",
 "y": null,
 "yd": [],
-"yh": null
-},
-"https://desjardins.wd10.myworkdayjobs.com/Desjardins/job/Montral/Analyste--Financement-durable_R2612489-1": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-18",
-"fpa": 0,
-"fr": true,
-"front": 1,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 2661,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "A minimum of two years of relevant experience",
-"y": 2,
-"yd": [
-"general"
-],
 "yh": null
 },
 "https://desjardins.wd10.myworkdayjobs.com/Desjardins/job/Montral/Analyste--Modlisation-des-accs--Infrastructures-Azure_R2612651-1": {
@@ -1855,27 +1876,6 @@
 ],
 "yh": 5.0
 },
-"https://www.bnpparibas.ca/en/jobs/corporate-coverage-graduate-analyst/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-16",
-"fpa": 1,
-"fr": false,
-"front": 11,
-"inv": true,
-"jr": true,
-"mba": false,
-"n": 10148,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Has less than 1 year full-time professional experience excluding relevant internship experience",
-"y": 0,
-"yd": [
-"general"
-],
-"yh": 1.0
-},
 "https://www.bnpparibas.ca/en/jobs/credit-officer-securitization-private-debt-financing-and-clo-warehousing/": {
 "cfa": "",
 "cpa": false,
@@ -1981,27 +1981,6 @@
 ],
 "yh": 3.0
 },
-"https://www.linkedin.com/jobs/view/4425324437/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-28",
-"fpa": 0,
-"fr": false,
-"front": 0,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3975,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "5 à 8 ans d’expérience en développement logiciel et administration de systèmes.",
-"y": 5.0,
-"yd": [
-"general"
-],
-"yh": 8.0
-},
 "https://www.linkedin.com/jobs/view/4455946961/": {
 "cfa": "mention",
 "cpa": false,
@@ -2065,27 +2044,6 @@
 "deals"
 ],
 "yh": null
-},
-"https://www.linkedin.com/jobs/view/4463921641/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-27",
-"fpa": 0,
-"fr": true,
-"front": 4,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 5989,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Cinq à dix ans d’expérience en investissement, ainsi qu’une expérience des régimes à prestations déterminées à titre de conseiller, de gestionnaire de relations ou de gestionnaire de placements.",
-"y": 5,
-"yd": [
-"investing"
-],
-"yh": 10
 },
 "https://www.linkedin.com/jobs/view/4465882599/": {
 "cfa": "progress",
@@ -2170,27 +2128,6 @@
 "yd": [],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4471513878/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-02",
-"fpa": 0,
-"fr": true,
-"front": 10,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 7566,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum de 3 ans d’expérience en immobilier commercial, avec un accent sur l’analyse financière et l’analyse de faisabilité financière ( underwriting ).",
-"y": 3.0,
-"yd": [
-"investing"
-],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4471599818/": {
 "cfa": "",
 "cpa": false,
@@ -2209,27 +2146,6 @@
 "y": 5.0,
 "yd": [
 "general"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4472797293/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-28",
-"fpa": 0,
-"fr": true,
-"front": 29,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 10301,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "3+ years of experience in grain (or agricultural commodities) trading, with a proven track record of building and running a profitable book.",
-"y": 3.0,
-"yd": [
-"investing"
 ],
 "yh": null
 },
@@ -2252,46 +2168,6 @@
 "yd": [
 "investing"
 ],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4473019680/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-22",
-"fpa": 1,
-"fr": false,
-"front": 10,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4951,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "2 to 4 years of relevant experience in real estate finance, debt structuring, or financial analysis.",
-"y": 2.0,
-"yd": [
-"investing"
-],
-"yh": 4.0
-},
-"https://www.linkedin.com/jobs/view/4473243457/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-28",
-"fpa": 0,
-"fr": true,
-"front": 19,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6742,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4473393229/": {
@@ -2352,27 +2228,6 @@
 "y": 5.0,
 "yd": [
 "investing"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4474026167/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-28",
-"fpa": 0,
-"fr": false,
-"front": 1,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3888,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum de 10 ans d'expérience en processus opérationnels TI;",
-"y": 10.0,
-"yd": [
-"general"
 ],
 "yh": null
 },
@@ -2499,27 +2354,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4479137378/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-28",
-"fpa": 0,
-"fr": true,
-"front": 0,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6008,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Cinq (5) années d’expérience, dont trois (3) ans d’expérience dans des fonctions similaires au cours des cinq (5) dernières années;",
-"y": 5,
-"yd": [
-"general"
-],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4479429766/": {
 "cfa": "",
 "cpa": false,
@@ -2602,46 +2436,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4481128592/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-28",
-"fpa": 1,
-"fr": true,
-"front": 1,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4036,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4482138870/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-28",
-"fpa": 4,
-"fr": true,
-"front": 14,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 2834,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "10 years of relevant experience in managing financial projects related to M&A, restructurings, or integrations.",
-"y": 10.0,
-"yd": [
-"deals"
-],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4482149942/": {
 "cfa": "",
 "cpa": false,
@@ -2682,6 +2476,27 @@
 "yd": [
 "investing",
 "deals"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4482545574/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-10-29",
+"fpa": 0,
+"fr": true,
+"front": 6,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4602,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum 7 years of experience in Commercial Banking, Corporate Banking, National Accounts, or Capital Markets, preferably serving large corporate clients with annual revenues of C$100 million or more.",
+"y": 7.0,
+"yd": [
+"investing"
 ],
 "yh": null
 },
@@ -2749,19 +2564,19 @@
 ],
 "yh": null
 },
-"https://www.squarepoint-capital.com/open-opportunities?id=2546549&gh_jid=2546549": {
+"https://www.squarepoint-capital.com/open-opportunities?id=253410&gh_jid=253410": {
 "cfa": "",
 "cpa": false,
-"d": "2026-10-02",
+"d": "2026-10-29",
 "fpa": 0,
 "fr": false,
-"front": 7,
+"front": 5,
 "inv": false,
-"jr": true,
+"jr": false,
 "mba": false,
-"n": 2266,
+"n": 1960,
 "ok": true,
-"ops": 2,
+"ops": 0,
 "opsy": false,
 "q": "",
 "y": null,
