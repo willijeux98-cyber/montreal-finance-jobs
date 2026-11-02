@@ -21,7 +21,7 @@
     ]
    ]
   ],
-  "careers": "https://www.lacaisse.com/fr/carrieres",
+  "careers": "https://www.lacaisse.com/en/careers",
   "rc": false
  },
  {
@@ -38,7 +38,7 @@
     ]
    ]
   ],
-  "careers": "https://www.investpsp.com/en/news/psp-investments-joins-cpp-investments-and-ferrovial-in-407-etr-ownership-group/",
+  "careers": "https://www.investpsp.com/en/work/careers/",
   "rc": false
  },
  {
@@ -63,7 +63,7 @@
     ]
    ]
   ],
-  "careers": "https://www.fondsftq.com/erreur-404.aspx?item=%2fcareers%2f&user=espaceepargnant%5cAnonymous&site=espaceepargnant",
+  "careers": "https://www.fondsftq.com/erreur-404.aspx?item=%2fjoin-us&user=espaceepargnant%5cAnonymous&site=espaceepargnant",
   "rc": false
  },
  {
@@ -71,7 +71,7 @@
   "domain": "fondaction.com",
   "cat": "pension",
   "boards": [],
-  "careers": "https://www.fondaction.com/carrieres/",
+  "careers": "https://www.fondaction.com/nous-joindre/",
   "rc": true
  },
  {
@@ -88,7 +88,7 @@
     ]
    ]
   ],
-  "careers": "https://carrieres.investquebec.com/",
+  "careers": "https://www.investquebec.com/fr/nous-joindre/infolettre",
   "rc": false
  },
  {
@@ -162,7 +162,7 @@
     ]
    ]
   ],
-  "careers": "https://www.ardian.com/talent/resource-center",
+  "careers": "https://www.ardian.com/talent/inclusion-diversity",
   "rc": true
  },
  {
@@ -187,7 +187,7 @@
     ]
    ]
   ],
-  "careers": "https://www.desjardins.com/fr/nous-joindre.html",
+  "careers": "https://www.desjardins.com/fr/carriere.html?utm_campaign=vanity-url&utm_medium=vanity&utm_source=desjardins&utm_term=/carrieres/index.jsp",
   "rc": true
  },
  {
@@ -195,7 +195,7 @@
   "domain": "cn.ca",
   "cat": "pension",
   "boards": [],
-  "careers": "https://www.cn.ca/fr/carrieres",
+  "careers": "https://www.cn.ca/careers/",
   "rc": false
  },
  {
@@ -203,7 +203,7 @@
   "domain": "omers.com",
   "cat": "pension",
   "boards": [],
-  "careers": "https://www.omers.com/en/about/careers",
+  "careers": "https://www.omers.com/careers",
   "rc": false
  },
  {
@@ -228,7 +228,7 @@
     ]
    ]
   ],
-  "careers": "https://www.otpp.com/en-ca/careers/meet-our-team/strategy-stakeholder-relations/",
+  "careers": "https://www.otpp.com/en-ca/careers/meet-our-team/",
   "rc": false
  },
  {
@@ -252,8 +252,17 @@
   "name": "AIMCo",
   "domain": "aimco.ca",
   "cat": "pension",
-  "boards": [],
-  "careers": null,
+  "boards": [
+   [
+    "workday",
+    [
+     "aimco",
+     "10",
+     "AIMCoCareers"
+    ]
+   ]
+  ],
+  "careers": "https://www.aimco.ca/careers",
   "rc": false
  },
  {
@@ -382,7 +391,7 @@
     "northleafcapitalpartners"
    ]
   ],
-  "careers": "https://www.northleafcapital.com/fr/carrieres",
+  "careers": "https://www.northleafcapital.com/careers",
   "rc": false
  },
  {
@@ -445,7 +454,7 @@
   "domain": "kkr.com",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://www.kkr.com/careers/student-careers",
+  "careers": "https://www.kkr.com/careers/inclusive-culture",
   "rc": false
  },
  {
@@ -517,7 +526,7 @@
   "domain": "brightspark.com",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://brightspark.com/en/about/careers",
+  "careers": "https://careers.brightspark.com/companies",
   "rc": true
  },
  {
@@ -541,7 +550,7 @@
   "domain": "frontrow.vc",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://frontrow.ventures/en/join-us/",
+  "careers": "https://pinchtalent.com/",
   "rc": true
  },
  {
@@ -570,7 +579,7 @@
     "georgian"
    ]
   ],
-  "careers": "https://careers.georgian.io/jobs",
+  "careers": "https://georgian.io/careers",
   "rc": false
  },
  {
@@ -627,7 +636,7 @@
   "domain": "jflglobal.com",
   "cat": "am",
   "boards": [],
-  "careers": "https://jflglobal.com/fr-ca/carrieres/",
+  "careers": "https://jflglobal.com/en-ca/careers/",
   "rc": false
  },
  {
@@ -708,7 +717,7 @@
   "domain": "optimumgestion.com",
   "cat": "am",
   "boards": [],
-  "careers": "https://carrieres.optimumfinancier.com/en/available-positions",
+  "careers": "https://carrieres.optimumfinancier.com/postes-disponibles",
   "rc": false
  },
  {
@@ -716,7 +725,7 @@
   "domain": "formulagrowth.ca",
   "cat": "am",
   "boards": [],
-  "careers": null,
+  "careers": "https://www.formulagrowth.com/investment_fund/formula-growth-global-opportunities-fund/",
   "rc": false
  },
  {
@@ -773,7 +782,7 @@
   "domain": "mawer.com",
   "cat": "am",
   "boards": [],
-  "careers": "https://www.mawer.com/fr/carrieres",
+  "careers": "https://www.mawer.com/join-us",
   "rc": false
  },
  {
@@ -789,7 +798,7 @@
   "domain": "burgundyasset.com",
   "cat": "am",
   "boards": [],
-  "careers": "https://www.burgundyasset.com/job-opportunities/",
+  "careers": "https://www.burgundyasset.com/fr/carrieres/",
   "rc": false
  },
  {
@@ -822,7 +831,7 @@
   "domain": "blackrock.com",
   "cat": "am",
   "boards": [],
-  "careers": "https://careers.blackrock.com",
+  "careers": "https://careers.blackrock.com/",
   "rc": false
  },
  {
@@ -856,7 +865,7 @@
     ]
    ]
   ],
-  "careers": "https://ia.ca/nous-joindre",
+  "careers": "https://ia.ca/jobs",
   "rc": false
  },
  {
@@ -881,7 +890,7 @@
     ]
    ]
   ],
-  "careers": "https://careers.manulife.com/global/en",
+  "careers": "https://careers.manulife.com/ca/fr",
   "rc": false
  },
  {
@@ -914,7 +923,7 @@
     ]
    ]
   ],
-  "careers": "https://www.desjardins.com/fr/nous-joindre.html",
+  "careers": "https://www.desjardins.com/fr/carriere.html?utm_campaign=vanity-url&utm_medium=vanity&utm_source=desjardins&utm_term=/carrieres/index.jsp",
   "rc": false
  },
  {
@@ -970,7 +979,7 @@
   "domain": "rbc.com",
   "cat": "ib",
   "boards": [],
-  "careers": "https://www.rbc.com/en/about-us/history/careers/",
+  "careers": "https://www.rbc.com/fr/notre-compagnie/histoire/carrieres/",
   "rc": false
  },
  {
@@ -1084,7 +1093,7 @@
   "domain": "bnpparibas.ca",
   "cat": "ib",
   "boards": [],
-  "careers": "https://www.bnpparibas.ca/en/join-us/",
+  "careers": "https://www.bnpparibas.ca/en/work-at-bnp-paribas/",
   "rc": false
  },
  {
@@ -1100,7 +1109,7 @@
   "domain": "ca-cib.com",
   "cat": "ib",
   "boards": [],
-  "careers": "https://www.ca-cib.com/careers",
+  "careers": "https://www.ca-cib.com/en/careers/students-and-young-graduates",
   "rc": false
  },
  {
@@ -1125,7 +1134,7 @@
     ]
    ]
   ],
-  "careers": "https://www.tmx.com/en/careers",
+  "careers": "https://www.tmx.com/fr/careers",
   "rc": false
  },
  {
@@ -1133,7 +1142,7 @@
   "domain": "deloitte.com",
   "cat": "advisory",
   "boards": [],
-  "careers": "https://www.deloitte.com/us/en/legal/join-deloitte-legal-information-for-job-seekers.html?icid=bn_join-deloitte-legal-information-for-job-seekers",
+  "careers": "https://www.deloitte.com/us/en/careers/join-deloitte/consultative-offerings-careers.html?icid=top_consultative-offerings-careers",
   "rc": true
  },
  {
@@ -1149,7 +1158,7 @@
   "domain": "ey.com",
   "cat": "advisory",
   "boards": [],
-  "careers": "https://www.ey.com/en_us/careers/application-and-interview-tips",
+  "careers": "https://www.ey.com/en_us/careers/climate-change-sustainability-services",
   "rc": false
  },
  {
@@ -1174,7 +1183,7 @@
     ]
    ]
   ],
-  "careers": "https://www.bdo.ca/insights/capital-flow-and-strategic-m-and-a-opportunities/defence",
+  "careers": "https://www.bdo.ca/careers/",
   "rc": true
  },
  {
@@ -1248,7 +1257,7 @@
     ]
    ]
   ],
-  "careers": "https://hl.com/careers/",
+  "careers": "https://hl.com/careers",
   "rc": false
  },
  {
@@ -1256,7 +1265,7 @@
   "domain": "lazard.com",
   "cat": "advisory",
   "boards": [],
-  "careers": "https://www.lazard.com/careers/students/",
+  "careers": "https://icbpjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/LazardStudentCareers/jobs",
   "rc": false
  },
  {
@@ -1264,7 +1273,7 @@
   "domain": "evercore.com",
   "cat": "advisory",
   "boards": [],
-  "careers": "https://www.evercore.com/careers/professionals/",
+  "careers": "https://www.evercore.com/careers/",
   "rc": false
  },
  {
@@ -1272,14 +1281,6 @@
   "domain": "pjtpartners.com",
   "cat": "advisory",
   "boards": [
-   [
-    "workday",
-    [
-     "pjtpartners",
-     "1",
-     "Careers"
-    ]
-   ],
    [
     "workday",
     [
@@ -1295,9 +1296,17 @@
      "1",
      "Studentevents"
     ]
+   ],
+   [
+    "workday",
+    [
+     "pjtpartners",
+     "1",
+     "Careers"
+    ]
    ]
   ],
-  "careers": "https://www.pjtpartners.com/careers",
+  "careers": "https://www.pjtpartners.com/careers/students",
   "rc": false
  },
  {
@@ -1327,11 +1336,19 @@
     [
      "rothschildandco",
      "3",
+     "RothschildAndCo_Lateral"
+    ]
+   ],
+   [
+    "workday",
+    [
+     "rothschildandco",
+     "3",
      "Rothschildandco_Lateral"
     ]
    ]
   ],
-  "careers": "https://www.rothschildandco.com/en/careers/students-and-graduates/apprenticeships/",
+  "careers": "https://www.rothschildandco.com/en/careers/",
   "rc": false
  },
  {
@@ -1347,7 +1364,7 @@
   "domain": "cgi.com",
   "cat": "corpdev",
   "boards": [],
-  "careers": "https://www.cgi.com/en/careers/career-articles",
+  "careers": "https://www.cgi.com/en/careers/be-supported",
   "rc": false
  },
  {
@@ -1364,7 +1381,7 @@
     ]
    ]
   ],
-  "careers": "https://www.cae.com/about/careers",
+  "careers": "https://www.cae.com/fr/carrieres",
   "rc": false
  },
  {
@@ -1397,7 +1414,7 @@
     ]
    ]
   ],
-  "careers": "https://www.saputo.com/careers/",
+  "careers": "https://www.saputo.com/en/careers",
   "rc": false
  },
  {
@@ -1421,7 +1438,7 @@
   "domain": "aircanada.com",
   "cat": "corpdev",
   "boards": [],
-  "careers": "https://careers.aircanada.com/ca/en",
+  "careers": "https://careers.aircanada.com/ca/fr",
   "rc": false
  },
  {
@@ -1429,7 +1446,7 @@
   "domain": "cn.ca",
   "cat": "corpdev",
   "boards": [],
-  "careers": "https://www.cn.ca/fr/carrieres",
+  "careers": "https://www.cn.ca/careers/",
   "rc": false
  },
  {
@@ -1453,7 +1470,7 @@
   "domain": "nuvei.com",
   "cat": "corpdev",
   "boards": [],
-  "careers": "https://www.nuvei.com/fr/carrieres",
+  "careers": "https://www.nuvei.com/careers",
   "rc": false
  },
  {
@@ -1461,7 +1478,7 @@
   "domain": "hydroquebec.com",
   "cat": "corpdev",
   "boards": [],
-  "careers": "https://emploi.hydroquebec.com//",
+  "careers": "https://emploi.hydroquebec.com/",
   "rc": false
  },
  {
@@ -1485,7 +1502,7 @@
   "domain": "boralex.com",
   "cat": "corpdev",
   "boards": [],
-  "careers": "https://www.boralex.com/en/careers/why-joining-us",
+  "careers": "https://www.boralex.com/en/careers/life-boralex",
   "rc": false
  },
  {
@@ -1493,7 +1510,7 @@
   "domain": "innergex.com",
   "cat": "corpdev",
   "boards": [],
-  "careers": "https://www.innergex.com/en/careers",
+  "careers": "https://www.innergex.com/carrieres",
   "rc": false
  },
  {
@@ -1501,7 +1518,7 @@
   "domain": "pomerleau.ca",
   "cat": "corpdev",
   "boards": [],
-  "careers": "https://pomerleau.ca/en/insights/article/news/groupe-allen-joins-pomerleau",
+  "careers": "https://jobs.pomerleau.ca/en_US/Jobs",
   "rc": false
  },
  {
@@ -1509,7 +1526,7 @@
   "domain": "corpo.cogeco.com",
   "cat": "corpdev",
   "boards": [],
-  "careers": "https://corpo.cogeco.com/carrieres",
+  "careers": "https://corpo.cogeco.com/careers/",
   "rc": false
  },
  {
@@ -1517,7 +1534,7 @@
   "domain": "quebecor.com",
   "cat": "corpdev",
   "boards": [],
-  "careers": "https://www.quebecor.com/fr/nous-joindre",
+  "careers": "https://www.quebecor.com/en/about/careers",
   "rc": false
  },
  {
@@ -1573,7 +1590,7 @@
   "domain": "dissan.com",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://www.dissan.com/carriere-et-culture/",
+  "careers": "https://www.dissan.com/en/career-and-culture/",
   "rc": false
  },
  {
@@ -1605,7 +1622,7 @@
   "domain": "twosmallfish.vc",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://twosmallfish.vc/the-five-layers-of-ai-where-are-the-next-opportunities",
+  "careers": null,
   "rc": true
  },
  {
@@ -1621,7 +1638,7 @@
   "domain": "2degres.com",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://2degres.com/nous-joindre/",
+  "careers": "https://2degres.com/carriere/",
   "rc": false
  },
  {
@@ -1662,7 +1679,7 @@
     ]
    ]
   ],
-  "careers": "https://www.fcc-fac.ca/en/about/careers",
+  "careers": "https://www.fcc-fac.ca/fr/carrieres",
   "rc": true
  },
  {
@@ -1710,7 +1727,7 @@
   "domain": "penderhowe.com",
   "cat": "pe_vc",
   "boards": [],
-  "careers": null,
+  "careers": "https://penderhowe.com/en/insights/dino-crescenzi-joins-pender-howe-as-partner-to-strengthen-its-quebec-practice/",
   "rc": true
  },
  {
@@ -1726,7 +1743,7 @@
   "domain": "propulsionquebec.com",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://propulsionquebec.com/nous-joindre",
+  "careers": "https://propulsionquebec.com/en/careers",
   "rc": false
  },
  {
@@ -1758,7 +1775,7 @@
   "domain": "zumtl.com",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://zumtl.com/en/careers/",
+  "careers": "https://zumtl.com/fr/carrieres/",
   "rc": false
  },
  {
@@ -1774,7 +1791,7 @@
   "domain": "sodec.gouv.qc.ca",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://sodec.gouv.qc.ca/carriere/",
+  "careers": "https://sodec.gouv.qc.ca/sodec-capital/joindre-notre-equipe/",
   "rc": true
  },
  {
@@ -1830,7 +1847,7 @@
   "domain": "i4capital.vc",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://i4capital.vc/carrieres/",
+  "careers": "https://i4capital.vc/join-us/",
   "rc": true
  },
  {
@@ -1870,7 +1887,7 @@
   "domain": "egr.ca",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://www.egr.ca/en/careers/",
+  "careers": "https://www.egr.ca/carrieres/",
   "rc": true
  },
  {
@@ -2031,7 +2048,7 @@
   "domain": "edc.ca",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://www.edc.ca/en/about-us/careers.html",
+  "careers": "https://www.edc.ca/fr/a-propos-de-nous/carrieres.html",
   "rc": false
  },
  {
@@ -2087,7 +2104,7 @@
   "domain": "pmemtl.com",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://pmemtl.com/en/careers",
+  "careers": "https://pmemtl.com/blogue/cinq-trucs-pour-devenir-un-aimant-a-talents",
   "rc": true
  },
  {
@@ -2095,7 +2112,7 @@
   "domain": "developpementvs.com",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://developpementvs.com/carrieres/",
+  "careers": "https://developpementvs.com/nous-joindre/",
   "rc": false
  },
  {
@@ -2167,7 +2184,7 @@
   "domain": "delagglo.ca",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://www.delagglo.ca/en/del/careers",
+  "careers": "https://www.delagglo.ca/fr/del/carrieres",
   "rc": false
  },
  {
@@ -2272,7 +2289,7 @@
   "domain": "mkbandco.com",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://www.mkbandco.com/careers/",
+  "careers": "https://www.mkbandco.com/fr/carrieres/",
   "rc": false
  },
  {
@@ -2288,7 +2305,7 @@
   "domain": "gplassurance.com",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://jobs.ajg.com/ajg-canada?lang=fr-CA",
+  "careers": "https://www.ajg.com/ca-fr/careers/",
   "rc": false
  },
  {
@@ -2296,7 +2313,7 @@
   "domain": "univalor.ca",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://www.axelys.ca/carrieres/",
+  "careers": "https://www.axelys.ca/en/careers",
   "rc": true
  },
  {
@@ -2304,7 +2321,7 @@
   "domain": "axelys.ca",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://www.axelys.ca/carrieres/",
+  "careers": "https://www.axelys.ca/en/careers",
   "rc": true
  },
  {
@@ -2320,7 +2337,7 @@
   "domain": "deloitte.ca",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://www.deloitte.com/ca/en/careers/deloitte-life/talent-value-proposition.html?icid=top_talent-value-proposition",
+  "careers": "https://careers.deloitte.ca/",
   "rc": true
  },
  {
@@ -2368,7 +2385,7 @@
   "domain": "lacaisse.com",
   "cat": "pe_vc",
   "boards": [],
-  "careers": "https://www.lacaisse.com/fr/carrieres",
+  "careers": "https://www.lacaisse.com/en/careers",
   "rc": false
  },
  {
