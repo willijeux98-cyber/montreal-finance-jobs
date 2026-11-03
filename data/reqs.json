@@ -101,6 +101,27 @@
 ],
 "yh": 4.0
 },
+"https://bdc.wd10.myworkdayjobs.com/BDC_Careers/job/Montreal/ANALYST--VENTURE-CAPITAL--ASSET-MANAGEMENT---BDC-Capital_R-8420": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 4,
+"fr": true,
+"front": 12,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 5552,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "Two years of experience in a venture capital firm, technology company, or a financial institution in an investment banking or lending role.",
+"y": 2,
+"yd": [
+"investing"
+],
+"yh": null
+},
 "https://bdc.wd10.myworkdayjobs.com/BDC_Careers/job/Montreal/ASSOCIATE--SEEDS-FUND_R-8385-1": {
 "cfa": "progress",
 "cpa": false,
@@ -728,27 +749,6 @@
 ],
 "yh": 7
 },
-"https://cdpq.wd10.myworkdayjobs.com/CDPQ/job/Montreal/Analyste--Gestion-quantitative_R05162": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-18",
-"fpa": 0,
-"fr": false,
-"front": 2,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4928,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum de un (1) à quatre (4) années d’expérience en développement, en recherche ou en mise en œuvre de modèles quantitatifs appliqués aux marchés boursiers;",
-"y": 1,
-"yd": [
-"investing"
-],
-"yh": 4
-},
 "https://cdpq.wd10.myworkdayjobs.com/CDPQ/job/Montreal/Analyste-principal-e---Placements-privs---Infrastructures_R05136": {
 "cfa": "progress",
 "cpa": false,
@@ -1053,44 +1053,6 @@
 "jr": false,
 "mba": false,
 "n": 1505,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
-"https://frontrow.ventures/en/join-us/#venture-analyst": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-13",
-"fpa": 0,
-"fr": true,
-"front": 44,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 20673,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
-"https://frontrow.ventures/en/join-us/#venture-manager": {
-"cfa": "",
-"cpa": false,
-"d": "2026-10-13",
-"fpa": 0,
-"fr": true,
-"front": 44,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 20673,
 "ok": true,
 "ops": 0,
 "opsy": false,
@@ -1517,6 +1479,27 @@
 "y": 5.0,
 "yd": [
 "investing"
+],
+"yh": null
+},
+"https://jobs.scotiabank.com/job/Montreal-Gestionnaire-principal%28e%29%2C-Gestion-de-programmes-Croissance-Qu%C3%A9bec-QC-H3A-3L6/607619917/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 1,
+"fr": true,
+"front": 1,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 12030,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "Au moins 7 ans d’expérience en gestion de programmes , notamment la responsabilité de programmes d’une valeur supérieure à 5 millions de dollars .",
+"y": 7.0,
+"yd": [
+"general"
 ],
 "yh": null
 },
@@ -2023,6 +2006,48 @@
 ],
 "yh": 7.0
 },
+"https://www.linkedin.com/jobs/view/4463686603/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 2,
+"fr": true,
+"front": 25,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 14726,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Plus de 1 ans d’expérience professionnelle en comptabilité publique, services transactionnels, consultation, finance corporative ou dans un environnement similaire de services professionnels",
+"y": 1.0,
+"yd": [
+"deals"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4465882599/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": true,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4762,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Five to ten years of experience working with defined benefit plans as a consultant or relationship manager.",
+"y": 5,
+"yd": [
+"deals"
+],
+"yh": 10
+},
 "https://www.linkedin.com/jobs/view/4466354481/": {
 "cfa": "",
 "cpa": false,
@@ -2039,6 +2064,131 @@
 "opsy": false,
 "q": "2+ ans d’expérience en marchés des capitaux, capital-investissement, capital de risque, investissement de type « acheter et conserver » ou fusions et acquisitions.",
 "y": 2.0,
+"yd": [
+"investing",
+"deals"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4470884667/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 1,
+"fr": false,
+"front": 11,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5550,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum de 2 à 4 ans d’expérience pertinente dans le domaine du financement immobilier, de la structuration de dettes ou de l’analyse financière.",
+"y": 2.0,
+"yd": [
+"investing"
+],
+"yh": 4.0
+},
+"https://www.linkedin.com/jobs/view/4472945727/": {
+"cfa": "mention",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 4,
+"fr": false,
+"front": 23,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 12338,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "Minimum de 5 ans d’expérience pertinente et directe en financement de projets ou en financement structuré, acquise au sein d’une banque, d’un cabinet-conseil ou du côté des promoteurs/sponsors (fonds d’investissement,…",
+"y": 5.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4473243457/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 1171,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4473393229/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": true,
+"front": 8,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5037,
+"ok": true,
+"ops": 4,
+"opsy": true,
+"q": "Minimum 6 ans d'expérience en analyse d'affaires, dans un contexte de livraison de solutions intégrées bout en bout pour le secteur marché des capitaux",
+"y": 6.0,
+"yd": [
+"ops"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4474026167/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3888,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum de 10 ans d'expérience en processus opérationnels TI;",
+"y": 10.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4474339372/": {
+"cfa": "mention",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": false,
+"front": 19,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 9371,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "Minimum 5+ years of direct, relevant experience in project finance or structured finance, gained within banking, advisory, or sponsor‑side platforms (investment funds, developers, etc.)",
+"y": 5.0,
 "yd": [
 "investing",
 "deals"
@@ -2066,6 +2216,27 @@
 ],
 "yh": 5.0
 },
+"https://www.linkedin.com/jobs/view/4477667104/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 3,
+"fr": true,
+"front": 4,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7136,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Au moins 5 ans d’expérience en gestion de catégories.",
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4477850433/": {
 "cfa": "progress",
 "cpa": false,
@@ -2086,6 +2257,105 @@
 "investing"
 ],
 "yh": 7
+},
+"https://www.linkedin.com/jobs/view/4477885774/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": true,
+"front": 7,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4166,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4477890419/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": true,
+"front": 4,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6612,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4478274876/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 4,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 2679,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4479008023/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": false,
+"front": 10,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5938,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "5 ans d’expérience préalable en analyse d’affaires dans un contexte de projet de livraison de solutions d’affaires pour le secteur marché des capitaux, sur des sujets affaires du pupitre de dérivés et revenu fixe.",
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4479137378/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": true,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6008,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Cinq (5) années d’expérience, dont trois (3) ans d’expérience dans des fonctions similaires au cours des cinq (5) dernières années;",
+"y": 5,
+"yd": [
+"general"
+],
+"yh": null
 },
 "https://www.linkedin.com/jobs/view/4479429766/": {
 "cfa": "",
@@ -2148,6 +2418,27 @@
 ],
 "yh": 2
 },
+"https://www.linkedin.com/jobs/view/4480511909/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 6,
+"fr": true,
+"front": 4,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7123,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Plus de 2 ans d’expérience en gestion de comptes clés, de portefeuille ou de marque — idéalement dans le secteur des produits de grande consommation (CPG), les boissons alcoolisées ou les industries de style de vie ha…",
+"y": 2.0,
+"yd": [
+"general"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4482149942/": {
 "cfa": "",
 "cpa": false,
@@ -2164,6 +2455,70 @@
 "opsy": false,
 "q": "Minimum de 5 ans d'expérience en investissement, financement ou analyse financière, idéalement en immobilier",
 "y": 5.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4482183845/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": true,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4883,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum of 2 years of proven experience in a financial/investment consulting, insurance, economics, capital markets pension environment working in an analyst capacity is preferred",
+"y": 2.0,
+"yd": [
+"investing",
+"deals"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4482539475/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 2,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3900,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "10+ years of experience managing and delivering infrastructure design and operational excellence, including 5+ years successfully leading an infrastructure team;",
+"y": 10.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4482545574/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": true,
+"front": 6,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4602,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum 7 years of experience in Commercial Banking, Corporate Banking, National Accounts, or Capital Markets, preferably serving large corporate clients with annual revenues of C$100 million or more.",
+"y": 7.0,
 "yd": [
 "investing"
 ],
@@ -2210,6 +2565,27 @@
 "deals"
 ],
 "yh": 3
+},
+"https://www.linkedin.com/jobs/view/4483068488/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": true,
+"front": 8,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5389,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "agroéconomie, ou autre domaine pertinent, avec 5 à 10 années d’expérience pertinentes;",
+"y": 5.0,
+"yd": [
+"general"
+],
+"yh": 10.0
 },
 "https://www.linkedin.com/jobs/view/4483598831/": {
 "cfa": "",
@@ -2275,6 +2651,48 @@
 ],
 "yh": 3.0
 },
+"https://www.linkedin.com/jobs/view/4484244578/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": false,
+"front": 3,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 13878,
+"ok": true,
+"ops": 2,
+"opsy": false,
+"q": "Minimum two (2) years of experience in investment research, economic analysis, financial markets, data analysis, or a related field.",
+"y": 2,
+"yd": [
+"investing"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4484499577/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 2,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4949,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Posséder plus de 10 ans d’expérience en gestion et en prestation de services de conception d’infrastructure et d’excellence opérationnelle, dont plus de 5 ans à diriger avec succès une équipe d’infrastructure;",
+"y": 10.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4484511974/": {
 "cfa": "",
 "cpa": false,
@@ -2295,6 +2713,88 @@
 "investing"
 ],
 "yh": null
+},
+"https://www.linkedin.com/jobs/view/4484558912/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 1,
+"fr": false,
+"front": 11,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5555,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum de 2 à 4 ans d’expérience pertinente dans le domaine du financement immobilier, de la structuration de dettes ou de l’analyse financière.",
+"y": 2.0,
+"yd": [
+"investing"
+],
+"yh": 4.0
+},
+"https://www.linkedin.com/jobs/view/4484729184/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": true,
+"front": 12,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6265,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Au moins 3 ans d'expérience en trading de grains (ou de matières premières agricoles), avec un bilan démontré de constitution et de gestion d'un portefeuille rentable.",
+"y": 3.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4484739018/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": true,
+"front": 9,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3874,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4484739573/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": false,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4527,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum de 10 à 15 ans d'expérience pertinente en infrastructures ferroviaires.",
+"y": 10.0,
+"yd": [
+"investing"
+],
+"yh": 15.0
 },
 "https://www.linkedin.com/jobs/view/4484970998/": {
 "cfa": "progress",
@@ -2317,6 +2817,25 @@
 ],
 "yh": 3
 },
+"https://www.linkedin.com/jobs/view/4485338927/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": true,
+"front": 11,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4370,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4485618069/": {
 "cfa": "progress",
 "cpa": false,
@@ -2337,6 +2856,71 @@
 "deals"
 ],
 "yh": null
+},
+"https://www.linkedin.com/jobs/view/4485771771/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": true,
+"front": 15,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 9137,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "At least 2 years of experience (excluding internships) in private equity/venture capital, investment management, investment banking, management consulting, STEM or a climate-tech operational role.",
+"y": 2.0,
+"yd": [
+"investing",
+"deals"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4486431677/": {
+"cfa": "mention",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 1,
+"fr": true,
+"front": 12,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 9426,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Posséder de 0 à 2 ans d'expérience professionnelle pertinente, y compris des stages, des programmes coopératifs ou une expérience comme analyste en finance, infrastructures, consultation, services bancaires ou domaine…",
+"y": 0.0,
+"yd": [
+"general"
+],
+"yh": 2.0
+},
+"https://www.linkedin.com/jobs/view/4486439292/": {
+"cfa": "mention",
+"cpa": false,
+"d": "2026-11-03",
+"fpa": 0,
+"fr": true,
+"front": 14,
+"inv": true,
+"jr": true,
+"mba": false,
+"n": 7384,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "0-2 years of relevant professional experience, including internships, co-op placements, or analyst experience in finance, infrastructure, consulting, banking, or related fields.",
+"y": 0.0,
+"yd": [
+"investing",
+"deals"
+],
+"yh": 2.0
 },
 "https://www.squarepoint-capital.com/open-opportunities?id=253410&gh_jid=253410": {
 "cfa": "",
