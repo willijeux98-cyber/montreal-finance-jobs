@@ -312,89 +312,26 @@
 ],
 "yh": null
 },
-"https://bmo.wd3.myworkdayjobs.com/External/job/New-York-NY-USA/Analyst--US-Diversified-Corporate---Leveraged-Banking_R260029708": {
-"cfa": "",
+"https://bmo.wd3.myworkdayjobs.com/External/job/MONTREAL-QC-CAN/Associate-or-Vice-President--Global-Markets_R260029603-1": {
+"cfa": "progress",
 "cpa": false,
-"d": "2026-11-01",
+"d": "2026-11-04",
 "fpa": 0,
 "fr": false,
-"front": 28,
-"inv": true,
-"jr": true,
-"mba": false,
-"n": 7612,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "1 - 2 years of relevant experience within investment banking, corporate banking, corporate credit, or capital markets",
-"y": 1.0,
-"yd": [
-"investing"
-],
-"yh": 2.0
-},
-"https://cae.wd3.myworkdayjobs.com/career/job/Montreal-St-Laurent/Experienced-Analyst--Corporate-Finance-and-M-A_123448": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-01",
-"fpa": 0,
-"fr": true,
-"front": 11,
+"front": 23,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 4496,
+"n": 8380,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "Relevant Experience: 2 to 4 years of professional experience in the fields of corporate finance and/or M&A",
-"y": 2.0,
+"q": "Minimum of 5 years of industry related experience",
+"y": 5.0,
 "yd": [
-"deals"
+"general"
 ],
-"yh": 4.0
-},
-"https://cae.wd3.myworkdayjobs.com/career/job/Montreal-St-Laurent/Financial-Analyst_118908": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-01",
-"fpa": 0,
-"fr": true,
-"front": 11,
-"inv": false,
-"jr": true,
-"mba": false,
-"n": 4327,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "1 to 2 years of professional experience in the fields of corporate finance and/or M&A",
-"y": 1.0,
-"yd": [
-"deals"
-],
-"yh": 2.0
-},
-"https://cae.wd3.myworkdayjobs.com/career/job/Montreal-St-Laurent/Senior-Analyst--Corporate-Finance-and-M-A_122630": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-01",
-"fpa": 0,
-"fr": true,
-"front": 11,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4501,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Relevant Experience : 4 to 7 years of professional experience in the fields of corporate finance and/or M&A",
-"y": 4.0,
-"yd": [
-"deals"
-],
-"yh": 7.0
+"yh": null
 },
 "https://careers.deloitte.ca/job/Montr%C3%A9al%2C-QC-Conseiller%28%C3%A8re%29-principal%28e%29%2C-Evaluation-d'entreprise-et-mod%C3%A9lisation-QC-H3B-4T9/1420072400/": {
 "cfa": "progress",
@@ -813,17 +750,17 @@
 ],
 "yh": null
 },
-"https://cib-bic.ca/en/jobs/?gh_jid=5254348008": {
+"https://cib-bic.ca/en/jobs/?gh_jid=5423746008": {
 "cfa": "progress",
 "cpa": false,
-"d": "2026-10-02",
+"d": "2026-11-04",
 "fpa": 1,
 "fr": true,
 "front": 17,
 "inv": true,
 "jr": true,
 "mba": false,
-"n": 3040,
+"n": 3066,
 "ok": true,
 "ops": 0,
 "opsy": false,
@@ -899,17 +836,17 @@
 ],
 "yh": null
 },
-"https://desjardins.wd10.myworkdayjobs.com/Desjardins/job/Montral/Analyste--Produits-d-investissement_R2612701": {
-"cfa": "charter",
+"https://desjardins.wd10.myworkdayjobs.com/Desjardins/job/Montral/Conseiller-principal-ou-conseillre-principale--Gestion-de-portefeuille_R2613447-1": {
+"cfa": "",
 "cpa": false,
-"d": "2026-10-24",
-"fpa": 0,
+"d": "2026-11-04",
+"fpa": 1,
 "fr": true,
 "front": 1,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 3074,
+"n": 2974,
 "ok": true,
 "ops": 0,
 "opsy": false,
@@ -1061,27 +998,6 @@
 "yd": [],
 "yh": null
 },
-"https://intactfc.wd3.myworkdayjobs.com/intactfc/job/Montral-Quebec-CAN/Spcialiste-Financier--Placements-Privs_R153743": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-01",
-"fpa": 1,
-"fr": true,
-"front": 9,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 7364,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "More than 8 years of relevant experience and a track record of successfully using your financial expertise for business development.",
-"y": 8.0,
-"yd": [
-"general"
-],
-"yh": null
-},
 "https://intactfc.wd3.myworkdayjobs.com/intactfc/job/Montral-Quebec-CAN/Specialist--Corporate-Development---Capital-Management_R155496": {
 "cfa": "",
 "cpa": false,
@@ -1145,6 +1061,27 @@
 "investing"
 ],
 "yh": 2
+},
+"https://investpsp.wd3.myworkdayjobs.com/psp_careers/job/Montreal/Analyst-Senior-Analyst--Governance---Sustainability--Global-Alpha_R4993": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-04",
+"fpa": 0,
+"fr": true,
+"front": 11,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 8142,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Demonstrated expertise through two (2) to four (4) years of relevant sustainability-related experience preferred, preferably with a strong foundation in corporate governance, although graduates with a strong backgroun…",
+"y": 2,
+"yd": [
+"general"
+],
+"yh": 4
 },
 "https://investpsp.wd3.myworkdayjobs.com/psp_careers/job/Montreal/Analyst-Senior-Analyst--Real-Estate-Investments_R4752": {
 "cfa": "progress",
@@ -1605,6 +1542,25 @@
 ],
 "yh": null
 },
+"https://pwc.wd3.myworkdayjobs.com/Global_Experienced_Careers/job/Montreal/Transaction-Services-Manager----Financial-Services--Bilingual-FR-EN-_769761WD-2": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-04",
+"fpa": 1,
+"fr": true,
+"front": 26,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 9984,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://pwc.wd3.myworkdayjobs.com/Global_Experienced_Careers/job/Montreal/Transaction-Services-Senior-Associate--Bilingual-FR-EN-_755254WD": {
 "cfa": "",
 "cpa": false,
@@ -1963,6 +1919,92 @@
 ],
 "yh": 3.0
 },
+"https://www.linkedin.com/jobs/view/4434596342/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-04",
+"fpa": 0,
+"fr": true,
+"front": 11,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4474,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Relevant Experience: 4 to 7 years of professional experience in the fields of corporate finance and/or M&A",
+"y": 4.0,
+"yd": [
+"deals"
+],
+"yh": 7.0
+},
+"https://www.linkedin.com/jobs/view/4438106840/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-04",
+"fpa": 0,
+"fr": true,
+"front": 9,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5941,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Expérience pertinente : 4 à 7 ans d’expérience professionnelle dans les domaines de la finance d’entreprise et/ou des fusions et acquisitions",
+"y": 4.0,
+"yd": [
+"deals"
+],
+"yh": 7.0
+},
+"https://www.linkedin.com/jobs/view/4446247904/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-04",
+"fpa": 1,
+"fr": true,
+"front": 4,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5546,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum of 5 years of finance or corporate finance leadership experience, with a solid track record in corporate investor relations, FP&A, equity research, or financial communications;",
+"y": 5.0,
+"yd": [
+"investing",
+"deals"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4446352142/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-04",
+"fpa": 0,
+"fr": true,
+"front": 2,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3333,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "15 or more years of progressive investment experience, ideally gained in a client-service oriented environment (consulting, investment management or portfolio management)",
+"y": 15.0,
+"yd": [
+"investing",
+"deals"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4455946961/": {
 "cfa": "mention",
 "cpa": false,
@@ -2026,6 +2068,27 @@
 "deals"
 ],
 "yh": null
+},
+"https://www.linkedin.com/jobs/view/4463921641/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-04",
+"fpa": 0,
+"fr": true,
+"front": 4,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5989,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Cinq à dix ans d’expérience en investissement, ainsi qu’une expérience des régimes à prestations déterminées à titre de conseiller, de gestionnaire de relations ou de gestionnaire de placements.",
+"y": 5,
+"yd": [
+"investing"
+],
+"yh": 10
 },
 "https://www.linkedin.com/jobs/view/4465882599/": {
 "cfa": "progress",
@@ -2091,6 +2154,27 @@
 ],
 "yh": 4.0
 },
+"https://www.linkedin.com/jobs/view/4472797293/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-04",
+"fpa": 0,
+"fr": true,
+"front": 16,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5276,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "At least 3 years of experience in grain (or agricultural commodity) trading, with a proven track record of building and managing a profitable book.",
+"y": 3.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4472945727/": {
 "cfa": "mention",
 "cpa": false,
@@ -2110,25 +2194,6 @@
 "yd": [
 "investing"
 ],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4473243457/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-03",
-"fpa": 0,
-"fr": false,
-"front": 0,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 1171,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4473393229/": {
@@ -2195,6 +2260,27 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4474846806/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-04",
+"fpa": 0,
+"fr": true,
+"front": 11,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 4300,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "1 to 2 years of professional experience in the fields of corporate finance and/or M&A",
+"y": 1.0,
+"yd": [
+"deals"
+],
+"yh": 2.0
+},
 "https://www.linkedin.com/jobs/view/4476801945/": {
 "cfa": "progress",
 "cpa": false,
@@ -2216,6 +2302,48 @@
 ],
 "yh": 5.0
 },
+"https://www.linkedin.com/jobs/view/4477604108/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-04",
+"fpa": 0,
+"fr": true,
+"front": 9,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 5738,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "1 à 2 ans d’expérience professionnelle dans les domaines de la finance d’entreprise et/ou des fusions et acquisitions",
+"y": 1.0,
+"yd": [
+"deals"
+],
+"yh": 2.0
+},
+"https://www.linkedin.com/jobs/view/4477605125/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-04",
+"fpa": 0,
+"fr": true,
+"front": 9,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5926,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Expérience pertinente : 2 à 4 ans d’expérience professionnelle dans les domaines de la finance d’entreprise et/ou des fusions et acquisitions",
+"y": 2.0,
+"yd": [
+"deals"
+],
+"yh": 4.0
+},
 "https://www.linkedin.com/jobs/view/4477667104/": {
 "cfa": "",
 "cpa": false,
@@ -2236,27 +2364,6 @@
 "general"
 ],
 "yh": null
-},
-"https://www.linkedin.com/jobs/view/4477850433/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-10-28",
-"fpa": 1,
-"fr": true,
-"front": 13,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 11165,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "De deux à sept ans d’expérience en placement, en recherche quantitative ou en développement quantitatif, en analyse de portefeuille, en répartition de l’actif, en services-conseils en actuariat ou en placement, ou en …",
-"y": 2,
-"yd": [
-"investing"
-],
-"yh": 7
 },
 "https://www.linkedin.com/jobs/view/4477885774/": {
 "cfa": "progress",
@@ -2735,6 +2842,27 @@
 ],
 "yh": 4.0
 },
+"https://www.linkedin.com/jobs/view/4484692616/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-04",
+"fpa": 0,
+"fr": true,
+"front": 6,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4574,
+"ok": true,
+"ops": 4,
+"opsy": false,
+"q": "Minimum de 5 ans d’expérience pertinente en analyse d’affaires dans des projets de solutions pour les marchés des capitaux, dont au moins 3 ans sur les dérivés et l’adhésion ou le cycle de vie client",
+"y": 5.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4484729184/": {
 "cfa": "",
 "cpa": false,
@@ -2754,25 +2882,6 @@
 "yd": [
 "investing"
 ],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4484739018/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-03",
-"fpa": 0,
-"fr": true,
-"front": 9,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3874,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4484739573/": {
@@ -2921,6 +3030,67 @@
 "deals"
 ],
 "yh": 2.0
+},
+"https://www.linkedin.com/jobs/view/4487012276/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-04",
+"fpa": 0,
+"fr": true,
+"front": 6,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 2074,
+"ok": true,
+"ops": 3,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4487071987/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-04",
+"fpa": 1,
+"fr": true,
+"front": 9,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4240,
+"ok": true,
+"ops": 4,
+"opsy": false,
+"q": "Posséder un minimum de cinq ans d’expérience pertinente en analyse d’affaires dans un contexte de livraison de solutions pour le secteur du Marché des capitaux, dont au moins trois ans dans le domaine des dérivés de t…",
+"y": 5,
+"yd": [
+"general"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4487075988/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-04",
+"fpa": 0,
+"fr": false,
+"front": 4,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4580,
+"ok": true,
+"ops": 2,
+"opsy": false,
+"q": "Posséder un minimum de cinq (5) années d’expérience pertinente en analyse d’affaires dans un contexte de livraison de projets de solutions d’affaires, dont au moins trois années en KYC/KYB, en gestion du cycle de vie …",
+"y": 5,
+"yd": [
+"general"
+],
+"yh": null
 },
 "https://www.squarepoint-capital.com/open-opportunities?id=253410&gh_jid=253410": {
 "cfa": "",
