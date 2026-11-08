@@ -35,7 +35,7 @@ CAREER_HINT = re.compile(r"career|carri|emploi|jobs|join|recrut|work-with-us|wor
 
 def get(url):
     try:
-        r = requests.get(url, headers=UA, timeout=12, allow_redirects=True)
+        r = requests.get(url, headers=UA, timeout=10, allow_redirects=True)
         return r.url, r.text if r.status_code < 400 else ""
     except Exception:
         return url, ""
@@ -54,7 +54,7 @@ def scan(text):
 
 
 def discover(firm):
-    name, domain, cat = firm
+    name, domain, cat, city, src = firm
     base = "https://" + (domain if domain.count(".") > 1 and not domain.startswith("www.") else "www." + domain)
     pages, found, careers = [], [], None
     final, home = get(base)
@@ -83,22 +83,81 @@ def discover(firm):
     for f in found:
         if f not in uniq:
             uniq.append(f)
-    return {"name": name, "domain": domain, "cat": cat, "boards": uniq, "careers": careers}
+    return {"name": name, "domain": domain, "cat": cat, "city": city, "src": src, "boards": uniq, "careers": careers}
+
+
+def _key(name):
+    return re.sub(r"[^a-z0-9 ]+", " ", name.lower().replace("é", "e").replace("è", "e")).split()
+
+
+def tidy(name):
+    """Directory names arrive as 'La Caisse (formerly: ...)' or 'Maverix Private Equity Inc.': keep the firm's own name."""
+    name = re.sub(r"\s*\((formerly|anciennement|previously).*$", "", name, flags=re.I)   # may hold nested brackets
+    for _ in range(3):
+        name = re.sub(r"\s*\(([A-Z0-9&.\- ]{2,8}|canada)\)\s*$", "", name.strip(), flags=0)   # "(CBGF)", "(Canada)"
+        name = re.sub(r"\s*\((canada)\)\s*$", "", name, flags=re.I)
+        name = re.sub(r",?\s+(inc|ltd|ltée|limited|limitée|corp|corporation|llc|lp|l\.p|s\.e\.n\.c)\.?$", "", name.strip(), flags=re.I)
+    if name.count(")") > name.count("("):
+        name = name.replace(")", "")
+    return re.sub(r"\s+", " ", name).strip()
+
+
+# directory entries that are a seed firm under another name
+SAME_AS = {"la caisse": "CDPQ", "caisse de depot": "CDPQ", "omers ventures": "OMERS", "fengate private equity": "Fengate",
+           "roynat": "Scotiabank", "rbccm": "RBC", "banque scotia": "Scotiabank", "canada pension plan": "CPP Investments",
+           "cpp investments": "CPP Investments", "investment management corporation of ontario": "IMCO",
+           "ontario teachers": "Ontario Teachers", "hexavest": "Vontobel"}
+
+
+def known(name, seeds):
+    k = " ".join(_key(name))
+    if any(k.startswith(a) for a in SAME_AS):
+        return True
+    w = _key(name)
+    return any(w[:len(s)] == s for s in seeds if s)   # "Fengate Private Equity" -> seed "Fengate"
 
 
 def main():
-    firms = list(SEED)
-    try:
-        for base, name, dom, cl in json.load(open("data/rc_sites.json", encoding="utf-8")):
-            if dom and not any(dom == f[1] for f in firms):
-                firms.append((name, dom, "pe_vc"))
+    firms = [(n, d, c, city, "seed") for n, d, c, city in SEED]
+    doms = {f[1] for f in firms}
+    seeds = [_key(n) for n, _, _, _ in SEED if len(_key(n)) and len(" ".join(_key(n))) >= 4]
+    try:   # CVCA: small and mid-size PE / VC / private-debt / M&A-boutique firms across Canada
+        for x in json.load(open("data/cvca.json", encoding="utf-8")):
+            name = tidy(x["name"])
+            if (x["domain"] and x["domain"] not in doms and x.get("country") in ("Canada", "") and not known(name, seeds)
+                    and name.lower() not in {f[0].lower() for f in firms}):
+                firms.append((name, x["domain"], x["cat"], x.get("city") or "", "cvca"))
+                doms.add(x["domain"])
     except FileNotFoundError:
         pass
-    with cf.ThreadPoolExecutor(16) as ex:
+    try:   # Reseau Capital: Quebec PE / VC members
+        for base, name, dom, cl in json.load(open("data/rc_sites.json", encoding="utf-8")):
+            name = tidy(name)
+            if dom and dom not in doms and not known(name, seeds) and name.lower() not in {f[0].lower() for f in firms}:
+                firms.append((name, dom, "pe_vc", "Montréal", "rc"))
+                doms.add(dom)
+    except FileNotFoundError:
+        pass
+    try:
+        prev = {r["domain"]: r for r in json.load(open("data/boards.json", encoding="utf-8"))}
+    except Exception:
+        prev = {}
+    print(f"scanning {len(firms)} firms", flush=True)
+    with cf.ThreadPoolExecutor(48) as ex:   # network-bound: most of the time is spent waiting on small firms' sites
         res = list(ex.map(discover, firms))
+    # A site that was slow or down this week must not make a firm vanish: keep last week's board and careers page
+    kept = 0
+    for r in res:
+        old = prev.get(r["domain"])
+        if not old:
+            continue
+        if not r["boards"] and old.get("boards"):
+            r["boards"] = old["boards"]; kept += 1
+        if not r["careers"] and old.get("careers"):
+            r["careers"] = old["careers"]
     json.dump(res, open("data/boards.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     hit = [r for r in res if r["boards"]]
-    print(f"{len(res)} firms scanned, {len(hit)} with a detectable job board, "
+    print(f"{len(res)} firms scanned, {len(hit)} with a detectable job board ({kept} carried from last week), "
           f"{sum(1 for r in res if not r['boards'] and r['careers'])} with a careers page only")
 
 

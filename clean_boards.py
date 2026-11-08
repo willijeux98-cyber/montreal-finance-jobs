@@ -57,7 +57,7 @@ def clean(path="data/boards.json", rc_path="data/rc_sites.json"):
         r["boards"] = keep
         if r.get("careers") and re.search(r"linkedin\.|indeed\.|glassdoor\.|workopolis|jobillico", r["careers"], re.I):
             r["careers"] = None
-        r["rc"] = r["name"] in members
+        r["rc"] = r["name"] in members or r.get("src") in ("rc", "cvca")   # directory firm: watch its careers page too
         out.append(r)
     json.dump(out, open(path, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     return out

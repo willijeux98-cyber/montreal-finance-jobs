@@ -1,9 +1,10 @@
 """
-Montreal high-finance job desk.
+Canadian high-finance job desk.
 
 Pulls postings straight from each employer's hiring system, then sweeps public job
-searches (LinkedIn, Job Bank) for Montreal investment roles at firms the boards don't
-cover. Keeps the Montreal buy-side / investment banking / markets seats, ranks them
+searches (LinkedIn, Job Bank, eFinancialCareers) for investment roles across Canada at
+firms the boards don't cover. Keeps buy-side, investment banking, markets, quant and
+investment-risk seats at analyst level, places each one in a Canadian city, ranks them
 against the owner's profile, and writes docs/index.html.
 
 Run:  python fetch.py
@@ -37,9 +38,48 @@ from sources import build_sources  # noqa: E402  (all job boards live in sources
 import reqs  # noqa: E402  (reads what each posting actually asks for)
 
 # ---------------------------------------------------------------- filters
-MTL = re.compile(r"montr[eé]al|laval|longueuil|brossard|boucherville|pointe[- ]claire|saint-laurent|st-laurent|dorval|"
-                 r"mont-royal|westmount|verdun|lasalle|lachine|anjou|kirkland|terrebonne|boisbriand|blainville|repentigny", re.I)
+# Canadian cities, each with the suburbs and spellings hiring systems use. A posting is placed in the first one it names.
+CITIES = [
+    ("Toronto", "ON", r"toronto|mississauga|oakville|markham|vaughan|richmond hill|north york|etobicoke|scarborough|brampton|"
+                      r"thornhill|pickering|newmarket|greater toronto|\bGTA\b|(burlington|aurora|concord|ajax),\s*(on|ontario)\b"),
+    ("Montréal", "QC", r"montr[eé]al|\blaval\b|longueuil|brossard|boucherville|pointe[- ]claire|saint-laurent|st-laurent|dorval|"
+                       r"mont-royal|westmount|verdun|lasalle|lachine|anjou|kirkland|terrebonne|boisbriand|blainville|repentigny"),
+    ("Vancouver", "BC", r"vancouver|burnaby|coquitlam|new westminster|port moody|(surrey|richmond|langley),\s*(bc|b\.c\.|british)"),
+    ("Calgary", "AB", r"calgary"),
+    ("Ottawa", "ON", r"ottawa|kanata|gatineau"),
+    ("Edmonton", "AB", r"edmonton"),
+    ("Québec City", "QC", r"qu[eé]bec city|ville de qu[eé]bec|\bl[eé]vis\b|sainte-foy|qu[eé]bec,\s*(qc|qu[eé]bec)\b|qu[eé]bec \((qc|qu[eé]bec)\)"),
+    ("Winnipeg", "MB", r"winnipeg"),
+    ("Halifax", "NS", r"halifax|dartmouth"),
+    ("Waterloo Region", "ON", r"waterloo|kitchener|guelph|cambridge,\s*(on|ontario)\b"),
+    ("Victoria", "BC", r"victoria,\s*(bc|b\.c\.|british)|victoria \(bc\)"),
+    ("Regina", "SK", r"\bregina\b"),
+    ("Saskatoon", "SK", r"saskatoon"),
+    ("London, ON", "ON", r"london,\s*(on|ontario|canada)\b"),
+    ("Hamilton", "ON", r"hamilton,\s*(on|ontario|canada)\b|hamilton \((on|ontario)\)|\(hamilton\)"),
+    ("Fredericton", "NB", r"fredericton"),
+    ("Moncton", "NB", r"moncton"),
+    ("St. John's", "NL", r"st\.? john'?s"),
+    ("Sherbrooke", "QC", r"sherbrooke"),
+    ("Kelowna", "BC", r"kelowna"),
+    ("Charlottetown", "PE", r"charlottetown"),
+]
+CITY_RX = [(name, prov, re.compile(rx, re.I)) for name, prov, rx in CITIES]
+CITY_PROV = {name: prov for name, prov, _ in CITIES}
+CANADA = re.compile(r"canada|ontario|qu[eé]bec|british columbia|colombie-britannique|alberta|manitoba|saskatchewan|"
+                    r"nova scotia|nouvelle-[eé]cosse|new brunswick|nouveau-brunswick|newfoundland|prince edward", re.I)
+CA_ABBR = re.compile(r"\b(ON|QC|BC|AB|MB|SK|NS|NB|NL|PE)\b")
+FOREIGN = re.compile(r"united states|\bUSA\b|\bU\.S\.|new york|boston|chicago|houston|dallas|san francisco|los angeles|seattle|"
+                     r"miami|greenwich|stamford|philadelphia|atlanta|denver|charlotte|austin|jersey city|london(?!,\s*(on|ontario))|"
+                     r"united kingdom|\bUK\b|england|scotland|ireland|dublin|paris|france|madrid|milan|frankfurt|munich|zurich|"
+                     r"geneva|luxembourg|amsterdam|stockholm|singapore|hong kong|tokyo|seoul|sydney|melbourne|dubai|abu dhabi|"
+                     r"riyadh|doha|mumbai|bangalore|bengaluru|india|mexico|brazil|s[aã]o paulo|bermuda|cayman|grand rapids|"
+                     r"st\.? petersburg|charlotte(?!town)|minneapolis|nashville|salt lake|phoenix|san diego|pittsburgh|"
+                     r"cleveland|detroit|baltimore|washington,? d\.?c|mclean|richmond, va", re.I)
+US_STATE = re.compile(r",\s*(AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|"
+                      r"ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY|DC)\b")
 MULTI = re.compile(r"^\s*\d+\s+(locations|lieux|possible locations|lieux possibles)", re.I)
+REMOTE = re.compile(r"remote|t[ée]l[ée]travail|[àa] distance|work from home", re.I)
 
 EXCLUDE = re.compile(
     r"develop|développ|engineer|ingénieur|software|logiciel|devops|cyber|sécurité|security|"
@@ -73,15 +113,19 @@ STRONG = [
      r"création de valeur|financement d.entreprises|[ée]valuation d.entreprise", "deal advisory"),
     (r"corporate debt|private debt|dette privée|dette (corporative|subordonnée)|mezzanine|leveraged|credit opportunit|"
      r"structured credit|financement structuré|asset[- ]based lend", "private credit"),
-    (r"\bF&A\b|corporate banking|services bancaires aux (grandes )?entreprises|project financ|financement de projets",
-     "investment banking"),
+    (r"\bF&A\b|project financ|financement de projets", "investment banking"),
+    (r"credit research|high[- ]yield|distressed|special situations|leveraged loans?|syndicated loans?|loan syndication",
+     "private credit"),
+    (r"search fund", "private equity"),
+    (r"equity analyst|investment research|buy[- ]side analyst|long/short|long-short", "research"),
+    (r"institutional (equity |fixed income |equities )?sales|ventes institutionnelles", "trading"),
     (r"recherche fondamentale|fundamental research", "research"),
     (r"secondar|primaries|primary fund|funds? of funds|fonds de fonds|fund investments?|co-?invest|private markets|"
      r"marchés privés|placements privés", "fund investing"),
     (r"corporate development|développement corporatif|corp\.? dev", "corporate development"),
     (r"transaction advisory|deal advisory|transaction services|financial due diligence|business valuation|"
      r"évaluation d.entreprise|valuations? (&|and) (modeling|modelling|advisory)|restructuring", "deal advisory"),
-    (r"private equity|capital[- ]investissement|buyout", "private equity"),
+    (r"private equity|private capital|capital[- ]investissement|buyout", "private equity"),
     (r"venture|capital de risque|growth equity|croissance", "venture / growth"),
     (r"investment banking|banque d.investissement|financement corporatif|corporate finance|"
      r"\bM&A\b|mergers|fusions|acquisitions|leveraged finance|debt capital|equity capital|\bDCM\b|\bECM\b",
@@ -144,14 +188,36 @@ OVERRIDE = re.compile(r"corporate development|développement corporatif|\bM&A\b|
 STRICT = {"BDC", "EDC", "Intact", "Manulife", "Sun Life", "iA Financial Group", "Hydro-Quebec", "CN", "Bombardier"}
 
 
+# Seats that are never high finance, whatever investment words the title also carries
+NEVER = re.compile(r"business analyst|analyste d.affaires|investor relations|relations (avec les )?investisseurs|"
+                   r"financial planning|FP&A|planification financi|deal technology|technology in deals|"
+                   r"revenue coordinator|\badministrat(or|rice|eur)\b|wholesaler|grossiste|"
+                   r"future opportunit|general application|expression of interest|talent (pool|community)|"
+                   r"candidature spontan|opportunit[ée]s futures|associate portfolio manager|"
+                   r"gestionnaire de portefeuille associ", re.I)
+# Corporate and commercial banking (lending relationships), unless it's the investment-banking side
+CORP_BANK = re.compile(r"corporate banking|commercial banking|services bancaires aux (grandes )?entreprises|"
+                       r"services bancaires commerciaux", re.I)
+IB_WORDS = re.compile(r"investment banking|banque d.investissement|\bM&A\b|mergers", re.I)
+POSTCODE = re.compile(r"\s*\(?\b(?:ON|QC|BC|AB|MB|SK|NS|NB|NL|PE|Qu[ée]b\w*|Ont\w*|Brit\w*|Alb\w*)\)?\s+[A-Z]\d[A-Z]\s?\d[A-Z]\d\s*$")
+TAIL_CITY = re.compile(r"\s*[-–|,]?\s*\(?(?:Toronto|Montr[ée]al|Vancouver|Calgary|Ottawa|Edmonton|Winnipeg|Halifax)"
+                       r"(?:,\s*(?:Ontario|ON|Qu[ée]bec|QC|British Columbia|BC|Alberta|AB|Manitoba|MB|Nova Scotia|NS))?\)?,?\s*$", re.I)
+
+
 def clean_title(t):
     t = re.sub(r"\s*\((?:Montr[ée]al|Toronto|Ottawa)\)\s*Qu[ée]b\w*\s+[A-Z]\d[A-Z]\s?\d[A-Z]\d\s*$", "", t)
-    t = re.sub(r"\s+Qu[ée]b\w*\s+[A-Z]\d[A-Z]\s?\d[A-Z]\d\s*$", "", t)
-    return re.sub(r"\s+", " ", t).strip()
+    t = POSTCODE.sub("", t)                 # "... ON M5H 0B3", "... (Vancouver) Brit V6E 4E5"
+    t = re.sub(r"\s+", " ", t).strip()
+    stripped = TAIL_CITY.sub("", t)          # "Associate, Corporate Development Toronto, Ontario" (the city is shown anyway)
+    if len(stripped) >= 12 and stripped != t and stripped.count("(") == stripped.count(")"):   # never split "(Toronto, Calgary)"
+        t = stripped
+    return re.sub(r"\s+", " ", t).strip(" -–,|")
 
 
 def excluded(t):
-    if HARD.search(t):
+    if HARD.search(t) or NEVER.search(t):
+        return True
+    if CORP_BANK.search(t) and not IB_WORDS.search(t):
         return True
     if OVERRIDE.search(t):
         return False
@@ -165,13 +231,14 @@ LEVEL_DOWN = re.compile(
     r"head of|chef|principal\b(?!e?\s*\)?,)|partner|lead\b|managing|senior advisor|"
     r"conseill(er|ère) (principal|senior|sénior)|premier\(?-?è?r?e?\)? conseill|expert)\b",
     re.I)
-STUDENT = re.compile(r"intern|stage|stagiaire|co-?op|student|étudiant|summer|été 20", re.I)
+STUDENT = re.compile(r"intern|stage|stagiaire|co-?op|student|étudiant|summer|été 20|winter (analyst|associate|20)|"
+                     r"fall (analyst|associate|20)|off[- ]cycle|hiver 20|automne 20|new grad program", re.I)
 TEMP = re.compile(r"temporary|temporaire|contract|contrat|\d+\s*(months|mois)", re.I)
 
 CAT_BASE = {"pension": 6, "pe_vc": 6, "hedge": 6, "am": 5, "ib": 5, "markets": 5, "insurer": 4,
             "advisory": 5, "corpdev": 5, "re": 5, "open": 4}
 CAT_WORDS = {
-    "pension": "a Montreal pension investor",
+    "pension": "a pension or institutional investor",
     "pe_vc": "a private-markets investor",
     "hedge": "a trading / hedge fund shop",
     "am": "an asset manager",
@@ -179,7 +246,7 @@ CAT_WORDS = {
     "markets": "the exchange operator",
     "insurer": "an insurer's investment arm",
     "advisory": "a deal-advisory / valuation team",
-    "corpdev": "a Montreal company's M&A team",
+    "corpdev": "a company's M&A team",
     "re": "a real estate investor or developer",
     "open": "a firm outside the usual list",
 }
@@ -200,11 +267,11 @@ ANGLE = {
     "portfolio management": "Lead with CFA Level I, investment management and your data skills.",
     "capital markets": "Lead with capital markets, CFA Level I, and that you're fully bilingual.",
     "investments": "Lead with CFA Level I and the large-merger diligence.",
-    "quant": "Only if you're ready for a stats and coding test. Your Python is real, the bar is high.",
+    "quant": "Lead with your Python and SQL, CFA Level I and any model you've built end to end. Expect a stats and coding test.",
     "valuation": "Lead with your break-even and scenario modelling and CFA Level I.",
     "markets operations": "A real way onto the markets side. Lead with your process work and CFA Level I.",
     "performance measurement": "Measuring how portfolios actually did. Lead with your data work and CFA Level I.",
-    "investment risk": "Lead with the modelling and your insurance background.",
+    "investment risk": "Buy-side risk sits next to the portfolio managers. Lead with the modelling, CFA Level I and your insurance background.",
     "due diligence": "This is literally what you did in the merger diligence. Say so.",
     "strategy": "Strategy work at a finance shop: the same muscles as your current role. Use it as the way in.",
     "analytics": "Your current skill set at a finance shop. A foot in the door, not an investment seat.",
@@ -214,13 +281,28 @@ ANGLE = {
 
 
 QUANT = re.compile(r"quant|quantitativ", re.I)
+# buy-side and trading-desk risk: the seat next to the portfolio managers. Operational, enterprise, model-validation,
+# compliance and retail-credit risk are support functions and stay out.
+INV_RISK = re.compile(r"investment risk|risques? (de |d.)(placement|investissement)|market risk|risques? de march[ée]|"
+                      r"portfolio risk|risques? de portefeuille|risk analytics|total (fund|portfolio) risk|trading risk|"
+                      r"risk (&|and) (quant|analytics)", re.I)
+RISK_BAD = re.compile(r"operational|op[ée]rationnel|enterprise risk|risques? d.entreprise|model (risk|validation)|validation|"
+                      r"technolog|cyber|third[- ]party|vendor|conduct|compliance|conformit|regulatory|r[ée]glementaire|"
+                      r"adjudicat|retail|fraud|insurance risk|actuar|basel|IFRS|climate|ESG|reporting|governance|gouvernance|"
+                      r"audit|non-financial|liquidity|treasury|capital management|stress test|credit risk|risque de cr[ée]dit", re.I)
+GENERIC_RISK = re.compile(r"\brisk\b|\brisques?\b", re.I)
+RISK_HOME = {"pension", "am", "hedge", "pe_vc"}   # where a bare "Risk Analyst" title is an investment-risk seat
 BARE = re.compile(r"^\s*(senior\s+)?(analyst|associate|analyste|associé)(\s*/\s*(senior\s+)?(analyst|associate))?\s*$", re.I)
 STRONG_MEDIUM = {"valuation", "markets operations", "performance measurement", "investment risk", "due diligence"}
 
 
 def classify(title, cat=None):
-    if QUANT.search(title):
+    if QUANT.search(title) and not RISK_BAD.search(title):
         return "quant", "quant"
+    if INV_RISK.search(title) and not RISK_BAD.search(title):
+        return "quant", "investment risk"
+    if cat in RISK_HOME and GENERIC_RISK.search(title) and not RISK_BAD.search(title):
+        return "quant", "investment risk"
     if cat in ("pe_vc", "pension") and BARE.search(title):
         return "strong", "investments"
     for pat, name in STRONG:
@@ -241,11 +323,16 @@ OPS = re.compile(r"operations|operational|opérations|opérationnel|due diligenc
                  r"autoris|adjudicat|servicing|integration|intégration|\brisk|risque|performance|analytics|analytique|"
                  r"reporting|\bdata\b|données|compliance|conformité|middle office|back office|fund accounting|"
                  r"information financière|financial information", re.I)
+# the same list without the words a quant or risk seat legitimately carries in its title
+OPS_CORE = re.compile(r"operations|operational|opérations|opérationnel|due diligence officer|\bKYC\b|know your client|administration|"
+                      r"settlement|règlement|control\b|contrôle|oversight|autoris|adjudicat|servicing|integration|intégration|"
+                      r"reporting|compliance|conformité|middle office|back office|fund accounting|information financière", re.I)
 FRONT_MEDIUM = {"valuation", "due diligence"}   # the only "medium" seats that still lead to deal work
 LVL_ADV = re.compile(r"advisor|conseill|specialist|spécialiste", re.I)
 
 
 def level_of(t):
+    t = re.sub(r"principal invest\w*|investissements? principaux|principal (finance|credit|capital)", " ", t, flags=re.I)   # a seat, not a rank
     if STUDENT.search(t):
         return "student", -4
     if re.search(r"associate director|directeur associ|directrice associ", t, re.I):
@@ -285,8 +372,10 @@ def score(job):
         return None  # only investing, deal, markets and corporate-finance seats
     if kind == "medium" and sig not in FRONT_MEDIUM:
         return None  # risk, performance, analytics, strategy, treasury: support seats, not the target path
-    if kind in ("strong", "quant", "medium") and OPS.search(t):
+    if kind in ("strong", "medium") and OPS.search(t):
         return None  # investment word, support seat (model risk, operational due diligence, KYC...)
+    if kind == "quant" and OPS_CORE.search(t):
+        return None
     if cat in ("open", "corpdev") and sig == "real estate investing" and not re.search(
             r"acqui|invest|placement|financement|financing|capital|transaction", t, re.I):
         return None  # a retailer's or operator's own real estate team: leasing and sites, not investing
@@ -294,15 +383,13 @@ def score(job):
     if kind == "strong":
         s += 3
     elif kind == "quant":
-        s += 0
+        s += 2 if sig == "quant" else 1
     elif kind == "medium":
         s += 1 if sig in STRONG_MEDIUM else 0
     else:
         s -= 2
     level, adj = level_of(t)
     s += adj
-    if kind == "quant" and re.search(r"research", t, re.I):
-        s = min(s, 5)
     if TEMP.search(t):
         s -= 1
     a = job.get("age")
@@ -314,8 +401,8 @@ def score(job):
             s -= 2; job["fresh"] = "evergreen"   # posted for months or years: a resume pipeline, not a live seat
         elif a > 45 and a != 31:                 # Workday only ever says "30+" (stored as 31): don't penalise that
             s -= 1
-    if not job["mtl_explicit"]:
-        s -= 1
+    if not job["m"]:
+        s -= 1   # the posting doesn't name its city
     job["_raw"], job["_ladj"] = s, adj   # kept so the posting's own requirements can replace the title's guess
     s = max(0, min(10, s))
     if s < 4:
@@ -338,8 +425,8 @@ def why(job, kind, sig, level):
            "unclear": "Level isn't clear from the title"}[level]
     what = f"{sig} at {CAT_WORDS[job['cat']]}" if sig else f"a non-investment seat at {CAT_WORDS[job['cat']]}"
     extra = " It's a fixed-term contract." if TEMP.search(job["t"]) else ""
-    if not job["mtl_explicit"]:
-        extra += " Posted across several cities, so check Montreal is one of them."
+    if not job["m"]:
+        extra += " The posting doesn't pin down the city, so check which office it sits in."
     if job.get("fresh") == "evergreen":
         extra += " It has been posted for months: likely an always-open pipeline rather than a live seat."
     return f"{lvl}: {what}.{extra} {ANGLE.get(sig, ANGLE[None])}"
@@ -350,7 +437,8 @@ def why(job, kind, sig, level):
 # CFA Level I passed, Level II candidate. Edit these three numbers as that changes.
 PROFILE = dict(general=2, ops=2, deals=1, investing=0)
 REQS_PATH = os.path.join(ROOT, "data", "reqs.json")
-REQS_STATS = dict(read=0, cached=0, failed=0, linkedin_limited=0)
+REQS_STATS = dict(read=0, cached=0, failed=0, linkedin_limited=0, linkedin_deferred=0)
+LI_READ_BUDGET = 60 if os.environ.get("PB_QUICK") == "1" else 600
 
 
 TOP = {"advisory": 9, "corpdev": 9, "re": 9, "open": 9, "insurer": 9, "markets": 9}
@@ -381,7 +469,7 @@ def apply_reqs(j, rq):
     j["r"] = None
     if not rq or not rq.get("ok"):
         return True
-    if reqs.back_office(rq):
+    if reqs.back_office(rq) and not (j.get("sig") in ("quant", "investment risk") and not rq.get("opsy")):
         return False
     have = have_years(rq.get("yd"))
     gap = None
@@ -434,24 +522,33 @@ def read_reqs(cands):
         r = reqs.parse(text, j["t"])
         r["d"] = TODAY.isoformat()
         return j["u"], r
-    li = [j for j in todo if "linkedin.com" in j["u"]]
+    live = {j["u"] for j in cands}
+
+    def keep():
+        os.makedirs(os.path.dirname(REQS_PATH), exist_ok=True)
+        json.dump(dict({u: r for u, r in cache.items() if u in live}, _v=reqs.VERSION),
+                  open(REQS_PATH, "w", encoding="utf-8"), indent=0, sort_keys=True, ensure_ascii=False)
+
+    li = sorted((j for j in todo if "linkedin.com" in j["u"]), key=lambda j: -j["s"])   # best candidates first
     rest = [j for j in todo if "linkedin.com" not in j["u"]]
-    with cf.ThreadPoolExecutor(8) as ex:
+    with cf.ThreadPoolExecutor(12) as ex:
         for u, r in ex.map(one, rest):
             if r is not None and r.get("ok"):
                 cache[u] = r
-    for j in li:                           # LinkedIn's public pages: one at a time, and stop if it pushes back
-        if REQS_STATS["linkedin_limited"] >= 3:
+    keep()   # the boards' readings are safe even if the LinkedIn pass is cut short
+    # LinkedIn's public pages: one at a time, stop if it pushes back, and never more than LI_READ_BUDGET seconds a night.
+    # Readings are cached, so whatever isn't read tonight is read on a later night.
+    t0 = time.time()
+    for j in li:
+        if REQS_STATS["linkedin_limited"] >= 3 or time.time() - t0 > LI_READ_BUDGET:
+            REQS_STATS["linkedin_deferred"] = len(li) - li.index(j)
             break
         u, r = one(j)
         if r is not None and r.get("ok"):
             cache[u] = r
         time.sleep(1.2)
-    live = {j["u"] for j in cands}
-    cache = {u: r for u, r in cache.items() if u in live}
-    os.makedirs(os.path.dirname(REQS_PATH), exist_ok=True)
-    json.dump(dict(cache, _v=reqs.VERSION), open(REQS_PATH, "w", encoding="utf-8"), indent=0, sort_keys=True, ensure_ascii=False)
-    return cache
+    keep()
+    return {u: r for u, r in cache.items() if u in live}
 
 
 SOURCES = [(lambda _s, f=f: f(), None, label) for f, label in build_sources()]
@@ -489,7 +586,24 @@ ALIASES = {
     "couche tard": "Couche-Tard", "alimentation couche tard": "Couche-Tard", "cn": "CN", "canadian national railway": "CN",
     "bmo financier": "BMO", "bmo groupe financier": "BMO", "rbc banque royale": "RBC", "banque royale": "RBC",
     "banque scotia": "Scotiabank", "groupe financier banque td": "TD", "ia financier": "iA Financial Group", "financier banque td": "TD", "caisse depot et placement quebec": "CDPQ", "kpmg": "KPMG", "deloitte": "Deloitte", "ey": "EY", "ernst & young": "EY", "pwc": "PwC", "pricewaterhousecoopers": "PwC",
+    "agf": "AGF", "agf investments": "AGF", "alberta investment management": "AIMCo", "aimco": "AIMCo",
+    "ontario teachers pension plan": "Ontario Teachers", "ontario teachers": "Ontario Teachers", "otpp": "Ontario Teachers",
+    "cpp investments": "CPP Investments", "canada pension plan investment board": "CPP Investments", "cppib": "CPP Investments",
+    "healthcare ontario pension plan": "HOOPP", "hoopp": "HOOPP", "investment management corporation ontario": "IMCO",
+    "imco": "IMCO", "british columbia investment management": "BCI", "bci": "BCI", "connor clark lunn": "Connor Clark & Lunn",
+    "omers": "OMERS", "la caisse": "CDPQ", "brookfield asset management": "Brookfield", "rbc capital markets": "RBC",
+    "td securities": "TD", "bmo capital markets": "BMO", "cibc capital markets": "CIBC", "scotia capital": "Scotiabank",
+    "national bank financial": "National Bank", "financiere banque nationale": "National Bank",
 }
+
+
+def tidy_co(name):
+    """Display name: 'Gold Investment Management Ltd.' -> 'Gold Investment Management'."""
+    n = re.sub(r"\s*\((formerly|anciennement).*$", "", str(name or "").strip(), flags=re.I)
+    for _ in range(3):
+        n = re.sub(r"\s*\(([A-Z0-9&.\- ]{2,8}|canada)\)\s*$", "", n.strip(), flags=re.I)
+        n = re.sub(r",?\s+(inc|ltd|ltée|limited|limitée|corp|llc|l\.?p|s\.?e\.?n\.?c)\.?$", "", n.strip(), flags=re.I)
+    return n.strip() or str(name or "").strip()
 
 
 def firm_index(names):
@@ -517,11 +631,18 @@ NOT_A_FIRM = re.compile(r"\bllp\b|s\.?e\.?n\.?c\.?r\.?l|avocats|lawyers|\blaw\b|
                         r"norton rose|davies ward|lavery|langlois|blakes|torys|dentons|gowling|miller thomson|mcmillan|"
                         r"\bacca careers\b|jobillico|talent\.com|indeed|workopolis|eluta|\brecrutement\b|staffing|placement de personnel|"
                         r"hunter bond|anson mccade|robert half|\bhays\b|michael page|page group|randstad|adecco|kforce|"
-                        r"morgan mckinley|selby jennings|harnham|venatus|teksystems|\bbaro\s?rh\b|dialectica|fed finance", re.I)
+                        r"morgan mckinley|selby jennings|harnham|venatus|teksystems|\bbaro\s?rh\b|dialectica|fed finance|"
+                        r"recruit|executive search|search partners|talent partners|\bPER\b|private equity recruitment|"
+                        r"ziprecruiter|jooble|glassdoor|monster|careerbuilder|korn ferry|heidrick|spencer stuart|"
+                        r"russell reynolds|odgers|caldwell partners|walker hamill|oxford knight|options group|dartmouth partners|"
+                        r"bay street search|cooper fitch|bruin|jobs for humanity|confidential|crossover|mercor|joblet|"
+                        r"jobgether|lensa|dice\b|hirequest|careerjet|simplyhired", re.I)
 
 
 def guess_cat(company):
     c = fold(company)
+    if re.search(r"hedge|multi[- ]strateg|\balpha\b|quantitative", c):
+        return "hedge"
     if re.search(r"deloitte|kpmg|pwc|\bey\b|ernst|grant thornton|raymond chabot|\bmnp\b|\bbdo\b|richter|accuracy|valuation|evaluation|"
                  r"transaction advis|alvarez|fti consulting", c):
         return "advisory"
@@ -539,23 +660,90 @@ def guess_cat(company):
     return "open"
 
 
-# ---------------------------------------------------------------- pipeline
-OTHER = re.compile(r"toronto|vancouver|calgary|edmonton|ottawa|winnipeg|halifax|waterloo|mississauga|new york|"
-                   r"boston|chicago|houston|london|paris|madrid|singapore|hong kong|qu[eé]bec city|ville de qu[eé]bec|"
-                   r"\bl[eé]vis\b|sherbrooke|gatineau", re.I)
+# ---------------------------------------------------------------- where in Canada?
+def city_of(text):
+    """First Canadian city a location string names -> (city, province) or None."""
+    best = None
+    for name, prov, rx in CITY_RX:
+        m = rx.search(text or "")
+        if m and (best is None or m.start() < best[0]):
+            best = (m.start(), name, prov)
+    return best and best[1:]
 
 
 def keep_location(j):
+    """Place the posting in Canada, or drop it. Sets ct (city), pv (province), m (the posting itself names the city)."""
     loc = "" if (j["l"] or "").startswith("Location not stated") else (j["l"] or "")
-    if MTL.search(loc) or MTL.search(j["t"]):
-        j["mtl_explicit"] = True
+    home = "head office" in loc
+    title = j.get("t0") or j["t"]
+    hit = city_of(loc) or city_of(title)
+    if hit:
+        j["ct"], j["pv"] = hit
+        j["m"] = not home   # "Toronto (head office)" is our inference from a careers page, not the posting's word
         return True
-    if OTHER.search(loc) or OTHER.search(j["t"]):
+    if FOREIGN.search(loc) or FOREIGN.search(title) or US_STATE.search(loc) or US_STATE.search(title):
         return False
-    if (j["hq"] or j.get("hint")) and (MULTI.search(loc) or not loc.strip() or re.search(r"canada|qu[eé]bec", loc, re.I)):
-        j["mtl_explicit"] = False
+    j["m"], j["pv"] = False, ""
+    if CANADA.search(loc) or CA_ABBR.search(loc):
+        j["ct"] = "Remote" if REMOTE.search(loc + " " + title) else "Canada"
         return True
+    if MULTI.search(loc) and (j["hq"] or j.get("hint")):
+        j["ct"] = "Multiple cities"
+        return True
+    if j["hq"]:
+        if not loc.strip():
+            from sources import FIRM_CITY
+            c = FIRM_CITY.get(j["c"])
+            j["ct"], j["pv"] = (c, CITY_PROV.get(c, "")) if c else ("Canada", "")
+            return True
     return False
+
+
+# ---------------------------------------------------------------- the filter: analyst-level seats only
+def analyst_level(j):
+    """Analyst-level seats (0-3 years): no manager / director / VP titles, no internships, and nothing whose posting
+    asks for more than three years of experience."""
+    if j.get("lv") in ("exec", "senior", "student"):
+        return False
+    r = j.get("r")
+    return not (r and r.get("y") is not None and r["y"] > 3)
+
+
+# seat key for the page's filters
+SEAT = {"private equity": "pe", "venture / growth": "pe", "fund investing": "pe", "investment banking": "ib",
+        "deal advisory": "deals", "valuation": "deals", "due diligence": "deals", "corporate development": "deals",
+        "private credit": "credit", "research": "research", "trading": "st", "markets": "st", "capital markets": "st",
+        "portfolio management": "am", "infrastructure investing": "real", "real estate investing": "real",
+        "natural resources investing": "real", "quant": "quant", "investment risk": "quant"}
+BY_FIRM = {"pe_vc": "pe", "pension": "am", "am": "am", "insurer": "am", "hedge": "hf", "re": "real", "ib": "ib",
+           "markets": "st", "advisory": "deals", "corpdev": "deals", "open": "am"}
+HEDGE_WORDS = re.compile(r"hedge fund|long/short|multi[- ]strateg|multi[- ]manager|\bpod\b", re.I)
+
+
+def seat_of(j):
+    sig, cat = j.get("sig") or "", j["cat"]
+    if (cat == "hedge" or HEDGE_WORDS.search(j["t"])) and sig not in ("quant", "investment risk", "real estate investing",
+                                                                      "infrastructure investing", "private equity"):
+        return "hf"
+    if sig == "private credit" and cat == "ib":
+        return "ib"   # leveraged finance and loan syndication at a bank
+    return SEAT.get(sig) or BY_FIRM.get(cat, "am")
+
+
+def directory_firms():
+    """CVCA and PMAC member names -> category, so a small firm found on LinkedIn is recognised for what it is."""
+    out = {}
+    try:
+        for x in json.load(open(os.path.join(ROOT, "data", "cvca.json"), encoding="utf-8")):
+            out[x["name"]] = x["cat"]
+    except Exception:
+        pass
+    try:
+        for n in json.load(open(os.path.join(ROOT, "data", "pmac.json"), encoding="utf-8")):
+            out.setdefault(n, "am")
+    except Exception:
+        pass
+    return out
 
 
 def with_retry(fn, src, tries=3):
@@ -598,7 +786,7 @@ def main():
             j["c"], j["cat"], j["hq"] = "Jarislowsky Fraser", "am", True
 
     # The net: keep a row only if its firm's own board didn't already give us postings
-    from sources import MTL_HQ
+    from sources import CA_HQ
     try:
         boards = json.load(open(os.path.join(ROOT, "data", "boards.json"), encoding="utf-8"))
     except Exception:
@@ -608,7 +796,11 @@ def main():
         cats.setdefault(label, None)
     for j in raw:
         cats[j["c"]] = j["cat"]
-    idx = firm_index(list(cats) + list(MTL_HQ))
+    dirs = directory_firms()
+    # two passes: the firms we read directly first ("Northleaf Capital Partners" is Northleaf Capital, whose board we
+    # read), then the CVCA / PMAC directories for small firms we only meet on job sites
+    idx = firm_index(list(cats) + list(CA_HQ))
+    didx = {norm_co(n): n for n in dirs if norm_co(n)}
     netkept, netdrop = 0, 0
     for j in netraw:
         if NOT_A_FIRM.search(j["c"] or ""):
@@ -619,14 +811,19 @@ def main():
             netdrop += 1
             continue   # that firm's own board is read directly
         if firm:
-            j["c"], j["cat"], j["hq"] = firm, cats.get(firm) or guess_cat(firm), firm in MTL_HQ
+            j["c"], j["cat"], j["hq"] = firm, cats.get(firm) or dirs.get(firm) or guess_cat(firm), firm in CA_HQ
+        elif match_firm(j["c"], didx):
+            d = match_firm(j["c"], didx)
+            j["c"], j["cat"], j["hq"] = tidy_co(d), dirs[d], True
         else:
+            j["c"] = tidy_co(j["c"])
             j["cat"] = guess_cat(j["c"])
         netkept += 1
         raw.append(j)
 
     kept, dedupe, trk = [], {}, set()
     for j in raw:
+        j["t0"] = j["t"] or ""            # the title as posted: the city reader still needs "Analyst - Toronto"
         j["t"] = clean_title(j["t"] or "")
         j["l"] = re.sub(r"\s+", " ", j["l"] or "").strip()
         if not j["t"] or excluded(j["t"]):
@@ -661,8 +858,8 @@ def main():
             continue
         final.append(j)
     kept = final
-    print(f"requirements: {REQS_STATS['read']} read, {REQS_STATS['cached']} cached, {REQS_STATS['failed']} failed; "
-          f"{dropped_support} support seats dropped")
+    print(f"requirements: {REQS_STATS['read']} read, {REQS_STATS['cached']} cached, {REQS_STATS['failed']} failed, "
+          f"{REQS_STATS['linkedin_deferred']} LinkedIn postings left for a later night; {dropped_support} support seats dropped")
 
     os.makedirs(os.path.dirname(SEEN_PATH), exist_ok=True)
     try:
@@ -686,17 +883,20 @@ def main():
 
     kept.sort(key=lambda j: (-j["s"], j["age"] if j["age"] is not None else 999))
     alive = sorted({j["u"] for j in kept} | trk)
+    above = [j for j in kept if j["s"] >= MIN_SHOW]
+    shown = [j for j in above if analyst_level(j)]
+    print(f"analyst gate: {len(above) - len(shown)} senior or 3+ year seats dropped, {len(shown)} kept")
     jobs = [dict(s=j["s"], c=j["c"], cat=j["cat"], t=j["t"], l=j["l"], u=j["u"],
-                 a=j["age"], n=j["new"], m=j["mtl_explicit"], w=j["why"], o=j.get("net") or "", g=j.get("sig") or "",
+                 a=j["age"], n=j["new"], m=j["m"], w=j["why"], o=j.get("net") or "", g=j.get("sig") or "",
                  lv=j.get("lv"), k=j.get("k"), ad=j.get("ad"), tm=j.get("tm", False), ev=j.get("fresh") == "evergreen",
-                 r=j.get("r"))
-            for j in kept if j["s"] >= MIN_SHOW]
+                 r=j.get("r"), ct=j.get("ct") or "Canada", pv=j.get("pv") or "", st=seat_of(j))
+            for j in shown]
     if len(errors) > len(SOURCES) / 3:
         raise SystemExit(f"{len(errors)} of {len(SOURCES)} boards failed; keeping yesterday's page. {errors[:10]}")
     # boards that failed today: keep yesterday's rows for them so the book doesn't flicker
     failed = {e.split(":")[0] for e in errors}
-    if failed & {"LinkedIn sweep", "Job Bank sweep"}:
-        failed |= {x for x, lab in (("LinkedIn", "LinkedIn sweep"), ("Job Bank", "Job Bank sweep")) if lab in failed}
+    sweeps = (("LinkedIn", "LinkedIn sweep"), ("Job Bank", "Job Bank sweep"), ("eFinancialCareers", "eFinancialCareers sweep"))
+    failed |= {x for x, lab in sweeps if lab in failed}
     if failed and os.path.exists(OUT):
         try:
             prev = open(OUT, encoding="utf-8").read()
@@ -704,7 +904,8 @@ def main():
             old_jobs = json.loads(prev[i:prev.index(";\nconst JOBS")].replace("\\u003c", "<"))["jobs"]
             have = {j["u"] for j in jobs}
             carried = [dict(j, n=False) for j in old_jobs
-                       if (j["c"] in failed or j.get("o") in failed) and j["u"] not in have and j.get("s", 0) >= MIN_SHOW]
+                       if (j["c"] in failed or j.get("o") in failed) and j["u"] not in have and j.get("s", 0) >= MIN_SHOW
+                       and j.get("ct")]   # rows from before the Canada-wide build have no city: let them go
             jobs += carried
             alive = sorted(set(alive) | {j["u"] for j in carried})
         except Exception as e:
@@ -716,23 +917,8 @@ def main():
                 firms=len({j["c"] for j in jobs}), min=MIN_SHOW, tracked=len(alive), reqs=dict(REQS_STATS),
                 profile=PROFILE)
 
-    # the Syracuse desk: a second market and a second profile, built after the Montreal book
-    syr_data = None
-    try:
-        import syr
-        syr_data = syr.build()
-        syr_data["meta"].update(iso=TODAY.isoformat(), at=_NOW.strftime("%H:%M"))
-    except Exception as e:
-        print("syracuse desk failed, keeping the previous one:", e)
-        try:
-            prev = open(OUT, encoding="utf-8").read()
-            i = prev.index("const DATA = ") + len("const DATA = ")
-            syr_data = json.loads(prev[i:prev.index(";\nconst JOBS")].replace("\\u003c", "<")).get("syr")
-        except Exception:
-            syr_data = None
-
     page = open(TEMPLATE, encoding="utf-8").read()
-    payload = json.dumps({"meta": meta, "jobs": jobs, "alive": alive, "syr": syr_data}, ensure_ascii=True).replace("<", "\\u003c")
+    payload = json.dumps({"meta": meta, "jobs": jobs, "alive": alive}, ensure_ascii=True).replace("<", "\\u003c")
     page = page.replace("/*__DATA__*/null", payload)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     open(OUT, "w", encoding="utf-8").write(page)

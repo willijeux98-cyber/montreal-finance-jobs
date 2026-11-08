@@ -89,6 +89,11 @@ def description(url, api=None):
             b = re.search(r'(?is)<div[^>]+class="[^"]*show-more-less-html__markup[^"]*"[^>]*>(.*?)</div>', r.text)
             return _text(b.group(1) if b else r.text)
         raise RuntimeError("LinkedIn 429")
+    m = re.match(r"/careers/(\d+)", path)
+    if host.endswith(".bamboohr.com") and m:   # the page is a script shell; the posting lives at /careers/<id>/detail
+        jo = ((_get(f"https://{host}/careers/{m.group(1)}/detail", headers={**UA, "Accept": "application/json"}).json()
+               .get("result") or {}).get("jobOpening") or {})
+        return _text(jo.get("description") or "") + ("\nMinimum experience: " + jo["minimumExperience"] if jo.get("minimumExperience") else "")
     if host == "jobs.ashbyhq.com":
         page = _get(url).text
         m = re.search(r'"descriptionHtml"\s*:\s*("(?:[^"\\]|\\.)*")', page)

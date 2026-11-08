@@ -1,0 +1,2512 @@
+[
+{
+"name": "AIP Private Equity",
+"domain": "aipprivatecapital.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 9
+},
+{
+"name": "AON M&A and Transaction Solutions",
+"domain": "aon.com",
+"cat": "advisory",
+"city": "London",
+"prov": "Greater London",
+"country": "England",
+"type": "Service Provider - Financial Advisor",
+"staff": 74438
+},
+{
+"name": "AQC Capital (formerly: Anges Québec Capital)",
+"domain": "aqccapital.ca",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 9
+},
+{
+"name": "ARC Financial Corp.",
+"domain": "arcfinancial.com",
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": ""
+},
+{
+"name": "Accelia Capital",
+"domain": "accelia.vc",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 12
+},
+{
+"name": "Active Impact Investments",
+"domain": "activeimpactinvestments.com",
+"cat": "pe_vc",
+"city": "North Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 13
+},
+{
+"name": "Ag Capital Canada",
+"domain": "agcapitalcanada.com",
+"cat": "pe_vc",
+"city": "Tillsonburg",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 9
+},
+{
+"name": "Alberta Enterprise Corporation",
+"domain": "alberta-enterprise.ca",
+"cat": "pension",
+"city": "Edmonton",
+"prov": "AB",
+"country": "Canada",
+"type": "LP Investor - Limited Partners",
+"staff": 14
+},
+{
+"name": "Alborz Venture Capital Inc.",
+"domain": "alborz.vc",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 3
+},
+{
+"name": "Alcorn Partners",
+"domain": "alcornpartners.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": ""
+},
+{
+"name": "AllosteRx Capital Management (Canada) Inc.",
+"domain": "allosterxcapital.com",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 2
+},
+{
+"name": "Alphi Capital",
+"domain": "alphicapital.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 9
+},
+{
+"name": "Alt Ventures",
+"domain": "altventures.ca",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Altas Partners Inc.",
+"domain": "altaspartners.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 96
+},
+{
+"name": "Alvarez & Marsal LLC",
+"domain": "alvarezandmarsal.com",
+"cat": "advisory",
+"city": "New York",
+"prov": "NY",
+"country": "US",
+"type": "Service Provider - Financial Advisor",
+"staff": 11437
+},
+{
+"name": "Amiral Ventures",
+"domain": "amiral.vc",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Amplify Capital",
+"domain": "amplifycapital.ca",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 9
+},
+{
+"name": "Amplitude Ventures",
+"domain": "amplitudevc.com",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 14
+},
+{
+"name": "Antler Canada",
+"domain": "antler.co",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Archangel Network of Funds",
+"domain": "archangelnetwork.ca",
+"cat": "pe_vc",
+"city": "Waterloo",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 17
+},
+{
+"name": "Arete Pacific Tech Ventures",
+"domain": "areteventure.capital",
+"cat": "pe_vc",
+"city": "North Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 4
+},
+{
+"name": "Armentum Partners",
+"domain": "armentumpartners.com",
+"cat": "advisory",
+"city": "San Francisco",
+"prov": "CA",
+"country": "US",
+"type": "Service Provider - Financial Advisor",
+"staff": 12
+},
+{
+"name": "Ascentus Capital",
+"domain": "ascentuscap.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 11
+},
+{
+"name": "BCF Ventures",
+"domain": "bcfventures.vc",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Corporate Venture Capital",
+"staff": 4
+},
+{
+"name": "BDC Capital",
+"domain": "bdc.ca",
+"cat": "pension",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "LP Investor - Limited Partners",
+"staff": 4522
+},
+{
+"name": "BKR Capital (formerly: Black Innovation Capital)",
+"domain": "bkrcapital.ca",
+"cat": "pe_vc",
+"city": "North York",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 14
+},
+{
+"name": "BMO Capital Partners",
+"domain": "bmo.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 2700
+},
+{
+"name": "Beedie Capital Partners",
+"domain": "beediecapital.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Corporate Venture Capital",
+"staff": 13
+},
+{
+"name": "Bell Ventures",
+"domain": "bce.ca",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Corporate Venture Capital",
+"staff": 5
+},
+{
+"name": "Beringer Capital Partners Ltd.",
+"domain": "beringercapital.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 33
+},
+{
+"name": "Birch Hill Equity Partners Management Inc.",
+"domain": "birchhillequity.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 73
+},
+{
+"name": "Birchmont Consulting",
+"domain": "birchmont.com",
+"cat": "advisory",
+"city": "Mississauga",
+"prov": "ON",
+"country": "Canada",
+"type": "Service Provider - Financial Advisor",
+"staff": ""
+},
+{
+"name": "Bizmark Business Markets Inc.",
+"domain": "bizmark.ca",
+"cat": "advisory",
+"city": "St. Albert",
+"prov": "AB",
+"country": "Canada",
+"type": "Service Provider - Financial Advisor",
+"staff": 3
+},
+{
+"name": "Bluesky Equities Ltd.",
+"domain": "blueskyequities.com",
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Family Offices",
+"staff": 8
+},
+{
+"name": "Boann Social Impact",
+"domain": "boann.ca",
+"cat": "pension",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "LP Investor - Endowment/Foundation/Trust",
+"staff": ""
+},
+{
+"name": "Boreal Ventures",
+"domain": "boreal.vc",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 5
+},
+{
+"name": "BrandProject",
+"domain": "brandproject.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Corporate Venture Capital",
+"staff": 12
+},
+{
+"name": "Brightspark Ventures",
+"domain": "brightspark.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 32
+},
+{
+"name": "Brilliant Phoenix Capital Management Inc",
+"domain": "brilliantphoenix.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 7
+},
+{
+"name": "Brookfield Asset Management Inc.",
+"domain": "brookfield.com",
+"cat": "pe_vc",
+"city": "New York",
+"prov": "NY",
+"country": "US",
+"type": "Investor - Private Equity",
+"staff": 4651
+},
+{
+"name": "BuenaVista Capital Partners",
+"domain": "bcp.partners",
+"cat": "pe_vc",
+"city": "Quito",
+"prov": "Quito",
+"country": "Ecuador",
+"type": "Investor - Private Equity",
+"staff": ""
+},
+{
+"name": "Build Ventures",
+"domain": "buildventures.ca",
+"cat": "pe_vc",
+"city": "Halifax",
+"prov": "NS",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 2
+},
+{
+"name": "CAI Capital Partners",
+"domain": "caifunds.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 14
+},
+{
+"name": "CIBC Innovation Banking",
+"domain": "cibc.com",
+"cat": "pension",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "LP Investor - Limited Partners",
+"staff": ""
+},
+{
+"name": "CIC Capital Ventures",
+"domain": null,
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Corporate Venture Capital",
+"staff": ""
+},
+{
+"name": "CIEL Capital",
+"domain": "ciel.capital",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Family Offices",
+"staff": 9
+},
+{
+"name": "CMCC Global",
+"domain": "cmcc.vc",
+"cat": "pe_vc",
+"city": "Hong Kong",
+"prov": "",
+"country": "Hong Kong",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "CTI Life Sciences / CTI Sciences de la vie",
+"domain": "ctisciences.com",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 7
+},
+{
+"name": "Caldwell Securities Ltd.",
+"domain": "caldwellsecurities.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 62
+},
+{
+"name": "Canada Pension Plan Investment Board (CPPIB)",
+"domain": "cppib.ca",
+"cat": "pension",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "LP Investor - Public Pension",
+"staff": 2336
+},
+{
+"name": "Canadian Business Growth Fund (CBGF)",
+"domain": "cbgf.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 24
+},
+{
+"name": "Caracalla Investment Corporation",
+"domain": "caracalla.ca",
+"cat": "pe_vc",
+"city": "Victoria",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Celtic House Venture Partners",
+"domain": "celtic-house.com",
+"cat": "pe_vc",
+"city": "Ottawa",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 4
+},
+{
+"name": "Citco Group Limited",
+"domain": "citco.com",
+"cat": "pe_vc",
+"city": "Grand Cayman",
+"prov": "",
+"country": "Cayman Islands",
+"type": "Investor - Corporate Investor",
+"staff": 11518
+},
+{
+"name": "Clairvest Group Inc",
+"domain": "clairvest.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 47
+},
+{
+"name": "Clearspring Capital Partners",
+"domain": "callistocapital.ca",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": ""
+},
+{
+"name": "Climate Innovation Capital",
+"domain": "climateinnovationcapital.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 14
+},
+{
+"name": "Conexus Venture Capital",
+"domain": "conexusventurecapital.ca",
+"cat": "pe_vc",
+"city": "Regina",
+"prov": "SK",
+"country": "Canada",
+"type": "Investor - Corporate Venture Capital",
+"staff": 4
+},
+{
+"name": "Crédit Mutuel Equity",
+"domain": "creditmutuel.fr",
+"cat": "pe_vc",
+"city": "Strasbourg",
+"prov": "France",
+"country": "France",
+"type": "Investor - Private Equity",
+"staff": 145
+},
+{
+"name": "Cycle Capital Management",
+"domain": "cyclecapital.com",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 35
+},
+{
+"name": "Dancap Private Equity Inc.",
+"domain": "dancap.ca",
+"cat": "pension",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "LP Investor - Limited Partners",
+"staff": 9
+},
+{
+"name": "Dawson Partners (formerly: Whitehorse Liquidity Partners)",
+"domain": "dawsonpartners.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 175
+},
+{
+"name": "Deloitte Ventures",
+"domain": "www2.deloitte.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Corporate Venture Capital",
+"staff": 479066
+},
+{
+"name": "Delvinia",
+"domain": "delvinia.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Investor",
+"staff": ""
+},
+{
+"name": "Desjardins Capital",
+"domain": "desjardins.com",
+"cat": "pension",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "LP Investor - Limited Partners",
+"staff": 41904
+},
+{
+"name": "Diagram Ventures",
+"domain": "diagram.ca",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 43
+},
+{
+"name": "District Ventures Capital",
+"domain": "districtventurescapital.com",
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 6
+},
+{
+"name": "Easly",
+"domain": "fundeasly.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 2
+},
+{
+"name": "Emend Vision Fund",
+"domain": "emendfund.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Emmertech",
+"domain": "emmertech.ag",
+"cat": "pe_vc",
+"city": "Regina",
+"prov": "SK",
+"country": "Canada",
+"type": "Investor - Corporate Venture Capital",
+"staff": 4
+},
+{
+"name": "EnerTech Capital",
+"domain": "enertechcapital.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 15
+},
+{
+"name": "Esplanade Healthtech Ventures",
+"domain": "esplanadeventures.com",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 7
+},
+{
+"name": "Espresso Capital Ltd.",
+"domain": "espressocapital.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 48
+},
+{
+"name": "Evok Innovations",
+"domain": "evokinnovations.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 10
+},
+{
+"name": "Export Development Canada (EDC)",
+"domain": "edc.ca",
+"cat": "pe_vc",
+"city": "Ottawa",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Investor",
+"staff": 2532
+},
+{
+"name": "Extreme Venture Partners (EVP)",
+"domain": "evp.vc",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "FACIT",
+"domain": "facit.ca",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 16
+},
+{
+"name": "Farm Credit Canada (FCC)",
+"domain": "fcc-fac.ca",
+"cat": "pension",
+"city": "Regina",
+"prov": "SK",
+"country": "Canada",
+"type": "LP Investor - Limited Partners",
+"staff": 2367
+},
+{
+"name": "Fengate Private Equity",
+"domain": "fengatecapital.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 299
+},
+{
+"name": "Finchley Healthcare Ventures",
+"domain": "finchleyventures.com",
+"cat": "pension",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "LP Investor - Limited Partners",
+"staff": 6
+},
+{
+"name": "FirePower Capital",
+"domain": "firepowercapital.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Debt Provider",
+"staff": 40
+},
+{
+"name": "First Ascent Ventures",
+"domain": "firstascentventures.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 9
+},
+{
+"name": "Flow Capital",
+"domain": "flowcap.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 12
+},
+{
+"name": "Fondaction",
+"domain": "fondaction.com",
+"cat": "pension",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "LP Investor - Limited Partners",
+"staff": 289
+},
+{
+"name": "Forum Asset Management",
+"domain": "forumam.com",
+"cat": "am",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Asset Management/Mutual Fund",
+"staff": 60
+},
+{
+"name": "Framework Venture Partners",
+"domain": "framework.vc",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 23
+},
+{
+"name": "Fulcrum Capital Partners Inc.",
+"domain": "fulcrumcapital.ca",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 13
+},
+{
+"name": "Garage Capital",
+"domain": "garage.vc",
+"cat": "pe_vc",
+"city": "Kitchener",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 5
+},
+{
+"name": "Genesys Capital",
+"domain": "genesyscapital.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 8
+},
+{
+"name": "Georgian",
+"domain": "georgian.io",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 138
+},
+{
+"name": "Golden Ventures",
+"domain": "golden.ventures",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 9
+},
+{
+"name": "Good News Ventures",
+"domain": "goodnewsventures.com",
+"cat": "pe_vc",
+"city": "Markham",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 17
+},
+{
+"name": "Graphite Ventures",
+"domain": "graphitevc.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 12
+},
+{
+"name": "GreenSky Ventures",
+"domain": "greenskycapital.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 9
+},
+{
+"name": "Greensoil PropTech Ventures",
+"domain": "gspv.vc",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 9
+},
+{
+"name": "GroundBreak Ventures",
+"domain": "groundbreakventures.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 4
+},
+{
+"name": "HUMANUS Ventures",
+"domain": "humanus.vc",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Halifax Climate Investment, Innovation and Impact (HCi3) Fund",
+"domain": "hci3.ca",
+"cat": "pe_vc",
+"city": "Halifax",
+"prov": "NS",
+"country": "Canada",
+"type": "Investor - Investor",
+"staff": ""
+},
+{
+"name": "HarbourVest Partners, LLC",
+"domain": "harbourvest.com",
+"cat": "pe_vc",
+"city": "Boston",
+"prov": "MA",
+"country": "US",
+"type": "LP Investor - Fund of Funds",
+"staff": 1307
+},
+{
+"name": "Hazelview Ventures",
+"domain": "hazelview.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Corporate Venture Capital",
+"staff": 115
+},
+{
+"name": "Headwater Equity Partners Inc.",
+"domain": "headwaterequity.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 4
+},
+{
+"name": "INP Capital",
+"domain": "inp-capital.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 5
+},
+{
+"name": "Imperial Capital Group Ltd",
+"domain": "imperialcap.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 80
+},
+{
+"name": "InBC Investment Corporation",
+"domain": "inbcinvestment.ca",
+"cat": "pension",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "LP Investor - Limited Partners",
+"staff": 18
+},
+{
+"name": "Information Venture Partners Inc.",
+"domain": "informationvp.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 11
+},
+{
+"name": "Inovia Capital Inc.",
+"domain": "inoviacapital.com",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 105
+},
+{
+"name": "Instar Asset Management Inc.",
+"domain": "instaragf.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 28
+},
+{
+"name": "Intrepid Growth Partners",
+"domain": "intrepidgp.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": ""
+},
+{
+"name": "Intrinsic Venture Capital Inc.",
+"domain": "intrinsicvc.com",
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 2
+},
+{
+"name": "Invest Nova Scotia",
+"domain": "innovacorp.ca",
+"cat": "pe_vc",
+"city": "Halifax",
+"prov": "NS",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 229
+},
+{
+"name": "Investeco Capital Corp.",
+"domain": "investeco.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 12
+},
+{
+"name": "Investissement Québec",
+"domain": "investquebec.com",
+"cat": "pension",
+"city": "Quebec City",
+"prov": "QC",
+"country": "Canada",
+"type": "LP Investor - Limited Partners",
+"staff": 1280
+},
+{
+"name": "Investment Management Corporation of Ontario (IMCO)",
+"domain": "opb.ca",
+"cat": "pension",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "LP Investor - Limited Partners",
+"staff": 231
+},
+{
+"name": "Ironbridge Equity Partners Management Limited",
+"domain": "ironbridgeequity.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 21
+},
+{
+"name": "Island Capital Partners",
+"domain": "peislandcapitalpartners.com",
+"cat": "pe_vc",
+"city": "Charlottetown",
+"prov": "PE",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 6
+},
+{
+"name": "Jolt Capital",
+"domain": "jolt-capital.com",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Corporate Investor",
+"staff": ""
+},
+{
+"name": "KV Capital",
+"domain": "kvcapital.ca",
+"cat": "pe_vc",
+"city": "Edmonton",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 85
+},
+{
+"name": "Kalos LLP",
+"domain": "kalostransactions.ca",
+"cat": "advisory",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Service Provider - Financial Advisor",
+"staff": ""
+},
+{
+"name": "Kanata Ventures",
+"domain": "kanata.vc",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 3
+},
+{
+"name": "Kensington Capital Partners Limited",
+"domain": "kcpl.ca",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "LP Investor - Fund of Funds",
+"staff": 48
+},
+{
+"name": "Killick Capital Inc.",
+"domain": "killickcapital.com",
+"cat": "pe_vc",
+"city": "St. John's",
+"prov": "NL",
+"country": "Canada",
+"type": "Investor - Family Offices",
+"staff": ""
+},
+{
+"name": "LBI Capital Group",
+"domain": "lbicapitalgroup.ca",
+"cat": "pe_vc",
+"city": "Edmonton",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": ""
+},
+{
+"name": "La Caisse (formerly: Caisse de dépôt et placement du Québec (CDPQ))",
+"domain": "lacaisse.com",
+"cat": "pension",
+"city": "Quebec City",
+"prov": "QC",
+"country": "Canada",
+"type": "LP Investor - Public Pension",
+"staff": 2313
+},
+{
+"name": "Launch Kawartha",
+"domain": "launchkawartha.ca",
+"cat": "pe_vc",
+"city": "Lindsay",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Laurier Capital Partners",
+"domain": "lcpartners.ca",
+"cat": "pe_vc",
+"city": "Sudbury",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": ""
+},
+{
+"name": "Leva Capital",
+"domain": "levacapital.ca",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 6
+},
+{
+"name": "Lex Capital Corp.",
+"domain": "lexcapitalcorp.ca",
+"cat": "pe_vc",
+"city": "Regina",
+"prov": "SK",
+"country": "Canada",
+"type": "Investor - Family Offices",
+"staff": ""
+},
+{
+"name": "Lexington Partners (formerly: Lex Capital Management Inc.)",
+"domain": "lexcapital.ca",
+"cat": "pe_vc",
+"city": "Regina",
+"prov": "SK",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Linearis Ventures",
+"domain": "linearis.com",
+"cat": "pe_vc",
+"city": "Quebec City",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Longbow Capital Inc.",
+"domain": "longbowcapital.com",
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 20
+},
+{
+"name": "Luge Capital",
+"domain": "luge.vc",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 13
+},
+{
+"name": "Lumira Ventures",
+"domain": "lumiraventures.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 17
+},
+{
+"name": "MKB",
+"domain": "mkbandco.com",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 13
+},
+{
+"name": "MNP Corporate Finance Inc.",
+"domain": "mnp.ca",
+"cat": "advisory",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Service Provider - Financial Advisor",
+"staff": 8922
+},
+{
+"name": "MaRS Investment Accelerator Fund (IAF)",
+"domain": "marsiaf.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 12
+},
+{
+"name": "Manitoba First Fund",
+"domain": "manitobafirstfund.com",
+"cat": "pension",
+"city": "Winnipeg",
+"prov": "MB",
+"country": "Canada",
+"type": "LP Investor - Limited Partners",
+"staff": 6
+},
+{
+"name": "Manulife Investment Management",
+"domain": "manulifeim.com",
+"cat": "am",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Asset Management/Mutual Fund",
+"staff": 5421
+},
+{
+"name": "Manvest Inc.",
+"domain": "mancal.com",
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Corporate Investor",
+"staff": 6
+},
+{
+"name": "Maple Bridge Ventures",
+"domain": "maplebridge.vc",
+"cat": "pe_vc",
+"city": "Ottawa",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 2
+},
+{
+"name": "Maverix Private Equity",
+"domain": "maverixpe.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 14
+},
+{
+"name": "MaxWave Capital Inc.",
+"domain": "maxwavecapital.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": ""
+},
+{
+"name": "McRock Capital Corporation",
+"domain": "mcrockcapital.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 10
+},
+{
+"name": "Metiquity Ventures",
+"domain": "metiquity.ca",
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Mink Capital",
+"domain": "minkcapital.ca",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 1
+},
+{
+"name": "Mission BioCapital Management Company LLC",
+"domain": "missionbiocapital.com",
+"cat": "pe_vc",
+"city": "Cambridge",
+"prov": "MA",
+"country": "US",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Mithril360",
+"domain": "mithril.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 3
+},
+{
+"name": "Mobili Capital Corp",
+"domain": "mobilicapital.com",
+"cat": "pe_vc",
+"city": "Markham",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": ""
+},
+{
+"name": "Métanoïa / Metanoia",
+"domain": "metanoia.vc",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "NYA Ventures",
+"domain": "nyaplanet.com",
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 9
+},
+{
+"name": "New Brunswick Innovation Foundation (NBIF)",
+"domain": "nbif.ca",
+"cat": "pension",
+"city": "Fredericton",
+"prov": "NB",
+"country": "Canada",
+"type": "LP Investor - Endowment/Foundation/Trust",
+"staff": 24
+},
+{
+"name": "Nex Gen VC Partners",
+"domain": "nexgen.ventures",
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 2
+},
+{
+"name": "Nicola Wealth Management Ltd.",
+"domain": "nicolawealth.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Family Offices",
+"staff": 472
+},
+{
+"name": "Nimbus Synergies",
+"domain": "nimbusinc.vc",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 6
+},
+{
+"name": "Northleaf Capital Partners",
+"domain": "northleafcapital.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "LP Investor - Fund of Funds",
+"staff": 268
+},
+{
+"name": "Northreach Capital Inc.",
+"domain": "ngif.ca",
+"cat": "pe_vc",
+"city": "Ottawa",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 19
+},
+{
+"name": "Novacap Management Inc.",
+"domain": "novacap.ca",
+"cat": "pe_vc",
+"city": "Longueuil",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 346
+},
+{
+"name": "Nàdarra Ventures / Nadarra Ventures",
+"domain": "nadarraventures.com",
+"cat": "pe_vc",
+"city": "Charlottetown",
+"prov": "PE",
+"country": "Canada",
+"type": "Investor - Corporate Venture Capital",
+"staff": 3
+},
+{
+"name": "OMERS Private Equity Inc.",
+"domain": "omersprivateequity.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 127
+},
+{
+"name": "OMERS Ventures Management Inc.",
+"domain": "omersventures.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 31
+},
+{
+"name": "Onex Corporation",
+"domain": "onex.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 737
+},
+{
+"name": "Ontario Teachers' Pension Plan (OTPP)",
+"domain": "otpp.com",
+"cat": "pension",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "LP Investor - Public Pension",
+"staff": 1912
+},
+{
+"name": "Outsider Capital",
+"domain": "outsidercap.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": ""
+},
+{
+"name": "PFM Capital Inc.",
+"domain": "pfm.ca",
+"cat": "pe_vc",
+"city": "Regina",
+"prov": "SK",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 16
+},
+{
+"name": "PIC Investments Group Inc.",
+"domain": "picgroup.ca",
+"cat": "pe_vc",
+"city": "Saskatoon",
+"prov": "SK",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 13
+},
+{
+"name": "PRIVEQ Capital Funds",
+"domain": "priveq.ca",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 4
+},
+{
+"name": "PaceZero Capital Partners",
+"domain": "pacezero.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Debt Provider",
+"staff": 11
+},
+{
+"name": "Panache Ventures",
+"domain": "panache.vc",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 19
+},
+{
+"name": "Peak Bridge Advisors Inc.",
+"domain": "peakbridge.ca",
+"cat": "advisory",
+"city": "Mississauga",
+"prov": "ON",
+"country": "Canada",
+"type": "Service Provider - Financial Advisor",
+"staff": ""
+},
+{
+"name": "Pelorus Venture Capital",
+"domain": "pelorusvc.com",
+"cat": "pe_vc",
+"city": "St. John's",
+"prov": "NL",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 4
+},
+{
+"name": "Peloton Capital Management",
+"domain": "pelotoncapitalmanagement.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 27
+},
+{
+"name": "Pender Ventures",
+"domain": "penderventures.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 10
+},
+{
+"name": "Plaza Ventures",
+"domain": "plaza.ventures",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 6
+},
+{
+"name": "Portage Ventures",
+"domain": "portagevc.com",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Private Capital Group Solutions Inc.",
+"domain": "privatecapitalgroup.ca",
+"cat": "advisory",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Service Provider - Financial Advisor",
+"staff": ""
+},
+{
+"name": "Providence Health Care Ventures (PHC Ventures)",
+"domain": "phcventures.ca",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Corporate Venture Capital",
+"staff": 3
+},
+{
+"name": "RBC Capital Partners",
+"domain": "rbccm.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 10266
+},
+{
+"name": "RBCx",
+"domain": "rbcx.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 426
+},
+{
+"name": "REACH Canada",
+"domain": "scv.vc",
+"cat": "pe_vc",
+"city": "Chicago",
+"prov": "IL",
+"country": "US",
+"type": "Investor - Corporate Venture Capital",
+"staff": 22
+},
+{
+"name": "Radical Ventures",
+"domain": "radical.vc",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 29
+},
+{
+"name": "Raven Indigenous Capital Partners",
+"domain": "ravencapitalpartners.ca",
+"cat": "pe_vc",
+"city": "Victoria",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 19
+},
+{
+"name": "Real Ventures",
+"domain": "realventures.com",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 43
+},
+{
+"name": "Red Leaf Capital",
+"domain": "redleafcapital.ca",
+"cat": "pe_vc",
+"city": "Winnipeg",
+"prov": "MB",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 4
+},
+{
+"name": "Regimen Equity Partners Inc.",
+"domain": "regimenpartners.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 11
+},
+{
+"name": "Relay Ventures",
+"domain": "relayventures.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "LP Investor - Fund of Funds",
+"staff": 17
+},
+{
+"name": "Renewal Funds",
+"domain": "renewalfunds.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 9
+},
+{
+"name": "RiSC Capital",
+"domain": "risccap.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 8
+},
+{
+"name": "Ripple Ventures",
+"domain": "rippleventures.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Rise Capital",
+"domain": "risecapital.ca",
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Debt Provider",
+"staff": ""
+},
+{
+"name": "Roadmap Capital Inc.",
+"domain": "roadmapcapitalinc.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 5
+},
+{
+"name": "Rockmount Financial Corporation",
+"domain": "rockmountcorp.com",
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Family Offices",
+"staff": 2
+},
+{
+"name": "Roller Labs Ventures",
+"domain": "corp.canadiantire.ca",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Corporate Venture Capital",
+"staff": 5
+},
+{
+"name": "Round13 Capital Inc.",
+"domain": "r13.vc",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 8
+},
+{
+"name": "Roynat Capital Inc.",
+"domain": "roynat.com",
+"cat": "pe_vc",
+"city": "Ottawa",
+"prov": "ON",
+"country": "Canada",
+"type": "LP Investor - Fund of Funds",
+"staff": 202
+},
+{
+"name": "SE Impact Ventures",
+"domain": "seimpactventures.com",
+"cat": "pe_vc",
+"city": "Markham",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "SVG Ventures - THRIVE",
+"domain": "thriveagrifood.com",
+"cat": "pe_vc",
+"city": "Los Gatos",
+"prov": "CA",
+"country": "US",
+"type": "Investor - Venture Capital",
+"staff": 63
+},
+{
+"name": "Sagard Private Equity Canada",
+"domain": "sagard.com",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 424
+},
+{
+"name": "Sand Hill North Ventures",
+"domain": "sandhillnorth.vc",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 4
+},
+{
+"name": "Sandpiper Ventures",
+"domain": "sandpiper.vc",
+"cat": "pe_vc",
+"city": "Halifax",
+"prov": "NS",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 9
+},
+{
+"name": "Scotiabank Private Equity",
+"domain": null,
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": ""
+},
+{
+"name": "SeaFort Capital Inc.",
+"domain": "seafortcapital.com",
+"cat": "pe_vc",
+"city": "Halifax",
+"prov": "NS",
+"country": "Canada",
+"type": "Investor - Family Offices",
+"staff": 13
+},
+{
+"name": "Sectoral Asset Management Inc.",
+"domain": "sectoral.com",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 37
+},
+{
+"name": "Seido Capital",
+"domain": "seidocapital.com",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Sixty Degree Capital",
+"domain": "sixtydegreecapital.com",
+"cat": "pe_vc",
+"city": "North York",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Spring Impact Capital",
+"domain": "springimpactcapital.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 8
+},
+{
+"name": "Staircase Ventures",
+"domain": "staircaseventures.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 2
+},
+{
+"name": "StandUp Ventures",
+"domain": "standupvc.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 9
+},
+{
+"name": "Stellé",
+"domain": "stelle.co",
+"cat": "advisory",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Service Provider - Financial Advisor",
+"staff": 25
+},
+{
+"name": "Storytime Capital",
+"domain": "storytime.capital",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 4
+},
+{
+"name": "SunnySide Capital Management Inc.",
+"domain": "sunnysideinc.ca",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Family Offices",
+"staff": ""
+},
+{
+"name": "TC Energy",
+"domain": "tcenergy.com",
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Corporate Venture Capital",
+"staff": ""
+},
+{
+"name": "TD Innovation Partners",
+"domain": "tdip.td.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Corporate Venture Capital",
+"staff": ""
+},
+{
+"name": "TELUS Global Ventures",
+"domain": "telus.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Corporate Venture Capital",
+"staff": 20
+},
+{
+"name": "TLT Capital",
+"domain": "tlt.capital",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Tacenda Capital (VCC) Inc.",
+"domain": "tacenda.ca",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 2
+},
+{
+"name": "Tall Grass Ventures",
+"domain": "tallgrass.vc",
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 11
+},
+{
+"name": "TandemLaunch Inc.",
+"domain": "tandemlaunch.com",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 15
+},
+{
+"name": "Taygetos Capital Inc.",
+"domain": "taygetos.ca",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Teralys Capital",
+"domain": "teralyscapital.com",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "LP Investor - Fund of Funds",
+"staff": 24
+},
+{
+"name": "TerraNova Partners L.P.",
+"domain": "terranovapartners.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 8
+},
+{
+"name": "The Atmospheric Fund",
+"domain": "taf.ca",
+"cat": "pension",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "LP Investor - Endowment/Foundation/Trust",
+"staff": 36
+},
+{
+"name": "The Viridis Group",
+"domain": "viridis.ca",
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Family Offices",
+"staff": ""
+},
+{
+"name": "The51 Ventures Fund",
+"domain": "the51.com",
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 22
+},
+{
+"name": "Thomson Reuters Ventures",
+"domain": "trventures.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Corporate Venture Capital",
+"staff": 5
+},
+{
+"name": "Top Down Ventures",
+"domain": "topdown.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 14
+},
+{
+"name": "Top Renergy Inc. (TRE)",
+"domain": "toprenergy.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 2
+},
+{
+"name": "TorQuest Partners",
+"domain": "torquest.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 56
+},
+{
+"name": "TriWest Capital Partners",
+"domain": "triwest.ca",
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 26
+},
+{
+"name": "Tribe Ventures",
+"domain": "tribeventures.ca",
+"cat": "pe_vc",
+"city": "Halifax",
+"prov": "NS",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Tricor Pacific Capital Inc.",
+"domain": "tricorpacific.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Family Offices",
+"staff": 22
+},
+{
+"name": "Trillick Ventures",
+"domain": "trillick.ca",
+"cat": "pe_vc",
+"city": "Winnipeg",
+"prov": "MB",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Triptyq Capital",
+"domain": "triptyq.vc",
+"cat": "pe_vc",
+"city": "Montreal",
+"prov": "QC",
+"country": "Canada",
+"type": "Investor - Corporate Venture Capital",
+"staff": 9
+},
+{
+"name": "True North Fund",
+"domain": "truenorthfund.ca",
+"cat": "pe_vc",
+"city": "Kitchener",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 5
+},
+{
+"name": "Two Small Fish Ventures",
+"domain": "twosmallfishventures.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 10
+},
+{
+"name": "UTI Limited Partnership",
+"domain": "innovatecalgary.com",
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": ""
+},
+{
+"name": "Vanedge Capital Partners Ltd",
+"domain": "vanedgecapital.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 9
+},
+{
+"name": "Vantage Futures",
+"domain": "vantagegroup.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Corporate Venture Capital",
+"staff": ""
+},
+{
+"name": "Venture Ontario (formerly: Ontario Capital Growth Corporation (OCGC))",
+"domain": "ocgc.gov.on.ca",
+"cat": "pension",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "LP Investor - Limited Partners",
+"staff": 2
+},
+{
+"name": "Verdex Capital",
+"domain": "verdexcapital.com",
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "LP Investor - Fund of Funds",
+"staff": 5
+},
+{
+"name": "Versant Ventures",
+"domain": "versantventures.com",
+"cat": "pe_vc",
+"city": "Menlo Park",
+"prov": "CA",
+"country": "US",
+"type": "Investor - Venture Capital",
+"staff": 67
+},
+{
+"name": "Version One Ventures",
+"domain": "versiononeventures.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 3
+},
+{
+"name": "Vertu Capital",
+"domain": "vertucapital.ca",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 17
+},
+{
+"name": "Vistara Growth",
+"domain": "vistaragrowth.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Debt Provider",
+"staff": 15
+},
+{
+"name": "Waterous Energy Fund, WEF",
+"domain": null,
+"cat": "pe_vc",
+"city": "Calgary",
+"prov": "AB",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": ""
+},
+{
+"name": "Weathervane Investment",
+"domain": "weathervaneinvestments.ca",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 11
+},
+{
+"name": "Westcap Mgt. Ltd.",
+"domain": "westcapmgt.ca",
+"cat": "pe_vc",
+"city": "Saskatoon",
+"prov": "SK",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 20
+},
+{
+"name": "White Star Capital Inc.",
+"domain": "whitestarcapital.com",
+"cat": "pe_vc",
+"city": "New York",
+"prov": "NY",
+"country": "US",
+"type": "Investor - Venture Capital",
+"staff": 73
+},
+{
+"name": "Whitecap Venture Partners",
+"domain": "whitecapvp.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 11
+},
+{
+"name": "XPV Water Partners",
+"domain": "xpvcapital.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Private Equity",
+"staff": 37
+},
+{
+"name": "Yaletown Partners Inc",
+"domain": "yaletown.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 21
+},
+{
+"name": "adMare BioInnovations",
+"domain": "admarebio.com",
+"cat": "pe_vc",
+"city": "Vancouver",
+"prov": "BC",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 108
+},
+{
+"name": "iGan Partners Inc.",
+"domain": "iganpartners.com",
+"cat": "pe_vc",
+"city": "Toronto",
+"prov": "ON",
+"country": "Canada",
+"type": "Investor - Venture Capital",
+"staff": 9
+}
+]

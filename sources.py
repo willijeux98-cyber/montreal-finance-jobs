@@ -2,7 +2,7 @@
 Job-board fetchers for every hiring system the discovery scan finds.
 
 Each fetcher returns (postings, count_read). A posting is a dict:
-  c (company), cat, t (title), l (location text), u (url), age (days or None), hq (Montreal HQ?)
+  c (company), cat, t (title), l (location text), u (url), age (days or None), hq (Canadian head office?)
 """
 import concurrent.futures as cf
 import datetime as dt
@@ -21,21 +21,14 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
       "Accept-Language": "en-CA,en;q=0.9,fr;q=0.8"}
 TODAY = dt.date.today()
 
-# Firms whose head office (or main office) is in Montreal: "N locations" postings are kept for them.
-MTL_HQ = {
-    "CDPQ", "PSP Investments", "Ivanhoe Cambridge", "Fonds de solidarite FTQ", "Fondaction", "Investissement Quebec",
-    "BDC", "Teralys Capital", "Power Corporation", "Sagard", "Power Sustainable", "Claridge", "Desjardins Capital",
-    "Novacap", "Walter Capital Partners", "Champlain Financial", "XPND Capital", "Seafort Capital", "Inovia Capital",
-    "Real Ventures", "Panache Ventures", "White Star Capital", "Amplitude Ventures", "Lumira Ventures", "Cycle Capital",
-    "Diagram Ventures", "Luge Capital", "Tactico", "Front Row Ventures", "Anges Quebec", "Boreal Ventures", "Evolem",
-    "Emerillon Capital", "Idealist Capital", "Fiera Capital", "Jarislowsky Fraser", "Letko Brosseau", "Van Berkom",
-    "Montrusco Bolton", "Triasima", "Claret Asset Management", "Pembroke Management", "Addenda Capital",
-    "AlphaFixe Capital", "Optimum Asset Management", "Formula Growth", "iA Financial Group", "Beneva", "Desjardins",
-    "National Bank", "Laurentian Bank", "Couche-Tard", "CGI", "CAE", "WSP", "BRP", "Saputo", "Metro", "Dollarama",
-    "Air Canada", "CN", "CN Investment Division", "Bombardier", "Lightspeed", "Nuvei", "Hydro-Quebec", "Gildan",
-    "Stella-Jones", "Boralex", "Innergex", "Pomerleau", "Cogeco", "Quebecor", "TFI International",
-    "Raymond Chabot Grant Thornton", "Richter",
-}
+# Firms with a Canadian head office, and that city. "N locations" postings are kept for these, and a careers page
+# that names no city is read as the head office. Directory firms (CVCA, Reseau Capital) are added in build_sources().
+try:
+    from firms_seed import SEED
+except Exception:
+    SEED = []
+FIRM_CITY = {n: c for n, d, cat, c in SEED if c}
+CA_HQ = set(FIRM_CITY)
 
 
 def _get(url, **kw):
@@ -74,6 +67,9 @@ def _wd_days(txt):
     return (int(m.group(1)) + (1 if m.group(2) else 0)) if m else None
 
 
+CA_SEARCH = ("Canada", "Toronto", "Montreal", "Montréal", "Vancouver", "Calgary")
+
+
 def workday(name, cat, hq, tenant, n, site, lang=None):
     base = f"https://{tenant}.wd{n}.myworkdayjobs.com"
     api = f"{base}/wday/cxs/{tenant}/{site}/jobs"
@@ -91,10 +87,10 @@ def workday(name, cat, hq, tenant, n, site, lang=None):
     total = first.get("total", 0) or 0
     posts = list(first.get("jobPostings", []))
     queries = [("", total)]
-    if total > 2000:  # very large global boards: only pull what mentions Montreal
+    if total > 2000:  # very large global boards: only pull what mentions Canada or a Canadian finance city
         posts = []
         queries = []
-        for q in ("Montreal", "Montréal"):
+        for q in CA_SEARCH:
             d = page(0, q)
             posts += d.get("jobPostings", [])
             queries.append((q, d.get("total", 0) or 0))
@@ -107,10 +103,10 @@ def workday(name, cat, hq, tenant, n, site, lang=None):
         hinted = {p.get("externalPath") for p in posts}
     elif not hq:
         try:
-            d = page(0, "Montreal")
+            d = page(0, "Canada")
             extra = list(d.get("jobPostings", []))
             for off in range(20, min(d.get("total", 0) or 0, 400), 20):
-                extra += page(off, "Montreal").get("jobPostings", [])
+                extra += page(off, "Canada").get("jobPostings", [])
             hinted = {p.get("externalPath") for p in extra}
         except Exception:
             pass
@@ -121,7 +117,7 @@ def workday(name, cat, hq, tenant, n, site, lang=None):
             continue
         seen.add(u)
         row = _p(name, cat, p.get("title"), p.get("locationsText"), u, _wd_days(p.get("postedOn")), hq)
-        row["hint"] = p.get("externalPath") in hinted   # the board's own search says Montreal is involved
+        row["hint"] = p.get("externalPath") in hinted   # the board's own search says Canada is involved
         out.append(row)
     return out, total
 
@@ -232,7 +228,8 @@ def teamtailor(name, cat, hq, sub):
 
 
 
-MTL_RX = re.compile(r"montr[eé]al|laval|longueuil|brossard|saint-laurent|st-laurent|dorval", re.I)
+CA_RX = re.compile(r"canada|toronto|montr[eé]al|vancouver|calgary|ottawa|edmonton|winnipeg|halifax|qu[eé]bec|"
+                   r"\b(ON|QC|BC|AB|MB|SK|NS|NB|NL|PE)\b", re.I)
 
 
 def workable(name, cat, hq, tok):
@@ -245,8 +242,12 @@ def workable(name, cat, hq, tok):
         r.raise_for_status()
         d = r.json()
         for j in d.get("results", []):
-            locs = [l.get("city") for l in (j.get("locations") or []) if l.get("city")] or [(j.get("location") or {}).get("city", "")]
-            mt = [l for l in locs if MTL_RX.search(l or "")]
+            locs = [", ".join(x for x in (l.get("city"), l.get("region"), l.get("country")) if x)
+                    for l in (j.get("locations") or []) if l.get("city")]
+            if not locs:
+                l = j.get("location") or {}
+                locs = [", ".join(x for x in (l.get("city"), l.get("region"), l.get("country")) if x)]
+            mt = [l for l in locs if CA_RX.search(l or "")]
             out.append(_p(name, cat, j.get("title"), ", ".join(mt) if mt else ", ".join(x for x in locs if x),
                           f"https://apply.workable.com/{tok}/j/{j.get('shortcode')}/", _iso_age(j.get("published")), hq))
         nxt = d.get("nextPage")
@@ -314,33 +315,39 @@ def rmk(name, cat, hq, base):
 
 
 def jibe(name, cat, hq, base):
-    """Jibe career sites (KPMG): JSON API. Only a User-Agent header, or it returns nothing."""
-    out, page = [], 1
-    while page <= 20:
-        r = requests.get(f"{base}/api/jobs", params={"location": "Montreal", "limit": 100, "page": page},
-                         headers={"User-Agent": UA["User-Agent"]}, timeout=40)
-        r.raise_for_status()
-        jobs = r.json().get("jobs", [])
-        for j in jobs:
-            x = j.get("data", {})
-            out.append(_p(name, cat, x.get("title"), x.get("full_location") or x.get("city"),
-                          f"{base}/professionals/jobs/{x.get('slug')}", _iso_age(x.get("posted_date")), hq))
-        if len(jobs) < 100:
-            break
-        page += 1
+    """Jibe career sites (KPMG): JSON API. Only a User-Agent header, or it returns nothing. Searched city by city."""
+    out, seen = [], set()
+    for city in ("Toronto", "Montreal", "Vancouver", "Calgary", "Ottawa", "Edmonton", "Winnipeg", "Halifax", "Waterloo"):
+        page = 1
+        while page <= 20:
+            r = requests.get(f"{base}/api/jobs", params={"location": city, "limit": 100, "page": page},
+                             headers={"User-Agent": UA["User-Agent"]}, timeout=40)
+            r.raise_for_status()
+            jobs = r.json().get("jobs", [])
+            for j in jobs:
+                x = j.get("data", {})
+                u = f"{base}/professionals/jobs/{x.get('slug')}"
+                if u in seen:
+                    continue
+                seen.add(u)
+                out.append(_p(name, cat, x.get("title"), x.get("full_location") or x.get("city"), u,
+                              _iso_age(x.get("posted_date")), hq))
+            if len(jobs) < 100:
+                break
+            page += 1
     return out, len(out)
 
 
 def wprss(name, cat, hq, feed):
-    """WordPress job feed (BNP Paribas Canada)."""
+    """WordPress job feed (BNP Paribas Canada: Montreal and Toronto offices; the feed doesn't say which)."""
     out = []
     for p in range(1, 11):
         r = requests.get(feed, params={"paged": p}, headers=UA, timeout=40)
         items = re.findall(r"<item>.*?<title>(.*?)</title>.*?<link>(.*?)</link>", r.text, re.S)
         if r.status_code != 200 or not items:
             break
-        for t, l in items:
-            out.append(_p(name, cat, html.unescape(t).replace("\u200b", ""), "Montreal", l.strip(), None, hq))
+        for t, l in items:   # a city in the title still wins; otherwise "Canada", city unconfirmed
+            out.append(_p(name, cat, html.unescape(t).replace("\u200b", ""), "Canada", l.strip(), None, hq))
     return out, len(out)
 
 
@@ -426,6 +433,11 @@ NAVISH = re.compile(r"^(careers?|carri[eè]res?|jobs?|emplois?|join us|contact|l
                     r"en savoir plus|home|accueil|privacy)$", re.I)
 
 
+def _home(name):
+    c = FIRM_CITY.get(name)
+    return f"{c} (head office)" if c else "Location not stated"
+
+
 def _clean(s):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", s or ""))).strip()
 
@@ -456,14 +468,13 @@ def _scan_careers(t, name, cat, hq, url, strip_chrome):
         locm = re.search(r'class="[^"]*location[^"]*"[^>]*>(.*?)</(?:p|div|li)>', inner, re.S | re.I)
         loc = _clean(locm.group(1)) if locm else ""
         oc = OTHER_CITY.search(text)
-        out.append(_p(name, cat, text, loc or (oc.group(0) if oc else ("Montreal (head office)" if hq else "Location not stated")),
-                      link, None, hq))
+        out.append(_p(name, cat, text, loc or (oc.group(0) if oc else _home(name)), link, None, hq))
     for h in re.findall(r"<h[2-4][^>]*>(.*?)</h[2-4]>", body, re.S | re.I):  # jobs listed as headings, no link
         text = re.sub(r"^\d{4}-\d{2}-\d{2}\s*", "", _clean(h))
         if 8 <= len(text) <= 110 and JOBISH.search(text) and not NOT_JOB.search(text) and text.lower() not in seen:
             seen.add(text.lower())
             oc = OTHER_CITY.search(text)
-            out.append(_p(name, cat, text, oc.group(0) if oc else ("Montreal (head office)" if hq else "Location not stated"),
+            out.append(_p(name, cat, text, oc.group(0) if oc else _home(name),
                           url + "#" + re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-"), None, hq))
     return out
 
@@ -622,14 +633,14 @@ try:
 except Exception:
     SEED_NAMES = set()
 
-OTHER_CITY = re.compile(r"\b(toronto|vancouver|calgary|edmonton|ottawa|winnipeg|halifax|waterloo|mississauga|"
+OTHER_CITY = re.compile(r"\b(toronto|montr[eé]al|vancouver|calgary|edmonton|ottawa|winnipeg|halifax|waterloo|mississauga|"
                         r"new york|boston|chicago|houston|san francisco|london|paris|madrid|milan|frankfurt|"
                         r"zurich|luxembourg|singapore|hong kong|tokyo|sydney|dubai)\b", re.I)
 
 
 MANUAL_NAMES = {m[2] for m in MANUAL} | {"National Bank"}
-BASE_HQ = set(MTL_HQ) | {"Valnet", "Canada Infrastructure Bank", "Bell"}
-MTL_HQ |= {"Valnet", "Addenda Capital", "Bell"}
+FIRM_CITY.update({"Valnet": "Montréal", "Bell": "Montréal", "Quebecor": "Montréal"})
+CA_HQ |= set(FIRM_CITY)
 
 
 CAREERS_PATH = re.compile(r"career|carri|job|emploi|join|joindre|rejoindre|talent|postes|opportunit|hiring|recrut|travailler|work-with", re.I)
@@ -657,7 +668,7 @@ def build_sources():
             return  # e.g. Desjardins' own board listed again under "Desjardins Capital"
         owner.setdefault(tenant, name)
         seen.add(k)
-        hq = name in (MTL_HQ if kind == "careers" else BASE_HQ)
+        hq = name in CA_HQ
         srcs.append((lambda kind=kind, key=key, name=name, cat=cat, hq=hq: FETCHERS[kind](name, cat, hq, key), name))
 
     for kind, key, name, cat in MANUAL:
@@ -671,17 +682,19 @@ def build_sources():
     for f in found:
         name, cat = f["name"], f["cat"]
         rc = f.get("rc", False) and name not in SEED_NAMES  # directory firms we know nothing else about
-        if rc:
-            MTL_HQ.add(name)
+        if f.get("city") and f.get("src") in ("cvca", "rc") and name not in SEED_NAMES:   # the seed list's city always wins
+            FIRM_CITY.setdefault(name, f["city"])
+            CA_HQ.add(name)
         if f["boards"]:
             for kind, key in f["boards"]:
                 add(kind, key, name, cat)
-        elif f.get("careers") and (name in MTL_HQ or rc) and name not in MANUAL_NAMES and real_careers_url(f["careers"]):
+        elif f.get("careers") and (name in CA_HQ or rc) and name not in MANUAL_NAMES and real_careers_url(f["careers"]):
             host = re.sub(r"^https?://", "", f["careers"]).split("/")[0].lower()
             if cat == "pe_vc" and re.match(r"(careers|jobs|talent)\.", host):
                 continue  # VC "careers." sites are portfolio-company talent boards, not the fund's own jobs
             add("careers", f["careers"], name, cat)
-    from net import linkedin, jobbank
+    from net import linkedin, jobbank, efc
     srcs.append((linkedin, "LinkedIn sweep"))
     srcs.append((jobbank, "Job Bank sweep"))
+    srcs.append((efc, "eFinancialCareers sweep"))
     return srcs

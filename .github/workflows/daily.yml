@@ -16,7 +16,7 @@ on:
   workflow_dispatch:        # "Run workflow" button for an on-demand refresh
   push:                     # rebuild right away when the engine or board list changes
     branches: [main]
-    paths: ["fetch.py", "sources.py", "net.py", "reqs.py", "syr.py", "template.html", "data/boards.json", "firms_seed.py", ".github/workflows/daily.yml"]
+    paths: ["fetch.py", "sources.py", "net.py", "reqs.py", "template.html", "data/boards.json", "data/cvca.json", "firms_seed.py", ".github/workflows/daily.yml"]
 
 permissions:
   contents: write
@@ -28,7 +28,7 @@ concurrency:
 jobs:
   pull:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 120   # Canada-wide: a few hundred boards plus a 25-minute LinkedIn sweep
     env:
       TZ: America/Toronto     # dates and "today" are Montreal's, not the server's
     steps:
