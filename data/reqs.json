@@ -21,28 +21,6 @@
 ],
 "yh": 3
 },
-"https://aimco.wd10.myworkdayjobs.com/AIMCoCareers/job/Calgary/Portfolio-Manager--Global-Fundamental_JR100830": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 23,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 6198,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum 6 years of institutional investment experience, ideally including some direct portfolio management experience.",
-"y": 6.0,
-"yd": [
-"investing",
-"deals"
-],
-"yh": null
-},
 "https://ardian.wd103.myworkdayjobs.com/ArdianCareers/job/Montreal/Fund-Finance-Infrastructure-Intern---December-2026---MTL_JR1002272": {
 "cfa": "",
 "cpa": false,
@@ -648,69 +626,6 @@
 ],
 "yh": 4.0
 },
-"https://bmo.wd3.myworkdayjobs.com/External/job/Calgary-AB-CAN/Associate-Director--Commercial-Banking--Corporate-Finance-Group-_R260028591-1": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 9,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 8560,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Preferred 5 – 7 years of relevant experience in credit or lending instruments or financial operations in a corporate or banking environment.",
-"y": 5.0,
-"yd": [
-"investing"
-],
-"yh": 7.0
-},
-"https://bmo.wd3.myworkdayjobs.com/External/job/Halifax-NS-CAN/Senior-Relationship-Manager--Commercial-Banking--Corporate-Finance-Group-_R260027639": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 16,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 8344,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "10+ years of relevant experience in Relationship Management, Account Management or Portfolio Management in a corporate or similar segmented banking environment with sales metrics is preferred.",
-"y": 10.0,
-"yd": [
-"investing"
-],
-"yh": null
-},
-"https://bmo.wd3.myworkdayjobs.com/External/job/MONTREAL-QC-CAN/Analyst--Associate--Investment-Banking---Montreal_R260010184": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 14,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 7022,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Typically between 1 - 6 years of relevant experience and post-secondary degree in related field of study or an equivalent combination of education and experience.",
-"y": 1.0,
-"yd": [
-"investing"
-],
-"yh": 6.0
-},
 "https://bmo.wd3.myworkdayjobs.com/External/job/MONTREAL-QC-CAN/Associate--Asset-Based-Lending_R260024617": {
 "cfa": "mention",
 "cpa": false,
@@ -775,27 +690,6 @@
 ],
 "yh": 5.0
 },
-"https://bmo.wd3.myworkdayjobs.com/External/job/Ottawa-ON-CAN/Senior-Relationship-Manager--Commercial-Banking--Corporate-Finance-Group-_R260029537": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 16,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 8337,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "10+ years of relevant experience in Relationship Management, Account Management or Portfolio Management in a corporate or similar segmented banking environment with sales metrics is preferred.",
-"y": 10.0,
-"yd": [
-"investing"
-],
-"yh": null
-},
 "https://bmo.wd3.myworkdayjobs.com/External/job/REMOTETELETRAVAIL-QC-CAN/Advisor--Digital-Investing--BMO-SmartFolio_R260024876": {
 "cfa": "",
 "cpa": false,
@@ -817,27 +711,6 @@
 ],
 "yh": null
 },
-"https://bmo.wd3.myworkdayjobs.com/External/job/Toronto-ON-CAN/Analyst--Global-Markets-Corporate-Banking_R260027057": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 17,
-"inv": false,
-"jr": true,
-"mba": false,
-"n": 8387,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "0–3 years of relevant experience (e.g., credit, structured finance, capital markets, or related analytical roles); formal credit training preferred.",
-"y": 0.0,
-"yd": [
-"investing"
-],
-"yh": 3.0
-},
 "https://bmo.wd3.myworkdayjobs.com/External/job/Toronto-ON-CAN/Analyst--Investment-Platforms_R260030221": {
 "cfa": "",
 "cpa": false,
@@ -857,27 +730,6 @@
 "yd": [],
 "yh": null
 },
-"https://bmo.wd3.myworkdayjobs.com/External/job/Toronto-ON-CAN/Associate--Global-Markets-Corporate-Banking_R260027062": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 26,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 10845,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Typically 3 to 6 years of relevant experience in credit, structured finance, securitization, corporate banking, capital markets, or a related analytical role.",
-"y": 3.0,
-"yd": [
-"investing"
-],
-"yh": 6.0
-},
 "https://bmo.wd3.myworkdayjobs.com/External/job/Toronto-ON-CAN/Associate--Quantitative-Modeling_R260028769": {
 "cfa": "",
 "cpa": false,
@@ -896,27 +748,6 @@
 "y": null,
 "yd": [],
 "yh": null
-},
-"https://bmo.wd3.myworkdayjobs.com/External/job/Toronto-ON-CAN/Associate-Director--Commercial-Banking--Corporate-Finance-Group-_R260006932": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 9,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 8555,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Preferred 5 – 7 years of relevant experience in credit or lending instruments or financial operations in a corporate or banking environment.",
-"y": 5.0,
-"yd": [
-"investing"
-],
-"yh": 7.0
 },
 "https://bmo.wd3.myworkdayjobs.com/External/job/Toronto-ON-CAN/Associate-Director--Investment-Platform--Contract-_R260020316": {
 "cfa": "progress",
@@ -939,27 +770,6 @@
 "deals"
 ],
 "yh": null
-},
-"https://bmo.wd3.myworkdayjobs.com/External/job/Toronto-ON-CAN/BMO-Capital-Markets-Summer-2027-Corporate-Banking-Analyst--Toronto_R260001648": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 20,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 10912,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Typically between 3 - 5 years of relevant experience and post-secondary degree in related field of study or an equivalent combination of education and experience.",
-"y": 3.0,
-"yd": [
-"investing"
-],
-"yh": 5.0
 },
 "https://bmo.wd3.myworkdayjobs.com/External/job/Toronto-ON-CAN/Equity-Research-Associate---Metals---Mining_R260028990-1": {
 "cfa": "progress",
@@ -1123,27 +933,6 @@
 "yd": [],
 "yh": null
 },
-"https://bmo.wd3.myworkdayjobs.com/External/job/Toronto-ON-CAN/Senior-Relationship-Manager--Commercial-Banking--Corporate-Finance-Group-_R260026069": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 16,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 8518,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "10+ years of relevant experience in Relationship Management, Account Management or Portfolio Management in a corporate or similar segmented banking environment with sales metrics is preferred.",
-"y": 10.0,
-"yd": [
-"investing"
-],
-"yh": null
-},
 "https://bmo.wd3.myworkdayjobs.com/External/job/Toronto-ON-CAN/Trading-Enablement-Specialist_R260017501-1": {
 "cfa": "",
 "cpa": false,
@@ -1206,27 +995,6 @@
 "investing"
 ],
 "yh": 6.0
-},
-"https://bmo.wd3.myworkdayjobs.com/External/job/Winnipeg-MB-CAN/Senior-Relationship-Manager--Commercial-Banking--Corporate-Finance-Group-_R260029800": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 16,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 8363,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "10+ years of relevant experience in Relationship Management, Account Management or Portfolio Management in a corporate or similar segmented banking environment with sales metrics is preferred.",
-"y": 10.0,
-"yd": [
-"investing"
-],
-"yh": null
 },
 "https://boards.greenhouse.io/point72/jobs/7045936002?gh_jid=7045936002": {
 "cfa": "",
@@ -2121,27 +1889,6 @@
 ],
 "yh": 3.0
 },
-"https://careers.ey.com/ey/job/Toronto-Consultant%2C-Deal-Technology-%28Toronto%2C-Calgary%2C-Vancouver%29-ON-M5H-0B3/1452306733/": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": true,
-"front": 23,
-"inv": false,
-"jr": true,
-"mba": false,
-"n": 15919,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "At least 2–3 years of relevant technology, transaction, consulting or related professional experience, preferably in a large professional services organization",
-"y": 2.0,
-"yd": [
-"deals"
-],
-"yh": 3.0
-},
 "https://careers.ey.com/ey/job/Toronto-Consultant%2C-Strategy-&-Value-Creation-%28Toronto%29-ON-M5H-0B3/1448240733/": {
 "cfa": "",
 "cpa": false,
@@ -2490,27 +2237,6 @@
 "yd": [],
 "yh": null
 },
-"https://careers.kpmg.ca/professionals/jobs/32971": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 2,
-"fr": false,
-"front": 26,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 7431,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Approximately 5+ years of relevant accounting, finance, transaction or advisory experience , ideally including at least 2 years of M&A, financial due diligence, or Transaction Services experience",
-"y": 5.0,
-"yd": [
-"deals"
-],
-"yh": null
-},
 "https://careers.kpmg.ca/professionals/jobs/33097": {
 "cfa": "",
 "cpa": false,
@@ -2660,27 +2386,6 @@
 "general"
 ],
 "yh": 5.0
-},
-"https://careers.kpmg.ca/professionals/jobs/34035": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 2,
-"fr": false,
-"front": 26,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 9032,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Approximately 7+ years of relevant transaction, accounting, finance or advisory experience , including significant M&A, financial due diligence or Transaction Services experience",
-"y": 7.0,
-"yd": [
-"deals"
-],
-"yh": null
 },
 "https://careers.kpmg.ca/professionals/jobs/34037": {
 "cfa": "",
@@ -3037,25 +2742,6 @@
 "investing",
 "deals"
 ],
-"yh": null
-},
-"https://cgf.wd10.myworkdayjobs.com/CG/job/Vancouver-BC/Corporate-Finance-Revenue-Coordinator_JR100631": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 5,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3357,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
 "yh": null
 },
 "https://ci.wd3.myworkdayjobs.com/CI_FINANCIAL_EXTERNAL_CAREER-SITE/job/CDA-ON--Head-Office---15-York/Investment-Analyst_JR6115": {
@@ -4491,25 +4177,6 @@
 "yd": [],
 "yh": null
 },
-"https://jobs.scotiabank.com/job/Moncton-Investment-Planning-Specialist%2C-Scotia-Financial-Planning-Moncton%2C-NB-NB/607764017/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 1,
-"fr": true,
-"front": 2,
-"inv": false,
-"jr": true,
-"mba": false,
-"n": 8465,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://jobs.scotiabank.com/job/Montreal-Gestionnaire-principal%28e%29%2C-Gestion-de-programmes-Croissance-Qu%C3%A9bec-QC-H3A-3L6/607619917/": {
 "cfa": "",
 "cpa": false,
@@ -5002,6 +4669,27 @@
 "investing"
 ],
 "yh": 5
+},
+"https://northleafcapitalpartners.bamboohr.com/careers/139": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-08",
+"fpa": 7,
+"fr": false,
+"front": 1,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 9777,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "7 + years experience of asset management and private markets investments, with direct experience with credit facilities considered valuable and preferred.",
+"y": 7.0,
+"yd": [
+"investing"
+],
+"yh": null
 },
 "https://omers.wd3.myworkdayjobs.com/OMERS_External/job/Toronto-Ontario/Analyst-Senior-Analyst--Risk-Analytics_JR-7887": {
 "cfa": "mention",
@@ -5509,44 +5197,6 @@
 "yd": [],
 "yh": null
 },
-"https://pwc.wd3.myworkdayjobs.com/Global_Experienced_Careers/job/Toronto/Technology-in-Deals---Senior-Associate_750250WD": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": true,
-"front": 40,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 13644,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
-"https://pwc.wd3.myworkdayjobs.com/Global_Experienced_Careers/job/Toronto/Technology-in-Deals---Senior-Manager_750253WD": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 1,
-"fr": true,
-"front": 44,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 14023,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://pwc.wd3.myworkdayjobs.com/Global_Experienced_Careers/job/Toronto/Transaction-Services-Senior-Associate---Financial-Services--Bilingual-FR-EN-_768241WD-2": {
 "cfa": "",
 "cpa": false,
@@ -5628,359 +5278,6 @@
 ],
 "yh": 3.0
 },
-"https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers/job/FL---Saint-Petersburg---880-Carillon-Pkwy/Project-Analyst--Infrastructure-Implementation_R-0013541": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 0,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6434,
-"ok": true,
-"ops": 2,
-"opsy": false,
-"q": "4-6 years of experience in project coordination, project management, operations, business transformation, or a related field, with demonstrated experience supporting project planning, execution, implementation, report…",
-"y": 4.0,
-"yd": [
-"general"
-],
-"yh": 6.0
-},
-"https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers/job/Georgetown-Texas---United-States/Investment-Portfolio-Associate--Georgetown--TX-_R-0013053": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 2,
-"fr": false,
-"front": 7,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4825,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Bachelor’s degree in a related field and three years’ experience in the financial services industry with an emphasis on conducting market research and analysis",
-"y": 3,
-"yd": [
-"general"
-],
-"yh": null
-},
-"https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers/job/Huntsville-Alabama---United-States/Investment-Portfolio-Associate-Huntsville--AL_R-0013160": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 2,
-"fr": false,
-"front": 7,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 5019,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Bachelor’s degree in a related field and three years’ experience in the financial services industry with an emphasis on conducting market research and analysis",
-"y": 3,
-"yd": [
-"general"
-],
-"yh": null
-},
-"https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers/job/Mc-Lean-Virginia---United-States/Investment-Banking-Associate---Defense---Government-Services--McLean--VA-_R-0013666": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 3,
-"fr": false,
-"front": 6,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3550,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "General Experience - 3 to 6 years",
-"y": 3.0,
-"yd": [
-"general"
-],
-"yh": 6.0
-},
-"https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers/job/Mc-Lean-Virginia---United-States/Investment-Banking-Senior-Associate--Junior-VP---Defense---Government-Services--McLean--VA-_R-0013669": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 3,
-"fr": false,
-"front": 7,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3616,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "General Experience - 3 to 6 years",
-"y": 3.0,
-"yd": [
-"general"
-],
-"yh": 6.0
-},
-"https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers/job/Memphis-Tennessee---United-States/Asset-Management-Senior-Trading-Associate---UMA-Trading_R-0012948": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 14,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 5006,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "General Experience - 13 months to 3 years",
-"y": 3.0,
-"yd": [
-"general"
-],
-"yh": null
-},
-"https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers/job/Naples-Florida---United-States/Investment-Portfolio-Associate--Naples--FL-_R-0012510": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 2,
-"fr": false,
-"front": 7,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4897,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Bachelor’s degree in a related field and three years’ experience in the financial services industry with an emphasis on conducting market research and analysis ~or~",
-"y": 3,
-"yd": [
-"general"
-],
-"yh": null
-},
-"https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers/job/New-York-New-York---United-States/Investment-Banking-Analyst-II--Leveraged-Finance---Debt-Advisory-_R-0013196": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 12,
-"inv": true,
-"jr": true,
-"mba": false,
-"n": 3652,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "General Experience - 3 to 6 years",
-"y": 3.0,
-"yd": [
-"general"
-],
-"yh": 6.0
-},
-"https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers/job/New-York-New-York---United-States/Investment-Banking-Analyst-II-III--Capital-Structure-Advisory-_R-0013080": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 1,
-"fr": false,
-"front": 4,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 8737,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "General Experience - 13 months to 3 years",
-"y": 3.0,
-"yd": [
-"general"
-],
-"yh": null
-},
-"https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers/job/New-York-New-York---United-States/Investment-Banking-Associate-I--Leveraged-Finance---Debt-Advisory-_R-0013197": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 12,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 4444,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "General Experience - 3 to 6 years",
-"y": 3.0,
-"yd": [
-"general"
-],
-"yh": 6.0
-},
-"https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers/job/New-York-New-York---United-States/Investment-Banking-Experienced-Associate--Restructuring----Capital-Structure-Advisory--NY_R-0013445": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 1,
-"fr": false,
-"front": 2,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 7967,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "General Experience - 3 to 6 years",
-"y": 3.0,
-"yd": [
-"general"
-],
-"yh": 6.0
-},
-"https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers/job/New-York-New-York---United-States/Investment-Banking-Senior-Associate-Junior-VP---Paper-and-Packaging--NYC-_R-0013105-1": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 0,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3739,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
-"https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers/job/Remote-Illinois---United-States/Institutional-Sales---Raymond-James-Investment-Management_R-0013084": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 1,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 6854,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "General Experience – 10 to 15 years",
-"y": 10.0,
-"yd": [
-"general"
-],
-"yh": 15.0
-},
-"https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers/job/Remote-Massachusetts---United-States/External-Wholesaler---Raymond-James-Investment-Management---Remote---MA---CT_R-0013754": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 1,
-"fr": false,
-"front": 1,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 5674,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Bachelor’s Degree (B.A.) in Finance or related field and a minimum of two (2) years of experience in the financial services industry.",
-"y": 2,
-"yd": [
-"general"
-],
-"yh": null
-},
-"https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers/job/Saint-Petersburg-Florida---United-States/Asset-Management-Trading-Associate---Freedom-Trading_R-0012511": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 11,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4642,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "General Experience - 13 months to 3 years",
-"y": 3.0,
-"yd": [
-"general"
-],
-"yh": null
-},
-"https://raymondjames.wd1.myworkdayjobs.com/RaymondJamesCareers/job/Saint-Petersburg-Florida---United-States/Experienced-Investment-Banking-Analyst---M-A--St-Petersburg--FL-_R-0013106": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 1,
-"fr": false,
-"front": 5,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3168,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "General Experience - 13 months to 3 years",
-"y": 3.0,
-"yd": [
-"general"
-],
-"yh": null
-},
-"https://rbc.wd3.myworkdayjobs.com/RBCEARLYTALENT1/job/TORONTO-Ontario-Canada/XMLNAME-2027-Capital-Markets--Debt-Capital-Markets-Winter-Analyst--8-Months-_R-0000191799": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 8,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6494,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://rbc.wd3.myworkdayjobs.com/RBCGLOBAL1/job/Boston-Massachusetts-United-States-of-America/Investment-Production-Analyst_R-0000186681": {
 "cfa": "",
 "cpa": false,
@@ -5998,27 +5295,6 @@
 "q": "",
 "y": null,
 "yd": [],
-"yh": null
-},
-"https://rbc.wd3.myworkdayjobs.com/RBCGLOBAL1/job/EDMONTON-Alberta-Canada/Associate-Portfolio-Manager_R-0000188888": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": true,
-"front": 3,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4894,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum 5 years investment industry experience",
-"y": 5.0,
-"yd": [
-"investing"
-],
 "yh": null
 },
 "https://rbc.wd3.myworkdayjobs.com/RBCGLOBAL1/job/Minneapolis-Minnesota-United-States-of-America/Alternative-Investment-Strategist_R-0000172168-2": {
@@ -6164,27 +5440,6 @@
 "general"
 ],
 "yh": 6.0
-},
-"https://rbc.wd3.myworkdayjobs.com/RBCGLOBAL1/job/WATERLOO-Ontario-Canada/Associate-Portfolio-Manager_R-0000191885-1": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 3,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 5187,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum of 5 years Investment industry experience",
-"y": 5.0,
-"yd": [
-"investing"
-],
-"yh": null
 },
 "https://rcgt.wd3.myworkdayjobs.com/External/job/Qubec/Conseillre-ou-conseiller---Fusion--Acquisition-et-Financement-Corporatif_R006829": {
 "cfa": "progress",
@@ -6539,49 +5794,6 @@
 ],
 "yh": null
 },
-"https://tmx.wd3.myworkdayjobs.com/TMX_Careers/job/Toronto---100-Adelaide-St-W/Administrator--Investor-Services--Contract-_R-6610": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": true,
-"front": 2,
-"inv": false,
-"jr": true,
-"mba": false,
-"n": 4990,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "1 to 3 years of experience in a similar role",
-"y": 1.0,
-"yd": [
-"general"
-],
-"yh": 3.0
-},
-"https://tmx.wd3.myworkdayjobs.com/TMX_Careers/job/Toronto---100-Adelaide-St-W/Senior-Analyst--Investor-Relations--12-Months-Contract-_R-6515": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 4,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6338,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "5+ years of progressive experience in investor relations, equity research, corporate finance, or capital markets.",
-"y": 5.0,
-"yd": [
-"investing",
-"deals"
-],
-"yh": null
-},
 "https://tmx.wd3.myworkdayjobs.com/TMX_Careers/job/Toronto---100-Adelaide-St-W/Specialist--Investor-Experience-Content-and-Governance_R-6423": {
 "cfa": "",
 "cpa": false,
@@ -6870,27 +6082,6 @@
 "yd": [],
 "yh": null
 },
-"https://www.jobbank.gc.ca/jobsearch/jobposting/50677097": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 2,
-"fr": true,
-"front": 2,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6651,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Experience: 5 years or more.",
-"y": 5.0,
-"yd": [
-"general"
-],
-"yh": null
-},
 "https://www.jobbank.gc.ca/jobsearch/jobposting/50677579": {
 "cfa": "",
 "cpa": false,
@@ -6908,6 +6099,28 @@
 "q": "",
 "y": null,
 "yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4280230558/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-08",
+"fpa": 0,
+"fr": false,
+"front": 20,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 4102,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "5 years of progressive work experience at a top tier accounting, capital advisory, investment banking, management consulting, transaction services and/or private equity firm, with 2-3 years of mid-market deal experien…",
+"y": 5.0,
+"yd": [
+"investing",
+"deals"
+],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4282288519/": {
@@ -7073,23 +6286,25 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4410861031/": {
-"cfa": "progress",
+"https://www.linkedin.com/jobs/view/4410239782/": {
+"cfa": "mention",
 "cpa": false,
-"d": "2026-11-07",
-"fpa": 1,
+"d": "2026-11-08",
+"fpa": 0,
 "fr": false,
-"front": 17,
+"front": 11,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 9370,
+"n": 5270,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "",
-"y": null,
-"yd": [],
+"q": "10+ years of experience in quantitative investing, with demonstrated leadership in equity research (U.S. experience strongly preferred).",
+"y": 10.0,
+"yd": [
+"investing"
+],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4414689584/": {
@@ -7129,6 +6344,27 @@
 "y": 2.0,
 "yd": [
 "investing"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4422230280/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-08",
+"fpa": 0,
+"fr": false,
+"front": 2,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3039,
+"ok": true,
+"ops": 4,
+"opsy": false,
+"q": "Approximately 5+ years’ experience",
+"y": 5.0,
+"yd": [
+"general"
 ],
 "yh": null
 },
@@ -7237,25 +6473,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4450829906/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 1,
-"fr": false,
-"front": 17,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 9472,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4451028055/": {
 "cfa": "",
 "cpa": false,
@@ -7297,25 +6514,6 @@
 "general"
 ],
 "yh": 3.0
-},
-"https://www.linkedin.com/jobs/view/4457708727/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 1,
-"fr": false,
-"front": 4,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4051,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
 },
 "https://www.linkedin.com/jobs/view/4462722382/": {
 "cfa": "progress",
@@ -7376,6 +6574,27 @@
 "yd": [
 "investing",
 "deals"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4467440007/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-08",
+"fpa": 1,
+"fr": false,
+"front": 5,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 5865,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "5+ years of experience and deep knowledge in investment analytics, investment management, or data science.",
+"y": 5.0,
+"yd": [
+"investing"
 ],
 "yh": null
 },
@@ -7485,6 +6704,25 @@
 ],
 "yh": 4.0
 },
+"https://www.linkedin.com/jobs/view/4470602369/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-08",
+"fpa": 0,
+"fr": false,
+"front": 2,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4998,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4474371264/": {
 "cfa": "progress",
 "cpa": false,
@@ -7591,46 +6829,6 @@
 ],
 "yh": 5.0
 },
-"https://www.linkedin.com/jobs/view/4477024314/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 1,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3458,
-"ok": true,
-"ops": 3,
-"opsy": false,
-"q": "Minimum 2 years’ experience managing staff",
-"y": 2.0,
-"yd": [
-"general"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4478130943/": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 4,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 6520,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4478436963/": {
 "cfa": "mention",
 "cpa": false,
@@ -7652,28 +6850,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4478470531/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 11,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 7301,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "1-4 years of financial or professional services experience, preferably in private markets, corporate banking, investment banking, management consulting, transaction advisory, direct investing, investor relations, clie…",
-"y": 1.0,
-"yd": [
-"investing",
-"deals"
-],
-"yh": 4.0
-},
 "https://www.linkedin.com/jobs/view/4478497643/": {
 "cfa": "progress",
 "cpa": false,
@@ -7691,49 +6867,6 @@
 "q": "",
 "y": null,
 "yd": [],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4478596843/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 27,
-"inv": true,
-"jr": true,
-"mba": false,
-"n": 5187,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "1–3 years of experience in investment banking, corporate finance, transaction advisory, valuation, mergers & acquisitions, or another financial advisory environment.",
-"y": 1.0,
-"yd": [
-"investing",
-"deals"
-],
-"yh": 3.0
-},
-"https://www.linkedin.com/jobs/view/4478606834/": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 13,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 8797,
-"ok": true,
-"ops": 16,
-"opsy": true,
-"q": "10+ years of experience as a Business Analyst, Senior Business Analyst, Product Analyst, or similar role.",
-"y": 10.0,
-"yd": [
-"ops"
-],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4479045224/": {
@@ -7779,6 +6912,27 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4479109881/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-08",
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 3290,
+"ok": true,
+"ops": 3,
+"opsy": false,
+"q": "A minimum of 5 years’ experience in the Private Equity/Real Estate funds industry",
+"y": 5.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4479429766/": {
 "cfa": "",
 "cpa": false,
@@ -7800,51 +6954,31 @@
 ],
 "yh": 2.0
 },
-"https://www.linkedin.com/jobs/view/4479921545/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": true,
-"front": 18,
-"inv": true,
-"jr": true,
-"mba": false,
-"n": 5352,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4480468379/": {
+"https://www.linkedin.com/jobs/view/4479753001/": {
 "cfa": "progress",
 "cpa": false,
-"d": "2026-11-07",
-"fpa": 7,
+"d": "2026-11-08",
+"fpa": 0,
 "fr": false,
-"front": 7,
+"front": 8,
 "inv": true,
 "jr": false,
 "mba": false,
-"n": 8503,
+"n": 3990,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "3+ years of experience in a Financial Modeling, Corporate Accounting, or similar function, with experience in investment banking, management consulting or asset management, all equally advantageous",
-"y": 3.0,
+"q": "7+ years of experience in institutional asset management, investment management, portfolio management, client portfolio management or a related investment role",
+"y": 7.0,
 "yd": [
-"investing",
-"deals"
+"investing"
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4480503221/": {
+"https://www.linkedin.com/jobs/view/4480394497/": {
 "cfa": "mention",
 "cpa": false,
-"d": "2026-11-07",
+"d": "2026-11-08",
 "fpa": 1,
 "fr": true,
 "front": 13,
@@ -7861,27 +6995,6 @@
 "investing"
 ],
 "yh": 2
-},
-"https://www.linkedin.com/jobs/view/4481012251/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 0,
-"inv": false,
-"jr": true,
-"mba": false,
-"n": 2637,
-"ok": true,
-"ops": 2,
-"opsy": false,
-"q": "Preferably have 1-3 years of experience in Client Services.",
-"y": 1.0,
-"yd": [
-"general"
-],
-"yh": 3.0
 },
 "https://www.linkedin.com/jobs/view/4481127192/": {
 "cfa": "",
@@ -8026,25 +7139,6 @@
 "yd": [],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4482005440/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 2,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 5263,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4482149942/": {
 "cfa": "",
 "cpa": false,
@@ -8063,6 +7157,28 @@
 "y": 5.0,
 "yd": [
 "investing"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4482183845/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-08",
+"fpa": 0,
+"fr": true,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4883,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum of 2 years of proven experience in a financial/investment consulting, insurance, economics, capital markets pension environment working in an analyst capacity is preferred",
+"y": 2.0,
+"yd": [
+"investing",
+"deals"
 ],
 "yh": null
 },
@@ -8341,26 +7457,26 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4484511974/": {
+"https://www.linkedin.com/jobs/view/4484558912/": {
 "cfa": "",
 "cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
+"d": "2026-11-08",
+"fpa": 1,
 "fr": false,
-"front": 12,
+"front": 11,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 4854,
+"n": 5548,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "Entre 0 et 3 ans d’expérience pertinente dans le domaine de l'investissement immobilier ou de l’analyse financière.",
-"y": 3.0,
+"q": "Minimum de 2 à 4 ans d’expérience pertinente dans le domaine du financement immobilier, de la structuration de dettes ou de l’analyse financière.",
+"y": 2.0,
 "yd": [
 "investing"
 ],
-"yh": null
+"yh": 4.0
 },
 "https://www.linkedin.com/jobs/view/4484607990/": {
 "cfa": "mention",
@@ -8468,44 +7584,6 @@
 ],
 "yh": 5.0
 },
-"https://www.linkedin.com/jobs/view/4485281306/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 1,
-"fr": true,
-"front": 21,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 7749,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4485284664/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 18,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4750,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4485766866/": {
 "cfa": "",
 "cpa": false,
@@ -8591,45 +7669,48 @@
 ],
 "yh": 4.0
 },
-"https://www.linkedin.com/jobs/view/4486095282/": {
+"https://www.linkedin.com/jobs/view/4486431677/": {
 "cfa": "mention",
 "cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 32,
-"inv": true,
+"d": "2026-11-08",
+"fpa": 1,
+"fr": true,
+"front": 12,
+"inv": false,
 "jr": true,
 "mba": false,
-"n": 8211,
+"n": 9426,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "One (1) to three (3) years of relevant experience; prior experience in Investment Banking, Equity Research, Project Finance, Management Consulting, Investment Management, Transaction Services, Accounting, Corporate Fi…",
-"y": 1,
+"q": "Posséder de 0 à 2 ans d'expérience professionnelle pertinente, y compris des stages, des programmes coopératifs ou une expérience comme analyste en finance, infrastructures, consultation, services bancaires ou domaine…",
+"y": 0.0,
 "yd": [
 "general"
 ],
-"yh": 3
+"yh": 2.0
 },
-"https://www.linkedin.com/jobs/view/4486505261/": {
-"cfa": "progress",
+"https://www.linkedin.com/jobs/view/4486439292/": {
+"cfa": "mention",
 "cpa": false,
-"d": "2026-11-07",
+"d": "2026-11-08",
 "fpa": 0,
-"fr": false,
+"fr": true,
 "front": 14,
-"inv": false,
-"jr": false,
+"inv": true,
+"jr": true,
 "mba": false,
-"n": 4446,
+"n": 7384,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
+"q": "0-2 years of relevant professional experience, including internships, co-op placements, or analyst experience in finance, infrastructure, consulting, banking, or related fields.",
+"y": 0.0,
+"yd": [
+"investing",
+"deals"
+],
+"yh": 2.0
 },
 "https://www.linkedin.com/jobs/view/4486607176/": {
 "cfa": "progress",
@@ -8709,19 +7790,19 @@
 "yd": [],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4487012276/": {
+"https://www.linkedin.com/jobs/view/4487083173/": {
 "cfa": "",
 "cpa": false,
-"d": "2026-11-07",
+"d": "2026-11-08",
 "fpa": 0,
-"fr": true,
-"front": 6,
-"inv": false,
+"fr": false,
+"front": 11,
+"inv": true,
 "jr": false,
 "mba": false,
-"n": 2074,
+"n": 8602,
 "ok": true,
-"ops": 3,
+"ops": 0,
 "opsy": false,
 "q": "",
 "y": null,
@@ -8771,6 +7852,27 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4487342765/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-08",
+"fpa": 0,
+"fr": false,
+"front": 4,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 2912,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "5-10 years of experience at another investment firm, working with portfolio companies and alongside their executive teams.",
+"y": 5.0,
+"yd": [
+"investing"
+],
+"yh": 10.0
+},
 "https://www.linkedin.com/jobs/view/4487570387/": {
 "cfa": "mention",
 "cpa": false,
@@ -8784,25 +7886,6 @@
 "n": 7158,
 "ok": true,
 "ops": 2,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4487619085/": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 52,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 5584,
-"ok": true,
-"ops": 0,
 "opsy": false,
 "q": "",
 "y": null,
@@ -8873,28 +7956,6 @@
 ],
 "yh": 2.0
 },
-"https://www.linkedin.com/jobs/view/4488723609/": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 18,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 5630,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "One to two years of full-time work experience in corporate finance, investment banking, accounting or private equity is beneficial.",
-"y": 1,
-"yd": [
-"investing",
-"deals"
-],
-"yh": 2
-},
 "https://www.squarepoint-capital.com/open-opportunities?id=2546549&gh_jid=2546549": {
 "cfa": "",
 "cpa": false,
@@ -8931,27 +7992,6 @@
 "q": "",
 "y": null,
 "yd": [],
-"yh": null
-},
-"https://www.starlightinvest.com/careers/associate-portfolio-manager-diversified-equities": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": false,
-"front": 6,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3142,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "3+ year buyside track record in North American equities",
-"y": 3.0,
-"yd": [
-"general"
-],
 "yh": null
 },
 "https://www.stepstonegroup.com/current-opportunities/?gh_jid=8239658": {
