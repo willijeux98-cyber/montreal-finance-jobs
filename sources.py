@@ -480,7 +480,12 @@ def _scan_careers(t, name, cat, hq, url, strip_chrome):
 
 
 def careers_page(name, cat, hq, url):
-    t = _get(url, headers={**UA, "Accept": "text/html"}).text
+    try:
+        t = _get(url, headers={**UA, "Accept": "text/html"}).text
+    except requests.HTTPError as e:
+        if e.response is not None and e.response.status_code in (401, 403, 404, 410):
+            return [], 0   # page moved or bot-blocked: an empty watch, not a failure (discovery re-finds it on Monday)
+        raise
     strip = True
     out = _scan_careers(t, name, cat, hq, url, strip_chrome=True)
     if not out:   # job cards often wrap each title in <header>/<footer>: look again without stripping those
@@ -503,23 +508,59 @@ def careers_page(name, cat, hq, url):
     return out, len(out)
 
 
-# ---------------------------------------------------------------- Oracle Recruiting Cloud (Innergex)
-def oracle(name, cat, hq, host, site):
-    out, off, total = [], 0, 1
-    while off < min(total, 1000):
-        u = (f"{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true"
-             f"&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber={site},facetsList=NONE,limit=100,offset={off}")
-        it = (_get(u).json().get("items") or [{}])[0]
-        total = it.get("TotalJobsCount") or 0
-        reqs = it.get("requisitionList") or []
-        for r in reqs:
-            locs = [r.get("PrimaryLocation") or ""] + [x.get("Name", "") for x in (r.get("secondaryLocations") or []) if isinstance(x, dict)]
-            out.append(_p(name, cat, r.get("Title"), ", ".join(x for x in locs if x),
-                          f"{host}/hcmUI/CandidateExperience/en/sites/{site}/job/{r.get('Id')}", _iso_age(r.get("PostedDate")), hq))
-        if not reqs:
+# ---------------------------------------------------------------- Oracle Recruiting Cloud (Innergex, Lazard, J.P. Morgan)
+def oracle(name, cat, hq, host, site, keywords=None):
+    """keywords: for very large global boards (J.P. Morgan), search city by city instead of reading everything."""
+    out, seen, read = [], set(), 0
+    for kw in (keywords or [None]):
+        off, total = 0, 1
+        while off < min(total, 1000):
+            u = (f"{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true"
+                 f"&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber={site},facetsList=NONE,"
+                 + (f"keyword={kw}," if kw else "") + f"limit=100,offset={off}")
+            it = (_get(u).json().get("items") or [{}])[0]
+            total = it.get("TotalJobsCount") or 0
+            reqs = it.get("requisitionList") or []
+            for r in reqs:
+                link = f"{host}/hcmUI/CandidateExperience/en/sites/{site}/job/{r.get('Id')}"
+                if link in seen:
+                    continue
+                seen.add(link)
+                locs = [r.get("PrimaryLocation") or ""] + [x.get("Name", "") for x in (r.get("secondaryLocations") or []) if isinstance(x, dict)]
+                out.append(_p(name, cat, r.get("Title"), ", ".join(x for x in locs if x), link, _iso_age(r.get("PostedDate")), hq))
+            if not reqs:
+                break
+            off += len(reqs)
+            read += len(reqs)
+    return out, read
+
+
+# ---------------------------------------------------------------- iCIMS (Mackenzie Investments)
+ICIMS_ROW = re.compile(r'<a[^>]+href="(https://[^"]+\.icims\.com/jobs/\d+/[^"?]+/job)[^"]*"[^>]*>(.*?)</a>', re.S)
+
+
+def icims(name, cat, hq, host):
+    """iCIMS career sites: the search page in its 'iframe' form is plain HTML, 50 or so jobs a page."""
+    out, seen = [], set()
+    for pr in range(0, 20):
+        t = _get(f"https://{host}/jobs/search", params={"pr": pr, "in_iframe": 1, "schemaId": "", "o": ""},
+                 headers={**UA, "Accept": "text/html"}).text
+        rows = ICIMS_ROW.findall(t)
+        locs = [re.sub(r"\s+", " ", html.unescape(x)).strip()
+                for x in re.findall(r'(?s)Job Locations?\s*</span>\s*<span[^>]*>(.*?)</span>', t)]
+        fresh = 0
+        for i, (link, inner) in enumerate(rows):
+            if link in seen:
+                continue
+            seen.add(link)
+            fresh += 1
+            title = re.sub(r"^\s*Job Title\s*", "", _clean(inner))
+            loc = locs[i] if i < len(locs) else ""
+            loc = re.sub(r"^CA-(\w\w)-", r"\1, ", loc)   # "CA-ON-Greater Toronto Area" -> "ON, Greater Toronto Area"
+            out.append(_p(name, cat, title, loc, link, None, hq))
+        if not fresh:
             break
-        off += len(reqs)
-    return out, total
+    return out, len(out)
 
 
 # ---------------------------------------------------------------- registry
@@ -546,11 +587,29 @@ FETCHERS = {
     "jobvite": lambda n, c, h, k: jobvite(n, c, h, k),
     "careers": lambda n, c, h, k: careers_page(n, c, h, k),
     "oracle": lambda n, c, h, k: oracle(n, c, h, *k),
+    "icims": lambda n, c, h, k: icims(n, c, h, k),
 }
 
 # Boards that discovery can't find on its own (verified by hand). kind, key, name, cat
 MANUAL = [
     ("workday", ["cdpq", 10, "CDPQ"], "CDPQ", "pension"),
+    # added after the 8 Nov audit of major firms with no detectable board (each endpoint verified to return postings)
+    ("workday", ["cppib", 10, "cppinvestments"], "CPP Investments", "pension"),
+    ("workday", ["imcoinvest", 3, "IMCO"], "IMCO", "pension"),
+    ("workday", ["optrust", 3, "OPTrust"], "OPTrust", "pension"),
+    ("workday", ["agf", 3, "AGF_Careers"], "AGF", "am"),
+    ("workday", ["hamiltonlane", 108, "search"], "Hamilton Lane", "pe_vc"),
+    ("greenhouse", "cclim", "Connor Clark & Lunn", "am"),
+    ("greenhouse", "cclfg", "Connor Clark & Lunn", "am"),
+    ("greenhouse", "cclconfidential", "Connor Clark & Lunn", "am"),
+    ("greenhouse", "cclinfrastructure", "Connor Clark & Lunn", "am"),
+    ("icims", "careersen-mackenzieinvestments.icims.com", "Mackenzie Investments", "am"),
+    ("oracle", ["https://icbpjb.fa.ocs.oraclecloud.com", "LazardProfessionalCareers"], "Lazard", "advisory"),
+    ("oracle", ["https://jpmc.fa.oraclecloud.com", "CX_1001", ["Toronto", "Montreal", "Calgary", "Vancouver"]],
+     "J.P. Morgan", "ib"),
+    ("ultipro", ["BEN5000BENTK", "066c0f8e-eef6-4dac-8b14-99dbb5fbc4ab", "recruiting.ultipro.ca"], "BentallGreenOak", "re"),
+    ("ultipro", ["BEN5000BENTK", "6f7f3dc0-d599-4e78-9ee5-fa1703eb67ac", "recruiting.ultipro.ca"], "BentallGreenOak", "re"),
+    ("ultipro", ["cad5000cfcl", "89aff150-d66c-444e-b2df-be190dad9e87", "recruiting.ultipro.ca"], "Cadillac Fairview", "re"),
     ("workday", ["investpsp", 3, "psp_careers"], "PSP Investments", "pension"),
     ("workday", ["fieracapital", 3, "Career"], "Fiera Capital", "am"),
     ("workday", ["desjardins", 10, "Desjardins"], "Desjardins", "ib"),

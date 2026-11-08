@@ -46,7 +46,7 @@ def clean(path="data/boards.json", rc_path="data/rc_sites.json"):
         keep = []
         for kind, key in r["boards"]:
             tok = key[0] if isinstance(key, list) else key
-            if kind in ("icims", "taleo", "successfactors", "avature", "dayforce"):
+            if kind in ("taleo", "successfactors", "avature", "dayforce"):
                 continue  # not machine-readable here; fall back to the careers page
             if norm(str(tok)) in JUNK or not related(str(tok), r["name"], r["domain"]):
                 continue

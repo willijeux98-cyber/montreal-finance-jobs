@@ -24,7 +24,7 @@ ATS = [
     ("pinpoint", r"([a-z0-9-]+)\.pinpointhq\.com"),
     ("dayforce", r"jobs\.dayforcehcm\.com/(?:[a-z]{2}-[A-Z]{2}/)?([A-Za-z0-9_-]+)"),
     ("ultipro", r"recruiting2?\.ultipro(?:\.ca)?\.com/([A-Z0-9]+)/JobBoard/([0-9a-f-]{36})"),
-    ("icims", r"(careers-[a-z0-9-]+\.icims\.com)"),
+    ("icims", r"([a-z0-9-]+\.icims\.com)"),
     ("taleo", r"([a-z0-9-]+\.taleo\.net)"),
     ("successfactors", r"(career\d*\.successfactors\.(?:com|eu))"),
     ("avature", r"([a-z0-9-]+\.avature\.net)"),

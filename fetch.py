@@ -114,6 +114,9 @@ STRONG = [
     (r"corporate debt|private debt|dette privée|dette (corporative|subordonnée)|mezzanine|leveraged|credit opportunit|"
      r"structured credit|financement structuré|asset[- ]based lend", "private credit"),
     (r"\bF&A\b|project financ|financement de projets", "investment banking"),
+    (r"gestion des transactions|transaction management|deal management|strat[ée]gie et ex[ée]cution|"
+     r"strategy (and|&) (transaction )?execution|transaction execution", "deal advisory"),
+    (r"syndicat|loan structuring|structuration de pr[êe]ts", "private credit"),
     (r"credit research|high[- ]yield|distressed|special situations|leveraged loans?|syndicated loans?|loan syndication",
      "private credit"),
     (r"search fund", "private equity"),
@@ -193,11 +196,16 @@ NEVER = re.compile(r"business analyst|analyste d.affaires|investor relations|rel
                    r"financial planning|FP&A|planification financi|deal technology|technology in deals|"
                    r"revenue coordinator|\badministrat(or|rice|eur)\b|wholesaler|grossiste|"
                    r"future opportunit|general application|expression of interest|talent (pool|community)|"
-                   r"candidature spontan|opportunit[ée]s futures|associate portfolio manager|"
-                   r"gestionnaire de portefeuille associ", re.I)
+                   r"candidature spontan|opportunit[ée]s futures|"
+                   # retail and wealth seats that borrow investment words
+                   r"digital investing|smartfolio|tangerine|investorline|customer care|client experience|fee[- ]based|"
+                   r"advsior|funds? advisor|[ée]valuat(eur|rice) de biens|appraiser|"
+                   # support seats
+                   r"investment platforms?\b|enablement|database|working capital|(diligence|execution)\W+technology|"
+                   r"technology (due )?diligence|client (group|solutions|relationship|service|portfolio manager)", re.I)
 # Corporate and commercial banking (lending relationships), unless it's the investment-banking side
 CORP_BANK = re.compile(r"corporate banking|commercial banking|services bancaires aux (grandes )?entreprises|"
-                       r"services bancaires commerciaux", re.I)
+                       r"services bancaires commerciaux|commercial (portfolio|credit|lending|account)", re.I)
 IB_WORDS = re.compile(r"investment banking|banque d.investissement|\bM&A\b|mergers", re.I)
 POSTCODE = re.compile(r"\s*\(?\b(?:ON|QC|BC|AB|MB|SK|NS|NB|NL|PE|Qu[ée]b\w*|Ont\w*|Brit\w*|Alb\w*)\)?\s+[A-Z]\d[A-Z]\s?\d[A-Z]\d\s*$")
 TAIL_CITY = re.compile(r"\s*[-–|,]?\s*\(?(?:Toronto|Montr[ée]al|Vancouver|Calgary|Ottawa|Edmonton|Winnipeg|Halifax)"
@@ -214,14 +222,37 @@ def clean_title(t):
     return re.sub(r"\s+", " ", t).strip(" -–,|")
 
 
+# A front-office seat named with the sector it covers ("Investment Banking - Software", "Equity Research - Media"):
+# the sector words must not trip the filters that keep developers and marketers out.
+FRONT_TITLE = re.compile(r"investment banking|banque d.investissement|equity research|recherche (sur les )?actions|"
+                         r"research (associate|analyst)|\bM&A\b|mergers|fusions|leveraged finance|private equity|"
+                         r"capital markets|march[ée]s des capitaux|corporate finance|financement corporatif|coverage|"
+                         r"investments?\b|investissements?\b|placements?\b|credit research", re.I)
+SECTORS = re.compile(r"software|technolog\w*|\btech\b|m[ée]dias?|telecom\w*|communications?|semiconductor\w*|memory|"
+                     r"interconnect|equipment|manufacturing|health ?care|life sciences|biotech\w*|pharma\w*|energy|power|"
+                     r"utilities|mining|metals|industrials?|consumer|retail|gaming|financial institutions|\bFIG\b|"
+                     r"diversified|natural resources|oil|gas|internet|digital|data cent\w*|infrastructure|transportation|"
+                     r"aerospace|defen[cs]e|agri\w*|chemicals?|cannabis|fintech|sports?|entertainment", re.I)
+
+
+# ...but when those words name the job itself, it stays out ("Media Relations Advisor", "Technology Analyst")
+ROLE_FN = re.compile(r"media relations|relations? (avec les )?m[ée]dias|communications? (advisor|specialist|manager|officer|"
+                     r"coordinator|lead|associate|conseill)|conseill\w* en communication|(technology|technologie|IT) "
+                     r"(analyst|analyste|associate|specialist|lead|manager|consultant|platform)|platform (analyst|engineer)|"
+                     r"marketing|developer|d[ée]veloppeu|engineer(?!ing (investment|sector|coverage))|ing[ée]nieur|\bapplications?\b", re.I)
+
+
 def excluded(t):
-    if HARD.search(t) or NEVER.search(t):
+    if ROLE_FN.search(t):
+        return True
+    core = SECTORS.sub(" ", t) if FRONT_TITLE.search(t) else t
+    if HARD.search(core) or NEVER.search(t):   # NEVER reads the whole title: its phrases are never coverage sectors
         return True
     if CORP_BANK.search(t) and not IB_WORDS.search(t):
         return True
     if OVERRIDE.search(t):
         return False
-    return bool(EXCLUDE.search(t))
+    return bool(EXCLUDE.search(core))
 
 
 LEVEL_UP = re.compile(r"\b(analyst|analyste|associate|associé|junior|entry|early career)\b", re.I)
@@ -296,8 +327,26 @@ BARE = re.compile(r"^\s*(senior\s+)?(analyst|associate|analyste|associé)(\s*/\s
 STRONG_MEDIUM = {"valuation", "markets operations", "performance measurement", "investment risk", "due diligence"}
 
 
+# Words that only mean an investing seat at a buy-side firm (a pension's "Analyst, Credit" or "Analyst, Real Estate";
+# at a bank the same words are lending or property management)
+BUY_SIDE = {"pension", "pe_vc", "am", "hedge", "insurer"}
+BS_QUANT = re.compile(r"data scien|modell?ing|mod[ée]lisation|systematic|syst[ée]matique", re.I)
+BS_SEATS = [
+    (r"external (manag|strateg|portfolio)|gestion externe|gestionnaires? externes?|strat[ée]gies? alternatives?|"
+     r"alternative (strateg|invest)|manager (selection|research)|s[ée]lection de gestionnaires|absolute return|"
+     r"hedge funds? (invest|allocat|portfolio)|fund of hedge", "fund investing"),
+    (r"\bcredit\b|\bcr[ée]dit\b", "private credit"),
+    (r"real estate|immobili", "real estate investing"),
+    (r"asset management|gestion d.actifs|portfolio strateg|strat[ée]gie de portefeuille|portfolio construction|"
+     r"[ée]tablissement de portefeuille|fundamental|fondamental", "portfolio management"),
+    (r"market intelligence|veille (des )?march[ée]s?", "research"),
+]
+
+
 def classify(title, cat=None):
     if QUANT.search(title) and not RISK_BAD.search(title):
+        return "quant", "quant"
+    if cat in BUY_SIDE and BS_QUANT.search(title) and not RISK_BAD.search(title):
         return "quant", "quant"
     if INV_RISK.search(title) and not RISK_BAD.search(title):
         return "quant", "investment risk"
@@ -305,6 +354,10 @@ def classify(title, cat=None):
         return "quant", "investment risk"
     if cat in ("pe_vc", "pension") and BARE.search(title):
         return "strong", "investments"
+    if cat in BUY_SIDE:
+        for pat, name in BS_SEATS:
+            if re.search(pat, title, re.I):
+                return "strong", name
     for pat, name in STRONG:
         if re.search(pat, title, re.I):
             return "strong", name
@@ -319,7 +372,7 @@ LVL_EXEC = re.compile(r"director|directeur|directrice|vice[- ]pr[ée]sident|\bVP
 LVL_MGR = re.compile(r"manager|gestionnaire|\blead\b|principal\b|senior advisor|conseill(er|ère)\(?-?è?r?e?\)? "
                      r"(principal|senior|sénior)|premier\(?-?è?r?e?\)? conseill|expert", re.I)
 # support seats that borrow an investment word: "Investment Operations", "Trading Risk", "Fund Reporting"
-OPS = re.compile(r"operations|operational|opérations|opérationnel|due diligence officer|\bKYC\b|know your client|administration|settlement|règlement|control\b|contrôle|oversight|"
+OPS = re.compile(r"operations|operational|opérations|opérationnel|due diligence officer|\bKYC\b|know your client|administration|settlement|règlement|controls?\b|contrôle|oversight|production|"
                  r"autoris|adjudicat|servicing|integration|intégration|\brisk|risque|performance|analytics|analytique|"
                  r"reporting|\bdata\b|données|compliance|conformité|middle office|back office|fund accounting|"
                  r"information financière|financial information", re.I)
@@ -327,11 +380,18 @@ OPS = re.compile(r"operations|operational|opérations|opérationnel|due diligenc
 OPS_CORE = re.compile(r"operations|operational|opérations|opérationnel|due diligence officer|\bKYC\b|know your client|administration|"
                       r"settlement|règlement|control\b|contrôle|oversight|autoris|adjudicat|servicing|integration|intégration|"
                       r"reporting|compliance|conformité|middle office|back office|fund accounting|information financière", re.I)
+DEAL_CORE = re.compile(r"restructur|transaction diligence|due diligence|transaction services|valuations?\b|"
+                       r"\bM&A (advisory|transaction|diligence)|deal advisory|fusions et acquisitions", re.I)
+PORTFOLIO_SEAT = re.compile(r"portfolio (strateg|construction)|strat[ée]gie de portefeuille|total (fund|portfolio)", re.I)
 FRONT_MEDIUM = {"valuation", "due diligence"}   # the only "medium" seats that still lead to deal work
 LVL_ADV = re.compile(r"advisor|conseill|specialist|spécialiste", re.I)
 
 
 def level_of(t):
+    if re.search(r"\b(associate|assistant) vice[- ]president|\bAVP\b|vice-pr[ée]sident(e)? adjoint", t, re.I):
+        return "senior", -3
+    if re.search(r"associate portfolio manager|gestionnaire de portefeuille associ|assistant portfolio manager", t, re.I):
+        return "mixed", -1
     t = re.sub(r"principal invest\w*|investissements? principaux|principal (finance|credit|capital)", " ", t, flags=re.I)   # a seat, not a rank
     if STUDENT.search(t):
         return "student", -4
@@ -362,8 +422,11 @@ def score(job):
         return None  # wealth-desk assistant seat at a bank
     # banks are huge: only keep their front-office seats
     if (cat in ("ib", "insurer", "markets", "advisory", "corpdev", "re", "open") or job["c"] in STRICT) and kind not in ("strong", "quant"):
-        if not (cat in ("ib", "advisory") and sig in ("valuation", "markets operations", "due diligence")):
+        if not ((cat in ("ib", "advisory") and sig in ("valuation", "markets operations", "due diligence")) or
+                (job["c"] in STRICT and sig in ("valuation", "due diligence"))):
             return None
+    if cat == "ib" and re.search(r"asset[- ]based lend|pr[êe]ts? (adoss|garantis par des actifs)", t, re.I):
+        return None  # a bank's asset-based lending desk is corporate lending (at a credit fund it's private credit)
     if cat == "corpdev" and sig not in ("corporate development", "investment banking", "deal advisory", "fund investing"):
         return None  # at an operating company only the M&A / corp-dev seats count
     if cat == "advisory" and sig not in ("deal advisory", "investment banking", "valuation", "due diligence"):
@@ -372,7 +435,8 @@ def score(job):
         return None  # only investing, deal, markets and corporate-finance seats
     if kind == "medium" and sig not in FRONT_MEDIUM:
         return None  # risk, performance, analytics, strategy, treasury: support seats, not the target path
-    if kind in ("strong", "medium") and OPS.search(t):
+    if (kind in ("strong", "medium") and OPS.search(t) and not (PORTFOLIO_SEAT.search(t) and not OPS_CORE.search(t))
+            and not DEAL_CORE.search(t)):
         return None  # investment word, support seat (model risk, operational due diligence, KYC...)
     if kind == "quant" and OPS_CORE.search(t):
         return None
@@ -911,7 +975,9 @@ def main():
         except Exception as e:
             print("could not carry over yesterday's rows:", e)
     direct = [l for _, _, l in SOURCES if not l.endswith(" sweep")]
+    edition = "morning" if _NOW.hour < 11 else "midday" if _NOW.hour < 17 else "evening"
     meta = dict(run=TODAY.strftime("%a %d %b %Y"), iso=TODAY.isoformat(), at=_NOW.strftime("%H:%M"),
+                slot=os.environ.get("PB_SLOT") or f"{TODAY.isoformat()}-{edition}", edition=edition,
                 boards=len([l for l in direct if l not in failed]), scanned=scanned, errors=errors,
                 empty=len(empty), net=dict(read=netread, kept=netkept, dropped=netdrop, **__import__("net").STATS),
                 firms=len({j["c"] for j in jobs}), min=MIN_SHOW, tracked=len(alive), reqs=dict(REQS_STATS),

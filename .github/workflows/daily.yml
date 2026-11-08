@@ -1,18 +1,11 @@
-name: Daily job pull
+name: Job pull (3 times a day)
 
 on:
   schedule:
-    # GitHub starts scheduled jobs late, lately 6-7 hours late. So there are attempts spread across the whole night:
-    # the evening ones land after midnight in Montreal when GitHub is slow, the early-morning ones land on time when
-    # it isn't. The first run after midnight (Montreal time) builds the book; every later one sees today's date and stops.
-    - cron: "17 23 * * *"
-    - cron: "43 0 * * *"
-    - cron: "17 2 * * *"
-    - cron: "43 3 * * *"
-    - cron: "17 5 * * *"
-    - cron: "43 6 * * *"
-    - cron: "17 8 * * *"
-    - cron: "23 13 * * *"   # late-morning safety net
+    # Three editions a day, by Montreal time: morning (before 11:00), midday (11:00-16:59), evening (17:00 on).
+    # GitHub starts scheduled jobs late, sometimes hours late, so there's an attempt every two hours. Each run works
+    # out its edition and builds only if that edition isn't published yet; the rest stop after a few seconds.
+    - cron: "17 */2 * * *"
   workflow_dispatch:        # "Run workflow" button for an on-demand refresh
   push:                     # rebuild right away when the engine or board list changes
     branches: [main]
@@ -30,15 +23,21 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120   # Canada-wide: a few hundred boards plus a 25-minute LinkedIn sweep
     env:
-      TZ: America/Toronto     # dates and "today" are Montreal's, not the server's
+      TZ: America/Toronto     # dates, "today" and the edition are Montreal's, not the server's
     steps:
       - uses: actions/checkout@v4
-      - name: Already built today?
+        with:
+          ref: main             # the latest book, not the commit that was current when this run was queued
+      - name: Edition already built?
         id: check
         run: |
-          if [ "${{ github.event_name }}" = "schedule" ] && grep -q "iso.: .$(date +%F)" docs/index.html; then
+          h=$((10#$(date +%H)))
+          if [ $h -lt 11 ]; then ed=morning; elif [ $h -lt 17 ]; then ed=midday; else ed=evening; fi
+          slot="$(date +%F)-$ed"
+          echo "slot=$slot" >> "$GITHUB_OUTPUT"
+          if [ "${{ github.event_name }}" = "schedule" ] && grep -q "\"slot\": \"$slot\"" docs/index.html; then
             echo "done=true" >> "$GITHUB_OUTPUT"
-            echo "Today's book ($(date +%F), Montreal) is already published; skipping."
+            echo "The $ed book for $(date +%F) (Montreal) is already published; skipping."
           else
             echo "done=false" >> "$GITHUB_OUTPUT"
           fi
@@ -50,12 +49,14 @@ jobs:
         if: steps.check.outputs.done != 'true'
       - run: python fetch.py
         if: steps.check.outputs.done != 'true'
-      - name: Save today's book
+        env:
+          PB_SLOT: ${{ steps.check.outputs.slot }}
+      - name: Save the book
         if: steps.check.outputs.done != 'true'
         run: |
           git config user.name  "position-book-bot"
           git config user.email "position-book-bot@users.noreply.github.com"
           git add docs data
-          git diff --cached --quiet || git commit -m "Book for $(date +%F)"
+          git diff --cached --quiet || git commit -m "Book for ${{ steps.check.outputs.slot }}"
           git pull --rebase --autostash origin main
           git push

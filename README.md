@@ -1,11 +1,11 @@
 # Position Book
 
-Every analyst-level seat in Canadian high finance, pulled from each firm's own hiring system, placed in its city, scored against one profile and ranked every morning.
+Every analyst-level seat in Canadian high finance, pulled from each firm's own hiring system, placed in its city, scored against one profile and ranked three times a day.
 
 - `fetch.py` pulls, filters and scores postings, then writes `docs/index.html`.
 - `template.html` is the page design (light, one page: hero, city picker, seat filters, the list, the firm map, the pipeline).
 - `data/seen.json` remembers when each posting first appeared, so new ones get flagged.
-- `.github/workflows/daily.yml` runs it every night after midnight, Montreal time.
+- `.github/workflows/daily.yml` runs it three times a day (morning, midday and evening editions, Montreal time).
 
 ## What makes the book
 - **Seats:** private equity and VC, hedge funds, asset and pension investing, investment banking, sales and trading, credit, research, real assets, corporate development and deal advisory, quant and investment risk. Corporate and retail banking, operations, compliance and other support seats are dropped.
@@ -24,6 +24,6 @@ Every analyst-level seat in Canadian high finance, pulled from each firm's own h
 ## Run it locally
 ```
 pip install -r requirements.txt
-python fetch.py            # the full nightly build
+python fetch.py            # a full build
 PB_QUICK=1 python fetch.py # a short LinkedIn / eFinancialCareers / Job Bank sweep, for testing
 ```

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Position Book</title>
 <meta name="robots" content="noindex,nofollow">
-<meta name="description" content="Every analyst-level seat in Canadian high finance, read from the firms' own hiring systems, scored and refreshed nightly.">
+<meta name="description" content="Every analyst-level seat in Canadian high finance, read from the firms' own hiring systems, scored and refreshed three times a day.">
 <meta name="theme-color" content="#FBFBFD">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Position Book">
@@ -698,7 +698,7 @@ function hero(){
     $("#h-roles").textContent = open.length ? plural(open.length, "role") + "." : "Every seat.";
     $("#h-yours").textContent = strong ? strong.toLocaleString("en-CA") + " made for you." : "Scored for you.";
     const cities = new Set(open.filter(j => !ANYWHERE.has(j.ct)).map(j => j.ct)).size;
-    $("#lede").innerHTML = "Every analyst-level seat in Canadian high finance. Private equity, hedge funds, banking, markets and more, read overnight from " +
+    $("#lede").innerHTML = "Every analyst-level seat in Canadian high finance. Private equity, hedge funds, banking, markets and more, read three times a day from " +
       "<b>" + Number(META.boards || 0).toLocaleString("en-CA") + " firms&rsquo; own hiring systems</b>" + (cities > 1 ? " across " + cities + " cities" : "") + ", then scored against your profile.";
     $("#profile").innerHTML = '<span class="lh">Scored for</span>' + PROFILE.map(p => '<span class="p">' + esc(p) + '</span>').join("");
     heroDone = true;
@@ -712,7 +712,7 @@ function coverage(){
   const net = META.net || {};
   let h = "Read directly from " + Number(META.boards || 0).toLocaleString("en-CA") + " firms&rsquo; own hiring systems: pensions, banks, dealers, asset managers, hedge funds, and the private-equity, venture and M&amp;A boutiques listed by the CVCA, PMAC and R&eacute;seau Capital" +
     (net.read ? ". Then LinkedIn, eFinancialCareers and the federal Job Bank, Canada-wide, for anything those miss" : "") +
-    ". " + Number(META.scanned || 0).toLocaleString("en-CA") + " postings screened in the last build; rebuilt nightly after midnight.";
+    ". " + Number(META.scanned || 0).toLocaleString("en-CA") + " postings screened in the last build; rebuilt three times a day: morning, midday and evening.";
   if(META.errors && META.errors.length) h += ' <span class="warn">Unreachable in this build: ' + esc(META.errors.slice(0, 12).map(e => e.split(":")[0]).join(", ")) + (META.errors.length > 12 ? " and " + (META.errors.length - 12) + " more" : "") + '. Their roles from the previous build are kept.</span>';
   $("#coverage").innerHTML = h;
   $("#scoring").innerHTML = SCORING;
@@ -800,10 +800,10 @@ function list(){
 }
 function emptyState(){
   const box = (glyph, title, text, btn) => '<div class="empty"><span class="glyph">' + glyph + '</span><b>' + title + '</b><p>' + text + '</p>' + (btn ? '<button class="btn" data-reset>' + btn + '</button>' : "") + '</div>';
-  if(!JOBS.length) return box(I.inbox, "No roles in this build", "The last refresh returned nothing above the bar. It runs again tonight.");
+  if(!JOBS.length) return box(I.inbox, "No roles in this build", "The last refresh returned nothing above the bar. It runs again in a few hours.");
   if(S.q) return box(I.search, "No roles match &ldquo;" + esc($("#q").value.trim()) + "&rdquo;", "Try a firm name, a seat such as private equity, or a broader word.", "Clear search and filters");
   if(S.quick === "saved") return box(I.mark, "Nothing saved yet", "Use the bookmark on any role to shortlist it before you apply.", "Show all roles");
-  if(S.quick === "new") return box(I.inbox, "No new roles this week", "Nothing new has cleared the bar here in the last seven days. The book is rebuilt every night.", "Show all roles");
+  if(S.quick === "new") return box(I.inbox, "No new roles this week", "Nothing new has cleared the bar here in the last seven days. The book is rebuilt three times a day.", "Show all roles");
   return box(I.pin, "Nothing open on these filters", "Try another city or seat, or clear the filters to see the whole book.", "Reset filters");
 }
 function resetAll(){ S.quick = "all"; S.q = ""; S.posted = 0; S.source = "all"; S.conf = 0; S.firm = null; S.seat = "all"; S.city = "all"; $("#q").value = ""; remember(); render(); }
@@ -1036,7 +1036,7 @@ function openRole(u, from){
   let h = '<div class="p-h"><span class="crumb">' + (panelStack.length ? '<button id="p-back">' + I.back + esc(panelStack[0]) + '</button>' : esc(typeOf(r) || "Role")) + '</span>' +
     '<button class="icon-b" id="p-close" aria-label="Close">' + I.x + '</button></div><div class="p-b">';
   h += '<div class="p-firm"><button data-firm="' + esc(r.c) + '">' + esc(r.c) + '</button></div><h2 class="p-title" id="p-title" data-first tabindex="-1">' + esc(r.t) + '</h2>';
-  if(j) h += '<div class="p-tags"><span class="pill">' + esc(place(j)) + '</span>' + (seatOf(j) ? '<span class="pill">' + esc(seatOf(j)) + '</span>' : "") + reqTag(j) + (isNew(j) ? '<span class="pill ok">' + (j.n ? "New overnight" : "Posted " + postedLong(j).toLowerCase()) + '</span>' : "") + '</div>';
+  if(j) h += '<div class="p-tags"><span class="pill">' + esc(place(j)) + '</span>' + (seatOf(j) ? '<span class="pill">' + esc(seatOf(j)) + '</span>' : "") + reqTag(j) + (isNew(j) ? '<span class="pill ok">' + (j.n ? "New today" : "Posted " + postedLong(j).toLowerCase()) + '</span>' : "") + '</div>';
   if(r.s){
     h += '<div class="scorebox ' + sClass(r.s) + '">' + ringHtml(r.s) + '<span class="lbl">' + labelOf(r.s) + '</span>' +
       '<span class="sub">Personal relevance, out of 10. <button id="why-score" aria-expanded="false" aria-controls="explain">How it works</button></span>' +
@@ -1050,7 +1050,7 @@ function openRole(u, from){
     '<dt>Seat</dt><dd>' + esc((j && seatOf(j)) || cap(r.g) || "Not specified") + '</dd>' +
     '<dt>Firm type</dt><dd>' + esc(typeOf(r) || "—") + '</dd>' +
     '<dt>Location</dt><dd>' + esc(r.l || (j ? place(j) : "Not stated")) + '</dd>' +
-    '<dt>Posted</dt><dd>' + (j ? postedLong(j) : "—") + (j && j.n ? ' · <span style="color:var(--green)">new overnight</span>' : "") + '</dd>' +
+    '<dt>Posted</dt><dd>' + (j ? postedLong(j) : "—") + (j && j.n ? ' · <span style="color:var(--green)">new today</span>' : "") + '</dd>' +
     '<dt>Source</dt><dd>' + (r.o ? "Found via " + esc(r.o) : "The firm&rsquo;s own job board") + '</dd>' +
     '<dt>Status</dt><dd>' + esc(status) + (t && t.d ? " · " + fmtDay(t.d) : "") + '</dd></dl></div>';
   h += '<div class="p-sec"><h3>Stage</h3><div class="stages" role="group" aria-label="Stage">' +
