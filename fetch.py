@@ -658,6 +658,7 @@ ALIASES = {
     "omers": "OMERS", "la caisse": "CDPQ", "brookfield asset management": "Brookfield", "rbc capital markets": "RBC",
     "td securities": "TD", "bmo capital markets": "BMO", "cibc capital markets": "CIBC", "scotia capital": "Scotiabank",
     "national bank financial": "National Bank", "financiere banque nationale": "National Bank",
+    "purpose": "Purpose Investments", "purpose unlimited": "Purpose Investments", "purpose investments": "Purpose Investments",
 }
 
 
@@ -947,6 +948,13 @@ def main():
 
     kept.sort(key=lambda j: (-j["s"], j["age"] if j["age"] is not None else 999))
     alive = sorted({j["u"] for j in kept} | trk)
+    # the same seat under two spellings of one firm ("Purpose" / "Purpose Investments", from two job sites): keep one
+    best = {}
+    for j in sorted(kept, key=lambda j: (bool(j.get("net")), -j["s"])):   # the firm's own board first, then the higher score
+        head = (norm_co(j["c"]).split() or [""])[0]
+        k = (head if len(head) >= 4 else norm_co(j["c"]), re.sub(r"[^a-z0-9]+", " ", fold(j["t"])).strip(), j.get("ct"))
+        best.setdefault(k, j)
+    kept = sorted(best.values(), key=lambda j: (-j["s"], j["age"] if j["age"] is not None else 999))
     above = [j for j in kept if j["s"] >= MIN_SHOW]
     shown = [j for j in above if analyst_level(j)]
     print(f"analyst gate: {len(above) - len(shown)} senior or 3+ year seats dropped, {len(shown)} kept")
