@@ -501,10 +501,11 @@ const JOBS = ((DATA && DATA.jobs) || []).filter(j => j.ct);
 const META = (DATA && DATA.meta) || {run:"-", boards:0, scanned:0, errors:[]};
 
 /* ---------------------------------------------------------------- vocabulary */
-const MIN = 7, STRONG = 9;
+const MIN = 6, STRONG = 9;
 const GROUPS = [[10, "Top match", "A seat on your path, and you clear the bar it sets."], [9, "Strong match", "Within about a year of the bar, or one small gap."],
-  [8, "Good match", "A real shot with a sharp application."], [7, "Worth a shot", "A stretch on experience, or a smaller seat. Apply selectively."]];
-const LABEL = {10:"Top match", 9:"Strong match", 8:"Good match", 7:"Worth a shot"};
+  [8, "Good match", "A real shot with a sharp application."], [7, "Worth a shot", "A stretch on experience, or a smaller seat. Apply selectively."],
+  [6, "Long shot", "The posting asks for a good deal more than you have. Only if the firm is a real target."]];
+const LABEL = {10:"Top match", 9:"Strong match", 8:"Good match", 7:"Worth a shot", 6:"Long shot"};
 const SEATS = [["pe", "Private equity & VC"], ["hf", "Hedge funds"], ["am", "Asset management"], ["ib", "Investment banking"], ["st", "Sales & trading"],
   ["credit", "Credit"], ["research", "Research"], ["real", "Real assets"], ["deals", "Corp dev & advisory"], ["quant", "Quant & risk"]];
 const SEAT_NAME = Object.fromEntries(SEATS);
@@ -515,7 +516,7 @@ const PROFILE = ["CFA Level I passed", "Level II candidate", "About two years in
 const ANYWHERE = new Set(["Canada", "Remote", "Multiple cities"]);
 const cityKey = j => ANYWHERE.has(j.ct) ? "any" : j.ct;
 const STAGES = [["saved", "Saved"], ["applied", "Applied"], ["interview", "Interview"], ["offer", "Offer"], ["closed", "Closed"]];
-const SCORING = "Each role gets a personal score out of 10. Only investing, banking, M&amp;A, deal-advisory, markets, research, quant and investment-risk seats are kept, and only at analyst level: nothing titled manager, director or VP, no internships, and nothing whose posting asks for more than three years. The score starts from the firm and the seat, then reads the posting itself: the years it asks for against yours, and hard requirements such as a CFA charter, MBA or CPA. A named city and a recent posting add a small lift. 7 and above are listed.";
+const SCORING = "Each role gets a personal score out of 10. Only investing, banking, M&amp;A, deal-advisory, markets, research, quant and investment-risk seats are kept, and only at analyst level: nothing titled manager, director or VP, no internships, and nothing whose posting asks for more than three years. The score starts from the firm and the seat, then reads the posting itself: the years it asks for against yours, and hard requirements such as a CFA charter, MBA or CPA. A named city and a recent posting add a small lift. 6 and above are listed; 6 is a long shot.";
 const EXPLAIN = "The score starts from the firm and the seat, then reads the posting itself: the years it asks for against your roughly two (about one on M&amp;A work, none in an investment seat), plus hard requirements such as a CFA charter, MBA or CPA. Meeting the bar adds a point; every year short takes points off. A posting that names its city and one posted this week get a small lift. Fixed rules for one profile, not a prediction of your chances.";
 
 /* what the posting asks for, against where you are */
@@ -612,7 +613,7 @@ const seatOf = j => SEAT_NAME[j.st] || cap(j.g) || "";
 const place = j => j.ct === "Canada" ? "Across Canada" : j.ct === "Remote" ? "Remote, Canada" : j.ct || "Canada";
 const typeOf = j => FIRM_TYPE[j.cat] || "";
 const sClass = s => s >= 10 ? "s10" : s >= 9 ? "s9" : s >= 8 ? "s8" : "s7";
-const labelOf = s => LABEL[Math.max(7, Math.min(10, s))] || "Match";
+const labelOf = s => LABEL[Math.max(6, Math.min(10, s))] || "Match";
 const plural = (n, w) => n.toLocaleString("en-CA") + " " + w + (n === 1 ? "" : "s");
 function hl(text, q){
   const t = String(text || "");
@@ -786,7 +787,7 @@ function list(){
   let h = "";
   if(S.sort === "best"){
     GROUPS.forEach(([s, name, note]) => {
-      const set = shown.filter(j => (s === 7 ? j.s <= 7 : j.s === s)), all = rows.filter(j => (s === 7 ? j.s <= 7 : j.s === s)).length;
+      const set = shown.filter(j => (s === MIN ? j.s <= MIN : j.s === s)), all = rows.filter(j => (s === MIN ? j.s <= MIN : j.s === s)).length;
       if(set.length) h += '<div class="grp-h"><b>' + name + '</b><span>' + note + '</span><span class="c">' + all + '</span></div><ul class="rows">' + set.map(rowHtml).join("") + '</ul>';
     });
   } else h += '<ul class="rows" style="padding-top:8px">' + shown.map(rowHtml).join("") + '</ul>';
@@ -850,7 +851,7 @@ function buildMap(){
   let g = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '" role="group" aria-label="Firm map, ' + order.length + ' firms">' +
     '<defs><linearGradient id="towerFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E6E6EB"/><stop offset="1" stop-color="#F0F0F3"/></linearGradient></defs>';
   g += '<text class="grid-t" x="' + (LEFT - 12) + '" y="20" text-anchor="end">Score</text>';
-  [7, 8, 9, 10].forEach(s => {
+  [6, 7, 8, 9, 10].forEach(s => {
     const yy = BASE - band(s);
     g += '<line class="grid-l" x1="' + LEFT + '" x2="' + (W - 16) + '" y1="' + yy + '" y2="' + yy + '" stroke-dasharray="1 5" stroke-linecap="round"/>';
     g += '<text class="grid-t" x="' + (LEFT - 12) + '" y="' + (yy + 3.5) + '" text-anchor="end">' + s + '</text>';
@@ -872,7 +873,7 @@ function buildMap(){
   });
   $("#map-scroll").innerHTML = g + '</svg>';
   $("#map-cap").textContent = plural(totalFirms, "firm") + " · " + plural(JOBS.filter(j => matches(j, {firm:true, quick:true})).length, "role");
-  $("#map-key").innerHTML = '<span><i class="k10"></i>10</span><span><i class="k9"></i>9</span><span><i class="k8"></i>8</span><span><i class="k7"></i>7</span><span><i class="kn"></i>New this week</span>';
+  $("#map-key").innerHTML = '<span><i class="k10"></i>10</span><span><i class="k9"></i>9</span><span><i class="k8"></i>8</span><span><i class="k7"></i>6–7</span><span><i class="kn"></i>New this week</span>';
   $("#map-note").textContent = totalFirms > MAP_MAX ? "Showing the " + MAP_MAX + " strongest of " + totalFirms + " firms. Pick a city or seat to see the rest." : "";
   const lead = firms.slice().sort((a, b) => b.best - a.best || b.js.length - a.js.length || b.strong - a.strong).slice(0, 6);
   $("#leaders").innerHTML = '<span class="lh">Deepest benches</span>' + lead.map(f =>

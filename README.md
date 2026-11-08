@@ -11,7 +11,7 @@ Every analyst-level seat in Canadian high finance, pulled from each firm's own h
 - **Seats:** private equity and VC, hedge funds, asset and pension investing, investment banking, sales and trading, credit, research, real assets, corporate development and deal advisory, quant and investment risk. Corporate and retail banking, operations, compliance and other support seats are dropped.
 - **Level:** analyst level only. No manager, director or VP titles, no internships, and nothing whose posting asks for more than three years of experience.
 - **Where:** anywhere in Canada. Each role gets a city (Toronto, Montréal, Vancouver, Calgary, Ottawa and every other city that turns up), or "multi-city / remote". Roles outside Canada are dropped.
-- **Score:** out of 10, from the firm, the seat and what the posting itself asks for against the profile in `fetch.py` (`PROFILE`). 7 and above are listed.
+- **Score:** out of 10, from the firm, the seat and what the posting itself asks for against the profile in `fetch.py` (`PROFILE`). 6 and above are listed (6 is a long shot).
 
 ## Coverage
 - `firms_seed.py`: hand-picked Canadian employers with their head-office city (pensions, PE, VC, hedge funds, asset managers, banks and dealers, M&A boutiques, deal advisory, real estate investors, corporate M&A teams).

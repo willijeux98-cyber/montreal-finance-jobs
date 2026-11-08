@@ -616,7 +616,7 @@ def read_reqs(cands):
 
 
 SOURCES = [(lambda _s, f=f: f(), None, label) for f, label in build_sources()]
-MIN_SHOW = 7   # shown from 7 up; every investment-titled posting is still tracked so Applied can tell "still posted"
+MIN_SHOW = 6   # shown from 6 up (6 = "long shot"); every investment-titled posting is still tracked so Applied can tell "still posted"
 
 
 # ---------------------------------------------------------------- the net: who is this firm?
