@@ -23,7 +23,7 @@
     ]
    ]
   ],
-  "careers": "https://www.lacaisse.com/fr/carrieres",
+  "careers": "https://www.lacaisse.com/fr/nous-joindre",
   "rc": false
  },
  {
@@ -42,7 +42,7 @@
     ]
    ]
   ],
-  "careers": "https://www.investpsp.com/en/work/careers/",
+  "careers": "https://www.investpsp.com/en/careers/",
   "rc": false
  },
  {
@@ -71,7 +71,7 @@
     ]
    ]
   ],
-  "careers": "https://www.fondsftq.com/fr-ca/carriere",
+  "careers": "https://www.fondsftq.com/fr-ca/nous-joindre",
   "rc": false
  },
  {
@@ -81,7 +81,7 @@
   "city": "Montréal",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.fondaction.com/carrieres",
+  "careers": "https://www.fondaction.com/carrieres/",
   "rc": true
  },
  {
@@ -100,7 +100,7 @@
     ]
    ]
   ],
-  "careers": "https://www.investquebec.com/fr/nous-joindre/infolettre",
+  "careers": "https://carrieres.investquebec.com/",
   "rc": false
  },
  {
@@ -120,7 +120,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.omers.com/jobs",
+  "careers": "https://www.omers.com/careers",
   "rc": false
  },
  {
@@ -149,7 +149,7 @@
     ]
    ]
   ],
-  "careers": "https://www.otpp.com/en-ca/careers/meet-our-team/finance/",
+  "careers": "https://www.otpp.com/en-ca/careers/early-talent/",
   "rc": false
  },
  {
@@ -164,7 +164,7 @@
     [
      "hoopp",
      "10",
-     "HOOPPStudent"
+     "HOOPP"
     ]
    ],
    [
@@ -172,11 +172,11 @@
     [
      "hoopp",
      "10",
-     "HOOPP"
+     "HOOPPStudent"
     ]
    ]
   ],
-  "careers": "https://hoopp.com/about-hoopp/hoopp-careers/students-and-new-graduates",
+  "careers": "https://hoopp.com/en/about/careers",
   "rc": false
  },
  {
@@ -196,7 +196,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.benefitscanada.com/news/cir-news-news/domestic-energy-investment-opportunities-growing-in-canada-imco/",
+  "careers": "https://www.imcoinvest.com/news/imco-joins-global-leaders-at-canada-investment-summit.html",
   "rc": false
  },
  {
@@ -215,7 +215,7 @@
     ]
    ]
   ],
-  "careers": "https://www.caatpension.ca/careers/",
+  "careers": "https://www.caatpension.ca/careers",
   "rc": false
  },
  {
@@ -263,7 +263,7 @@
     ]
    ]
   ],
-  "careers": "https://www.aimco.ca/careers",
+  "careers": "https://www.aimco.ca/careers/",
   "rc": false
  },
  {
@@ -273,7 +273,7 @@
   "city": "Fredericton",
   "src": "seed",
   "boards": [],
-  "careers": "https://vestcor.org/fr/notre-organisation/carrieres/",
+  "careers": "https://vestcor.org/en/about-us/careers/",
   "rc": false
  },
  {
@@ -292,7 +292,7 @@
     "banquedelinfrastructureducanada"
    ]
   ],
-  "careers": "https://cib-bic.ca/en/infrastructure-creates-opportunities/",
+  "careers": "https://cib-bic.ca/en/work-with-us/initiatives/",
   "rc": false
  },
  {
@@ -322,7 +322,7 @@
   "city": "Montréal",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.bdc.ca/fr/carrieres?ref=shorturl-carrieres",
+  "careers": "https://www.bdc.ca/en/careers",
   "rc": false
  },
  {
@@ -332,7 +332,7 @@
   "city": "Ottawa",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.edc.ca/en/about-us/careers.html",
+  "careers": "https://www.edc.ca/fr/a-propos-de-nous/carrieres.html",
   "rc": false
  },
  {
@@ -408,7 +408,7 @@
     ]
    ]
   ],
-  "careers": "https://www.desjardins.com/fr/carriere/domaines-emplois.html?navigMW=pp",
+  "careers": "https://desjardins.wd10.myworkdayjobs.com/EtudiantsetStagiaires/job/Montral/Emplois-tudiants-et-stages_R1906679",
   "rc": true
  },
  {
@@ -430,14 +430,14 @@
   "boards": [
    [
     "rippling",
-    "novacapexpress"
+    "novacapexprimez"
    ],
    [
     "rippling",
-    "novacapexprimez"
+    "novacapexpress"
    ]
   ],
-  "careers": "https://novacapcorp.com/careers/",
+  "careers": "https://novacapcorp.com/fr/carrieres/",
   "rc": false
  },
  {
@@ -477,7 +477,7 @@
   "city": "Montréal",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.seafortcapital.com/careers/",
+  "careers": "https://www.seafortcapital.com/careers",
   "rc": false
  },
  {
@@ -506,7 +506,7 @@
     ]
    ]
   ],
-  "careers": "https://www.brookfield.com/views-news/insights/how-connectivity-and-constraints-shape-opportunity",
+  "careers": "https://www.brookfield.com/careers/career-opportunities",
   "rc": false
  },
  {
@@ -546,7 +546,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.clairvest.com/careers",
+  "careers": "https://www.clairvest.com/careers/",
   "rc": false
  },
  {
@@ -576,7 +576,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.imperialcap.com/jobs",
+  "careers": "https://www.imperialcap.com/carrieres",
   "rc": false
  },
  {
@@ -611,7 +611,7 @@
     "northleafcapitalpartners"
    ]
   ],
-  "careers": "https://northleafcapitalpartners.bamboohr.com/careers",
+  "careers": "https://www.northleafcapital.com/careers",
   "rc": false
  },
  {
@@ -631,7 +631,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://banyancapitalpartners.cclgroup.com/insight/news-jeff-wigle-joins-alex-rawlings-on-the-private-equity-podcast/",
+  "careers": "https://cclfg.cclgroup.com/careers/working-at-ccl/",
   "rc": false
  },
  {
@@ -680,7 +680,7 @@
     ]
    ]
   ],
-  "careers": "https://fengate.wd10.myworkdayjobs.com/Fengate_Careers",
+  "careers": "https://fengate.com/careers",
   "rc": false
  },
  {
@@ -715,7 +715,7 @@
     "georgian"
    ]
   ],
-  "careers": "https://georgian.io/careers",
+  "careers": "https://careers.georgian.io/jobs",
   "rc": false
  },
  {
@@ -885,7 +885,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://brightspark.com/en/about/careers",
+  "careers": "https://careers.brightspark.com/companies",
   "rc": true
  },
  {
@@ -965,7 +965,7 @@
   "city": "Montréal",
   "src": "seed",
   "boards": [],
-  "careers": "https://pinchtalent.com/",
+  "careers": "https://frontrow.ventures/en/join-us/",
   "rc": true
  },
  {
@@ -984,7 +984,7 @@
     ]
    ]
   ],
-  "careers": "https://www.ardian.com/join-us",
+  "careers": "https://www.ardian.com/talent/inclusion-diversity",
   "rc": true
  },
  {
@@ -1013,7 +1013,7 @@
   "city": "",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.hamiltonlane.com/en-us/careers",
+  "careers": "https://www.hamiltonlane.com/en-us/news/infrastructure-opportunities-fund-ii-close",
   "rc": false
  },
  {
@@ -1047,7 +1047,7 @@
     ]
    ]
   ],
-  "careers": "https://www.blackstone.com/careers/careers-blackstone/",
+  "careers": "https://www.blackstone.com/our-businesses/tactical-opportunities/",
   "rc": false
  },
  {
@@ -1087,7 +1087,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": null,
+  "careers": "https://www.romspen.com/join-our-team/",
   "rc": false
  },
  {
@@ -1126,7 +1126,7 @@
     ]
    ]
   ],
-  "careers": "https://fieracapital.wd3.myworkdayjobs.com/Career",
+  "careers": "https://careers.fieracapital.com/",
   "rc": false
  },
  {
@@ -1176,7 +1176,7 @@
   "city": "Montréal",
   "src": "seed",
   "boards": [],
-  "careers": "https://triasima.com/fr/carrieres/",
+  "careers": "https://triasima.com/en/career/",
   "rc": false
  },
  {
@@ -1208,14 +1208,14 @@
   "boards": [
    [
     "jobvite",
-    "addendacapital"
+    "addendacapital-fr"
    ],
    [
     "jobvite",
-    "addendacapital-fr"
+    "addendacapital"
    ]
   ],
-  "careers": "https://addendacapital.com/en/careers",
+  "careers": "https://addendacapital.com/fr/carrieres",
   "rc": false
  },
  {
@@ -1235,7 +1235,7 @@
   "city": "Montréal",
   "src": "seed",
   "boards": [],
-  "careers": "https://carrieres.optimumfinancier.com/postes-disponibles",
+  "careers": "https://carrieres.optimumfinancier.com/en/available-positions",
   "rc": false
  },
  {
@@ -1314,7 +1314,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.burgundyasset.com/careers/",
+  "careers": "https://www.burgundyasset.com/fr/carrieres/",
   "rc": false
  },
  {
@@ -1343,8 +1343,17 @@
   "cat": "am",
   "city": "Toronto",
   "src": "seed",
-  "boards": [],
-  "careers": null,
+  "boards": [
+   [
+    "workday",
+    [
+     "agf",
+     "3",
+     "AGF_Careers"
+    ]
+   ]
+  ],
+  "careers": "https://www.agf.com/corporate/careers/index.jsp",
   "rc": false
  },
  {
@@ -1372,8 +1381,13 @@
   "cat": "am",
   "city": "Toronto",
   "src": "seed",
-  "boards": [],
-  "careers": null,
+  "boards": [
+   [
+    "bamboohr",
+    "sprott"
+   ]
+  ],
+  "careers": "https://sprott.com/about-us/careers/",
   "rc": false
  },
  {
@@ -1403,7 +1417,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.globalx.ca/fr/emplois",
+  "careers": "https://www.globalx.ca/careers",
   "rc": false
  },
  {
@@ -1413,7 +1427,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": null,
+  "careers": "https://www.hazelview.com/carrieres",
   "rc": false
  },
  {
@@ -1423,7 +1437,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": null,
+  "careers": "https://www.lysanderfunds.com/fr/carrieres/",
   "rc": false
  },
  {
@@ -1433,7 +1447,7 @@
   "city": "Calgary",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.mawer.com/join-us",
+  "careers": "https://www.mawer.com/careers/",
   "rc": false
  },
  {
@@ -1443,7 +1457,7 @@
   "city": "Vancouver",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.leithwheeler.com/careers",
+  "careers": "https://www.leithwheeler.com/careers/",
   "rc": false
  },
  {
@@ -1452,8 +1466,13 @@
   "cat": "am",
   "city": "Vancouver",
   "src": "seed",
-  "boards": [],
-  "careers": null,
+  "boards": [
+   [
+    "bamboohr",
+    "penderfund"
+   ]
+  ],
+  "careers": "https://penderfund.com/commentaries/pender-credit-opportunities-fund-q3-2026/",
   "rc": false
  },
  {
@@ -1482,7 +1501,7 @@
     ]
    ]
   ],
-  "careers": "https://www.pimco.com/ca/en/about-us/careers",
+  "careers": "https://www.pimco.com/us/en/about-us/careers",
   "rc": false
  },
  {
@@ -1492,7 +1511,7 @@
   "city": "",
   "src": "seed",
   "boards": [],
-  "careers": "https://careers.blackrock.com/",
+  "careers": "https://careers.blackrock.com",
   "rc": false
  },
  {
@@ -1541,7 +1560,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": null,
+  "careers": "https://waratahadvisors.com/about-waratah/careers/",
   "rc": false
  },
  {
@@ -1551,7 +1570,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": null,
+  "careers": "https://www.hillsdaleinv.com/about/#careers",
   "rc": false
  },
  {
@@ -1611,7 +1630,7 @@
   "city": "",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.squarepoint-capital.com/early-careers",
+  "careers": "https://www.squarepoint-capital.com/open-opportunities",
   "rc": false
  },
  {
@@ -1621,7 +1640,7 @@
   "city": "",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.drw.com/work-at-drw",
+  "careers": "https://www.drw.com/work-at-drw/who-we-are",
   "rc": false
  },
  {
@@ -1641,7 +1660,7 @@
   "city": "",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.optiver.com/join-us",
+  "careers": "https://www.optiver.com/join-us/students/",
   "rc": false
  },
  {
@@ -1660,7 +1679,7 @@
     ]
    ]
   ],
-  "careers": "https://ia.ca/emploi/conseiller-financier",
+  "careers": "https://ia.ca/emploi/emplois-disponibles",
   "rc": false
  },
  {
@@ -1670,7 +1689,7 @@
   "city": "Québec City",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.beneva.ca/en/careers",
+  "careers": "https://www.beneva.ca/careers/",
   "rc": false
  },
  {
@@ -1709,7 +1728,7 @@
   "city": "Winnipeg",
   "src": "seed",
   "boards": [],
-  "careers": null,
+  "careers": "https://www.careers.canadalife.com:443/",
   "rc": false
  },
  {
@@ -1719,7 +1738,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.intactfc.com/fr/carrieres",
+  "careers": "https://www.intactfc.com/careers",
   "rc": false
  },
  {
@@ -1738,7 +1757,7 @@
     ]
    ]
   ],
-  "careers": "https://www.desjardins.com/fr/nous-joindre.html?navigMW=pp",
+  "careers": "https://www.desjardins.com/fr/carriere.html",
   "rc": false
  },
  {
@@ -1748,7 +1767,7 @@
   "city": "Montréal",
   "src": "seed",
   "boards": [],
-  "careers": "https://emplois.bnc.ca/fr_CA/careers/banklife",
+  "careers": "https://emplois.bnc.ca/en_CA/careers",
   "rc": false
  },
  {
@@ -1778,7 +1797,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.rbc.com/en/about-us/history/careers/",
+  "careers": "https://jobs.rbc.com/ca/en/",
   "rc": false
  },
  {
@@ -1797,7 +1816,7 @@
     ]
    ]
   ],
-  "careers": "https://careers.td.com/",
+  "careers": "https://www.td.com/us/en/personal-banking/learning/student-and-careers",
   "rc": true
  },
  {
@@ -1824,7 +1843,7 @@
     ]
    ]
   ],
-  "careers": "https://www.cibc.com/fr/about-cibc/careers.html",
+  "careers": "https://www.cibc.com/en/about-cibc/careers.html",
   "rc": true
  },
  {
@@ -1873,8 +1892,13 @@
   "cat": "ib",
   "city": "",
   "src": "seed",
-  "boards": [],
-  "careers": "https://www.stifel.com/careers/benefits",
+  "boards": [
+   [
+    "icims",
+    "careers-stifel.icims.com"
+   ]
+  ],
+  "careers": "https://careers-stifel.icims.com/jobs/search?mode=job&iis=Company+Website",
   "rc": false
  },
  {
@@ -1944,7 +1968,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": null,
+  "careers": "https://www.bloomburton.com/careers/",
   "rc": false
  },
  {
@@ -1974,7 +1998,7 @@
   "city": "Vancouver",
   "src": "seed",
   "boards": [],
-  "careers": null,
+  "careers": "https://ventumfinancial.com/join-the-ventum-team-backup/advisors-portfolio-managers/advisor-marketing/",
   "rc": false
  },
  {
@@ -1984,7 +2008,7 @@
   "city": "",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.bnpparibas.ca/en/career-development/",
+  "careers": "https://www.bnpparibas.ca/en/join-us/",
   "rc": false
  },
  {
@@ -1994,7 +2018,7 @@
   "city": "",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.morganstanley.com/people-opportunities/students-graduates",
+  "careers": "https://www.morganstanley.com/careers/career-opportunities-search",
   "rc": false
  },
  {
@@ -2004,7 +2028,7 @@
   "city": "",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.goldmansachs.com/careers/benefits",
+  "careers": "https://www.goldmansachs.com/careers/featured-offices",
   "rc": false
  },
  {
@@ -2014,7 +2038,7 @@
   "city": "",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.jpmorganchase.com/careers/grow-with-us",
+  "careers": "https://www.jpmorganchase.com/careers",
   "rc": false
  },
  {
@@ -2053,7 +2077,7 @@
   "city": "",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.jefferies.com/careers/experienced-professionals/",
+  "careers": "https://www.jefferies.com/careers/",
   "rc": false
  },
  {
@@ -2063,7 +2087,7 @@
   "city": "",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.ca-cib.com/en/careers/diversity-and-inclusion",
+  "careers": "https://www.ca-cib.com/en/career",
   "rc": false
  },
  {
@@ -2121,7 +2145,7 @@
     ]
    ]
   ],
-  "careers": null,
+  "careers": "https://morningstar.wd5.myworkdayjobs.com/MorningstarDBRS",
   "rc": false
  },
  {
@@ -2130,8 +2154,25 @@
   "cat": "advisory",
   "city": "Toronto",
   "src": "seed",
-  "boards": [],
-  "careers": "https://www.deloitte.com/ca/fr/careers/deloitte-life.html?icid=top_deloitte-life",
+  "boards": [
+   [
+    "workday",
+    [
+     "deloitteie",
+     "3",
+     "Experienced_Professionals"
+    ]
+   ],
+   [
+    "lever",
+    "deloitte"
+   ],
+   [
+    "smartrecruiters",
+    "Deloitte6"
+   ]
+  ],
+  "careers": "https://www.deloitte.com/us/en/careers/join-deloitte/government-and-public-services-careers.html?icid=top_government-and-public-services-careers",
   "rc": true
  },
  {
@@ -2151,7 +2192,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.ey.com/en_us/careers/climate-change-sustainability-services",
+  "careers": "https://www.ey.com/en_us/careers",
   "rc": false
  },
  {
@@ -2180,7 +2221,7 @@
     ]
    ]
   ],
-  "careers": "https://www.bdo.ca/insights/capital-flow-and-strategic-m-and-a-opportunities/defence",
+  "careers": "https://www.bdo.ca/careers",
   "rc": true
  },
  {
@@ -2209,7 +2250,7 @@
     ]
    ]
   ],
-  "careers": "https://www.rcgt.com/fr/carrieres/etudiants-et-stagiaires/ambassadeurs-universitaires/",
+  "careers": "https://www.rcgt.com/fr/carrieres/carrieres-vie-entreprise-raymond-chabot-grant-thornton-offres-emploi/",
   "rc": false
  },
  {
@@ -2219,7 +2260,7 @@
   "city": "Calgary",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.mnp.ca/fr/carrieres",
+  "careers": "https://www.mnp.ca/en/careers",
   "rc": false
  },
  {
@@ -2229,7 +2270,7 @@
   "city": "Montréal",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.richter.ca/careers/",
+  "careers": "https://www.richter.ca/fr/carrieres/",
   "rc": true
  },
  {
@@ -2239,7 +2280,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://cdncases.alixpartners.com/careers/",
+  "careers": "https://cdncases.alixpartners.com/en/about/careers",
   "rc": false
  },
  {
@@ -2259,7 +2300,7 @@
   "city": "",
   "src": "seed",
   "boards": [],
-  "careers": null,
+  "careers": "https://www.fticonsulting.com/en/careers",
   "rc": false
  },
  {
@@ -2319,7 +2360,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": null,
+  "careers": "https://www.sequeirapartners.com/careers/",
   "rc": false
  },
  {
@@ -2354,7 +2395,7 @@
     ]
    ]
   ],
-  "careers": "https://hl.com/careers",
+  "careers": "https://hl.com/careers/",
   "rc": false
  },
  {
@@ -2374,7 +2415,7 @@
   "city": "",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.evercore.com/careers/professionals/",
+  "careers": "https://www.evercore.com/careers/students-graduates/",
   "rc": false
  },
  {
@@ -2384,6 +2425,14 @@
   "city": "",
   "src": "seed",
   "boards": [
+   [
+    "workday",
+    [
+     "pjtpartners",
+     "1",
+     "Careers"
+    ]
+   ],
    [
     "workday",
     [
@@ -2399,17 +2448,9 @@
      "1",
      "Studentevents"
     ]
-   ],
-   [
-    "workday",
-    [
-     "pjtpartners",
-     "1",
-     "Careers"
-    ]
    ]
   ],
-  "careers": "https://www.pjtpartners.com/careers/students",
+  "careers": "https://www.pjtpartners.com/careers/experienced-professionals",
   "rc": false
  },
  {
@@ -2428,7 +2469,7 @@
     ]
    ]
   ],
-  "careers": "https://www.moelis.com/careers/professional-development/",
+  "careers": "https://www.moelis.com/careers/explore-opportunities/?tab=experienced-professionals",
   "rc": false
  },
  {
@@ -2457,7 +2498,7 @@
     ]
    ]
   ],
-  "careers": "https://www.rothschildandco.com/en/careers/students-and-graduates/graduates/",
+  "careers": "https://www.rothschildandco.com/en/careers/",
   "rc": false
  },
  {
@@ -2467,7 +2508,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": null,
+  "careers": "https://www.oxfordproperties.com/careers",
   "rc": false
  },
  {
@@ -2504,7 +2545,7 @@
     ]
    ]
   ],
-  "careers": "https://quadreal.com/careers/",
+  "careers": "https://quadreal.wd10.myworkdayjobs.com/quadreal",
   "rc": false
  },
  {
@@ -2514,7 +2555,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://bgo.com/careers",
+  "careers": "https://bgo.com/culture-talent-and-belonging-at-bgo",
   "rc": false
  },
  {
@@ -2534,7 +2575,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.slateam.com/2026/02/26/bringing-jobs-and-more-clean-power-to-nova-scotia/",
+  "careers": "https://www.slateam.com/careers/",
   "rc": false
  },
  {
@@ -2554,7 +2595,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://crestpoint.cclgroup.com/careers/",
+  "careers": "https://crestpoint.cclgroup.com/careers/?functions=Crestpoint%20Real%20Estate%20Investments",
   "rc": false
  },
  {
@@ -2579,7 +2620,7 @@
     "alliedreit"
    ]
   ],
-  "careers": "https://alliedreit.com/fr/compagnie/carrieres/",
+  "careers": "https://alliedreit.com/company/careers/",
   "rc": false
  },
  {
@@ -2594,7 +2635,7 @@
     "riocan"
    ]
   ],
-  "careers": "https://jobs.lever.co:443/riocan",
+  "careers": "https://jobs.lever.co/riocan",
   "rc": false
  },
  {
@@ -2609,7 +2650,7 @@
     "fcr"
    ]
   ],
-  "careers": "https://fcr.ca/wp-content/uploads/2020/02/Careers-e1582582237406.jpg",
+  "careers": "https://fcr.ca/careers/",
   "rc": false
  },
  {
@@ -2628,8 +2669,13 @@
   "cat": "re",
   "city": "Toronto",
   "src": "seed",
-  "boards": [],
-  "careers": "https://careers-capreit.icims.com/",
+  "boards": [
+   [
+    "icims",
+    "careers-capreit.icims.com"
+   ]
+  ],
+  "careers": "https://careers-capreit.icims.com/jobs/search",
   "rc": false
  },
  {
@@ -2638,8 +2684,13 @@
   "cat": "re",
   "city": "Toronto",
   "src": "seed",
-  "boards": [],
-  "careers": null,
+  "boards": [
+   [
+    "bamboohr",
+    "granitereit"
+   ]
+  ],
+  "careers": "https://granitereit.com/careers",
   "rc": false
  },
  {
@@ -2654,7 +2705,7 @@
     "Morguard"
    ]
   ],
-  "careers": "https://careers.morguard.com/",
+  "careers": "https://careers.smartrecruiters.com/Morguard",
   "rc": false
  },
  {
@@ -2694,7 +2745,7 @@
   "city": "Montréal",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.cgi.com/fr/carrieres",
+  "careers": "https://www.cgi.com/en/careers",
   "rc": false
  },
  {
@@ -2713,7 +2764,7 @@
     ]
    ]
   ],
-  "careers": "https://www.cae.com/fr/carrieres",
+  "careers": "https://www.cae.com/join-us",
   "rc": false
  },
  {
@@ -2733,7 +2784,7 @@
   "city": "Montréal",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.brp.com/fr/carriere.html",
+  "careers": "https://www.brp.com/en/careers.html",
   "rc": false
  },
  {
@@ -2752,7 +2803,7 @@
     ]
    ]
   ],
-  "careers": "https://www.saputo.com/en/careers",
+  "careers": "https://www.saputo.com/en/careers/work-culture",
   "rc": false
  },
  {
@@ -2782,7 +2833,7 @@
   "city": "Montréal",
   "src": "seed",
   "boards": [],
-  "careers": "https://careers.aircanada.com/ca/fr",
+  "careers": "https://careers.aircanada.com/ca/en",
   "rc": false
  },
  {
@@ -2802,7 +2853,7 @@
   "city": "Montréal",
   "src": "seed",
   "boards": [],
-  "careers": "https://jobs.bombardier.com/?locale=en_US",
+  "careers": "https://jobs.bombardier.com/?locale=en_CA",
   "rc": false
  },
  {
@@ -2822,7 +2873,7 @@
   "city": "Montréal",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.nuvei.com/careers",
+  "careers": "https://www.nuvei.com/service-pages/joint-use-of-merchant-information-japan",
   "rc": false
  },
  {
@@ -2832,7 +2883,7 @@
   "city": "Montréal",
   "src": "seed",
   "boards": [],
-  "careers": "https://emploi.hydroquebec.com/",
+  "careers": "https://emploi.hydroquebec.com//",
   "rc": false
  },
  {
@@ -2841,8 +2892,13 @@
   "cat": "corpdev",
   "city": "Montréal",
   "src": "seed",
-  "boards": [],
-  "careers": "https://gildancorp.com/en/careers/summer-internship-program/",
+  "boards": [
+   [
+    "icims",
+    "careers-gildan.icims.com"
+   ]
+  ],
+  "careers": "https://gildancorp.com/en/careers/life-gildan/",
   "rc": false
  },
  {
@@ -2882,7 +2938,7 @@
   "city": "Montréal",
   "src": "seed",
   "boards": [],
-  "careers": "https://jobs.pomerleau.ca/en_US/Jobs",
+  "careers": "https://pomerleau.ca/en/insights/article/news/groupe-allen-joins-pomerleau",
   "rc": false
  },
  {
@@ -2891,8 +2947,17 @@
   "cat": "corpdev",
   "city": "Montréal",
   "src": "seed",
-  "boards": [],
-  "careers": "https://corpo.cogeco.com/carrieres",
+  "boards": [
+   [
+    "workday",
+    [
+     "cogeco",
+     "3",
+     "Cogeco_Careers"
+    ]
+   ]
+  ],
+  "careers": "https://corpo.cogeco.com/cca/fr/nous-joindre",
   "rc": false
  },
  {
@@ -2902,7 +2967,7 @@
   "city": "Montréal",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.quebecor.com/en/about/careers",
+  "careers": "https://www.quebecor.com/fr/carrieres",
   "rc": false
  },
  {
@@ -2922,7 +2987,7 @@
   "city": "Montréal",
   "src": "seed",
   "boards": [],
-  "careers": "https://orroyalties.com/English/careers/default.aspx",
+  "careers": "https://www.osiskogr.com/careers/",
   "rc": false
  },
  {
@@ -2961,7 +3026,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.rogers.com/careers/",
+  "careers": "https://jobs.rogers.com/?locale=fr_CA&utm_source=Rogerscorporate&utm_campaign=corpfooterfr",
   "rc": false
  },
  {
@@ -2971,7 +3036,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://careers.loblaw.ca",
+  "careers": "https://careers.loblaw.ca/",
   "rc": false
  },
  {
@@ -2981,7 +3046,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.magna.com/careers/",
+  "careers": "https://www.magna.com/careers/beware-of-fraudulent-job-offers",
   "rc": false
  },
  {
@@ -2991,7 +3056,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.rbi.com/English/sustainability/talent-development/default.aspx",
+  "careers": "https://careers.rbi.com/global/en",
   "rc": false
  },
  {
@@ -3011,14 +3076,10 @@
    ],
    [
     "smartrecruiters",
-    "Colliers1"
-   ],
-   [
-    "smartrecruiters",
     "ColliersInternationalEMEA"
    ]
   ],
-  "careers": "https://www.collierscanada.com/en-ca/careers",
+  "careers": "https://www.colliers.com/en/careers",
   "rc": false
  },
  {
@@ -3057,7 +3118,7 @@
     ]
    ]
   ],
-  "careers": "https://www.elementfleet.com/join-us",
+  "careers": "https://www.elementfleet.com/carrieres",
   "rc": false
  },
  {
@@ -3086,7 +3147,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.franco-nevada.com/corporate/careers/default.aspx",
+  "careers": "https://www.franco-nevada.com/careers/opportunities/default.aspx",
   "rc": false
  },
  {
@@ -3096,7 +3157,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.barrick.com/English/careers/default.aspx",
+  "careers": "https://jobs.barrick.com/",
   "rc": false
  },
  {
@@ -3106,7 +3167,7 @@
   "city": "Toronto",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.agnicoeagle.com/English/careers/a-rewarding-experience/default.aspx?ItemId=a1a5e221-0289-48c4-91e4-c388cad888bf",
+  "careers": "https://www.agnicoeagle.com/English/careers/student-experiences/default.aspx",
   "rc": false
  },
  {
@@ -3156,7 +3217,7 @@
   "city": "Vancouver",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.teck.com/careers/locations/alaska/",
+  "careers": "https://www.teck.com/careers/locations/",
   "rc": false
  },
  {
@@ -3185,8 +3246,17 @@
   "cat": "corpdev",
   "city": "Calgary",
   "src": "seed",
-  "boards": [],
-  "careers": null,
+  "boards": [
+   [
+    "workday",
+    [
+     "enbridge",
+     "3",
+     "enbridge_careers"
+    ]
+   ]
+  ],
+  "careers": "https://enbridge.wd3.myworkdayjobs.com/enbridge_careers",
   "rc": false
  },
  {
@@ -3205,7 +3275,7 @@
     ]
    ]
   ],
-  "careers": "https://www.tcenergy.com/careers/",
+  "careers": "https://www.tcenergy.com/about/careers/",
   "rc": false
  },
  {
@@ -3245,7 +3315,7 @@
   "city": "Calgary",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.pembina.com/en/careers",
+  "careers": "https://www.pembina.com/careers/our-hiring-process",
   "rc": false
  },
  {
@@ -3265,7 +3335,7 @@
   "city": "Calgary",
   "src": "seed",
   "boards": [],
-  "careers": "https://www.parkland.ca/careers",
+  "careers": "https://www.parkland.ca/en/careers",
   "rc": false
  },
  {
@@ -3275,7 +3345,7 @@
   "city": "Calgary",
   "src": "seed",
   "boards": [],
-  "careers": null,
+  "careers": "https://transalta.com/careers",
   "rc": false
  },
  {
@@ -3304,7 +3374,7 @@
   "city": "Saskatoon",
   "src": "seed",
   "boards": [],
-  "careers": "https://jobs.nutrien.com/",
+  "careers": "https://www.nutrien.com/careers",
   "rc": false
  },
  {
@@ -3324,7 +3394,7 @@
   "city": "St. John's",
   "src": "seed",
   "boards": [],
-  "careers": "https://fortisinc.com/careers/",
+  "careers": "https://www.fortisinc.com/careers",
   "rc": false
  },
  {
@@ -3333,7 +3403,16 @@
   "cat": "corpdev",
   "city": "Halifax",
   "src": "seed",
-  "boards": [],
+  "boards": [
+   [
+    "icims",
+    "employees-emera.icims.com"
+   ],
+   [
+    "icims",
+    "careers-emera.icims.com"
+   ]
+  ],
   "careers": "https://careers.emera.com/careers-home",
   "rc": false
  },
@@ -3364,7 +3443,7 @@
   "city": "Montreal",
   "src": "cvca",
   "boards": [],
-  "careers": "https://accelia.vc/nous-joindre/",
+  "careers": "https://accelia.vc/carrieres/",
   "rc": true
  },
  {
@@ -3484,7 +3563,7 @@
   "city": "Waterloo",
   "src": "cvca",
   "boards": [],
-  "careers": "https://www.archangelnetwork.ca/wp-content/uploads/2024/06/Intellijoint-Surgical_R-1-1-400x102-1.jpg",
+  "careers": "https://www.archangelnetwork.ca/portfolio-items/intellijoint/?portfolioCats=59%2C58%2C60%2C61",
   "rc": true
  },
  {
@@ -3504,7 +3583,7 @@
   "city": "Vancouver",
   "src": "cvca",
   "boards": [],
-  "careers": "https://ascentuscap.com/carrieres",
+  "careers": "https://ascentuscap.com/en/careers",
   "rc": true
  },
  {
@@ -3594,7 +3673,7 @@
   "city": "Toronto",
   "src": "cvca",
   "boards": [],
-  "careers": null,
+  "careers": "https://brandproject.com/join-us/",
   "rc": true
  },
  {
@@ -3733,8 +3812,13 @@
   "cat": "pe_vc",
   "city": "Toronto",
   "src": "cvca",
-  "boards": [],
-  "careers": null,
+  "boards": [
+   [
+    "bamboohr",
+    "dawsonpartners"
+   ]
+  ],
+  "careers": "https://dawsonpartners.com/careers",
   "rc": true
  },
  {
@@ -3744,7 +3828,7 @@
   "city": "Toronto",
   "src": "cvca",
   "boards": [],
-  "careers": "https://www.delvinia.com/delvinia-joins-forces-with-schlesinger-group/",
+  "careers": "https://www.delvinia.com/careers/",
   "rc": true
  },
  {
@@ -3764,7 +3848,7 @@
   "city": "Vancouver",
   "src": "cvca",
   "boards": [],
-  "careers": null,
+  "careers": "https://fundeasly.com/about/careers/",
   "rc": true
  },
  {
@@ -3843,8 +3927,13 @@
   "cat": "pe_vc",
   "city": "Toronto",
   "src": "cvca",
-  "boards": [],
-  "careers": null,
+  "boards": [
+   [
+    "bamboohr",
+    "facit"
+   ]
+  ],
+  "careers": "https://facit.ca/careers",
   "rc": true
  },
  {
@@ -3923,7 +4012,7 @@
   "city": "Toronto",
   "src": "cvca",
   "boards": [],
-  "careers": "https://www.framework.vc/en/articles/castellum-ai-joins-the-portfolio",
+  "careers": "https://www.framework.vc/en/articles/airspeed-joins-the-portfolio",
   "rc": true
  },
  {
@@ -3993,7 +4082,7 @@
   "city": "Toronto",
   "src": "cvca",
   "boards": [],
-  "careers": "https://www.gspv.vc/news/join-us-may-27th-greensoils-2026-summit-why-the-physical-world-wins-the-ai-era",
+  "careers": "https://www.gspv.vc/news/ivy-energy-and-glow-energy-join-forces-to-decarbonize-multi-tenant-buildings",
   "rc": true
  },
  {
@@ -4033,7 +4122,7 @@
   "city": "Toronto",
   "src": "cvca",
   "boards": [],
-  "careers": "https://www.hazelview.com/en/about/careers",
+  "careers": "https://www.hazelview.com/carrieres",
   "rc": true
  },
  {
@@ -4253,7 +4342,7 @@
   "city": "Quebec City",
   "src": "cvca",
   "boards": [],
-  "careers": "https://www.linearis.com/about/news/karimah-es-sabar-joins-linearis-ventures-as-strategic-advisor-in-life-sciences-and-venture-capital",
+  "careers": "https://www.linearis.com/about/careers",
   "rc": true
  },
  {
@@ -4273,7 +4362,7 @@
   "city": "Montreal",
   "src": "cvca",
   "boards": [],
-  "careers": "https://www.mkbandco.com/careers/",
+  "careers": "https://www.mkbandco.com/fr/carrieres/",
   "rc": true
  },
  {
@@ -4333,7 +4422,7 @@
     "maverixpe"
    ]
   ],
-  "careers": "https://www.maverixpe.com/careers/",
+  "careers": "https://www.maverixpe.com/careers",
   "rc": true
  },
  {
@@ -4343,7 +4432,7 @@
   "city": "Toronto",
   "src": "cvca",
   "boards": [],
-  "careers": "https://maxwavecapital.com/fr/carrieres",
+  "careers": "https://maxwavecapital.com/jobs",
   "rc": true
  },
  {
@@ -4443,7 +4532,7 @@
   "city": "Vancouver",
   "src": "cvca",
   "boards": [],
-  "careers": null,
+  "careers": "https://nicolawealth.com/jobs",
   "rc": true
  },
  {
@@ -4622,8 +4711,17 @@
   "cat": "pe_vc",
   "city": "Toronto",
   "src": "cvca",
-  "boards": [],
-  "careers": null,
+  "boards": [
+   [
+    "workday",
+    [
+     "rbc",
+     "3",
+     "RBCGLOBAL1"
+    ]
+   ]
+  ],
+  "careers": "https://jobs.rbc.com/ca/en/rbcx",
   "rc": true
  },
  {
@@ -4703,7 +4801,7 @@
   "city": "Toronto",
   "src": "cvca",
   "boards": [],
-  "careers": null,
+  "careers": "https://roadmapcapitalinc.com/en/careers",
   "rc": true
  },
  {
@@ -4732,7 +4830,7 @@
     ]
    ]
   ],
-  "careers": "https://corp.canadiantire.ca/English/careers/dealer-and-franchisees/ctr-dealers/default.aspx",
+  "careers": "https://corp.canadiantire.ca/English/careers/corporate/default.aspx",
   "rc": true
  },
  {
@@ -4952,7 +5050,7 @@
   "city": "Calgary",
   "src": "cvca",
   "boards": [],
-  "careers": "https://the51.com/careers/",
+  "careers": "https://the51.com/careers",
   "rc": true
  },
  {
@@ -4962,7 +5060,7 @@
   "city": "Vancouver",
   "src": "cvca",
   "boards": [],
-  "careers": "https://topdown.com/fr/carrieres",
+  "careers": "https://topdown.com/join-us",
   "rc": true
  },
  {
@@ -5061,7 +5159,16 @@
   "cat": "pe_vc",
   "city": "Vancouver",
   "src": "cvca",
-  "boards": [],
+  "boards": [
+   [
+    "icims",
+    "careers-vantageairportgroup.icims.com"
+   ],
+   [
+    "icims",
+    "uscareers-vantageairportgroup.icims.com"
+   ]
+  ],
   "careers": "https://www.vantagegroup.com/careers/",
   "rc": true
  },
@@ -5206,13 +5313,23 @@
   "rc": true
  },
  {
+  "name": "Capital d’Expérience",
+  "domain": "capitaldexperience.com",
+  "cat": "pe_vc",
+  "city": "Montréal",
+  "src": "rc",
+  "boards": [],
+  "careers": "https://www.capitaldexperience.com/carrieres.html",
+  "rc": true
+ },
+ {
   "name": "Dissan",
   "domain": "dissan.com",
   "cat": "pe_vc",
   "city": "Montréal",
   "src": "rc",
   "boards": [],
-  "careers": "https://www.dissan.com/carriere-et-culture/",
+  "careers": "https://www.dissan.com/en/career-and-culture/",
   "rc": true
  },
  {
@@ -5312,7 +5429,7 @@
   "city": "Montréal",
   "src": "rc",
   "boards": [],
-  "careers": "https://propulsionquebec.com/emplois",
+  "careers": "https://propulsionquebec.com/nous-joindre",
   "rc": true
  },
  {
@@ -5432,7 +5549,7 @@
   "city": "Montréal",
   "src": "rc",
   "boards": [],
-  "careers": "https://i4capital.vc/join-us/",
+  "careers": "https://i4capital.vc/carrieres/",
   "rc": true
  },
  {
@@ -5671,7 +5788,7 @@
   "city": "Montréal",
   "src": "rc",
   "boards": [],
-  "careers": "https://www.accuracy.com/careers/why-choose-us/",
+  "careers": "https://www.accuracy.com/fr/carrieres/",
   "rc": true
  },
  {
@@ -5711,7 +5828,7 @@
   "city": "Montréal",
   "src": "rc",
   "boards": [],
-  "careers": "https://www.beneva.ca/en/careers",
+  "careers": "https://www.beneva.ca/careers/",
   "rc": true
  },
  {
@@ -5731,7 +5848,7 @@
   "city": "Montréal",
   "src": "rc",
   "boards": [],
-  "careers": "https://www.assurart.com/careers",
+  "careers": "https://www.assurart.com/carriere",
   "rc": true
  },
  {
@@ -5775,7 +5892,7 @@
   "rc": true
  },
  {
-  "name": "DEL",
+  "name": "Développement économique de l’agglomération de Longueuil",
   "domain": "delagglo.ca",
   "cat": "pe_vc",
   "city": "Montréal",
@@ -5841,7 +5958,7 @@
   "city": "Montréal",
   "src": "rc",
   "boards": [],
-  "careers": "https://lecampquebec.com/careers",
+  "careers": "https://lecampquebec.com/jobs",
   "rc": true
  },
  {
@@ -5855,7 +5972,7 @@
   "rc": true
  },
  {
-  "name": "GPL Assurance",
+  "name": "GPL Assurance Inc.",
   "domain": "gplassurance.com",
   "cat": "pe_vc",
   "city": "Montréal",
@@ -5871,7 +5988,7 @@
   "city": "Montréal",
   "src": "rc",
   "boards": [],
-  "careers": "https://www.axelys.ca/carrieres",
+  "careers": "https://www.axelys.ca/carrieres/",
   "rc": true
  },
  {
@@ -5881,7 +5998,7 @@
   "city": "Montréal",
   "src": "rc",
   "boards": [],
-  "careers": "https://www.axelys.ca/carrieres",
+  "careers": "https://www.axelys.ca/carrieres/",
   "rc": true
  },
  {
