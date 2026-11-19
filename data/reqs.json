@@ -1238,6 +1238,28 @@
 ],
 "yh": null
 },
+"https://careers.kpmg.ca/professionals/jobs/34410": {
+"cfa": "",
+"cpa": true,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": true,
+"front": 14,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 5440,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "7-10 years of Transaction Services / Mergers and Acquisitions along with Accounting/Audit experience, in a consulting, advisory, or private equity environment",
+"y": 7.0,
+"yd": [
+"investing",
+"deals"
+],
+"yh": 10.0
+},
 "https://careers.kpmg.ca/professionals/jobs/34461": {
 "cfa": "",
 "cpa": false,
@@ -1402,25 +1424,6 @@
 ],
 "yh": 3
 },
-"https://emplois.bnc.ca/en_CA/careers/JobDetail/59935-ETUDIANT-STAGIAIRE-CADRE/35508": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-08",
-"fpa": 1,
-"fr": false,
-"front": 0,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 5959,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://emplois.bnc.ca/en_CA/careers/JobDetail/Alberta-Canada-70021-Analyst-Calgary-IB/36601": {
 "cfa": "",
 "cpa": false,
@@ -1442,6 +1445,46 @@
 "deals"
 ],
 "yh": 3.0
+},
+"https://emplois.bnc.ca/en_CA/careers/JobDetail/Alberta-Canada-7095P-Analyst-IB-Calgary/36899": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": false,
+"front": 10,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 5882,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://emplois.bnc.ca/en_CA/careers/JobDetail/Alberta-Canada-7096P-Associate-IB-Calgary/36900": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": false,
+"front": 13,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6422,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Have at least two years of investment banking experience.",
+"y": 2,
+"yd": [
+"investing"
+],
+"yh": null
 },
 "https://emplois.bnc.ca/en_CA/careers/JobDetail/Canada-7066P-ASSOCIE/36631": {
 "cfa": "",
@@ -1524,6 +1567,50 @@
 "y": null,
 "yd": [],
 "yh": null
+},
+"https://forumam.com/careers/associate-corporate-development": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": false,
+"front": 18,
+"inv": true,
+"jr": true,
+"mba": false,
+"n": 9710,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "1-2 years of experience in a transactional environment, including investment banking, venture capital, project development and/or corporate development.",
+"y": 1.0,
+"yd": [
+"investing",
+"deals"
+],
+"yh": 2.0
+},
+"https://forumam.com/careers/associate-investments-and-asset-management": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 4,
+"fr": false,
+"front": 26,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 11526,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "2-4 years of experience in real estate acquisitions, investments or development, or in investment banking, valuation, lending or private equity with real estate exposure.",
+"y": 2.0,
+"yd": [
+"investing",
+"deals"
+],
+"yh": 4.0
 },
 "https://job-boards.greenhouse.io/birchhillequity/jobs/6742077": {
 "cfa": "",
@@ -1769,6 +1856,25 @@
 ],
 "yh": null
 },
+"https://jobs.scotiabank.com/MD/job/Ottawa-Associate-Portfolio-Manager-ON-K1Z8R9/608210717/": {
+"cfa": "mention",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 1,
+"fr": false,
+"front": 5,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7325,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://jobs.scotiabank.com/job/Calgary-Scotia-Jarislowsky-Fraser-Portfolio-Manager-Calgary-BC-V6B4N7/607752117/": {
 "cfa": "",
 "cpa": false,
@@ -1868,27 +1974,6 @@
 ],
 "yh": null
 },
-"https://jobs.scotiabank.com/job/Toronto-Portfolio-Analyst-ON-M5H-1H1/608030917/": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-14",
-"fpa": 10,
-"fr": true,
-"front": 2,
-"inv": false,
-"jr": true,
-"mba": false,
-"n": 10778,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "5–7 years of relevant experience in portfolio analysis, portfolio management, financial analysis, program controls, business management, or delivery analytics within a large, complex organization; financial-services e…",
-"y": 5.0,
-"yd": [
-"investing"
-],
-"yh": 7.0
-},
 "https://jobs.scotiabank.com/job/Toronto-Senior-Delivery-Manager%2C-Capital-Markets-ON-M5H-0B4/603228617/": {
 "cfa": "",
 "cpa": false,
@@ -1905,27 +1990,6 @@
 "opsy": false,
 "q": "7+ years of project or program management experience, preferably within financial services, capital markets, or large enterprise environments",
 "y": 7.0,
-"yd": [
-"investing"
-],
-"yh": null
-},
-"https://jobs.scotiabank.com/job/Toronto-Senior-Investment-Product-Manager-ON-M5H-0B4/607615017/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-14",
-"fpa": 0,
-"fr": true,
-"front": 3,
-"inv": true,
-"jr": true,
-"mba": false,
-"n": 5393,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "5+ years of experience in the asset management industry, financial services, or an investment-related role.",
-"y": 5.0,
 "yd": [
 "investing"
 ],
@@ -2081,6 +2145,25 @@
 ],
 "yh": 3.0
 },
+"https://pictonmahoney.bamboohr.com/careers/394": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": false,
+"front": 4,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 6831,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://recruiting.ultipro.ca/BEN5000BENTK/JobBoard/6f7f3dc0-d599-4e78-9ee5-fa1703eb67ac/OpportunityDetail?opportunityId=c24ebd94-3ba0-4474-b8fd-d66836db7fdf": {
 "cfa": "",
 "cpa": false,
@@ -2111,46 +2194,6 @@
 "jr": false,
 "mba": false,
 "n": 911,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
-"https://sagardholdings.wd10.myworkdayjobs.com/sagardcareers/job/Montreal---QC---Canada/Analyst-Associate-Venture-Creation---Analyste-ou-un-Associ--Cration-de-ventures_JR100088": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-19",
-"fpa": 1,
-"fr": false,
-"front": 7,
-"inv": false,
-"jr": true,
-"mba": false,
-"n": 12322,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "1-3 years of work experience in relevant fields such as:",
-"y": 1.0,
-"yd": [
-"general"
-],
-"yh": 3.0
-},
-"https://sagardholdings.wd10.myworkdayjobs.com/sagardcareers/job/Toronto---ON---Canada/Analyst--Credit_JR100122": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-19",
-"fpa": 0,
-"fr": false,
-"front": 5,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3295,
 "ok": true,
 "ops": 0,
 "opsy": false,
@@ -2263,6 +2306,46 @@
 "yd": [],
 "yh": null
 },
+"https://www.bloomburton.com/career/analyst-investment-banking-2026/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": false,
+"front": 18,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 4714,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Undergraduate degree in business, finance, life sciences, or other related field; recent graduates and candidates with up to two years of relevant experience are encouraged to apply",
+"y": 0,
+"yd": [
+"general"
+],
+"yh": 2
+},
+"https://www.bloomburton.com/career/associate-equity-research/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": false,
+"front": 12,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3774,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://www.bnpparibas.ca/en/jobs/credit-portfolio-manager-project-finance/": {
 "cfa": "progress",
 "cpa": false,
@@ -2343,6 +2426,27 @@
 "yd": [],
 "yh": null
 },
+"https://www.hillsdaleinv.com/about/careers/us-portfolio-manager": {
+"cfa": "mention",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": false,
+"front": 13,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5834,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "10+ years of experience in quantitative investing, with demonstrated leadership in equity research (U.S. experience strongly preferred).",
+"y": 10.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
 "https://www.jobbank.gc.ca/jobsearch/jobposting/50608219": {
 "cfa": "",
 "cpa": false,
@@ -2359,27 +2463,6 @@
 "opsy": false,
 "q": "Experience: 1 year to less than 2 years.",
 "y": 1.0,
-"yd": [
-"general"
-],
-"yh": null
-},
-"https://www.jobbank.gc.ca/jobsearch/jobposting/50662374": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-07",
-"fpa": 0,
-"fr": true,
-"front": 8,
-"inv": false,
-"jr": true,
-"mba": false,
-"n": 6579,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "You?ll have two (2) or more years of relevant experience in a relevant role and we?re excited to consider new grads as well.",
-"y": 2,
 "yd": [
 "general"
 ],
@@ -2423,25 +2506,6 @@
 "yd": [],
 "yh": null
 },
-"https://www.jobbank.gc.ca/jobsearch/jobposting/50744252": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 0,
-"fr": true,
-"front": 6,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6672,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://www.jobbank.gc.ca/jobsearch/jobposting/50746571": {
 "cfa": "",
 "cpa": false,
@@ -2474,6 +2538,63 @@
 "n": 6656,
 "ok": true,
 "ops": 3,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.jobbank.gc.ca/jobsearch/jobposting/50763412": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": true,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 2751,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.jobbank.gc.ca/jobsearch/jobposting/50763546": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": true,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6871,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
+"https://www.jobbank.gc.ca/jobsearch/jobposting/50763596": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": true,
+"front": 0,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 3435,
+"ok": true,
+"ops": 0,
 "opsy": false,
 "q": "",
 "y": null,
@@ -2561,6 +2682,27 @@
 ],
 "yh": 10.0
 },
+"https://www.linkedin.com/jobs/view/4302684024/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 1,
+"fr": true,
+"front": 15,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 9073,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum de deux (2) années d’expérience pertinente en analyse financière, comptabilité, modélisation, valorisation et/ou transactions dans les domaines du conseil, de la banque d’investissement, du financement, de l’i…",
+"y": 2,
+"yd": [
+"deals"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4305100745/": {
 "cfa": "progress",
 "cpa": false,
@@ -2582,6 +2724,27 @@
 "deals"
 ],
 "yh": null
+},
+"https://www.linkedin.com/jobs/view/4373493194/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 1,
+"fr": true,
+"front": 10,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 8781,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "De deux (2) à cinq (5) années d’expérience pertinente en analyse financière, comptabilité, modélisation, évaluation et/ou expérience transactionnelle en services-conseils ou en banque d’investissement, financement, in…",
+"y": 2,
+"yd": [
+"deals"
+],
+"yh": 5
 },
 "https://www.linkedin.com/jobs/view/4375623556/": {
 "cfa": "progress",
@@ -2627,6 +2790,27 @@
 ],
 "yh": 3.0
 },
+"https://www.linkedin.com/jobs/view/4396032239/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": false,
+"front": 14,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6878,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Typically between 1 - 6 years of relevant experience and post-secondary degree in related field of study or an equivalent combination of education and experience.",
+"y": 1.0,
+"yd": [
+"investing"
+],
+"yh": 6.0
+},
 "https://www.linkedin.com/jobs/view/4403241426/": {
 "cfa": "progress",
 "cpa": false,
@@ -2646,25 +2830,6 @@
 "yd": [
 "general"
 ],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4405954610/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-08",
-"fpa": 0,
-"fr": false,
-"front": 5,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 2637,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4408693565/": {
@@ -2689,27 +2854,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4410239782/": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-19",
-"fpa": 0,
-"fr": false,
-"front": 11,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 5270,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "10+ years of experience in quantitative investing, with demonstrated leadership in equity research (U.S. experience strongly preferred).",
-"y": 10.0,
-"yd": [
-"investing"
-],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4410861031/": {
 "cfa": "progress",
 "cpa": false,
@@ -2728,27 +2872,6 @@
 "y": null,
 "yd": [],
 "yh": null
-},
-"https://www.linkedin.com/jobs/view/4414374542/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 3,
-"fr": true,
-"front": 5,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6236,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "D’une à quatre années d’expérience pertinente",
-"y": 1,
-"yd": [
-"general"
-],
-"yh": 4
 },
 "https://www.linkedin.com/jobs/view/4414918496/": {
 "cfa": "",
@@ -2897,6 +3020,28 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4441844678/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": true,
+"front": 12,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7508,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum de trois (3) à cinq (5) années d’expérience en investissements privés, en services bancaires d’investissement, en consultation, en finance d’entreprise, en recherche sur actions ou au sein d’une société du sec…",
+"y": 3,
+"yd": [
+"investing",
+"deals"
+],
+"yh": 5
+},
 "https://www.linkedin.com/jobs/view/4445249501/": {
 "cfa": "progress",
 "cpa": false,
@@ -2979,48 +3124,6 @@
 "investing"
 ],
 "yh": 3.0
-},
-"https://www.linkedin.com/jobs/view/4448458955/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 0,
-"fr": true,
-"front": 33,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 7824,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Approximately seven (7) + years of relevant experience in direct lending, private credit, leveraged finance, investment banking, private equity or a related investment environment",
-"y": 7,
-"yd": [
-"investing"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4448485376/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-18",
-"fpa": 0,
-"fr": false,
-"front": 25,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 7787,
-"ok": true,
-"ops": 2,
-"opsy": false,
-"q": "5+ years of experience in a trading or capital markets execution role at a buy-side or sell-side institution",
-"y": 5.0,
-"yd": [
-"investing"
-],
-"yh": null
 },
 "https://www.linkedin.com/jobs/view/4451028055/": {
 "cfa": "",
@@ -3128,28 +3231,6 @@
 ],
 "yh": 2
 },
-"https://www.linkedin.com/jobs/view/4457023705/": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-18",
-"fpa": 0,
-"fr": true,
-"front": 22,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 7414,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "You bring 5+ years of experience in one or more of investment banking, mergers and acquisitions, corporate finance, private equity, or the energy, infrastructure, and transition sectors.",
-"y": 5.0,
-"yd": [
-"investing",
-"deals"
-],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4457708727/": {
 "cfa": "",
 "cpa": false,
@@ -3168,69 +3249,6 @@
 "y": null,
 "yd": [],
 "yh": null
-},
-"https://www.linkedin.com/jobs/view/4458777233/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 0,
-"fr": false,
-"front": 16,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 5289,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "At least one year of relevant professional experience, including experience in investment banking, investing, or equity research.",
-"y": 1,
-"yd": [
-"investing"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4459357558/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-18",
-"fpa": 0,
-"fr": true,
-"front": 6,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 8085,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "3 to 5 years of work experience with an alternatives investment manager (preferably in fixed income/credit), equity/credit research, a 3rd-party investment advisory/consultant or an LP",
-"y": 3.0,
-"yd": [
-"investing"
-],
-"yh": 5.0
-},
-"https://www.linkedin.com/jobs/view/4459361406/": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 0,
-"fr": true,
-"front": 8,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6243,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum 5 to 7 years of experience (Analyst level) or 7 to 12 years of experience (Senior Analyst level) in investment management, actuarial or insurance industries;",
-"y": 7.0,
-"yd": [
-"investing"
-],
-"yh": 12.0
 },
 "https://www.linkedin.com/jobs/view/4460012842/": {
 "cfa": "",
@@ -3274,28 +3292,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4463083234/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 0,
-"fr": true,
-"front": 9,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 4313,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "2 to 3 years of experience in corporate development, investment banking, private equity, transaction advisory, or management consulting.",
-"y": 2.0,
-"yd": [
-"investing",
-"deals"
-],
-"yh": 3.0
-},
 "https://www.linkedin.com/jobs/view/4464441054/": {
 "cfa": "progress",
 "cpa": false,
@@ -3337,28 +3333,6 @@
 "investing"
 ],
 "yh": null
-},
-"https://www.linkedin.com/jobs/view/4465333863/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 0,
-"fr": true,
-"front": 8,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 5173,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "2 à 3 ans d'expérience en développement d'entreprise, en banque d'investissement, en capital-investissement, en services-conseils en transactions ou en conseil en management.",
-"y": 2.0,
-"yd": [
-"investing",
-"deals"
-],
-"yh": 3.0
 },
 "https://www.linkedin.com/jobs/view/4465882599/": {
 "cfa": "progress",
@@ -3424,48 +3398,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4468192079/": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-08",
-"fpa": 0,
-"fr": true,
-"front": 3,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 7467,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Seven years in the securities industry in a role providing client portfolio analysis, recommendations, and trade advice",
-"y": 7,
-"yd": [
-"investing"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4468282694/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-12",
-"fpa": 0,
-"fr": false,
-"front": 12,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 8065,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "2-4 years of lending experience and demonstrated commercial lending underwriting proficiency.",
-"y": 2.0,
-"yd": [
-"investing"
-],
-"yh": 4.0
-},
 "https://www.linkedin.com/jobs/view/4468504123/": {
 "cfa": "",
 "cpa": false,
@@ -3527,25 +3459,6 @@
 "deals"
 ],
 "yh": 3.0
-},
-"https://www.linkedin.com/jobs/view/4468854359/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-10",
-"fpa": 0,
-"fr": false,
-"front": 20,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4448,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
 },
 "https://www.linkedin.com/jobs/view/4469051956/": {
 "cfa": "",
@@ -3672,27 +3585,6 @@
 "yd": [],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4472945727/": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-08",
-"fpa": 4,
-"fr": false,
-"front": 23,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 12338,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "Minimum de 5 ans d’expérience pertinente et directe en financement de projets ou en financement structuré, acquise au sein d’une banque, d’un cabinet-conseil ou du côté des promoteurs/sponsors (fonds d’investissement,…",
-"y": 5.0,
-"yd": [
-"investing"
-],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4473000738/": {
 "cfa": "",
 "cpa": false,
@@ -3733,26 +3625,7 @@
 "yd": [],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4473027717/": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 0,
-"fr": true,
-"front": 23,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 8860,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4474354829/": {
+"https://www.linkedin.com/jobs/view/4474371264/": {
 "cfa": "progress",
 "cpa": false,
 "d": "2026-11-19",
@@ -3796,27 +3669,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4474471107/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 1,
-"fr": true,
-"front": 12,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 8431,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Deux (2) à trois (3) années d'expérience pertinente en analyse financière, comptabilité, modélisation financière, évaluation des entreprises et/ou exécution de transaction, acquise dans des domaines tels que la banque…",
-"y": 2,
-"yd": [
-"deals"
-],
-"yh": 3
-},
 "https://www.linkedin.com/jobs/view/4474484470/": {
 "cfa": "progress",
 "cpa": false,
@@ -3837,25 +3689,6 @@
 "investing",
 "deals"
 ],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4474522346/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-10",
-"fpa": 0,
-"fr": false,
-"front": 2,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4696,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4476774573/": {
@@ -3902,27 +3735,26 @@
 ],
 "yh": 10.0
 },
-"https://www.linkedin.com/jobs/view/4477872987/": {
-"cfa": "progress",
-"cpa": false,
+"https://www.linkedin.com/jobs/view/4477468651/": {
+"cfa": "",
+"cpa": true,
 "d": "2026-11-19",
-"fpa": 4,
+"fpa": 2,
 "fr": false,
-"front": 27,
-"inv": true,
+"front": 1,
+"inv": false,
 "jr": false,
 "mba": false,
-"n": 10125,
+"n": 6317,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "2-4 years of experience in real estate acquisitions, investments or development, or in investment banking, valuation, lending or private equity with real estate exposure.",
-"y": 2.0,
+"q": "Undergraduate degree in accounting, or other relevant technical discipline with minimum of 3 years of experience",
+"y": 3.0,
 "yd": [
-"investing",
-"deals"
+"general"
 ],
-"yh": 4.0
+"yh": null
 },
 "https://www.linkedin.com/jobs/view/4478436963/": {
 "cfa": "mention",
@@ -4024,28 +3856,6 @@
 "y": 3.0,
 "yd": [
 "general"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4480610747/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-13",
-"fpa": 0,
-"fr": false,
-"front": 13,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3084,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum of 5 years’ experience at a reputable M&A boutique, investment bank, or accounting firm with demonstrable M&A execution experience",
-"y": 5.0,
-"yd": [
-"investing",
-"deals"
 ],
 "yh": null
 },
@@ -4155,25 +3965,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4481543218/": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 0,
-"fr": false,
-"front": 2,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 7019,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4481640097/": {
 "cfa": "progress",
 "cpa": false,
@@ -4235,25 +4026,6 @@
 "yd": [],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4481906943/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-08",
-"fpa": 0,
-"fr": false,
-"front": 7,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 1928,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4481965699/": {
 "cfa": "",
 "cpa": false,
@@ -4292,6 +4064,28 @@
 "yd": [],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4482183845/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": true,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 4883,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum of 2 years of proven experience in a financial/investment consulting, insurance, economics, capital markets pension environment working in an analyst capacity is preferred",
+"y": 2.0,
+"yd": [
+"investing",
+"deals"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4482193067/": {
 "cfa": "progress",
 "cpa": false,
@@ -4309,27 +4103,6 @@
 "q": "",
 "y": null,
 "yd": [],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4482409470/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 0,
-"fr": false,
-"front": 12,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4669,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "8+ years of experience",
-"y": 8.0,
-"yd": [
-"general"
-],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4482413556/": {
@@ -4353,6 +4126,27 @@
 "deals"
 ],
 "yh": 5.0
+},
+"https://www.linkedin.com/jobs/view/4482816740/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": false,
+"front": 21,
+"inv": true,
+"jr": true,
+"mba": false,
+"n": 8375,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "1+ years of relevant experience (software engineering in finance)",
+"y": 1.0,
+"yd": [
+"general"
+],
+"yh": null
 },
 "https://www.linkedin.com/jobs/view/4482875958/": {
 "cfa": "",
@@ -4395,27 +4189,6 @@
 "investing"
 ],
 "yh": null
-},
-"https://www.linkedin.com/jobs/view/4483066289/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-08",
-"fpa": 0,
-"fr": true,
-"front": 14,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 6162,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Une à trois années d’expérience pertinente dans les domaines de la finance d’entreprise, du développement d’entreprise, du conseil en transactions, de l’évaluation ou de la consultation; les stages pertinents seront p…",
-"y": 1,
-"yd": [
-"deals"
-],
-"yh": 3
 },
 "https://www.linkedin.com/jobs/view/4483068488/": {
 "cfa": "progress",
@@ -4546,28 +4319,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4483899711/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 0,
-"fr": true,
-"front": 4,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 10044,
-"ok": true,
-"ops": 0,
-"opsy": true,
-"q": "Sept années et plus d’expérience professionnelle pertinente dans le domaine du crédit, des instruments de crédit ou des opérations financières dans un environnement de grande entreprise ou dans le secteur bancaire, de…",
-"y": 7,
-"yd": [
-"ops",
-"investing"
-],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4483903592/": {
 "cfa": "",
 "cpa": false,
@@ -4608,61 +4359,17 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4484111380/": {
+"https://www.linkedin.com/jobs/view/4484246821/": {
 "cfa": "",
 "cpa": false,
-"d": "2026-11-18",
+"d": "2026-11-19",
 "fpa": 0,
-"fr": true,
-"front": 5,
+"fr": false,
+"front": 14,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 9361,
-"ok": true,
-"ops": 0,
-"opsy": true,
-"q": "De trois à quatre années d’expérience professionnelle pertinente dans le domaine du crédit, des instruments de crédit ou des opérations financières dans un environnement de grande entreprise ou dans le secteur bancair…",
-"y": 3,
-"yd": [
-"ops",
-"investing"
-],
-"yh": 4
-},
-"https://www.linkedin.com/jobs/view/4484248410/": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-18",
-"fpa": 0,
-"fr": false,
-"front": 17,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 8857,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "Minimum 5 years of experience in investment banking, leveraged finance, private equity, equity research, corporate development, or accounting",
-"y": 5.0,
-"yd": [
-"investing",
-"deals"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4484253338/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 0,
-"fr": false,
-"front": 15,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 3520,
+"n": 4606,
 "ok": true,
 "ops": 0,
 "opsy": false,
@@ -4671,26 +4378,24 @@
 "yd": [],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4484558912/": {
+"https://www.linkedin.com/jobs/view/4484735091/": {
 "cfa": "",
 "cpa": false,
-"d": "2026-11-08",
+"d": "2026-11-19",
 "fpa": 1,
 "fr": false,
-"front": 11,
+"front": 20,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 5548,
+"n": 5494,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "Minimum de 2 à 4 ans d’expérience pertinente dans le domaine du financement immobilier, de la structuration de dettes ou de l’analyse financière.",
-"y": 2.0,
-"yd": [
-"investing"
-],
-"yh": 4.0
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
 },
 "https://www.linkedin.com/jobs/view/4484898996/": {
 "cfa": "progress",
@@ -4714,26 +4419,24 @@
 ],
 "yh": 5.0
 },
-"https://www.linkedin.com/jobs/view/4484970998/": {
-"cfa": "progress",
+"https://www.linkedin.com/jobs/view/4485100414/": {
+"cfa": "",
 "cpa": false,
-"d": "2026-11-08",
+"d": "2026-11-19",
 "fpa": 0,
-"fr": true,
-"front": 15,
-"inv": true,
+"fr": false,
+"front": 5,
+"inv": false,
 "jr": false,
 "mba": false,
-"n": 4734,
+"n": 3264,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "One to three years of relevant experience in corporate finance, corporate development, transaction advisory, valuation or consulting; relevant internship experience will be considered",
-"y": 1,
-"yd": [
-"deals"
-],
-"yh": 3
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
 },
 "https://www.linkedin.com/jobs/view/4485281306/": {
 "cfa": "progress",
@@ -4771,28 +4474,6 @@
 "q": "",
 "y": null,
 "yd": [],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4485452462/": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 0,
-"fr": false,
-"front": 23,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 6185,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum 6 years of institutional investment experience, ideally including some direct portfolio management experience.",
-"y": 6.0,
-"yd": [
-"investing",
-"deals"
-],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4485766866/": {
@@ -4836,60 +4517,17 @@
 ],
 "yh": 3
 },
-"https://www.linkedin.com/jobs/view/4486018278/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-18",
-"fpa": 0,
-"fr": false,
-"front": 38,
-"inv": true,
-"jr": true,
-"mba": false,
-"n": 5054,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "We are seeking an exceptional early-career professional with 1-4 years of professional experience in investment banking, sell-side M&A advisory, transaction services / financial due diligence or private equity .",
-"y": 1.0,
-"yd": [
-"investing",
-"deals"
-],
-"yh": 4.0
-},
-"https://www.linkedin.com/jobs/view/4486056771/": {
+"https://www.linkedin.com/jobs/view/4486091705/": {
 "cfa": "mention",
-"cpa": true,
-"d": "2026-11-10",
-"fpa": 0,
-"fr": false,
-"front": 9,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 5122,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "A senior commercial finance professional with 3–10 years’ experience in a major discipline related to the activities of Crete Capital: commercial banking/lending, commercial real estate finance and/or merchant banking.",
-"y": 3.0,
-"yd": [
-"investing"
-],
-"yh": 10.0
-},
-"https://www.linkedin.com/jobs/view/4486505261/": {
-"cfa": "progress",
 "cpa": false,
-"d": "2026-11-18",
+"d": "2026-11-19",
 "fpa": 0,
 "fr": false,
-"front": 14,
-"inv": false,
+"front": 25,
+"inv": true,
 "jr": false,
 "mba": false,
-"n": 4446,
+"n": 8054,
 "ok": true,
 "ops": 0,
 "opsy": false,
@@ -4957,6 +4595,28 @@
 "yd": [],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4486805375/": {
+"cfa": "mention",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 1,
+"fr": false,
+"front": 20,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 7425,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "4 years of experience in corporate finance or M&A, preferably within an M&A team in a financial services organization, investment bank or accounting firm",
+"y": 4.0,
+"yd": [
+"investing",
+"deals"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4486904448/": {
 "cfa": "",
 "cpa": false,
@@ -4998,27 +4658,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4487072438/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 0,
-"fr": false,
-"front": 23,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 8226,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Minimum of 5 years of industry related experience",
-"y": 5.0,
-"yd": [
-"general"
-],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4487083173/": {
 "cfa": "",
 "cpa": false,
@@ -5038,25 +4677,24 @@
 "yd": [],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4487315720/": {
+"https://www.linkedin.com/jobs/view/4487229914/": {
 "cfa": "progress",
 "cpa": false,
-"d": "2026-11-18",
+"d": "2026-11-19",
 "fpa": 0,
-"fr": true,
-"front": 18,
+"fr": false,
+"front": 3,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 2622,
+"n": 5181,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "Associate: 3+ years of investment banking, transaction advisory, or private equity experience",
-"y": 3.0,
+"q": "Minimum of 5 years Investment industry experience",
+"y": 5.0,
 "yd": [
-"investing",
-"deals"
+"investing"
 ],
 "yh": null
 },
@@ -5120,6 +4758,25 @@
 "investing"
 ],
 "yh": 3.0
+},
+"https://www.linkedin.com/jobs/view/4487571589/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": true,
+"front": 15,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 6044,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
 },
 "https://www.linkedin.com/jobs/view/4487689710/": {
 "cfa": "",
@@ -5205,25 +4862,6 @@
 ],
 "yh": 3.0
 },
-"https://www.linkedin.com/jobs/view/4488042856/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 1,
-"fr": false,
-"front": 34,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 8815,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4488078262/": {
 "cfa": "",
 "cpa": false,
@@ -5284,48 +4922,6 @@
 "q": "",
 "y": null,
 "yd": [],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4488307022/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-18",
-"fpa": 0,
-"fr": false,
-"front": 3,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 9069,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "7+ years of experience in portfolio management, commercial finance, asset-based lending, factoring, commercial banking, credit risk, or related financial services experience.",
-"y": 7.0,
-"yd": [
-"investing"
-],
-"yh": null
-},
-"https://www.linkedin.com/jobs/view/4488396640/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 0,
-"fr": true,
-"front": 15,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 12574,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "De zéro à trois années d’expérience consécutives dans le domaine des placements ou des services bancaires aux sociétés selon les exigences de l’organisation",
-"y": 3,
-"yd": [
-"investing"
-],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4488425989/": {
@@ -5537,27 +5133,6 @@
 "yd": [],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4489403890/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-10",
-"fpa": 1,
-"fr": false,
-"front": 6,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4221,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "Bachelor's Degree preferred with 5-8 years of relevant experience.",
-"y": 5.0,
-"yd": [
-"general"
-],
-"yh": 8.0
-},
 "https://www.linkedin.com/jobs/view/4489503772/": {
 "cfa": "",
 "cpa": false,
@@ -5622,27 +5197,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4489625120/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 0,
-"fr": true,
-"front": 20,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 10301,
-"ok": true,
-"ops": 1,
-"opsy": false,
-"q": "Typically between 3 - 5 years of relevant experience and post-secondary degree in related field of study or an equivalent combination of education and experience.",
-"y": 3.0,
-"yd": [
-"investing"
-],
-"yh": 5.0
-},
 "https://www.linkedin.com/jobs/view/4489805993/": {
 "cfa": "progress",
 "cpa": false,
@@ -5663,6 +5217,27 @@
 "general"
 ],
 "yh": null
+},
+"https://www.linkedin.com/jobs/view/4489820974/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": false,
+"front": 42,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 11410,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Significant professional experience, typically 12–15 years or more, in venture capital, growth equity, private equity or other relevant investment roles.",
+"y": 12.0,
+"yd": [
+"investing"
+],
+"yh": 15.0
 },
 "https://www.linkedin.com/jobs/view/4490134976/": {
 "cfa": "",
@@ -5705,27 +5280,6 @@
 "investing"
 ],
 "yh": 2
-},
-"https://www.linkedin.com/jobs/view/4490507960/": {
-"cfa": "mention",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 3,
-"fr": false,
-"front": 12,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 8956,
-"ok": true,
-"ops": 2,
-"opsy": false,
-"q": "5+ years in investment management or alternatives experience",
-"y": 5.0,
-"yd": [
-"investing"
-],
-"yh": null
 },
 "https://www.linkedin.com/jobs/view/4490753511/": {
 "cfa": "progress",
@@ -5790,6 +5344,27 @@
 ],
 "yh": null
 },
+"https://www.linkedin.com/jobs/view/4490840102/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": false,
+"front": 7,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 6133,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "One to three + years of relevant experience in project finance, corporate finance, accounting, or consulting and / or previous experience in the energy / power space",
+"y": 1,
+"yd": [
+"deals"
+],
+"yh": 3
+},
 "https://www.linkedin.com/jobs/view/4490901430/": {
 "cfa": "",
 "cpa": false,
@@ -5852,27 +5427,6 @@
 "deals"
 ],
 "yh": 3.0
-},
-"https://www.linkedin.com/jobs/view/4491164919/": {
-"cfa": "",
-"cpa": false,
-"d": "2026-11-17",
-"fpa": 1,
-"fr": false,
-"front": 7,
-"inv": true,
-"jr": false,
-"mba": false,
-"n": 3354,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "With over 15 years of experience, Lankin manages a portfolio exceeding $2 billion and more than 6,700 multi-family units across Canada.",
-"y": 15.0,
-"yd": [
-"general"
-],
-"yh": null
 },
 "https://www.linkedin.com/jobs/view/4491199523/": {
 "cfa": "",
@@ -5939,6 +5493,25 @@
 ],
 "yh": 4.0
 },
+"https://www.linkedin.com/jobs/view/4491391905/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": false,
+"front": 1,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 5877,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "",
+"y": null,
+"yd": [],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4491418924/": {
 "cfa": "progress",
 "cpa": false,
@@ -5956,6 +5529,48 @@
 "q": "",
 "y": null,
 "yd": [],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4491542237/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 7,
+"fr": false,
+"front": 0,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 5963,
+"ok": true,
+"ops": 1,
+"opsy": false,
+"q": "3 to 4 years of relevant experience in accounting and/or auditing function reporting in IFRS or ASPE, with consolidated financial statements and note disclosures",
+"y": 3.0,
+"yd": [
+"general"
+],
+"yh": 4.0
+},
+"https://www.linkedin.com/jobs/view/4491572390/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": false,
+"front": 6,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 2272,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Clear PM Runway: Defined path to full PM status (4 years CIM® experience or CFA Charter) with growing revenue participation.",
+"y": 4.0,
+"yd": [
+"general"
+],
 "yh": null
 },
 "https://www.linkedin.com/jobs/view/4491577482/": {
@@ -6000,6 +5615,27 @@
 ],
 "yh": 4.0
 },
+"https://www.linkedin.com/jobs/view/4491633469/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": false,
+"front": 21,
+"inv": true,
+"jr": false,
+"mba": false,
+"n": 5139,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "Minimum 2 years of relevant experience in structured credit investing or at a financial services firm.",
+"y": 2.0,
+"yd": [
+"investing"
+],
+"yh": null
+},
 "https://www.linkedin.com/jobs/view/4491701077/": {
 "cfa": "",
 "cpa": false,
@@ -6039,6 +5675,27 @@
 "investing"
 ],
 "yh": null
+},
+"https://www.linkedin.com/jobs/view/4491743801/": {
+"cfa": "",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 0,
+"fr": false,
+"front": 17,
+"inv": false,
+"jr": true,
+"mba": false,
+"n": 2938,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "1-3 years of experience in construction, engineering, infrastructure, industrial services, or project-based businesses.",
+"y": 1.0,
+"yd": [
+"investing"
+],
+"yh": 3.0
 },
 "https://www.linkedin.com/jobs/view/4491750951/": {
 "cfa": "",
@@ -6126,25 +5783,6 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4491877916/": {
-"cfa": "progress",
-"cpa": false,
-"d": "2026-11-18",
-"fpa": 2,
-"fr": false,
-"front": 11,
-"inv": false,
-"jr": false,
-"mba": false,
-"n": 4148,
-"ok": true,
-"ops": 0,
-"opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
-},
 "https://www.linkedin.com/jobs/view/4492045660/": {
 "cfa": "progress",
 "cpa": false,
@@ -6186,25 +5824,45 @@
 ],
 "yh": 5.0
 },
-"https://www.linkedin.com/jobs/view/4492228821/": {
+"https://www.linkedin.com/jobs/view/4492121076/": {
 "cfa": "progress",
 "cpa": false,
-"d": "2026-11-18",
+"d": "2026-11-19",
 "fpa": 0,
-"fr": true,
-"front": 16,
+"fr": false,
+"front": 6,
 "inv": false,
 "jr": false,
 "mba": false,
-"n": 7203,
+"n": 3436,
 "ok": true,
 "ops": 0,
 "opsy": false,
-"q": "Plus de six (6) ans d’expérience bancaire en financement transactionnel aux entreprises d’envergure (FGE).",
-"y": 6,
+"q": "10-15+ years of investment experience, including 5+ years in manager research or selection (10+ years for the Director level).",
+"y": 5.0,
 "yd": [
-"investing",
-"deals"
+"investing"
+],
+"yh": null
+},
+"https://www.linkedin.com/jobs/view/4492191269/": {
+"cfa": "progress",
+"cpa": false,
+"d": "2026-11-19",
+"fpa": 3,
+"fr": false,
+"front": 20,
+"inv": false,
+"jr": false,
+"mba": false,
+"n": 7109,
+"ok": true,
+"ops": 0,
+"opsy": false,
+"q": "15+ years of progressive experience in commercial real estate finance, construction lending, development finance, credit or related capital markets.",
+"y": 15.0,
+"yd": [
+"investing"
 ],
 "yh": null
 },
@@ -6230,24 +5888,27 @@
 ],
 "yh": null
 },
-"https://www.linkedin.com/jobs/view/4492259380/": {
+"https://www.linkedin.com/jobs/view/4492464314/": {
 "cfa": "",
 "cpa": false,
 "d": "2026-11-19",
 "fpa": 0,
 "fr": false,
-"front": 11,
-"inv": false,
+"front": 14,
+"inv": true,
 "jr": false,
 "mba": false,
-"n": 6658,
+"n": 7428,
 "ok": true,
-"ops": 0,
+"ops": 1,
 "opsy": false,
-"q": "",
-"y": null,
-"yd": [],
-"yh": null
+"q": "3-5+ years of proven experience in corporate development, investment banking, product or a related field, with a strong focus on M&A in the technology sector.",
+"y": 3.0,
+"yd": [
+"investing",
+"deals"
+],
+"yh": 5.0
 },
 "https://www.originmerchant.com/wp-content/uploads/2026/10/Origin-Merchant-Partners-2027-Summer-Analyst-Montreal.pdf": {
 "cfa": "",
